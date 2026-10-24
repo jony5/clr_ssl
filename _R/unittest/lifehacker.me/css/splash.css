@@ -1,0 +1,76 @@
+/* ALL */
+
+@font-face 					{ font-family: HelveticaNeueRegular; src: url('../fonts/HelveticaNeue.eot'); src: local('Helvetica Neue Bold'), local('HelveticaNeue'), url('../fonts/HelveticaNeue.woff') format('woff'), url('../fonts/HelveticaNeue.ttf') format('truetype');}
+@font-face 					{ font-family: HelveticaNeueLight; src: url('../fonts/HelveticaNeue-Light.eot'); src:local('HelveticaNeue'), url('../fonts/HelveticaNeue.woff') format('woff'), url('../fonts/HelveticaNeue.ttf') format('truetype');}
+@font-face 					{ font-family: HelveticaNeueUltraLight; src: url('../fonts/HelveticaNeue-UltraLight.eot'); src: local('HelveticaNeue'), url('../fonts/HelveticaNeue.woff') format('woff'), url('../fonts/HelveticaNeue.ttf') format('truetype');}
+@font-face 					{ font-family: HelveticaNeueCondensedBold; font-weight: bold; src: url('../fonts/HelveticaNeue-CondensedBold.eot'); src: local('HelveticaNeue-CondensedBold'), local('HelveticaNeue-CondensedBold'), url('../fonts/HelveticaNeue-CondensedBold.woff') format('woff'), url('../fonts/HelveticaNeue-CondensedBold.ttf') format('truetype');}
+
+body                 		{ margin: 24px 8px 8px 8px; background-color: #36ACF7; background-image: url('../images/bg_generic_blue.jpg'); background-attachment: fixed; background-repeat: none; background-position: left top; font-weight: bold; font-family: "HelveticaNeueCondensedBold", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;}
+
+/* NAVIGATION */
+#nav h1 					{ font-size: 92px; font-family: HelveticaNeueCondensedBold; margin: 0 24px -20px 0;}
+#logo_wrapper 				{ height:520px; width:900px; text-align: left; background-image: url('../images/crnrstn_logo_lg.png'); background-repeat: no-repeat;}
+#logo_letter_wrapper 		{ margin: 0 0 0 80px;}
+
+/*
+https://stackoverflow.com/a/8119473
+https://css-tricks.com/snippets/css/better-helvetica/
+font-family: "HelveticaNeueCondensedBold", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+
+5 :: Sunday, December 14, 2025 @ 1745 hrs.
+*/
+#logo_letter 				{ font-size: 92px; font-weight: bold; font-family: HelveticaNeueCondensedBold; line-height: 100px; color: #333; float: left; padding: 0 5px 0 0;}
+#logo_letter_R 				{ font-size: 92px; font-weight: bold; font-family: HelveticaNeueCondensedBold; line-height: 100px; color:#F90000; float:left; padding: 0 5px 0 0;}
+.the_V                      { color:#F90000; font-weight:bold;}
+.the_R 						{ color:#F90000;}
+.cb							{ width:100%; height:0; overflow:hidden; display:block;}
+
+#nav 						{ text-align: right; font-size: 22px; color: #FFFFFF;}
+#nav #elements 				{ margin-right: 20px; padding-top: 10px;}
+#nav li 					{ list-style: none; float: right; margin: 0 20px 0 20px; font-family: Arial, sans-serif, "Times New Roman"; -webkit-transition: All 0.3034s ease; -moz-transition: All 0.3034s ease; -o-transition: All 0.3034s ease; -webkit-transform: scale(1); -moz-transform: scale(1); -o-transform: scale(1);}
+#nav li:hover 				{ color: #FFFFFF; -moz-border-radius: 18px; -webkit-border-radius: 18px; border-radius: 18px; background: #000000; background: -webkit-gradient(linear, 80% 20%, 80% 100%, from(#000000), to(#555555)); padding: 6px 12px 6px 12px; -webkit-transform: scale(1.325); -moz-transform: scale(1.325); -o-transform: scale(1.325);}
+#nav a 						{ text-decoration: none; color: #FFFFFF;}
+#nav a:visited 				{ text-decoration: none; color: #FFFFFF;}
+#nav a:hover 				{ text-decoration: none; color: #FFFFFF;}
+
+/* CONTENT ALL */
+#triangle 					{ float: right; clear: right; text-align: right; padding: 0; margin: 10px 54px 0 0; -webkit-transition: All 0.3034s ease; -moz-transition: All 0.3034s ease; -o-transition: All 0.3034s ease;}
+.content_bubble 			{ float: right; clear: right; font-family: HelveticaNeueRegular; width: 820px; margin: 0 28px 0 0; padding: 32px 24px 21px 24px; border: none; opacity: 0.9; filter: alpha(opacity=90); -moz-border-radius: 18px; -webkit-border-radius: 18px; border-radius: 18px; background: #fff; text-align: left;}
+.content_bubble h3 			{ font-size: 36px; font-weight: bold; font-family: HelveticaNeueCondensedBold; margin: 2px 0 -10px 0;}
+.content_bubble a 			{ color: #444; text-decoration: none; font-weight: normal;}
+.content_bubble a:hover 	{ color: #444; text-decoration: underline;}
+.content_bubble p			{ padding-bottom: 0; margin-bottom: 0;}
+.content_last_modified p    { font-family: HelveticaNeueUltraLight; padding: 20px 0 10px 0;}
+
+/* CONTENT DISPLAY */
+#crnrstn 			        { display: inline;}
+#wethrbug   		        { display: none;}
+#css_validator 			    { display: none;}
+#covid  			        { display: none;}
+#eVifweb 					{ display: none;}
+#j5_stache 					{ display: none;}
+
+/* CONTENT PHOTOS */
+.galleria-thumbnails 		{ overflow:hidden;}
+.galleria-thumbnails .galleria-image 				{ width: 120px; height: 90px; float: left; cursor: pointer; margin: 8px; -moz-box-shadow: 0 0 7px #888; -webkit-box-shadow: 0 0 7px #888; box-shadow: 0 0 7px #888; -webkit-transition: All 0.3034s ease; -moz-transition: All 0.3034s ease; -o-transition: All 0.3034s ease; -webkit-transform: scale(1); -moz-transform: scale(1); -o-transform: scale(1);}
+.galleria-thumbnails:hover .galleria-image:hover 	{ -webkit-transform: scale(1.15); -moz-transform: scale(1.15); -o-transform: scale(1.15);}
+#flickr_photos img 			{ margin: 8px; -moz-box-shadow: 0 0 7px #888; -webkit-box-shadow: 0 0 7px #888; box-shadow: 0 0 7px #888; -webkit-transition: All 0.3034s ease; -moz-transition: All 0.3034s ease; -o-transition: All 0.3034s ease; -webkit-transform: scale(1); -moz-transform: scale(1); -o-transform: scale(1);}
+#flickr_photos img:hover 	{ -webkit-transform: scale(1.15); -moz-transform: scale(1.15); -o-transform: scale(1.15);}
+
+/* CONTENT VIDEOS */
+#vimeo_videos img 			{ margin: 8px; -moz-box-shadow: 0 0 7px #888; -webkit-box-shadow: 0 0 7px #888; box-shadow: 0 0 7px #888; -webkit-transition: All 0.3034s ease; -moz-transition: All 0.3034s ease; -o-transition: All 0.3034s ease; -webkit-transform: scale(1); -moz-transform: scale(1); -o-transform: scale(1);}
+
+#vimeo_videos img:hover 	{ -webkit-transform: scale(1.25); -moz-transform: scale(1.25); -o-transform: scale(1.25);}
+#youtube_videos img 		{ margin: 8px 12px 8px 8px; -moz-box-shadow: 0 0 7px #888; -webkit-box-shadow: 0 0 7px #888; box-shadow: 0 0 7px #888; -webkit-transition: All 0.3034s ease; -moz-transition: All 0.3034s ease; -o-transition: All 0.3034s ease; -webkit-transform: scale(1); -moz-transform: scale(1); -o-transform: scale(1);}
+#youtube_videos img:hover 	{ -webkit-transform: scale(1.25); -moz-transform: scale(1.25); -o-transform: scale(1.25);}
+
+/* CONTENT TWITTER */
+#twitter_feed 				{ }
+#twitter_feed hr 			{ height: 1px; border: 0; background-color: #DDD; clear: both;}
+.tweet 						{ -webkit-transition: All 0.3034s ease;-moz-transition: All 0.3034s ease;-o-transition: All 0.3034s ease; -webkit-transform: scale(1); -moz-transform: scale(1); -o-transform: scale(1);}
+.tweet:hover 				{ -moz-border-radius: 18px; -webkit-border-radius: 18px; border-radius: 18px; background: #FFF; height: 50px; padding: 8px; -moz-box-shadow: 0 0 7px #888; -webkit-box-shadow: 0 0 7px #888; box-shadow: 0 0 7px #888; -webkit-transform: scale(1.25); -moz-transform: scale(1.25); -o-transform: scale(1.25);}
+
+/*** FOOTER ***/
+#footer 					{ float: right; clear: both; color: #FFFFFF; font-size: 12px; font-weight: bold; margin: 48px 48px 0 0; margin-bottom: 50px; padding: 16px; -moz-border-radius: 18px; -webkit-border-radius: 18px; border-radius: 18px; background: #000000; background: -webkit-gradient(linear, 80% 20%, 80% 100%, from(#000000), to(#555555));}
+#footer a 					{ color: #C5E8FF; text-decoration: none;}
+#footer a:hover 			{ text-decoration: underline;}
