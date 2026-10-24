@@ -4,7 +4,7 @@
 // Code is Poetry */
 //
 // SEE CRNRSTN :: CONFIGURATION FOR USE OF config_add_resource.
-// /_crnrstn/_config/config.system_resource.secure/_crnrstn.system_resource.inc.php
+// /_crnrstn/_config/system_resource.secure/_crnrstn.system_resource.inc.php
 /////
 
 $fruit = array('apple', 'orange', 'tomato');

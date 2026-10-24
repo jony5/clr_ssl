@@ -258,7 +258,7 @@
 namespace CRNRSTN;
 
 /**
- * 
+ *
  *
  * GLOBAL FUNCTION
  * RESOURCE DEFINITION :: _crnrstn_native_resource_registry
@@ -542,7 +542,7 @@ function _crnrstn_native_resource_registry(
 
             $R_streamline_boot = true;
             $int_flag          = $R->get_crnrstn('int_flag');
-            $directory_shift   = $R->get_crnrstn('directory_shift');
+            $directory_shift   = $R->get_crnrstn('R_directory_shift');
 
             /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
              * Initialize the framework 
@@ -558,9 +558,9 @@ function _crnrstn_native_resource_registry(
 
         }
 
-        if($request_type != 'registry_is_authorized_resource')
+        if($request_type != 'resource_authorization')
             if(_crnrstn_native_resource_registry(
-                'registry_is_authorized_resource', 
+                'resource_authorization', 
                 $R, 
                 NULL, 
                 NULL, 
@@ -819,15 +819,15 @@ function _crnrstn_native_resource_registry(
      * -----
      * Login to manage software 
      * access authorizations, 
-     * or please see: /_R
-     *                /_config
-     *                /_config.defaults
-     *                /load_static_cache
-     *                /registry_is_authorized_resource
-     *                /crnrstn.registry_is_authorized_resource.runtime_exe.php.
+     * or please see: /_R/_config
+     *                /resource_registry
+     *                /secure
+     *                /resource_authorization
+     *                /crnrstn.authorized_resources.runtime_exe.php.
      *
      *
      * 5 :: Tuesday, May 26, 2026 @ 0243 hrs.
+     * Last Modified: Friday, September 25, 2026 @ 0752 hrs.
      *
      */
     if(!isset($software_access_mode))
@@ -915,7 +915,7 @@ function _crnrstn_native_resource_registry(
      *
      */
     switch($request_type){
-        case 'registry_is_authorized_resource':
+        case 'resource_authorization':
             // 5 :: Sunday, May 24, 2026 @ 0926 hrs.
 
             /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
@@ -926,8 +926,8 @@ function _crnrstn_native_resource_registry(
              * access list. 
              *
              * /_R/_config/resource_registry
-             * /config/registry_is_authorized_resource
-             * /crnrstn.registry_is_authorized_resource.runtime_exe.php
+             * /secure/resource_authorization
+             * /crnrstn.authorized_resources.runtime_exe.php
              *
              * E.g.:
              * $tmp_authorized_resources_ARRAY = array(
@@ -1365,7 +1365,7 @@ function _crnrstn_native_resource_registry(
                     /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
                      * What is the CLR-SSL resource 
                      * loading architecture? 
-                     * 
+                     *
                      * Is the resource to be 
                      * evaluated on every request 
                      * or just 1 evaluation per SESSION?
@@ -2690,7 +2690,7 @@ function _crnrstn_native_resource_registry(
                     /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
                      * Execute the default software 
                      * version executable file path. 
-                     * 
+                     *
                      * There is no version override 
                      * support at the moment. 
                      *
@@ -2854,7 +2854,7 @@ function _crnrstn_native_resource_registry(
                              *
                              */
                             if(_crnrstn_native_resource_registry(
-                                'registry_is_authorized_resource', 
+                                'resource_authorization', 
                                 $R, 
                                 NULL, 
                                 NULL, 
@@ -2952,7 +2952,7 @@ function _crnrstn_native_resource_registry(
                              *
                              *
                              * 5 :: Wednesday, May 27, 2026 @ 0015 hrs.
-                             * 
+                             *
                              */
                             if(!($R_file_path = $R->springs_of_Elim(
                                                     __FUNCTION__, 
@@ -3123,13 +3123,13 @@ function _crnrstn_native_resource_registry(
                          * Always work when the 
                          * function is called. 
                          * $software_access_mode = 'ANONYMOUS_OK'; 
-                         * 
+                         *
                          * -----
                          * Support access for 
                          * authorized third 
                          * party resources. 
                          * $software_access_mode = 'AUTHORIZED_ACCESS_INTEROPERABLE'; 
-                         * 
+                         *
                          * -----
                          * Only work when 
                          * called by authorized 
@@ -3406,7 +3406,7 @@ function _crnrstn_native_resource_registry(
                     /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
                      * What is the CLR-SSL resource 
                      * loading architecture? 
-                     * 
+                     *
                      * Is the resource to be 
                      * evaluated on every request 
                      * or just 1 evaluation per SESSION?
@@ -4278,7 +4278,7 @@ function _crnrstn_native_resource_registry(
                         /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
                          * Execute the default software 
                          * version executable file path. 
-                         * 
+                         *
                          * There is no version override 
                          * support at the moment. You silly, 
                          * still gonna send it. 
@@ -4532,7 +4532,7 @@ function _crnrstn_native_resource_registry(
                     /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
                      * What is the CLR-SSL resource 
                      * loading architecture? 
-                     * 
+                     *
                      * Is the resource to be 
                      * evaluated on every request 
                      * or just 1 evaluation per SESSION?
@@ -4889,7 +4889,7 @@ function _crnrstn_native_resource_registry(
                                  * [client 172.16.225.1:62237] [lnum 928] 
                                  * [mthd CRNRSTN\\_crnrstn_native_resource_registry] CLR-SSL file_path definition 
                                  * [Array\n(\n
-                                 *  [2.00.0001] => /var/www/html/sysops/_crnrstn/_config/config.integer_constants/crnrstn.constants_load.runtime_exe.php
+                                 *  [2.00.0001] => /var/www/html/sysops/_crnrstn/_config/integer_constants/crnrstn.constants_load.runtime_exe.php
                                  *  \n)\n].
                                  *
                                  *
@@ -4904,7 +4904,7 @@ function _crnrstn_native_resource_registry(
                                 /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
                                  * Execute the default software 
                                  * version file path. 
-                                 * 
+                                 *
                                  * There is no version override 
                                  * support at the moment. 
                                  *
@@ -4921,7 +4921,7 @@ function _crnrstn_native_resource_registry(
                                 /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
                                  * Execute the default software 
                                  * version file path. 
-                                 * 
+                                 *
                                  * There is no version override 
                                  * support at the moment. 
                                  *
@@ -4937,7 +4937,7 @@ function _crnrstn_native_resource_registry(
                                 /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
                                  * Execute the default software 
                                  * version file path. 
-                                 * 
+                                 *
                                  * There is no version override 
                                  * support at the moment. 
                                  *
@@ -4955,7 +4955,7 @@ function _crnrstn_native_resource_registry(
                                 /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
                                  * Execute the default software 
                                  * version file path. 
-                                 * 
+                                 *
                                  * There is no version override 
                                  * support at the moment. 
                                  *
@@ -5129,7 +5129,7 @@ function _crnrstn_native_resource_registry(
                      *
                      *
                      * 5 :: Sunday, July 12, 2026 @ 2303 hrs.
-                     * 
+                     *
                      */
                     if((($R_action == 'return[RUNTIME_EXECUTABLE]') || 
                         ((bool) $R_resp[$memory_pointer]['auto_obj_mode_enabled'][$R_resp[$memory_pointer]['software_default']] == true)) && 
@@ -5184,7 +5184,7 @@ function _crnrstn_native_resource_registry(
                         /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
                          * Execute the default software 
                          * version executable file path. 
-                         * 
+                         *
                          * There is no version override 
                          * support at the moment. 
                          *
@@ -5300,7 +5300,7 @@ function _crnrstn_native_resource_registry(
                                  *
                                  */
                                 if(_crnrstn_native_resource_registry(
-                                    'registry_is_authorized_resource', 
+                                    'resource_authorization', 
                                     $R, 
                                     NULL, 
                                     NULL, 
@@ -5398,7 +5398,7 @@ function _crnrstn_native_resource_registry(
                                  *
                                  *
                                  * 5 :: Wednesday, May 27, 2026 @ 0015 hrs.
-                                 * 
+                                 *
                                  */
                                 if(!($R_file_path = $R->springs_of_Elim(
                                                         __FUNCTION__, 
@@ -5793,7 +5793,7 @@ function _crnrstn_native_resource_registry(
                      *
                      * Data Format B - Comma "," Delimited: 
                      * $R_data_000 = 'resource_0,resource_1,resource_2,xxx';
-                     * 
+                     *
                      * * Please note that all spaces will be 
                      *   stripped from string input data 
                      *   before processing. 
@@ -6201,7 +6201,7 @@ function _crnrstn_native_resource_registry(
                          *
                          *
                          * 5 :: Tuesday, April 7, 2026 @ 0247 hrs.
-                         * 
+                         *
                          */
                         if(!($R_resp = _crnrstn_native_resource_registry(
                                        'ping', 
@@ -7718,8 +7718,8 @@ function _crnrstn_native_resource_registry(
                                              * Is file evaluate enabled?
                                              *
                                              * file_evaluate_enabled = true
-                                             * 
-                                             * 
+                                             *
+                                             *
                                              * 5 :: Tuesday, April 7, 2026 @ 0258 hrs.
                                              *
                                              */
@@ -8420,8 +8420,8 @@ function _crnrstn_native_resource_registry(
                                              * Only perform resource 
                                              * evaluation if: 
                                              * $R_resp[$memory_pointer]['file_evaluate_enabled'] = true;
-                                             * 
-                                             * 
+                                             *
+                                             *
                                              * 5 :: Tuesday, April 7, 2026 @ 0258 hrs.
                                              * Last Modified: Tuesday, April 7, 2026 @ 1303 hrs.
                                              *
@@ -8479,8 +8479,8 @@ function _crnrstn_native_resource_registry(
                                                  * Is automatic object (return) enabled?
                                                  *
                                                  * auto_obj_enabled = true
-                                                 * 
-                                                 * 
+                                                 *
+                                                 *
                                                  * 5 :: Sunday, May 10, 2026 @ 0540 hrs.
                                                  *
                                                  */
@@ -8921,8 +8921,8 @@ function _crnrstn_native_resource_registry(
                      * [Sun Apr 05 03:38:24.328567 2026] [:error] [pid 1098] [client 172.16.225.1:60727] [lnum 1577] [mthd CRNRSTN\\_crnrstn_native_resource_registry] resource_type[object_boot]. $resource_name[_crnrstn_int_return] class[CRNRSTN\\crnrstn]. object_version[].
                      * [Sun Apr 05 03:38:24.328618 2026] [:error] [pid 1098] [client 172.16.225.1:60727] [lnum 28120] [mthd CRNRSTN\\_crnrstn_native_resource_registry Ready to define[_crnrstn_int_return]. $request_type[resource_ping]. $object_version[boot]. die();
                      * [Sun Apr 05 03:38:24.328720 2026] [:error] [pid 1098] [client 172.16.225.1:60727] [lnum 1523] [mthd CRNRSTN\\_crnrstn_native_resource_registry] Boot resources batch_cnt = 0.
-                     * [Sun Apr 05 03:38:24.328770 2026] [:error] [pid 1098] [client 172.16.225.1:60727] [lnum 28663] [mthd CRNRSTN\\_crnrstn_native_resource_registry Request received for /var/www/html/sysops/_crnrstn/_config/config.integer_constants/crnrstn.constants_load.runtime_exe.php. $request_type[resource_ping]. $object_version[boot]. die();
-                     * [Sun Apr 05 03:38:24.328820 2026] [:error] [pid 1098] [client 172.16.225.1:60727] [lnum 1748] [mthd CRNRSTN\\_crnrstn_native_resource_registry] Evaluating /var/www/html/sysops/_crnrstn/_config/config.integer_constants/crnrstn.constants_load.runtime_exe.php at path [/var/www/html/sysops/_crnrstn/_config/config.integer_constants/crnrstn.constants_load.runtime_exe.php].
+                     * [Sun Apr 05 03:38:24.328770 2026] [:error] [pid 1098] [client 172.16.225.1:60727] [lnum 28663] [mthd CRNRSTN\\_crnrstn_native_resource_registry Request received for /var/www/html/sysops/_crnrstn/_config/integer_constants/crnrstn.constants_load.runtime_exe.php. $request_type[resource_ping]. $object_version[boot]. die();
+                     * [Sun Apr 05 03:38:24.328820 2026] [:error] [pid 1098] [client 172.16.225.1:60727] [lnum 1748] [mthd CRNRSTN\\_crnrstn_native_resource_registry] Evaluating /var/www/html/sysops/_crnrstn/_config/integer_constants/crnrstn.constants_load.runtime_exe.php at path [/var/www/html/sysops/_crnrstn/_config/integer_constants/crnrstn.constants_load.runtime_exe.php].
                      * [Sun Apr 05 03:38:24.330697 2026] [:error] [pid 1098] [client 172.16.225.1:60727] [lnum 1523] [mthd CRNRSTN\\_crnrstn_native_resource_registry] Boot resources batch_cnt = 0.
                      * [Sun Apr 05 03:38:24.330717 2026] [:error] [pid 1098] [client 172.16.225.1:60727] [lnum 1577] [mthd CRNRSTN\\_crnrstn_native_resource_registry] resource_type[object_boot]. $resource_name[_crnrstn_native_resource_registry_content_library] class[CRNRSTN\\crnrstn]. object_version[].
                      * [Sun Apr 05 03:38:24.330885 2026] [:error] [pid 1098] [client 172.16.225.1:60727] [lnum 6198] [mthd CRNRSTN\\crnrstn::R_data_write] $caller[CRNRSTN\\_crnrstn_native_resource_registry] $attrib_00[datatype_master_ARRAY].
@@ -8965,8 +8965,8 @@ function _crnrstn_native_resource_registry(
                      * [Sun Apr 05 03:40:01.981279 2026] [:error] [pid 1101] [client 172.16.225.1:61314] [lnum 1577] [mthd CRNRSTN\\_crnrstn_native_resource_registry] resource_type[object_boot]. $resource_name[_crnrstn_int_return] class[CRNRSTN\\crnrstn]. object_version[].
                      * [Sun Apr 05 03:40:01.981412 2026] [:error] [pid 1101] [client 172.16.225.1:61314] [lnum 28120] [mthd CRNRSTN\\_crnrstn_native_resource_registry Ready to define[_crnrstn_int_return]. $request_type[resource_ping]. $object_version[boot]. die();
                      * [Sun Apr 05 03:40:01.981585 2026] [:error] [pid 1101] [client 172.16.225.1:61314] [lnum 1523] [mthd CRNRSTN\\_crnrstn_native_resource_registry] Boot resources batch_cnt = 0.
-                     * [Sun Apr 05 03:40:01.981727 2026] [:error] [pid 1101] [client 172.16.225.1:61314] [lnum 28663] [mthd CRNRSTN\\_crnrstn_native_resource_registry Request received for /var/www/html/sysops/_crnrstn/_config/config.integer_constants/crnrstn.constants_load.runtime_exe.php. $request_type[resource_ping]. $object_version[boot]. die();
-                     * [Sun Apr 05 03:40:01.981805 2026] [:error] [pid 1101] [client 172.16.225.1:61314] [lnum 1748] [mthd CRNRSTN\\_crnrstn_native_resource_registry] Evaluating /var/www/html/sysops/_crnrstn/_config/config.integer_constants/crnrstn.constants_load.runtime_exe.php at path [/var/www/html/sysops/_crnrstn/_config/config.integer_constants/crnrstn.constants_load.runtime_exe.php].
+                     * [Sun Apr 05 03:40:01.981727 2026] [:error] [pid 1101] [client 172.16.225.1:61314] [lnum 28663] [mthd CRNRSTN\\_crnrstn_native_resource_registry Request received for /var/www/html/sysops/_crnrstn/_config/integer_constants/crnrstn.constants_load.runtime_exe.php. $request_type[resource_ping]. $object_version[boot]. die();
+                     * [Sun Apr 05 03:40:01.981805 2026] [:error] [pid 1101] [client 172.16.225.1:61314] [lnum 1748] [mthd CRNRSTN\\_crnrstn_native_resource_registry] Evaluating /var/www/html/sysops/_crnrstn/_config/integer_constants/crnrstn.constants_load.runtime_exe.php at path [/var/www/html/sysops/_crnrstn/_config/integer_constants/crnrstn.constants_load.runtime_exe.php].
                      * [Sun Apr 05 03:40:01.986642 2026] [:error] [pid 1101] [client 172.16.225.1:61314] [lnum 1523] [mthd CRNRSTN\\_crnrstn_native_resource_registry] Boot resources batch_cnt = 0.
                      * [Sun Apr 05 03:40:01.986697 2026] [:error] [pid 1101] [client 172.16.225.1:61314] [lnum 1577] [mthd CRNRSTN\\_crnrstn_native_resource_registry] resource_type[object_boot]. $resource_name[_crnrstn_native_resource_registry_content_library] class[CRNRSTN\\crnrstn]. object_version[].
                      * [Sun Apr 05 03:40:01.994360 2026] [:error] [pid 1101] [client 172.16.225.1:61314] 19928[mthd CRNRSTN\\crnrstn::return_cache_bytes_size] crnrstn This method should be replaced. tmp_data_type[13].
@@ -9015,7 +9015,7 @@ function _crnrstn_native_resource_registry(
                      * by eVifweb®
                      *
                      * /_R/class/assets/lightbox_helper.class.php
-                     * 
+                     *
                      * The CRNRSTN :: Lightsaber RoCEv2 
                      * SOAP Services Layer (CLR-SSL). 
                      *
@@ -9106,7 +9106,7 @@ function _crnrstn_native_resource_registry(
 
                             // 5 :: Sunday, May 24, 2026 @ 0922 hrs.
                             if(!(_crnrstn_native_resource_registry(
-                                'registry_is_authorized_resource', 
+                                'resource_authorization', 
                                 $R, 
                                 NULL, 
                                 NULL, 
@@ -9225,7 +9225,7 @@ function _crnrstn_native_resource_registry(
                         default:
 
                             if(!(_crnrstn_native_resource_registry(
-                                'registry_is_authorized_resource', 
+                                'resource_authorization', 
                                 $R, 
                                 NULL, 
                                 NULL, 
@@ -10210,9 +10210,9 @@ function _crnrstn_native_resource_registry(
             class[CRNRSTN\\crnrstn]. 
             tmp_boot_resources_ARRAY[Array\n(\n
               [_crnrstn_int_return]                               => FUNCTION_DEFINITION\n
-              [/var/www/html/sysops/_crnrstn/_config/config.system_paths
+              [/var/www/html/sysops/_crnrstn/_config/system_paths
                  /crnrstn.system_path_initialization.runtime_exe.php] => RUNTIME_EXECUTABLE\n
-              [/var/www/html/sysops/_crnrstn/_config/config.integer_constants
+              [/var/www/html/sysops/_crnrstn/_config/integer_constants
                 /crnrstn.constants_load.runtime_exe.php]          => RUNTIME_EXECUTABLE\n
               [_crnrstn_system_paths_initialization]              => FUNCTION_DEFINITION\n
               [system_path_initialization]                        => RUNTIME_EXECUTABLE\n
@@ -10241,7 +10241,7 @@ function _crnrstn_native_resource_registry(
                  *
                  *
                  * 5 :: Tuesday, April 7, 2026 @ 0247 hrs.
-                 * 
+                 *
                  */
                 if(!($R_resp = _crnrstn_native_resource_registry(
                                'ping', 
@@ -10536,8 +10536,8 @@ function _crnrstn_native_resource_registry(
                                          * Is automatic object (return) enabled?
                                          *
                                          * auto_obj_enabled = true
-                                         * 
-                                         * 
+                                         *
+                                         *
                                          * 5 :: Tuesday, April 7, 2026 @ 0258 hrs.
                                          *
                                          */
@@ -11072,7 +11072,7 @@ function _crnrstn_native_resource_registry(
                                  * [lnum 1578] [mthd CRNRSTN\\_crnrstn_native_resource_registry] 
                                  * Loading FUNCTION_DEFINITION resource. 
                                  * $tmp_file_path[/var/www/html/sysops/_crnrstn/_config
-                                 * /config.integer_constants/crnrstn.integer_return.function.php].
+                                 * /integer_constants/crnrstn.integer_return.function.php].
                                  *
                                  * # C # R # N # R # S # T # N # :: # L # I # G # H # T
                                  * error_log('[lnum ' . 
@@ -11092,7 +11092,7 @@ function _crnrstn_native_resource_registry(
                                  *     [resource_name] => _crnrstn_int_return\n
                                  *     [resource_type] => FUNCTION_DEFINITION\n
                                  *     [namespace] => CRNRSTN\n
-                                 *     [file_path] => /var/www/html/sysops/_crnrstn/_config/config.integer_constants
+                                 *     [file_path] => /var/www/html/sysops/_crnrstn/_config/integer_constants
                                  *                /crnrstn.integer_return.function.php\n
                                  *     [status] => Array\n                (\n
                                  *          [0] => Request received.\n
@@ -11109,8 +11109,8 @@ function _crnrstn_native_resource_registry(
                                  * Is file evaluate enabled?
                                  *
                                  * file_evaluate_enabled = true
-                                 * 
-                                 * 
+                                 *
+                                 *
                                  * 5 :: Tuesday, April 7, 2026 @ 0258 hrs.
                                  *
                                  */
@@ -11204,8 +11204,8 @@ function _crnrstn_native_resource_registry(
                                          * Mode (auto-return) enabled? 
                                          *
                                          * auto_obj_enabled = true
-                                         * 
-                                         * 
+                                         *
+                                         *
                                          * 5 :: Tuesday, April 7, 2026 @ 0258 hrs.
                                          *
                                          */
@@ -11519,8 +11519,8 @@ function _crnrstn_native_resource_registry(
                                  * Only perform resource 
                                  * evaluation if: 
                                  * $R_resp[$memory_pointer]['file_evaluate_enabled'] = true;
-                                 * 
-                                 * 
+                                 *
+                                 *
                                  * 5 :: Tuesday, April 7, 2026 @ 0258 hrs.
                                  * Last Modified: Tuesday, April 7, 2026 @ 1303 hrs.
                                  *
@@ -11618,7 +11618,7 @@ function _crnrstn_native_resource_registry(
             # RUNTIME EXECUTABLE :: /_R/_config/_config.themes/_crnrstn.themes.inc.php
             # FUNCTION           :: _crnrstn_native_resource_registry_content_library
             # FUNCTION           :: _crnrstn_native_resource_registry
-            # RUNTIME EXECUTABLE :: /_lightbox_helper/_config/config.database.secure/crnrstn.db_config.runtime_exe.php
+            # RUNTIME EXECUTABLE :: /_lightbox_helper/_config/database.secure/crnrstn.db_config.runtime_exe.php
             # CLASS              :: crnrstn_database_sql_silo
             # RUNTIME EXECUTABLE :: /_R/_config/config.encryption.secure/crnrstn.encryption.runtime_exe.php
             # FUNCTION           :: /_R/_config/config.integer_constants/crnrstn.integer_return.function.php
@@ -11920,7 +11920,7 @@ function _crnrstn_native_resource_registry(
              * // CONSTANTS INITIALIZATION. 
              * require(CRNRSTN_ROOT . '/_crnrstn/class/crnrstn/crnrstn.constants_initialize.inc.php');                            // CRNRSTN :: Lightsaber INTEGER CONSTANTS - INITIALIZATION. 
              * require(CRNRSTN_ROOT . '/_crnrstn/class/crnrstn/crnrstn.constants_load.inc.php');                                  // CRNRSTN :: Lightsaber INTEGER CONSTANTS - LOAD. 
-             * 
+             *
              * //
              * // CRNRSTN :: Lightsaber
              * // CLASS DEFINITIONS. 
@@ -12011,14 +12011,14 @@ function _crnrstn_native_resource_registry(
              * //
              * // CRNRSTN :: System Includes 
              * // and Overrides. 
-             * include_once(CRNRSTN_ROOT . '/_lightbox_helper/_config/_config.defaults/_crnrstn.system_data.inc.php');
-             * include_once(CRNRSTN_ROOT . '/_lightbox_helper/_config/_config.defaults/_crnrstn.system_overrides.inc.php');
+             * include_once(CRNRSTN_ROOT . '/_lightbox_helper/_config/defaults/_crnrstn.system_data.inc.php');
+             * include_once(CRNRSTN_ROOT . '/_lightbox_helper/_config/defaults/_crnrstn.system_overrides.inc.php');
              *
              * //
              * // CRNRSTN :: System Includes 
              * // and Overrides. 
-             * include_once(CRNRSTN_ROOT . '/_lightbox_helper/_config/_config.defaults/_crnrstn.system_data.inc.php');
-             * include_once(CRNRSTN_ROOT . '/_lightbox_helper/_config/_config.defaults/crnrstn.system_settings.inc.php');
+             * include_once(CRNRSTN_ROOT . '/_lightbox_helper/_config/defaults/_crnrstn.system_data.inc.php');
+             * include_once(CRNRSTN_ROOT . '/_lightbox_helper/_config/defaults/crnrstn.system_settings.inc.php');
              * include_once(CRNRSTN_ROOT . '/_lightbox_helper/_config/config.themes/_crnrstn.themes.inc.php');
              *
              * # C # R # N # R # S # T # N # :: # L # I # G # H # T
@@ -12027,7 +12027,7 @@ function _crnrstn_native_resource_registry(
              *
              * # C # R # N # R # S # T # N # :: # L # I # G # H # T
              * Next Up. 
-             * 
+             *
              * How CRNRSTN :: v2.00.0001 Alpha 
              * resources used to be loaded, even though the 
              * architecture was never finished (2024-2026). 
@@ -12081,7 +12081,7 @@ function _crnrstn_native_resource_registry(
              *  * 5
              *  *
              *  * Sunday, July 28, 2024 @ 0814 hrs. 
-             * 
+             *
              * $tmp_object_boot_ARRAY['resource_boot'] = $tmp_boot_resources_ARRAY;
              * $tmp_object_boot_ARRAY['flag']          = array(
              * '_crnrstn_object_boot_resource_paths_initialization' => 'FUNCTION_DEFINITION', 
@@ -12504,9 +12504,900 @@ function _crnrstn_native_resource_registry(
                      'class' . $os_path_dir_separator_char . 
                      'thirdparty' . $os_path_dir_separator_char . 
                      'phpmailer' . $os_path_dir_separator_char . 
+                     '7.1.1' . $os_path_dir_separator_char . 
+                     'src' . $os_path_dir_separator_char . 
+                     'DSNConfigurator.php':
+                case '7.1.1' . $os_path_dir_separator_char . 
+                     'DSNConfigurator.php':
+                case __NAMESPACE__ . 
+                     '\DSNConfigurator':
+                case 'DSNConfigurator':
+                case 'gabriel_dsn_config':
+
+                    /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
+                     * Initialize the system 
+                     * configuration resource 
+                     * file path. 
+                     *
+                     */
+                    $tmp_resource_name                      = 'DSNConfigurator';
+                    $tmp_file_name                          = 'DSNConfigurator.php';
+                    $tmp_type_dir                           = 'obj';
+                    $tmp_public_key                         = 'gabriel_dsn_config';
+                    $tmp_storage_arch                       = 'general_resource';
+                    $tmp_file_path_7_1_1                    = $root . $os_path_dir_separator_char . 
+                                                              'class' . $os_path_dir_separator_char . 
+                                                              'thirdparty' . $os_path_dir_separator_char . 
+                                                              'phpmailer' . $os_path_dir_separator_char . 
+                                                              '7.1.1' . $os_path_dir_separator_char . 
+                                                              'src' . $os_path_dir_separator_char . 
+                                                              $tmp_file_name;
+                    $tmp_obj_exe_path                       = $root . $os_path_dir_separator_char . 
+                                                              '_config' . $os_path_dir_separator_char . 
+                                                              'resource_registry' . $os_path_dir_separator_char . 
+                                                              $tmp_type_dir . $os_path_dir_separator_char . 
+                                                              $tmp_resource_name . $os_path_dir_separator_char . 
+                                                              'crnrstn.' . $tmp_resource_name . 
+                                                              '.fire_bolt_exe.php';
+
+                    /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
+                     * Initialize the CRNRSTN :: 
+                     * Lightsaber RoCEv2 SOAP 
+                     * Services Layer (CLR-SSL) 
+                     * Multi-Language Services 
+                     * Layer for resource 
+                     * meta return. 
+                     *
+                     *
+                     * 5
+                     *
+                     * Saturday, August 24, 2024 @ 0458 hrs.
+                     *
+                     */
+                    switch($tmp_iso_lang_code){
+                        //case 'es':
+                        case 'en':
+                        default:
+
+                            /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
+                             * Initialize a title for this 
+                             * natively registered resource of 
+                             * the CRNRSTN :: Lightsaber RoCEv2 
+                             * SOAP Services Layer (CLR-SSL) 
+                             * System Resource Registry. 
+                             *
+                             *
+                             * 5
+                             *
+                             */
+                            $tmp_TITLE_TEXT = 'The DSN Configuration ' . 
+                            'Wrapper for PHPMailer, a ' . 
+                            'full-featured email creation ' . 
+                            'and transfer class for PHP';
+
+                            /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
+                             * Initialize the license name for 
+                             * this natively registered resource 
+                             * of the CRNRSTN :: Lightsaber 
+                             * RoCEv2 SOAP Services Layer 
+                             * (CLR-SSL) Resource Registry. 
+                             *
+                             *
+                             * 5
+                             *
+                             */
+                            $tmp_LICENSE_NAME_TEXT = 'GNU Lesser General Public License';
+
+                            /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
+                             * Initialize the license URL 
+                             * for this natively registered 
+                             * resource of the CRNRSTN :: 
+                             * Lightsaber RoCEv2 SOAP 
+                             * Services Layer (CLR-SSL) 
+                             * System Resource Registry. 
+                             *
+                             *
+                             * 5
+                             *
+                             * Saturday, November 1, 2025 @ 2131 hrs.
+                             *
+                             */
+                            $tmp_LICENSE_URL = 'https://www.gnu.org/licenses/old-licenses/lgpl-2.1.html';
+
+                            /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
+                             * Initialize the copyright 
+                             * data for this natively 
+                             * registered resource of 
+                             * the CRNRSTN :: Lightsaber 
+                             * RoCEv2 SOAP Services 
+                             * Layer (CLR-SSL) System 
+                             * Resource Registry. 
+                             *
+                             *
+                             * 5
+                             *
+                             * Saturday, August 24, 2024 @ 0700 hrs.
+                             *
+                             */
+                            $tmp_COPYRIGHT_TEXT = 'Copyright (c) 2012 - 2023 Marcus Bointon. ' . 
+                            'Copyright (c)  2010 - 2012 Jim Jagielski. ' . 
+                            'Copyright (c)  2004 - 2009 Andy Prevost.';
+
+                        break;
+
+                    }
+
+                    /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
+                     * Prepare a memory pointer 
+                     * in order to index this 
+                     * resource in the CLR-SSL 
+                     * Resource Registry data 
+                     * output container. 
+                     *
+                     *
+                     * 5 :: Wednesday, April 15, 2026 @ 0817 hrs.
+                     *
+                     */
+                    $memory_ptr = $R->generate_memory_pointer($tmp_file_path_7_1_1);
+
+                    /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
+                     * Initialize a CLR-SSL 
+                     * Resource Registry 
+                     * response output 
+                     * data container. 
+                     *
+                     * $R_resp = array();
+                     *
+                     *
+                     * 5 :: Saturday, April 4, 2026 @ 1453 hrs.
+                     *
+                     */
+                    $R_resp                                           = array();
+                    $R_resp['clr_ssl_resource']['memory_pointer'][]   = $memory_ptr;
+                    $R_resp[$memory_ptr]['resource_name']             = $tmp_resource_name;
+                    $R_resp[$memory_ptr]['iso_lang_code']             = $tmp_iso_lang_code;
+                    $R_resp[$memory_ptr]['background_color_hex']      = $tmp_background_color_hex;
+                    $R_resp[$memory_ptr]['title']['TEXT']             = $tmp_TITLE_TEXT;
+                    $R_resp[$memory_ptr]['software_company']['key']   = 'PHPMailer';
+                    $R_resp[$memory_ptr]['software_default']          = '7.1.1';
+                    $R_resp[$memory_ptr]['license']['key']            = array('7.1.1' => 'GNU_Lesser');
+                    $R_resp[$memory_ptr]['license']['name']           = array('7.1.1' => $tmp_LICENSE_NAME_TEXT);
+                    $R_resp[$memory_ptr]['license']['url']            = array('7.1.1' => $tmp_LICENSE_URL);
+                    $R_resp[$memory_ptr]['copyright']                 = array('7.1.1' => $tmp_COPYRIGHT_TEXT);
+
+                    if($request_type === 'meta'){
+                        // 5 :: Friday, May 22, 2026 @ 1303 hrs.
+
+                        $R_resp[$memory_ptr]['clr_ssl_admin']['last_modified']['timestamp']['LINUX_MAC_OS'][] = 'Thu Oct 1 03:20:27.318152 2026';
+                        $R_resp[$memory_ptr]['clr_ssl_admin']['last_modified']['ip_address']                  = '172.16.225.1';
+                        $R_resp[$memory_ptr]['clr_ssl_admin']['datecreated']['timestamp']['LINUX_MAC_OS'][]   = 'Thu Oct 1 03:20:27.318152 2026';
+                        $R_resp[$memory_ptr]['clr_ssl_admin']['datecreated']['ip_address']                    = '172.16.225.1';
+
+                    }
+
+                    $R_resp[$memory_ptr]['microtime']                 = $R->microtime_float();
+                    $R_resp[$memory_ptr]['timestamp']                 = \gettimeofday();
+                    $R_resp[$memory_ptr]['runtime']                   = $R->wall_time();
+
+                    /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
+                     * require 
+                     * require_once
+                     * include
+                     * include_once
+                     */
+                    $R_resp[$memory_ptr]['evaluation_protocol']       = array('7.1.1' => 'require');
+
+                    /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
+                     * SOAP_ENDPOINT
+                     * CLASS_DEFINITION
+                     * FUNCTION_DEFINITION
+                     * RUNTIME_EXECUTABLE
+                     */
+                    $R_resp[$memory_ptr]['resource_type']             = 'CLASS_DEFINITION';
+                    $R_resp[$memory_ptr]['public_key']                = $tmp_public_key;
+                    $R_resp[$memory_ptr]['storage_arch']              = array('7.1.1' => $tmp_storage_arch);
+
+                    /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
+                     * (int) $int_flag['R_load_many_to_1_request']
+                     * (int) $int_flag['R_load_1_to_1_request']
+                     * (int) $int_flag['R_load_1_to_1_session']
+                     * (int) $int_flag['R_load_on_ttl_expire']
+                     */
+                    $R_resp[$memory_ptr]['loading_arch']              = array('7.1.1' => $int_flag['R_load_many_to_1_request']);
+                    $R_resp[$memory_ptr]['namespace']                 = __NAMESPACE__;
+                    $R_resp[$memory_ptr]['file_path']['definition']   = array('7.1.1' => $tmp_file_path_7_1_1);
+                    $R_resp[$memory_ptr]['file_path']['new_obj_exe']  = array('7.1.1' => $tmp_obj_exe_path);
+                    $R_resp[$memory_ptr]['file_name']                 = array('7.1.1' => $tmp_file_name);
+                    $R_resp[$memory_ptr]['software_version']          = array('7.1.1');
+                    $R_resp[$memory_ptr]['is_active']                 = array('7.1.1' => true);
+                    $R_resp[$memory_ptr]['input_parameter_count']     = array('7.1.1' => 0);
+                    $R_resp[$memory_ptr]['input_parameter_defaults']  = array('7.1.1' => array());
+                    $R_resp[$memory_ptr]['eval_ttl']                  = array('7.1.1' => -1);
+                    $R_resp[$memory_ptr]['file_evaluate_enabled']     = array('7.1.1' => true);
+                    $R_resp[$memory_ptr]['auto_eval_mode_enabled']    = array('7.1.1' => true);
+                    $R_resp[$memory_ptr]['auto_obj_mode_enabled']     = array('7.1.1' => true);
+
+                    /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
+                     * view_source_safe = 0 for admin 
+                     *                    only access. 
+                     * -----
+                     * This will grant a browser authenticated 
+                     * PHP admin session read access to 
+                     * source code. 
+                     *
+                     * Only an update to admin server 
+                     * settings should change this. 
+                     */
+                    $R_resp[$memory_ptr]['view_source_safe']          = array('7.1.1' => 0);
+
+                    /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
+                     * All 'extends_class' 
+                     * resources should be 
+                     * officially registered 
+                     * with the CRNRSTN :: 
+                     * Lightsaber RoCEv2 
+                     * SOAP Services Layer 
+                     * (CLR-SSL) Resource 
+                     * Registry. 
+                     *
+                     *
+                     * 5
+                     *
+                     * Monday, July 29, 2024 @ 0147 hrs.
+                     *
+                     */
+                    $R_resp[$memory_ptr]['extends_class']             = array();
+                    $R_resp[$memory_ptr]['dependencies']              = array();
+                    $R_resp[$memory_ptr]['php_version']['removed']    = array();
+                    $R_resp[$memory_ptr]['php_version']['deprecated'] = array();
+                    $R_resp[$memory_ptr]['php_version']['supported']  = array('7.1.1' => 'PHP >= 5.5, PHP 7, PHP 8');
+
+                    $clr_ssl_msg = 'Request received for ' . 
+                                   $R_syntax['resource_type'][$R_resp[$memory_ptr]['resource_type']] . 
+                                   ', ' . 
+                                   $R_resp[$memory_ptr]['resource_name'] . 
+                                   ' v' . 
+                                   $R_resp[$memory_ptr]['software_default'] . 
+                                   '.';
+                    // 5 :: Frixxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                    $msg_token = '8f3046abc4bd029426a9133e484d7470' . 
+                                 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx';
+                    $token_generation_date = '2026xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx';
+                    $token = array(
+                             'token'                   => $msg_token, 
+                             'token_generation_date'   => $token_generation_date, 
+                             'request_type'            => $request_type, 
+                             'code'                    => 200, 
+                             'clr_ssl_msg'             => $clr_ssl_msg, 
+                             'memory_ptr'              => $memory_ptr, 
+                             'resource_ping_runtime'   => $R_resp[$memory_ptr]['runtime'], 
+                             'resource_ping_microtime' => $R_resp[$memory_ptr]['microtime'], 
+                             'file_evaluate_enabled'   => $R_resp[$memory_ptr]['file_evaluate_enabled'][$R_resp[$memory_ptr]['software_default']], 
+                             'auto_eval_mode_enabled'  => $R_resp[$memory_ptr]['auto_eval_mode_enabled'][$R_resp[$memory_ptr]['software_default']], 
+                             'auto_obj_mode_enabled'   => $R_resp[$memory_ptr]['auto_obj_mode_enabled'][$R_resp[$memory_ptr]['software_default']], 
+                             'namespace'               => $R_resp[$memory_ptr]['namespace'], 
+                             'resource_loading_arch'   => $R_resp[$memory_ptr]['loading_arch'][$R_resp[$memory_ptr]['software_default']], 
+                             'resource_eval_ttl'       => $R_resp[$memory_ptr]['eval_ttl'][$R_resp[$memory_ptr]['software_default']], 
+                             'resource_type'           => $R_resp[$memory_ptr]['resource_type'], 
+                             'resource_name'           => $R_resp[$memory_ptr]['resource_name'], 
+                             'software_version'        => $R_resp[$memory_ptr]['software_default'], 
+                             'resource_title'          => $R_resp[$memory_ptr]['title']['TEXT'], 
+                             'software_company'        => $R_resp[$memory_ptr]['software_company']['key'], 
+                             'copyright'               => $R_resp[$memory_ptr]['copyright'][$R_resp[$memory_ptr]['software_default']], 
+                             'license_key'             => $R_resp[$memory_ptr]['license']['key'][$R_resp[$memory_ptr]['software_default']]);
+                    $R->error_log(
+                        $clr_ssl_msg, 
+                        \LOG_DEBUG, 
+                        \E_NOTICE, 
+                        __LINE__, 
+                        __FUNCTION__, 
+                        __FILE__, 
+                        $token);
+
+                    /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
+                     * CLR-SSL Registry Resource 
+                     * High Level Architecture for 
+                     * Resource and Meta Access: 
+                     * - ping 
+                     * - evaluate 
+                     * - return 
+                     * - meta 
+                     *
+                     * Are we checking on the 
+                     * existence of the requested 
+                     * resource in the server 
+                     * file system? A resource 
+                     * ping? 
+                     *
+                     * Perhaps a function call or 
+                     * even an object needs to 
+                     * be returned? 
+                     *
+                     * Does someone need a class title 
+                     * in HTML? Maybe. 
+                     *
+                     *
+                     * 5 :: Friday, April 3, 2026 @ 0808 hrs.
+                     * Last Updated: Wednesday, April 15, 2026 @ 1825 hrs.
+                     *
+                     */
+                    switch($request_type){
+                        case 'ping':
+
+                            if($R->by_pass_is_file(
+                                   NULL, 
+                                   $R_resp[$memory_ptr]['resource_name'], 
+                                   $R_resp[$memory_ptr]['software_default']))
+                            {
+
+                                if($R_resp[$memory_ptr]['file_evaluate_enabled'][$R_resp[$memory_ptr]['software_default']] !== false){
+
+                                    /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
+                                     * Do we automatically 
+                                     * return this resource? 
+                                     *
+                                     *
+                                     * 5 :: Tuesday, June 9, 2026 @ 1705 hrs.
+                                     *
+                                     */
+                                    if($R_resp[$memory_ptr]['auto_obj_mode_enabled'][$R_resp[$memory_ptr]['software_default']] !== false){
+
+                                        $R_resp = _crnrstn_native_resource_registry(
+                                                  __FUNCTION__, 
+                                                  $R, 
+                                                  'return[' . 
+                                                  $R_resp[$memory_ptr]['resource_type'] . ']', 
+                                                  $R_resp, 
+                                                  $R_debug_mode, 
+                                                  $memory_ptr, 
+                                                  true);                // <-- true means skip the file check.
+
+                                        return $R_resp;
+
+                                    }
+
+                                    /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
+                                     * Do we automatically 
+                                     * evaluate this resource? 
+                                     *
+                                     *
+                                     * 5 :: Thursday, May 21, 2026 @ 0720 hrs.
+                                     *
+                                     */
+                                    if($R_resp[$memory_ptr]['auto_eval_mode_enabled'][$R_resp[$memory_ptr]['software_default']] !== false)
+                                        $R_resp = _crnrstn_native_resource_registry(
+                                                  __FUNCTION__, 
+                                                  $R, 
+                                                  'evaluate[' . 
+                                                  $R_resp[$memory_ptr]['resource_type'] . ']', 
+                                                  $R_resp, 
+                                                  $R_debug_mode, 
+                                                  $memory_ptr, 
+                                                  true);               // <-- true means skip the file check.
+
+                                }
+
+                                // 5 :: Saturday, May 9, 2026 @ 1307 hrs.
+                                return $R_resp;
+
+                            }
+
+                            if(!($R->is_file(
+                                     $R_resp[$memory_ptr]['file_path']['definition'][$R_resp[$memory_ptr]['software_default']], 
+                                     $R_resp[$memory_ptr]['resource_name'], 
+                                     $R_resp[$memory_ptr]['software_default'])))
+                            {
+
+                                $clr_ssl_msg = 'File not found: ' . 
+                                               $R_resp[$memory_ptr]['file_path']['definition'][$R_resp[$memory_ptr]['software_default']] . 
+                                               '.';
+                                // 5 :: Tuexxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                                $msg_token = '8febb5003e6792dbeeac97bd025a256d' . 
+                                             'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx';
+                                $token_generation_date = '2026xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx';
+                                $token = array(
+                                         'token'                   => $msg_token, 
+                                         'token_generation_date'   => $token_generation_date, 
+                                         'request_type'            => $request_type, 
+                                         'code'                    => 200, 
+                                         'clr_ssl_msg'             => $clr_ssl_msg, 
+                                         'memory_ptr'              => $memory_ptr, 
+                                         'resource_ping_runtime'   => $R_resp[$memory_ptr]['runtime'], 
+                                         'resource_ping_microtime' => $R_resp[$memory_ptr]['microtime'], 
+                                         'file_evaluate_enabled'   => $R_resp[$memory_ptr]['file_evaluate_enabled'][$R_resp[$memory_ptr]['software_default']], 
+                                         'auto_eval_mode_enabled'  => $R_resp[$memory_ptr]['auto_eval_mode_enabled'][$R_resp[$memory_ptr]['software_default']], 
+                                         'auto_obj_mode_enabled'   => $R_resp[$memory_ptr]['auto_obj_mode_enabled'][$R_resp[$memory_ptr]['software_default']], 
+                                         'namespace'               => $R_resp[$memory_ptr]['namespace'], 
+                                         'resource_loading_arch'   => $R_resp[$memory_ptr]['loading_arch'][$R_resp[$memory_ptr]['software_default']], 
+                                         'resource_eval_ttl'       => $R_resp[$memory_ptr]['eval_ttl'][$R_resp[$memory_ptr]['software_default']], 
+                                         'resource_type'           => $R_resp[$memory_ptr]['resource_type'], 
+                                         'resource_name'           => $R_resp[$memory_ptr]['resource_name'], 
+                                         'software_version'        => $R_resp[$memory_ptr]['software_default'], 
+                                         'resource_title'          => $R_resp[$memory_ptr]['title']['TEXT'], 
+                                         'software_company'        => $R_resp[$memory_ptr]['software_company']['key'], 
+                                         'copyright'               => $R_resp[$memory_ptr]['copyright'][$R_resp[$memory_ptr]['software_default']], 
+                                         'license_key'             => $R_resp[$memory_ptr]['license']['key'][$R_resp[$memory_ptr]['software_default']]);
+                                $R->error_log(
+                                    $clr_ssl_msg, 
+                                    \LOG_CRIT, 
+                                    \E_ERROR, 
+                                    __LINE__, 
+                                    __FUNCTION__, 
+                                    __FILE__, 
+                                    $token);
+
+                                return false;
+
+                            }else{
+
+                                $clr_ssl_msg = 'The file system is ready for the ' . 
+                                               $R_syntax['resource_type'][$R_resp[$memory_ptr]['resource_type']] . 
+                                               ', ' . 
+                                               $R_resp[$memory_ptr]['resource_name'] . 
+                                               ' v' . 
+                                               $R_resp[$memory_ptr]['software_default'] . 
+                                               '.';
+                                // 5 :: Frixxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                                $msg_token = '1f137e9e37759ba10b5f675b5bef0819' . 
+                                             'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx';
+                                $token_generation_date = '2026xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx';
+                                $token = array(
+                                         'token'                   => $msg_token, 
+                                         'token_generation_date'   => $token_generation_date, 
+                                         'request_type'            => $request_type, 
+                                         'code'                    => 200, 
+                                         'clr_ssl_msg'             => $clr_ssl_msg, 
+                                         'memory_ptr'              => $memory_ptr, 
+                                         'resource_ping_runtime'   => $R_resp[$memory_ptr]['runtime'], 
+                                         'resource_ping_microtime' => $R_resp[$memory_ptr]['microtime'], 
+                                         'file_evaluate_enabled'   => $R_resp[$memory_ptr]['file_evaluate_enabled'][$R_resp[$memory_ptr]['software_default']], 
+                                         'auto_eval_mode_enabled'  => $R_resp[$memory_ptr]['auto_eval_mode_enabled'][$R_resp[$memory_ptr]['software_default']], 
+                                         'auto_obj_mode_enabled'   => $R_resp[$memory_ptr]['auto_obj_mode_enabled'][$R_resp[$memory_ptr]['software_default']], 
+                                         'namespace'               => $R_resp[$memory_ptr]['namespace'], 
+                                         'resource_loading_arch'   => $R_resp[$memory_ptr]['loading_arch'][$R_resp[$memory_ptr]['software_default']], 
+                                         'resource_eval_ttl'       => $R_resp[$memory_ptr]['eval_ttl'][$R_resp[$memory_ptr]['software_default']], 
+                                         'resource_type'           => $R_resp[$memory_ptr]['resource_type'], 
+                                         'resource_name'           => $R_resp[$memory_ptr]['resource_name'], 
+                                         'software_version'        => $R_resp[$memory_ptr]['software_default'], 
+                                         'resource_title'          => $R_resp[$memory_ptr]['title']['TEXT'], 
+                                         'software_company'        => $R_resp[$memory_ptr]['software_company']['key'], 
+                                         'copyright'               => $R_resp[$memory_ptr]['copyright'][$R_resp[$memory_ptr]['software_default']], 
+                                         'license_key'             => $R_resp[$memory_ptr]['license']['key'][$R_resp[$memory_ptr]['software_default']]);
+                                $R->error_log(
+                                    $clr_ssl_msg, 
+                                    \LOG_DEBUG, 
+                                    \E_NOTICE, 
+                                    __LINE__, 
+                                    __FUNCTION__, 
+                                    __FILE__, 
+                                    $token);
+
+                                if($R_resp[$memory_ptr]['file_evaluate_enabled'][$R_resp[$memory_ptr]['software_default']] !== false){
+
+                                    /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
+                                     * Do we automatically 
+                                     * return this resource? 
+                                     *
+                                     *
+                                     * 5 :: Tuesday, June 9, 2026 @ 1705 hrs.
+                                     *
+                                     */
+                                    if($R_resp[$memory_ptr]['auto_obj_mode_enabled'][$R_resp[$memory_ptr]['software_default']] !== false){
+
+                                        $R_resp = _crnrstn_native_resource_registry(
+                                                  __FUNCTION__, 
+                                                  $R, 
+                                                  'return[' . 
+                                                  $R_resp[$memory_ptr]['resource_type'] . ']', 
+                                                  $R_resp, 
+                                                  $R_debug_mode, 
+                                                  $memory_ptr, 
+                                                  true);                // <-- true means skip the file check.
+
+                                        return $R_resp;
+
+                                    }
+
+                                    /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
+                                     * Do we automatically 
+                                     * evaluate this resource? 
+                                     *
+                                     *
+                                     * 5 :: Thursday, May 21, 2026 @ 0711 hrs.
+                                     *
+                                     */
+                                    if($R_resp[$memory_ptr]['auto_eval_mode_enabled'][$R_resp[$memory_ptr]['software_default']] !== false)
+                                        $R_resp = _crnrstn_native_resource_registry(
+                                                  __FUNCTION__, 
+                                                  $R, 
+                                                  'evaluate[' . 
+                                                  $R_resp[$memory_ptr]['resource_type'] . ']', 
+                                                  $R_resp, 
+                                                  $R_debug_mode, 
+                                                  $memory_ptr, 
+                                                  true);               // <-- true means skip the file check.
+
+                                }
+
+                                return $R_resp;
+
+                            }
+
+                        break;
+                        case 'return':
+                        case 'evaluate':
+
+                            /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
+                             * If the resource is inactive, 
+                             * (bool) $R_resp[$memory_ptr]['is_active']['2.00.0001'] == false, 
+                             * or the file path is not 
+                             * successfully pointing to 
+                             * a valid file, the CLR-SSL 
+                             * will neither evaluate nor 
+                             * return the result of a 
+                             * class, function or 
+                             * runtime executable 
+                             * system resource. 
+                             *
+                             * It is worth mentioning 
+                             * that viewing the file 
+                             * source code could still 
+                             * be technically allowed to 
+                             * work on an "inactive" 
+                             * CLR-SSL resource. 
+                             *
+                             *
+                             * 5 :: Tuesday, April 20, 2026 @ 2206 hrs.
+                             *
+                             */
+                            if(!((bool) $R_resp[$memory_ptr]['is_active'][$R_resp[$memory_ptr]['software_default']] !== false)){
+
+                                if($request_type == 'evaluate') 
+                                    $tmp_action_type = 'evaluation of the';
+                                else
+                                    $tmp_action_type = 'return of the';
+
+                                $clr_ssl_msg = 'Resource inactive: ' . 
+                                               $R_resp[$memory_ptr]['resource_name'] . 
+                                               ' v' . 
+                                               $R_resp[$memory_ptr]['software_default'] . 
+                                               '.';
+                                // 5 :: Tuexxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                                $msg_token = 'f5825c29c97bc5aa61142abe37c838cf' . 
+                                             'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx';
+                                $token_generation_date = '2026xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx';
+                                $token = array(
+                                         'token'                   => $msg_token, 
+                                         'token_generation_date'   => $token_generation_date, 
+                                         'request_type'            => $request_type, 
+                                         'code'                    => 200, 
+                                         'clr_ssl_msg'             => $clr_ssl_msg, 
+                                         'memory_ptr'              => $memory_ptr, 
+                                         'resource_ping_runtime'   => $R_resp[$memory_ptr]['runtime'], 
+                                         'resource_ping_microtime' => $R_resp[$memory_ptr]['microtime'], 
+                                         'file_evaluate_enabled'   => $R_resp[$memory_ptr]['file_evaluate_enabled'][$R_resp[$memory_ptr]['software_default']], 
+                                         'auto_eval_mode_enabled'  => $R_resp[$memory_ptr]['auto_eval_mode_enabled'][$R_resp[$memory_ptr]['software_default']], 
+                                         'auto_obj_mode_enabled'   => $R_resp[$memory_ptr]['auto_obj_mode_enabled'][$R_resp[$memory_ptr]['software_default']], 
+                                         'namespace'               => $R_resp[$memory_ptr]['namespace'], 
+                                         'resource_loading_arch'   => $R_resp[$memory_ptr]['loading_arch'][$R_resp[$memory_ptr]['software_default']], 
+                                         'resource_eval_ttl'       => $R_resp[$memory_ptr]['eval_ttl'][$R_resp[$memory_ptr]['software_default']], 
+                                         'resource_type'           => $R_resp[$memory_ptr]['resource_type'], 
+                                         'resource_name'           => $R_resp[$memory_ptr]['resource_name'], 
+                                         'software_version'        => $R_resp[$memory_ptr]['software_default'], 
+                                         'resource_title'          => $R_resp[$memory_ptr]['title']['TEXT'], 
+                                         'software_company'        => $R_resp[$memory_ptr]['software_company']['key'], 
+                                         'copyright'               => $R_resp[$memory_ptr]['copyright'][$R_resp[$memory_ptr]['software_default']], 
+                                         'license_key'             => $R_resp[$memory_ptr]['license']['key'][$R_resp[$memory_ptr]['software_default']]);
+                                $R->error_log(
+                                    $clr_ssl_msg, 
+                                    \LOG_DEBUG, 
+                                    \E_NOTICE, 
+                                    __LINE__, 
+                                    __FUNCTION__, 
+                                    __FILE__, 
+                                    $token);
+
+                                // 5 :: Tuesday, April 20, 2026 @ 2213 hrs.
+                                $clr_ssl_msg = 'Suppressed the ' . 
+                                               $tmp_action_type . ' of an inactive ' . 
+                                               $R_syntax['resource_type'][$R_resp[$memory_ptr]['resource_type']] . 
+                                               ' at ' . 
+                                               $R_resp[$memory_ptr]['file_path']['definition'][$R_resp[$memory_ptr]['software_default']] . 
+                                               '.';
+                                // 5 :: Tuexxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                                $msg_token = 'fad7d387ad074d524b611d216d0c1efc' . 
+                                             'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx';
+                                $token_generation_date = '2026xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx';
+                                $token = array(
+                                         'token'                   => $msg_token, 
+                                         'token_generation_date'   => $token_generation_date, 
+                                         'request_type'            => $request_type, 
+                                         'code'                    => 200, 
+                                         'clr_ssl_msg'             => $clr_ssl_msg, 
+                                         'memory_ptr'              => $memory_ptr, 
+                                         'resource_ping_runtime'   => $R_resp[$memory_ptr]['runtime'], 
+                                         'resource_ping_microtime' => $R_resp[$memory_ptr]['microtime'], 
+                                         'file_evaluate_enabled'   => $R_resp[$memory_ptr]['file_evaluate_enabled'][$R_resp[$memory_ptr]['software_default']], 
+                                         'auto_eval_mode_enabled'  => $R_resp[$memory_ptr]['auto_eval_mode_enabled'][$R_resp[$memory_ptr]['software_default']], 
+                                         'auto_obj_mode_enabled'   => $R_resp[$memory_ptr]['auto_obj_mode_enabled'][$R_resp[$memory_ptr]['software_default']], 
+                                         'namespace'               => $R_resp[$memory_ptr]['namespace'], 
+                                         'resource_loading_arch'   => $R_resp[$memory_ptr]['loading_arch'][$R_resp[$memory_ptr]['software_default']], 
+                                         'resource_eval_ttl'       => $R_resp[$memory_ptr]['eval_ttl'][$R_resp[$memory_ptr]['software_default']], 
+                                         'resource_type'           => $R_resp[$memory_ptr]['resource_type'], 
+                                         'resource_name'           => $R_resp[$memory_ptr]['resource_name'], 
+                                         'software_version'        => $R_resp[$memory_ptr]['software_default'], 
+                                         'resource_title'          => $R_resp[$memory_ptr]['title']['TEXT'], 
+                                         'software_company'        => $R_resp[$memory_ptr]['software_company']['key'], 
+                                         'copyright'               => $R_resp[$memory_ptr]['copyright'][$R_resp[$memory_ptr]['software_default']], 
+                                         'license_key'             => $R_resp[$memory_ptr]['license']['key'][$R_resp[$memory_ptr]['software_default']]);
+                                $R->error_log(
+                                    $clr_ssl_msg, 
+                                    \LOG_INFO, 
+                                    \E_NOTICE, 
+                                    __LINE__, 
+                                    __FUNCTION__, 
+                                    __FILE__, 
+                                    $token);
+
+                                return false;
+
+                            }
+
+                            // True = skip file check. 
+                            if($R_data_001 != true)
+                            {
+
+                                if(!($R->is_file(
+                                         $R_resp[$memory_ptr]['file_path']['definition'][$R_resp[$memory_ptr]['software_default']], 
+                                         $R_resp[$memory_ptr]['resource_name'], 
+                                         $R_resp[$memory_ptr]['software_default'])))
+                                {
+
+                                    if($request_type == 'evaluate') 
+                                        $tmp_action_type = 'evaluate the';
+                                    else
+                                        $tmp_action_type = 'return the';
+
+                                    $clr_ssl_msg = 'File not found: ' . 
+                                                   $R_resp[$memory_ptr]['file_path']['definition'][$R_resp[$memory_ptr]['software_default']] . 
+                                                   '.';
+                                    // 5 :: Tuexxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                                    $msg_token = '4e8ed75f85e5e6b6da59199ed07d9e03' . 
+                                                 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx';
+                                    $token_generation_date = '2026xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx';
+                                    $token = array(
+                                             'token'                   => $msg_token, 
+                                             'token_generation_date'   => $token_generation_date, 
+                                             'request_type'            => $request_type, 
+                                             'code'                    => 200, 
+                                             'clr_ssl_msg'             => $clr_ssl_msg, 
+                                             'memory_ptr'              => $memory_ptr, 
+                                             'resource_ping_runtime'   => $R_resp[$memory_ptr]['runtime'], 
+                                             'resource_ping_microtime' => $R_resp[$memory_ptr]['microtime'], 
+                                             'file_evaluate_enabled'   => $R_resp[$memory_ptr]['file_evaluate_enabled'][$R_resp[$memory_ptr]['software_default']], 
+                                             'auto_eval_mode_enabled'  => $R_resp[$memory_ptr]['auto_eval_mode_enabled'][$R_resp[$memory_ptr]['software_default']], 
+                                             'auto_obj_mode_enabled'   => $R_resp[$memory_ptr]['auto_obj_mode_enabled'][$R_resp[$memory_ptr]['software_default']], 
+                                             'namespace'               => $R_resp[$memory_ptr]['namespace'], 
+                                             'resource_loading_arch'   => $R_resp[$memory_ptr]['loading_arch'][$R_resp[$memory_ptr]['software_default']], 
+                                             'resource_eval_ttl'       => $R_resp[$memory_ptr]['eval_ttl'][$R_resp[$memory_ptr]['software_default']], 
+                                             'resource_type'           => $R_resp[$memory_ptr]['resource_type'], 
+                                             'resource_name'           => $R_resp[$memory_ptr]['resource_name'], 
+                                             'software_version'        => $R_resp[$memory_ptr]['software_default'], 
+                                             'resource_title'          => $R_resp[$memory_ptr]['title']['TEXT'], 
+                                             'software_company'        => $R_resp[$memory_ptr]['software_company']['key'], 
+                                             'copyright'               => $R_resp[$memory_ptr]['copyright'][$R_resp[$memory_ptr]['software_default']], 
+                                             'license_key'             => $R_resp[$memory_ptr]['license']['key'][$R_resp[$memory_ptr]['software_default']]);
+                                    $R->error_log(
+                                        $clr_ssl_msg, 
+                                        \LOG_CRIT, 
+                                        \E_ERROR, 
+                                        __LINE__, 
+                                        __FUNCTION__, 
+                                        __FILE__, 
+                                        $token);
+
+                                    // 5 :: Friday, April 3, 2026 @ 0316 hrs.
+                                    $clr_ssl_msg = 'Failed to ' . 
+                                                   $tmp_action_type . ' the ' . 
+                                                   $R_syntax['resource_type'][$R_resp[$memory_ptr]['resource_type']] . 
+                                                   ': ' . 
+                                                   $R_resp[$memory_ptr]['resource_name'] . 
+                                                   ' v' . 
+                                                   $R_resp[$memory_ptr]['software_default'] . 
+                                                   '.';
+                                    // 5 :: Tuexxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                                    $msg_token = '11424925f03506b6a2c0b66cfc4a4ba5' . 
+                                                 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx';
+                                    $token_generation_date = '2026xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx';
+                                    $token = array(
+                                             'token'                   => $msg_token, 
+                                             'token_generation_date'   => $token_generation_date, 
+                                             'request_type'            => $request_type, 
+                                             'code'                    => 200, 
+                                             'clr_ssl_msg'             => $clr_ssl_msg, 
+                                             'memory_ptr'              => $memory_ptr, 
+                                             'resource_ping_runtime'   => $R_resp[$memory_ptr]['runtime'], 
+                                             'resource_ping_microtime' => $R_resp[$memory_ptr]['microtime'], 
+                                             'file_evaluate_enabled'   => $R_resp[$memory_ptr]['file_evaluate_enabled'][$R_resp[$memory_ptr]['software_default']], 
+                                             'auto_eval_mode_enabled'  => $R_resp[$memory_ptr]['auto_eval_mode_enabled'][$R_resp[$memory_ptr]['software_default']], 
+                                             'auto_obj_mode_enabled'   => $R_resp[$memory_ptr]['auto_obj_mode_enabled'][$R_resp[$memory_ptr]['software_default']], 
+                                             'namespace'               => $R_resp[$memory_ptr]['namespace'], 
+                                             'resource_loading_arch'   => $R_resp[$memory_ptr]['loading_arch'][$R_resp[$memory_ptr]['software_default']], 
+                                             'resource_eval_ttl'       => $R_resp[$memory_ptr]['eval_ttl'][$R_resp[$memory_ptr]['software_default']], 
+                                             'resource_type'           => $R_resp[$memory_ptr]['resource_type'], 
+                                             'resource_name'           => $R_resp[$memory_ptr]['resource_name'], 
+                                             'software_version'        => $R_resp[$memory_ptr]['software_default'], 
+                                             'resource_title'          => $R_resp[$memory_ptr]['title']['TEXT'], 
+                                             'software_company'        => $R_resp[$memory_ptr]['software_company']['key'], 
+                                             'copyright'               => $R_resp[$memory_ptr]['copyright'][$R_resp[$memory_ptr]['software_default']], 
+                                             'license_key'             => $R_resp[$memory_ptr]['license']['key'][$R_resp[$memory_ptr]['software_default']]);
+                                    $R->error_log(
+                                        $clr_ssl_msg, 
+                                        \LOG_ERR, 
+                                        \E_ERROR, 
+                                        __LINE__, 
+                                        __FUNCTION__, 
+                                        __FILE__, 
+                                        $token);
+
+                                    return false;
+
+                                }
+
+                                $clr_ssl_msg = 'The file system is ready for the ' . 
+                                               $R_syntax['resource_type'][$R_resp[$memory_ptr]['resource_type']] . 
+                                               ', ' . 
+                                               $R_resp[$memory_ptr]['resource_name'] . 
+                                               ' v' . 
+                                               $R_resp[$memory_ptr]['software_default'] . 
+                                               '.';
+                                // 5 :: Frixxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                                $msg_token = 'b5c7bedaf930910485642d1b8f960138' . 
+                                             '1c6c1e6ce45989159472da48deb276b1' . 
+                                             '6418a1b7bf04ba3b37a10eb97c64ede8' . 
+                                             'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx';
+                                $token_generation_date = '2026xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx';
+                                $token = array(
+                                         'token'                   => $msg_token, 
+                                         'token_generation_date'   => $token_generation_date, 
+                                         'request_type'            => $request_type, 
+                                         'code'                    => 200, 
+                                         'clr_ssl_msg'             => $clr_ssl_msg, 
+                                         'memory_ptr'              => $memory_ptr, 
+                                         'resource_ping_runtime'   => $R_resp[$memory_ptr]['runtime'], 
+                                         'resource_ping_microtime' => $R_resp[$memory_ptr]['microtime'], 
+                                         'file_evaluate_enabled'   => $R_resp[$memory_ptr]['file_evaluate_enabled'][$R_resp[$memory_ptr]['software_default']], 
+                                         'auto_eval_mode_enabled'  => $R_resp[$memory_ptr]['auto_eval_mode_enabled'][$R_resp[$memory_ptr]['software_default']], 
+                                         'auto_obj_mode_enabled'   => $R_resp[$memory_ptr]['auto_obj_mode_enabled'][$R_resp[$memory_ptr]['software_default']], 
+                                         'namespace'               => $R_resp[$memory_ptr]['namespace'], 
+                                         'resource_loading_arch'   => $R_resp[$memory_ptr]['loading_arch'][$R_resp[$memory_ptr]['software_default']], 
+                                         'resource_eval_ttl'       => $R_resp[$memory_ptr]['eval_ttl'][$R_resp[$memory_ptr]['software_default']], 
+                                         'resource_type'           => $R_resp[$memory_ptr]['resource_type'], 
+                                         'resource_name'           => $R_resp[$memory_ptr]['resource_name'], 
+                                         'software_version'        => $R_resp[$memory_ptr]['software_default'], 
+                                         'resource_title'          => $R_resp[$memory_ptr]['title']['TEXT'], 
+                                         'software_company'        => $R_resp[$memory_ptr]['software_company']['key'], 
+                                         'copyright'               => $R_resp[$memory_ptr]['copyright'][$R_resp[$memory_ptr]['software_default']], 
+                                         'license_key'             => $R_resp[$memory_ptr]['license']['key'][$R_resp[$memory_ptr]['software_default']]);
+                                $R->error_log(
+                                    $clr_ssl_msg, 
+                                    \LOG_DEBUG, 
+                                    \E_NOTICE, 
+                                    __LINE__, 
+                                    __FUNCTION__, 
+                                    __FILE__, 
+                                    $token);
+
+                            }
+
+                            /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
+                             * Evaluate the resource definition 
+                             * for a CLR-SSL Registry Resource 
+                             * and/or return a CLR-SSL 
+                             * resource...or return the 
+                             * output of said resource, e.g., 
+                             * if the resource is a function. 
+                             *
+                             *
+                             * 5 :: Monday, April 20, 2026 @ 0328 hrs.
+                             *
+                             */
+                            return _crnrstn_native_resource_registry(
+                                   __FUNCTION__, 
+                                   $R, 
+                                   $request_type . '[' . 
+                                   $R_resp[$memory_ptr]['resource_type'] . ']', 
+                                   $R_resp, 
+                                   $R_debug_mode, 
+                                   $memory_ptr);
+
+                        break;
+                        case 'meta':
+
+                            /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
+                             * CLR-SSL Registry Resource 
+                             * meta data fulfillment call. 
+                             *
+                             *
+                             * 5 :: Friday, April 10, 2026 @ 1248 hrs.
+                             *
+                             */
+                            return _crnrstn_native_resource_registry(
+                                   __FUNCTION__, 
+                                   $R, 
+                                   'return[' . 
+                                   $request_type . ']', 
+                                   $R_resp, 
+                                   $R_debug_mode, 
+                                   $memory_ptr, 
+                                   $R_data_000);
+
+                        break;
+                        default:
+
+                            $clr_ssl_msg = 'Unknown CLR-SSL Resource ' . 
+                                           'Registry action received: ' . 
+                                           \strval($request_type);
+                            // 5 :: Tuexxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                            $msg_token = '9c78974e20e83c630025c04ae0e1036a' . 
+                                         'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx';
+                            $token_generation_date = '2026xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx';
+                            $token = array(
+                                     'token'                   => $msg_token, 
+                                     'token_generation_date'   => $token_generation_date, 
+                                     'request_type'            => $request_type, 
+                                     'code'                    => 200, 
+                                     'clr_ssl_msg'             => $clr_ssl_msg, 
+                                     'memory_ptr'              => $memory_ptr, 
+                                     'resource_ping_runtime'   => $R_resp[$memory_ptr]['runtime'], 
+                                     'resource_ping_microtime' => $R_resp[$memory_ptr]['microtime'], 
+                                     'file_evaluate_enabled'   => $R_resp[$memory_ptr]['file_evaluate_enabled'][$R_resp[$memory_ptr]['software_default']], 
+                                     'auto_eval_mode_enabled'  => $R_resp[$memory_ptr]['auto_eval_mode_enabled'][$R_resp[$memory_ptr]['software_default']], 
+                                     'auto_obj_mode_enabled'   => $R_resp[$memory_ptr]['auto_obj_mode_enabled'][$R_resp[$memory_ptr]['software_default']], 
+                                     'namespace'               => $R_resp[$memory_ptr]['namespace'], 
+                                     'resource_loading_arch'   => $R_resp[$memory_ptr]['loading_arch'][$R_resp[$memory_ptr]['software_default']], 
+                                     'resource_eval_ttl'       => $R_resp[$memory_ptr]['eval_ttl'][$R_resp[$memory_ptr]['software_default']], 
+                                     'resource_type'           => $R_resp[$memory_ptr]['resource_type'], 
+                                     'resource_name'           => $R_resp[$memory_ptr]['resource_name'], 
+                                     'software_version'        => $R_resp[$memory_ptr]['software_default'], 
+                                     'resource_title'          => $R_resp[$memory_ptr]['title']['TEXT'], 
+                                     'software_company'        => $R_resp[$memory_ptr]['software_company']['key'], 
+                                     'copyright'               => $R_resp[$memory_ptr]['copyright'][$R_resp[$memory_ptr]['software_default']], 
+                                     'license_key'             => $R_resp[$memory_ptr]['license']['key'][$R_resp[$memory_ptr]['software_default']]);
+                            $R->error_log(
+                                $clr_ssl_msg, 
+                                \LOG_ERR, 
+                                \E_ERROR, 
+                                __LINE__, 
+                                __FUNCTION__, 
+                                __FILE__, 
+                                $token);
+
+                            return false;
+
+                        break;
+
+                    }
+
+                break;
+                case $root . $os_path_dir_separator_char . 
+                     'class' . $os_path_dir_separator_char . 
+                     'thirdparty' . $os_path_dir_separator_char . 
+                     'phpmailer' . $os_path_dir_separator_char . 
+                     '6.1.6' . $os_path_dir_separator_char . 
                      'src' . $os_path_dir_separator_char . 
                      'Exception.php': // <= $name. Where, _foo_factory(x, x, x, $name, x_000, x_001)
-                case 'Exception.php':
+                case '6.1.6' . $os_path_dir_separator_char . 
+                     'Exception.php':
+                case $root . $os_path_dir_separator_char . 
+                     'class' . $os_path_dir_separator_char . 
+                     'thirdparty' . $os_path_dir_separator_char . 
+                     'phpmailer' . $os_path_dir_separator_char . 
+                     '7.1.1' . $os_path_dir_separator_char . 
+                     'src' . $os_path_dir_separator_char . 
+                     'Exception.php': 
+                case '7.1.1' . $os_path_dir_separator_char . 
+                     'Exception.php':
                 case __NAMESPACE__ . 
                      '\Exception': // 5 :: Wednesday, June 17, 2026 @ 0735 hrs.
                 case 'Exception':
@@ -12545,7 +13436,7 @@ function _crnrstn_native_resource_registry(
                      *       and treatment:
                      *       - crnrstn_Exception renamed to Exception 
                      *       - crnrstn_PHPMailer renamed to PHPMailer 
-                     *       - crnrstn_SMTP to SMTP 
+                     *       - crnrstn_SMTP renamed to SMTP 
                      *       - crnrstn_OAuth renamed to OAuth 
                      *       - crnrstn_POP3 renamed to POP3 
                      *       5 :: Wednesday, September 9, 2026 @ 1452 hrs.
@@ -12561,10 +13452,18 @@ function _crnrstn_native_resource_registry(
                     $tmp_type_dir                           = 'obj';
                     $tmp_public_key                         = 'gabriel_exception';
                     $tmp_storage_arch                       = 'general_resource';
-                    $tmp_file_path                          = $root . $os_path_dir_separator_char . 
+                    $tmp_file_path_6_1_6                    = $root . $os_path_dir_separator_char . 
                                                               'class' . $os_path_dir_separator_char . 
                                                               'thirdparty' . $os_path_dir_separator_char . 
                                                               'phpmailer' . $os_path_dir_separator_char . 
+                                                              '6.1.6' . $os_path_dir_separator_char . 
+                                                              'src' . $os_path_dir_separator_char . 
+                                                              $tmp_file_name;
+                    $tmp_file_path_7_1_1                    = $root . $os_path_dir_separator_char . 
+                                                              'class' . $os_path_dir_separator_char . 
+                                                              'thirdparty' . $os_path_dir_separator_char . 
+                                                              'phpmailer' . $os_path_dir_separator_char . 
+                                                              '7.1.1' . $os_path_dir_separator_char . 
                                                               'src' . $os_path_dir_separator_char . 
                                                               $tmp_file_name;
                     $tmp_obj_exe_path                       = $root . $os_path_dir_separator_char . 
@@ -12636,7 +13535,7 @@ function _crnrstn_native_resource_registry(
                              * Saturday, November 1, 2025 @ 2120 hrs.
                              *
                              */
-                            $tmp_LICENSE_URL = 'http://www.gnu.org/copyleft/lesser.html';
+                            $tmp_LICENSE_URL = 'https://www.gnu.org/licenses/old-licenses/lgpl-2.1.html';
 
                             /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
                              * Initialize the copyright 
@@ -12653,7 +13552,7 @@ function _crnrstn_native_resource_registry(
                              * Saturday, August 24, 2024 @ 0700 hrs.
                              *
                              */
-                            $tmp_COPYRIGHT_TEXT = 'Copyright (c) 2012 - 2017 Marcus Bointon. ' . 
+                            $tmp_COPYRIGHT_TEXT = 'Copyright (c) 2012 - 2023 Marcus Bointon. ' . 
                             'Copyright (c)  2010 - 2012 Jim Jagielski. ' . 
                             'Copyright (c)  2004 - 2009 Andy Prevost.';
 
@@ -12672,7 +13571,7 @@ function _crnrstn_native_resource_registry(
                      * 5 :: Wednesday, April 15, 2026 @ 0817 hrs.
                      *
                      */
-                    $memory_ptr = $R->generate_memory_pointer($tmp_file_path);
+                    $memory_ptr = $R->generate_memory_pointer($tmp_file_path_7_1_1);
 
                     /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
                      * Initialize a CLR-SSL 
@@ -12693,11 +13592,15 @@ function _crnrstn_native_resource_registry(
                     $R_resp[$memory_ptr]['background_color_hex']      = $tmp_background_color_hex;
                     $R_resp[$memory_ptr]['title']['TEXT']             = $tmp_TITLE_TEXT;
                     $R_resp[$memory_ptr]['software_company']['key']   = 'PHPMailer';
-                    $R_resp[$memory_ptr]['software_default']          = '6.1.6';
-                    $R_resp[$memory_ptr]['license']['key']            = array('6.1.6' => 'GNU_Lesser');
-                    $R_resp[$memory_ptr]['license']['name']           = array('6.1.6' => $tmp_LICENSE_NAME_TEXT);
-                    $R_resp[$memory_ptr]['license']['url']            = array('6.1.6' => $tmp_LICENSE_URL);
-                    $R_resp[$memory_ptr]['copyright']                 = array('6.1.6' => $tmp_COPYRIGHT_TEXT);
+                    $R_resp[$memory_ptr]['software_default']          = '7.1.1';
+                    $R_resp[$memory_ptr]['license']['key']            = array('6.1.6' => 'GNU_Lesser', 
+                                                                              '7.1.1' => 'GNU_Lesser');
+                    $R_resp[$memory_ptr]['license']['name']           = array('6.1.6' => $tmp_LICENSE_NAME_TEXT, 
+                                                                              '7.1.1' => $tmp_LICENSE_NAME_TEXT);
+                    $R_resp[$memory_ptr]['license']['url']            = array('6.1.6' => $tmp_LICENSE_URL, 
+                                                                              '7.1.1' => $tmp_LICENSE_URL);
+                    $R_resp[$memory_ptr]['copyright']                 = array('6.1.6' => $tmp_COPYRIGHT_TEXT, 
+                                                                              '7.1.1' => $tmp_COPYRIGHT_TEXT);
 
                     if($request_type === 'meta'){
                         // 5 :: Friday, May 22, 2026 @ 1253 hrs.
@@ -12705,6 +13608,7 @@ function _crnrstn_native_resource_registry(
                         $R_resp[$memory_ptr]['clr_ssl_admin']['last_modified']['timestamp']['LINUX_MAC_OS'][] = 'Sun Aug 25 00:27:05.929147 2024';
                         $R_resp[$memory_ptr]['clr_ssl_admin']['last_modified']['timestamp']['LINUX_MAC_OS'][] = 'Thu Oct 30 00:48:42.385511 2025';
                         $R_resp[$memory_ptr]['clr_ssl_admin']['last_modified']['timestamp']['LINUX_MAC_OS'][] = 'Thu Aug 20 22:29:33.546978 2026';
+                        $R_resp[$memory_ptr]['clr_ssl_admin']['last_modified']['timestamp']['LINUX_MAC_OS'][] = 'Thu Oct 1 05:57:34.217035 2026';
                         $R_resp[$memory_ptr]['clr_ssl_admin']['last_modified']['ip_address']                  = '172.16.225.1';
                         $R_resp[$memory_ptr]['clr_ssl_admin']['datecreated']['timestamp']['LINUX_MAC_OS'][]   = 'Tue Jul 02 08:37:55.576268 2024';
                         $R_resp[$memory_ptr]['clr_ssl_admin']['datecreated']['ip_address']                    = '172.16.225.1';
@@ -12721,7 +13625,8 @@ function _crnrstn_native_resource_registry(
                      * include
                      * include_once
                      */
-                    $R_resp[$memory_ptr]['evaluation_protocol']       = array('6.1.6' => 'require');
+                    $R_resp[$memory_ptr]['evaluation_protocol']       = array('6.1.6' => 'require', 
+                                                                              '7.1.1' => 'require');
 
                     /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
                      * SOAP_ENDPOINT
@@ -12731,7 +13636,8 @@ function _crnrstn_native_resource_registry(
                      */
                     $R_resp[$memory_ptr]['resource_type']             = 'CLASS_DEFINITION';
                     $R_resp[$memory_ptr]['public_key']                = $tmp_public_key;
-                    $R_resp[$memory_ptr]['storage_arch']              = array('6.1.6' => $tmp_storage_arch);
+                    $R_resp[$memory_ptr]['storage_arch']              = array('6.1.6' => $tmp_storage_arch, 
+                                                                              '7.1.1' => $tmp_storage_arch);
 
                     /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
                      * (int) $int_flag['R_load_many_to_1_request']
@@ -12739,19 +13645,30 @@ function _crnrstn_native_resource_registry(
                      * (int) $int_flag['R_load_1_to_1_session']
                      * (int) $int_flag['R_load_on_ttl_expire']
                      */
-                    $R_resp[$memory_ptr]['loading_arch']              = array('6.1.6' => $int_flag['R_load_many_to_1_request']);
+                    $R_resp[$memory_ptr]['loading_arch']              = array('6.1.6' => $int_flag['R_load_many_to_1_request'], 
+                                                                              '7.1.1' => $int_flag['R_load_many_to_1_request']);
                     $R_resp[$memory_ptr]['namespace']                 = __NAMESPACE__;
-                    $R_resp[$memory_ptr]['file_path']['definition']   = array('6.1.6' => $tmp_file_path);
-                    $R_resp[$memory_ptr]['file_path']['new_obj_exe']  = array('6.1.6' => $tmp_obj_exe_path);
-                    $R_resp[$memory_ptr]['file_name']                 = array('6.1.6' => $tmp_file_name);
-                    $R_resp[$memory_ptr]['software_version']          = array('6.1.6');
-                    $R_resp[$memory_ptr]['is_active']                 = array('6.1.6' => true);
-                    $R_resp[$memory_ptr]['input_parameter_count']     = array('6.1.6' => 0);
-                    $R_resp[$memory_ptr]['input_parameter_defaults']  = array('6.1.6' => array());
-                    $R_resp[$memory_ptr]['eval_ttl']                  = array('6.1.6' => -1);
-                    $R_resp[$memory_ptr]['file_evaluate_enabled']     = array('6.1.6' => true);
-                    $R_resp[$memory_ptr]['auto_eval_mode_enabled']    = array('6.1.6' => true);
-                    $R_resp[$memory_ptr]['auto_obj_mode_enabled']     = array('6.1.6' => true);
+                    $R_resp[$memory_ptr]['file_path']['definition']   = array('6.1.6' => $tmp_file_path_6_1_6, 
+                                                                              '7.1.1' => $tmp_file_path_7_1_1);
+                    $R_resp[$memory_ptr]['file_path']['new_obj_exe']  = array('6.1.6' => $tmp_obj_exe_path, 
+                                                                              '7.1.1' => $tmp_obj_exe_path);
+                    $R_resp[$memory_ptr]['file_name']                 = array('6.1.6' => $tmp_file_name, 
+                                                                              '7.1.1' => $tmp_file_name);
+                    $R_resp[$memory_ptr]['software_version']          = array('6.1.6', '7.1.1');
+                    $R_resp[$memory_ptr]['is_active']                 = array('6.1.6' => true, 
+                                                                              '7.1.1' => true);
+                    $R_resp[$memory_ptr]['input_parameter_count']     = array('6.1.6' => 0, 
+                                                                              '7.1.1' => 0);
+                    $R_resp[$memory_ptr]['input_parameter_defaults']  = array('6.1.6' => array(), 
+                                                                              '7.1.1' => array());
+                    $R_resp[$memory_ptr]['eval_ttl']                  = array('6.1.6' => -1, 
+                                                                              '7.1.1' => -1);
+                    $R_resp[$memory_ptr]['file_evaluate_enabled']     = array('6.1.6' => true, 
+                                                                              '7.1.1' => true);
+                    $R_resp[$memory_ptr]['auto_eval_mode_enabled']    = array('6.1.6' => false, 
+                                                                              '7.1.1' => false);
+                    $R_resp[$memory_ptr]['auto_obj_mode_enabled']     = array('6.1.6' => false, 
+                                                                              '7.1.1' => false);
 
                     /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
                      * view_source_safe = 0 for admin 
@@ -12764,7 +13681,8 @@ function _crnrstn_native_resource_registry(
                      * Only an update to admin server 
                      * settings should change this. 
                      */
-                    $R_resp[$memory_ptr]['view_source_safe']          = array('6.1.6' => 0);
+                    $R_resp[$memory_ptr]['view_source_safe']          = array('6.1.6' => 0, 
+                                                                              '7.1.1' => 0);
 
                     /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
                      * All 'extends_class' 
@@ -12786,7 +13704,8 @@ function _crnrstn_native_resource_registry(
                     $R_resp[$memory_ptr]['dependencies']              = array();
                     $R_resp[$memory_ptr]['php_version']['removed']    = array();
                     $R_resp[$memory_ptr]['php_version']['deprecated'] = array();
-                    $R_resp[$memory_ptr]['php_version']['supported']  = array('6.1.6' => 'PHP > 5.5, PHP 7, PHP 8');
+                    $R_resp[$memory_ptr]['php_version']['supported']  = array('6.1.6' => 'PHP >= 5.5, PHP 7, PHP 8', 
+                                                                              '7.1.1' => 'PHP >= 5.5, PHP 7, PHP 8');
 
                     $clr_ssl_msg = 'Request received for the ' . 
                                    $R_syntax['resource_type'][$R_resp[$memory_ptr]['resource_type']] . ', ' . 
@@ -13197,7 +14116,7 @@ function _crnrstn_native_resource_registry(
                                                $tmp_action_type . ' of an inactive ' . 
                                                $R_syntax['resource_type'][$R_resp[$memory_ptr]['resource_type']] . 
                                                ' at ' . 
-                                               $tmp_file_path . 
+                                               $R_resp[$memory_ptr]['file_path']['definition'][$R_resp[$memory_ptr]['software_default']] . 
                                                '.';
                                 // 5 :: Mon May 04 09:44:50.881427 2026
                                 $msg_token = '3c41cf7f4c069cf1a1746c806567be88' . 
@@ -13487,9 +14406,20 @@ function _crnrstn_native_resource_registry(
                      'class' . $os_path_dir_separator_char . 
                      'thirdparty' . $os_path_dir_separator_char . 
                      'phpmailer' . $os_path_dir_separator_char . 
+                     '6.1.6' . $os_path_dir_separator_char . 
                      'src' . $os_path_dir_separator_char . 
                      'PHPMailer.php': // <= $name. Where, _foo_factory(x, x, x, $name, x_000, x_001)
-                case 'PHPMailer.php':
+                case '6.1.6' . $os_path_dir_separator_char . 
+                     'PHPMailer.php':
+                case $root . $os_path_dir_separator_char . 
+                     'class' . $os_path_dir_separator_char . 
+                     'thirdparty' . $os_path_dir_separator_char . 
+                     'phpmailer' . $os_path_dir_separator_char . 
+                     '7.1.1' . $os_path_dir_separator_char . 
+                     'src' . $os_path_dir_separator_char . 
+                     'PHPMailer.php':
+                case '7.1.1' . $os_path_dir_separator_char . 
+                     'PHPMailer.php':
                 case __NAMESPACE__ . 
                      '\PHPMailer':
                 case 'PHPMailer':
@@ -13513,10 +14443,18 @@ function _crnrstn_native_resource_registry(
                     $tmp_type_dir                           = 'obj';
                     $tmp_public_key                         = 'gabriel';
                     $tmp_storage_arch                       = 'general_resource';
-                    $tmp_file_path                          = $root . $os_path_dir_separator_char . 
+                    $tmp_file_path_6_1_6                    = $root . $os_path_dir_separator_char . 
                                                               'class' . $os_path_dir_separator_char . 
                                                               'thirdparty' . $os_path_dir_separator_char . 
                                                               'phpmailer' . $os_path_dir_separator_char . 
+                                                              '6.1.6' . $os_path_dir_separator_char . 
+                                                              'src' . $os_path_dir_separator_char . 
+                                                              $tmp_file_name;
+                    $tmp_file_path_7_1_1                    = $root . $os_path_dir_separator_char . 
+                                                              'class' . $os_path_dir_separator_char . 
+                                                              'thirdparty' . $os_path_dir_separator_char . 
+                                                              'phpmailer' . $os_path_dir_separator_char . 
+                                                              '7.1.1' . $os_path_dir_separator_char . 
                                                               'src' . $os_path_dir_separator_char . 
                                                               $tmp_file_name;
                     $tmp_obj_exe_path                       = $root . $os_path_dir_separator_char . 
@@ -13587,7 +14525,7 @@ function _crnrstn_native_resource_registry(
                              * Saturday, November 1, 2025 @ 2120 hrs.
                              *
                              */
-                            $tmp_LICENSE_URL = 'http://www.gnu.org/copyleft/lesser.html';
+                            $tmp_LICENSE_URL = 'https://www.gnu.org/licenses/old-licenses/lgpl-2.1.html';
 
                             /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
                              * Initialize the copyright 
@@ -13604,7 +14542,7 @@ function _crnrstn_native_resource_registry(
                              * Saturday, August 24, 2024 @ 0700 hrs.
                              *
                              */
-                            $tmp_COPYRIGHT_TEXT = 'Copyright (c) 2012 - 2017 Marcus Bointon. ' . 
+                            $tmp_COPYRIGHT_TEXT = 'Copyright (c) 2012 - 2023 Marcus Bointon. ' . 
                             'Copyright (c)  2010 - 2012 Jim Jagielski. ' . 
                             'Copyright (c)  2004 - 2009 Andy Prevost.';
 
@@ -13639,7 +14577,7 @@ function _crnrstn_native_resource_registry(
                      * 5 :: Wednesday, April 15, 2026 @ 0817 hrs.
                      *
                      */
-                    $memory_ptr = $R->generate_memory_pointer($tmp_file_path);
+                    $memory_ptr = $R->generate_memory_pointer($tmp_file_path_7_1_1);
 
                     /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
                      * Initialize a CLR-SSL 
@@ -13660,11 +14598,15 @@ function _crnrstn_native_resource_registry(
                     $R_resp[$memory_ptr]['background_color_hex']      = $tmp_background_color_hex;
                     $R_resp[$memory_ptr]['title']['TEXT']             = $tmp_TITLE_TEXT;
                     $R_resp[$memory_ptr]['software_company']['key']   = 'PHPMailer';
-                    $R_resp[$memory_ptr]['software_default']          = '6.1.6';
-                    $R_resp[$memory_ptr]['license']['key']            = array('6.1.6' => 'GNU_Lesser');
-                    $R_resp[$memory_ptr]['license']['name']           = array('6.1.6' => $tmp_LICENSE_NAME_TEXT);
-                    $R_resp[$memory_ptr]['license']['url']            = array('6.1.6' => $tmp_LICENSE_URL);
-                    $R_resp[$memory_ptr]['copyright']                 = array('6.1.6' => $tmp_COPYRIGHT_TEXT);
+                    $R_resp[$memory_ptr]['software_default']          = '7.1.1';
+                    $R_resp[$memory_ptr]['license']['key']            = array('6.1.6' => 'GNU_Lesser', 
+                                                                              '7.1.1' => 'GNU_Lesser');
+                    $R_resp[$memory_ptr]['license']['name']           = array('6.1.6' => $tmp_LICENSE_NAME_TEXT, 
+                                                                              '7.1.1' => $tmp_LICENSE_NAME_TEXT);
+                    $R_resp[$memory_ptr]['license']['url']            = array('6.1.6' => $tmp_LICENSE_URL, 
+                                                                              '7.1.1' => $tmp_LICENSE_URL);
+                    $R_resp[$memory_ptr]['copyright']                 = array('6.1.6' => $tmp_COPYRIGHT_TEXT, 
+                                                                              '7.1.1' => $tmp_COPYRIGHT_TEXT);
 
                     if($request_type === 'meta'){
                         // 5 :: Friday, May 22, 2026 @ 1303 hrs.
@@ -13672,6 +14614,7 @@ function _crnrstn_native_resource_registry(
                         $R_resp[$memory_ptr]['clr_ssl_admin']['last_modified']['timestamp']['LINUX_MAC_OS'][] = 'Sun Aug 25 00:30:47.589301 2024';
                         $R_resp[$memory_ptr]['clr_ssl_admin']['last_modified']['timestamp']['LINUX_MAC_OS'][] = 'Thu Oct 30 00:50:53.716706 2025';
                         $R_resp[$memory_ptr]['clr_ssl_admin']['last_modified']['timestamp']['LINUX_MAC_OS'][] = 'Thu Aug 20 22:30:57.544652 2026';
+                        $R_resp[$memory_ptr]['clr_ssl_admin']['last_modified']['timestamp']['LINUX_MAC_OS'][] = 'Thu Oct 1 06:00:28.538702 2026';
                         $R_resp[$memory_ptr]['clr_ssl_admin']['last_modified']['ip_address']                  = '172.16.225.1';
                         $R_resp[$memory_ptr]['clr_ssl_admin']['datecreated']['timestamp']['LINUX_MAC_OS'][]   = 'Tue Jul 02 09:06:35.640435 2024';
                         $R_resp[$memory_ptr]['clr_ssl_admin']['datecreated']['ip_address']                    = '172.16.225.1';
@@ -13688,7 +14631,8 @@ function _crnrstn_native_resource_registry(
                      * include
                      * include_once
                      */
-                    $R_resp[$memory_ptr]['evaluation_protocol']       = array('6.1.6' => 'require');
+                    $R_resp[$memory_ptr]['evaluation_protocol']       = array('6.1.6' => 'require', 
+                                                                              '7.1.1' => 'require');
 
                     /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
                      * SOAP_ENDPOINT
@@ -13698,7 +14642,8 @@ function _crnrstn_native_resource_registry(
                      */
                     $R_resp[$memory_ptr]['resource_type']             = 'CLASS_DEFINITION';
                     $R_resp[$memory_ptr]['public_key']                = $tmp_public_key;
-                    $R_resp[$memory_ptr]['storage_arch']              = array('6.1.6' => $tmp_storage_arch);
+                    $R_resp[$memory_ptr]['storage_arch']              = array('6.1.6' => $tmp_storage_arch, 
+                                                                              '7.1.1' => $tmp_storage_arch);
 
                     /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
                      * (int) $int_flag['R_load_many_to_1_request']
@@ -13706,28 +14651,30 @@ function _crnrstn_native_resource_registry(
                      * (int) $int_flag['R_load_1_to_1_session']
                      * (int) $int_flag['R_load_on_ttl_expire']
                      */
-                    $R_resp[$memory_ptr]['loading_arch']              = array('6.1.6' => $int_flag['R_load_many_to_1_request']);
+                    $R_resp[$memory_ptr]['loading_arch']              = array('6.1.6' => $int_flag['R_load_many_to_1_request'], 
+                                                                              '7.1.1' => $int_flag['R_load_many_to_1_request']);
                     $R_resp[$memory_ptr]['namespace']                 = __NAMESPACE__;
-                    $R_resp[$memory_ptr]['file_path']['definition']   = array('6.1.6' => $tmp_file_path);
-                    $R_resp[$memory_ptr]['file_path']['new_obj_exe']  = array('6.1.6' => $tmp_obj_exe_path);
-                    $R_resp[$memory_ptr]['file_name']                 = array('6.1.6' => $tmp_file_name);
-                    $R_resp[$memory_ptr]['software_version']          = array('6.1.6');
-                    $R_resp[$memory_ptr]['is_active']                 = array('6.1.6' => true);
-                    $R_resp[$memory_ptr]['input_parameter_count']     = array('6.1.6' => 1); 
-
-                    /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
-                     * NULL default. 
-                     * -----
-                     * @param bool $exceptions 
-                     * Should PHPMailer throw 
-                     * external (HTML, echo) 
-                     * exceptions? 
-                     */
-                    $R_resp[$memory_ptr]['input_parameter_defaults']  = array('6.1.6' => array(NULL));
-                    $R_resp[$memory_ptr]['eval_ttl']                  = array('6.1.6' => -1);
-                    $R_resp[$memory_ptr]['file_evaluate_enabled']     = array('6.1.6' => true);
-                    $R_resp[$memory_ptr]['auto_eval_mode_enabled']    = array('6.1.6' => false);
-                    $R_resp[$memory_ptr]['auto_obj_mode_enabled']     = array('6.1.6' => true);
+                    $R_resp[$memory_ptr]['file_path']['definition']   = array('6.1.6' => $tmp_file_path_6_1_6, 
+                                                                              '7.1.1' => $tmp_file_path_7_1_1);
+                    $R_resp[$memory_ptr]['file_path']['new_obj_exe']  = array('6.1.6' => $tmp_obj_exe_path, 
+                                                                              '7.1.1' => $tmp_obj_exe_path);
+                    $R_resp[$memory_ptr]['file_name']                 = array('6.1.6' => $tmp_file_name, 
+                                                                              '7.1.1' => $tmp_file_name);
+                    $R_resp[$memory_ptr]['software_version']          = array('6.1.6', '7.1.1');
+                    $R_resp[$memory_ptr]['is_active']                 = array('6.1.6' => true, 
+                                                                              '7.1.1' => true);
+                    $R_resp[$memory_ptr]['input_parameter_count']     = array('6.1.6' => 1, 
+                                                                              '7.1.1' => 1);
+                    $R_resp[$memory_ptr]['input_parameter_defaults']  = array('6.1.6' => array(NULL), 
+                                                                              '7.1.1' => array(NULL));
+                    $R_resp[$memory_ptr]['eval_ttl']                  = array('6.1.6' => -1, 
+                                                                              '7.1.1' => -1);
+                    $R_resp[$memory_ptr]['file_evaluate_enabled']     = array('6.1.6' => true, 
+                                                                              '7.1.1' => true);
+                    $R_resp[$memory_ptr]['auto_eval_mode_enabled']    = array('6.1.6' => false, 
+                                                                              '7.1.1' => false);
+                    $R_resp[$memory_ptr]['auto_obj_mode_enabled']     = array('6.1.6' => true, 
+                                                                              '7.1.1' => true);
 
                     /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
                      * view_source_safe = 0 for admin 
@@ -13740,7 +14687,8 @@ function _crnrstn_native_resource_registry(
                      * Only an update to admin server 
                      * settings should change this. 
                      */
-                    $R_resp[$memory_ptr]['view_source_safe']          = array('6.1.6' => 0);
+                    $R_resp[$memory_ptr]['view_source_safe']          = array('6.1.6' => 0, 
+                                                                              '7.1.1' => 0);
 
                     /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
                      * All 'extends_class' 
@@ -13761,11 +14709,14 @@ function _crnrstn_native_resource_registry(
                     if($R_streamline_boot)
                         $R_resp[$memory_ptr]['extends_class']             = array();
                     else
-                        $R_resp[$memory_ptr]['extends_class']             = array('6.1.6' => 'crnrstn');
+                        $R_resp[$memory_ptr]['extends_class']             = array('6.1.6' => 'crnrstn', 
+                                                                                  '7.1.1' => 'crnrstn');
+
                     $R_resp[$memory_ptr]['dependencies']              = array();
                     $R_resp[$memory_ptr]['php_version']['removed']    = array();
                     $R_resp[$memory_ptr]['php_version']['deprecated'] = array();
-                    $R_resp[$memory_ptr]['php_version']['supported']  = array('6.1.6' => 'PHP > 5.5, PHP 7, PHP 8');
+                    $R_resp[$memory_ptr]['php_version']['supported']  = array('6.1.6' => 'PHP >= 5.5, PHP 7, PHP 8', 
+                                                                              '7.1.1' => 'PHP >= 5.5, PHP 7, PHP 8');
 
                     $clr_ssl_msg = 'Request received for the ' . 
                                    $R_syntax['resource_type'][$R_resp[$memory_ptr]['resource_type']] . ', ' . 
@@ -14414,9 +15365,20 @@ function _crnrstn_native_resource_registry(
                      'class' . $os_path_dir_separator_char . 
                      'thirdparty' . $os_path_dir_separator_char . 
                      'phpmailer' . $os_path_dir_separator_char . 
+                     '6.1.6' . $os_path_dir_separator_char . 
                      'src' . $os_path_dir_separator_char . 
                      'SMTP.php': // <= $name. Where, _foo_factory(x, x, x, $name, x_000, x_001)
-                case 'SMTP.php':
+                case '6.1.6' . $os_path_dir_separator_char . 
+                     'SMTP.php':
+                case $root . $os_path_dir_separator_char . 
+                     'class' . $os_path_dir_separator_char . 
+                     'thirdparty' . $os_path_dir_separator_char . 
+                     'phpmailer' . $os_path_dir_separator_char . 
+                     '7.1.1' . $os_path_dir_separator_char . 
+                     'src' . $os_path_dir_separator_char . 
+                     'SMTP.php':
+                case '7.1.1' . $os_path_dir_separator_char . 
+                     'SMTP.php':
                 case __NAMESPACE__ . 
                      '\SMTP':
                 case 'SMTP':
@@ -14440,10 +15402,18 @@ function _crnrstn_native_resource_registry(
                     $tmp_type_dir                           = 'obj';
                     $tmp_public_key                         = 'gabriel_smtp';
                     $tmp_storage_arch                       = 'general_resource';
-                    $tmp_file_path                          = $root . $os_path_dir_separator_char . 
+                    $tmp_file_path_6_1_6                    = $root . $os_path_dir_separator_char . 
                                                               'class' . $os_path_dir_separator_char . 
                                                               'thirdparty' . $os_path_dir_separator_char . 
                                                               'phpmailer' . $os_path_dir_separator_char . 
+                                                              '6.1.6' . $os_path_dir_separator_char . 
+                                                              'src' . $os_path_dir_separator_char . 
+                                                              $tmp_file_name;
+                    $tmp_file_path_7_1_1                    = $root . $os_path_dir_separator_char . 
+                                                              'class' . $os_path_dir_separator_char . 
+                                                              'thirdparty' . $os_path_dir_separator_char . 
+                                                              'phpmailer' . $os_path_dir_separator_char . 
+                                                              '7.1.1' . $os_path_dir_separator_char . 
                                                               'src' . $os_path_dir_separator_char . 
                                                               $tmp_file_name;
                     $tmp_obj_exe_path                       = $root . $os_path_dir_separator_char . 
@@ -14516,7 +15486,7 @@ function _crnrstn_native_resource_registry(
                              * Saturday, November 1, 2025 @ 2130 hrs.
                              *
                              */
-                            $tmp_LICENSE_URL = 'http://www.gnu.org/copyleft/lesser.html';
+                            $tmp_LICENSE_URL = 'https://www.gnu.org/licenses/old-licenses/lgpl-2.1.html';
 
                             /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
                              * Initialize the copyright 
@@ -14533,7 +15503,7 @@ function _crnrstn_native_resource_registry(
                              * Saturday, August 24, 2024 @ 0700 hrs.
                              *
                              */
-                            $tmp_COPYRIGHT_TEXT = 'Copyright (c) 2012 - 2017 Marcus Bointon. ' . 
+                            $tmp_COPYRIGHT_TEXT = 'Copyright (c) 2012 - 2023 Marcus Bointon. ' . 
                             'Copyright (c)  2010 - 2012 Jim Jagielski. ' . 
                             'Copyright (c)  2004 - 2009 Andy Prevost.';
 
@@ -14573,11 +15543,15 @@ function _crnrstn_native_resource_registry(
                     $R_resp[$memory_ptr]['background_color_hex']      = $tmp_background_color_hex;
                     $R_resp[$memory_ptr]['title']['TEXT']             = $tmp_TITLE_TEXT;
                     $R_resp[$memory_ptr]['software_company']['key']   = 'PHPMailer';
-                    $R_resp[$memory_ptr]['software_default']          = '6.1.6';
-                    $R_resp[$memory_ptr]['license']['key']            = array('6.1.6' => 'GNU_Lesser');
-                    $R_resp[$memory_ptr]['license']['name']           = array('6.1.6' => $tmp_LICENSE_NAME_TEXT);
-                    $R_resp[$memory_ptr]['license']['url']            = array('6.1.6' => $tmp_LICENSE_URL);
-                    $R_resp[$memory_ptr]['copyright']                 = array('6.1.6' => $tmp_COPYRIGHT_TEXT);
+                    $R_resp[$memory_ptr]['software_default']          = '7.1.1';
+                    $R_resp[$memory_ptr]['license']['key']            = array('6.1.6' => 'GNU_Lesser', 
+                                                                              '7.1.1' => 'GNU_Lesser');
+                    $R_resp[$memory_ptr]['license']['name']           = array('6.1.6' => $tmp_LICENSE_NAME_TEXT, 
+                                                                              '7.1.1' => $tmp_LICENSE_NAME_TEXT);
+                    $R_resp[$memory_ptr]['license']['url']            = array('6.1.6' => $tmp_LICENSE_URL, 
+                                                                              '7.1.1' => $tmp_LICENSE_URL);
+                    $R_resp[$memory_ptr]['copyright']                 = array('6.1.6' => $tmp_COPYRIGHT_TEXT, 
+                                                                              '7.1.1' => $tmp_COPYRIGHT_TEXT);
 
                     if($request_type === 'meta'){
                         // 5 :: Friday, May 22, 2026 @ 1306 hrs.
@@ -14585,6 +15559,7 @@ function _crnrstn_native_resource_registry(
                         $R_resp[$memory_ptr]['clr_ssl_admin']['last_modified']['timestamp']['LINUX_MAC_OS'][] = 'Sun Aug 25 00:33:56.926795 2024';
                         $R_resp[$memory_ptr]['clr_ssl_admin']['last_modified']['timestamp']['LINUX_MAC_OS'][] = 'Thu Oct 30 00:52:00.261882 2025';
                         $R_resp[$memory_ptr]['clr_ssl_admin']['last_modified']['timestamp']['LINUX_MAC_OS'][] = 'Thu Aug 20 22:34:38.585146 2026';
+                        $R_resp[$memory_ptr]['clr_ssl_admin']['last_modified']['timestamp']['LINUX_MAC_OS'][] = 'Thu Oct 1 06:10:56.751762 2026';
                         $R_resp[$memory_ptr]['clr_ssl_admin']['last_modified']['ip_address']                  = '172.16.225.1';
                         $R_resp[$memory_ptr]['clr_ssl_admin']['datecreated']['timestamp']['LINUX_MAC_OS'][]   = 'Tue Jul 02 09:13:37.484123 2024';
                         $R_resp[$memory_ptr]['clr_ssl_admin']['datecreated']['ip_address']                    = '172.16.225.1';
@@ -14601,7 +15576,8 @@ function _crnrstn_native_resource_registry(
                      * include
                      * include_once
                      */
-                    $R_resp[$memory_ptr]['evaluation_protocol']       = array('6.1.6' => 'require');
+                    $R_resp[$memory_ptr]['evaluation_protocol']       = array('6.1.6' => 'require', 
+                                                                              '7.1.1' => 'require');
 
                     /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
                      * SOAP_ENDPOINT
@@ -14611,7 +15587,8 @@ function _crnrstn_native_resource_registry(
                      */
                     $R_resp[$memory_ptr]['resource_type']             = 'CLASS_DEFINITION';
                     $R_resp[$memory_ptr]['public_key']                = $tmp_public_key;
-                    $R_resp[$memory_ptr]['storage_arch']              = array('6.1.6' => $tmp_storage_arch);
+                    $R_resp[$memory_ptr]['storage_arch']              = array('6.1.6' => $tmp_storage_arch, 
+                                                                              '7.1.1' => $tmp_storage_arch);
 
                     /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
                      * (int) $int_flag['R_load_many_to_1_request']
@@ -14619,19 +15596,30 @@ function _crnrstn_native_resource_registry(
                      * (int) $int_flag['R_load_1_to_1_session']
                      * (int) $int_flag['R_load_on_ttl_expire']
                      */
-                    $R_resp[$memory_ptr]['loading_arch']              = array('6.1.6' => $int_flag['R_load_many_to_1_request']);
+                    $R_resp[$memory_ptr]['loading_arch']              = array('6.1.6' => $int_flag['R_load_many_to_1_request'], 
+                                                                              '7.1.1' => $int_flag['R_load_many_to_1_request']);
                     $R_resp[$memory_ptr]['namespace']                 = __NAMESPACE__;
-                    $R_resp[$memory_ptr]['file_path']['definition']   = array('6.1.6' => $tmp_file_path);
-                    $R_resp[$memory_ptr]['file_path']['new_obj_exe']  = array('6.1.6' => $tmp_obj_exe_path);
-                    $R_resp[$memory_ptr]['file_name']                 = array('6.1.6' => $tmp_file_name);
-                    $R_resp[$memory_ptr]['software_version']          = array('6.1.6');
-                    $R_resp[$memory_ptr]['is_active']                 = array('6.1.6' => true);
-                    $R_resp[$memory_ptr]['input_parameter_count']     = array('6.1.6' => 0);
-                    $R_resp[$memory_ptr]['input_parameter_defaults']  = array('6.1.6' => array());
-                    $R_resp[$memory_ptr]['eval_ttl']                  = array('6.1.6' => -1);
-                    $R_resp[$memory_ptr]['file_evaluate_enabled']     = array('6.1.6' => true);
-                    $R_resp[$memory_ptr]['auto_eval_mode_enabled']    = array('6.1.6' => true);
-                    $R_resp[$memory_ptr]['auto_obj_mode_enabled']     = array('6.1.6' => true);
+                    $R_resp[$memory_ptr]['file_path']['definition']   = array('6.1.6' => $tmp_file_path_6_1_6, 
+                                                                              '7.1.1' => $tmp_file_path_7_1_1);
+                    $R_resp[$memory_ptr]['file_path']['new_obj_exe']  = array('6.1.6' => $tmp_obj_exe_path, 
+                                                                              '7.1.1' => $tmp_obj_exe_path);
+                    $R_resp[$memory_ptr]['file_name']                 = array('6.1.6' => $tmp_file_name, 
+                                                                              '7.1.1' => $tmp_file_name);
+                    $R_resp[$memory_ptr]['software_version']          = array('6.1.6', '7.1.1');
+                    $R_resp[$memory_ptr]['is_active']                 = array('6.1.6' => true, 
+                                                                              '7.1.1' => true);
+                    $R_resp[$memory_ptr]['input_parameter_count']     = array('6.1.6' => 0, 
+                                                                              '7.1.1' => 0);
+                    $R_resp[$memory_ptr]['input_parameter_defaults']  = array('6.1.6' => array(), 
+                                                                              '7.1.1' => array());
+                    $R_resp[$memory_ptr]['eval_ttl']                  = array('6.1.6' => -1, 
+                                                                              '7.1.1' => -1);
+                    $R_resp[$memory_ptr]['file_evaluate_enabled']     = array('6.1.6' => true, 
+                                                                              '7.1.1' => true);
+                    $R_resp[$memory_ptr]['auto_eval_mode_enabled']    = array('6.1.6' => true, 
+                                                                              '7.1.1' => true);
+                    $R_resp[$memory_ptr]['auto_obj_mode_enabled']     = array('6.1.6' => true, 
+                                                                              '7.1.1' => true);
 
                     /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
                      * view_source_safe = 0 for admin 
@@ -14644,7 +15632,8 @@ function _crnrstn_native_resource_registry(
                      * Only an update to admin server 
                      * settings should change this. 
                      */
-                    $R_resp[$memory_ptr]['view_source_safe']          = array('6.1.6' => 0);
+                    $R_resp[$memory_ptr]['view_source_safe']          = array('6.1.6' => 0, 
+                                                                              '7.1.1' => 0);
 
                     /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
                      * All 'extends_class' 
@@ -14665,11 +15654,14 @@ function _crnrstn_native_resource_registry(
                     if($R_streamline_boot)
                         $R_resp[$memory_ptr]['extends_class']             = array();
                     else
-                        $R_resp[$memory_ptr]['extends_class']             = array('6.1.6' => 'crnrstn');
+                        $R_resp[$memory_ptr]['extends_class']             = array('6.1.6' => 'crnrstn', 
+                                                                                  '7.1.1' => 'crnrstn');
+
                     $R_resp[$memory_ptr]['dependencies']              = array();
                     $R_resp[$memory_ptr]['php_version']['removed']    = array();
                     $R_resp[$memory_ptr]['php_version']['deprecated'] = array();
-                    $R_resp[$memory_ptr]['php_version']['supported']  = array('6.1.6' => 'PHP > 5.5, PHP 7, PHP 8');
+                    $R_resp[$memory_ptr]['php_version']['supported']  = array('6.1.6' => 'PHP >= 5.5, PHP 7, PHP 8', 
+                                                                              '7.1.1' => 'PHP >= 5.5, PHP 7, PHP 8');
 
                     $clr_ssl_msg = 'Request received for the ' . 
                                    $R_syntax['resource_type'][$R_resp[$memory_ptr]['resource_type']] . ', ' . 
@@ -15318,9 +16310,20 @@ function _crnrstn_native_resource_registry(
                      'class' . $os_path_dir_separator_char . 
                      'thirdparty' . $os_path_dir_separator_char . 
                      'phpmailer' . $os_path_dir_separator_char . 
+                     '6.1.6' . $os_path_dir_separator_char . 
                      'src' . $os_path_dir_separator_char . 
                      'OAuth.php': // <= $name. Where, _foo_factory(x, x, x, $name, x_000, x_001)
-                case 'OAuth.php':
+                case '6.1.6' . $os_path_dir_separator_char . 
+                     'OAuth.php':
+                case $root . $os_path_dir_separator_char . 
+                     'class' . $os_path_dir_separator_char . 
+                     'thirdparty' . $os_path_dir_separator_char . 
+                     'phpmailer' . $os_path_dir_separator_char . 
+                     '7.1.1' . $os_path_dir_separator_char . 
+                     'src' . $os_path_dir_separator_char . 
+                     'OAuth.php':
+                case '7.1.1' . $os_path_dir_separator_char . 
+                     'OAuth.php':
                 case __NAMESPACE__ . 
                      '\OAuth':
                 case 'OAuth':
@@ -15344,10 +16347,18 @@ function _crnrstn_native_resource_registry(
                     $tmp_type_dir                           = 'obj';
                     $tmp_public_key                         = 'gabriel_oauth';
                     $tmp_storage_arch                       = 'general_resource';
-                    $tmp_file_path                          = $root . $os_path_dir_separator_char . 
+                    $tmp_file_path_6_1_6                    = $root . $os_path_dir_separator_char . 
                                                               'class' . $os_path_dir_separator_char . 
                                                               'thirdparty' . $os_path_dir_separator_char . 
                                                               'phpmailer' . $os_path_dir_separator_char . 
+                                                              '6.1.6' . $os_path_dir_separator_char . 
+                                                              'src' . $os_path_dir_separator_char . 
+                                                              $tmp_file_name;
+                    $tmp_file_path_7_1_1                    = $root . $os_path_dir_separator_char . 
+                                                              'class' . $os_path_dir_separator_char . 
+                                                              'thirdparty' . $os_path_dir_separator_char . 
+                                                              'phpmailer' . $os_path_dir_separator_char . 
+                                                              '7.1.1' . $os_path_dir_separator_char . 
                                                               'src' . $os_path_dir_separator_char . 
                                                               $tmp_file_name;
                     $tmp_obj_exe_path                       = $root . $os_path_dir_separator_char . 
@@ -15421,7 +16432,7 @@ function _crnrstn_native_resource_registry(
                              * Saturday, November 1, 2025 @ 2131 hrs.
                              *
                              */
-                            $tmp_LICENSE_URL = 'http://www.gnu.org/copyleft/lesser.html';
+                            $tmp_LICENSE_URL = 'https://www.gnu.org/licenses/old-licenses/lgpl-2.1.html';
 
                             /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
                              * Initialize the copyright 
@@ -15438,7 +16449,7 @@ function _crnrstn_native_resource_registry(
                              * Saturday, August 24, 2024 @ 0700 hrs.
                              *
                              */
-                            $tmp_COPYRIGHT_TEXT = 'Copyright (c) 2012 - 2017 Marcus Bointon. ' . 
+                            $tmp_COPYRIGHT_TEXT = 'Copyright (c) 2012 - 2023 Marcus Bointon. ' . 
                             'Copyright (c)  2010 - 2012 Jim Jagielski. ' . 
                             'Copyright (c)  2004 - 2009 Andy Prevost.';
 
@@ -15478,11 +16489,15 @@ function _crnrstn_native_resource_registry(
                     $R_resp[$memory_ptr]['background_color_hex']      = $tmp_background_color_hex;
                     $R_resp[$memory_ptr]['title']['TEXT']             = $tmp_TITLE_TEXT;
                     $R_resp[$memory_ptr]['software_company']['key']   = 'PHPMailer';
-                    $R_resp[$memory_ptr]['software_default']          = '6.1.6';
-                    $R_resp[$memory_ptr]['license']['key']            = array('6.1.6' => 'GNU_Lesser');
-                    $R_resp[$memory_ptr]['license']['name']           = array('6.1.6' => $tmp_LICENSE_NAME_TEXT);
-                    $R_resp[$memory_ptr]['license']['url']            = array('6.1.6' => $tmp_LICENSE_URL);
-                    $R_resp[$memory_ptr]['copyright']                 = array('6.1.6' => $tmp_COPYRIGHT_TEXT);
+                    $R_resp[$memory_ptr]['software_default']          = '7.1.1';
+                    $R_resp[$memory_ptr]['license']['key']            = array('6.1.6' => 'GNU_Lesser', 
+                                                                              '7.1.1' => 'GNU_Lesser');
+                    $R_resp[$memory_ptr]['license']['name']           = array('6.1.6' => $tmp_LICENSE_NAME_TEXT, 
+                                                                              '7.1.1' => $tmp_LICENSE_NAME_TEXT);
+                    $R_resp[$memory_ptr]['license']['url']            = array('6.1.6' => $tmp_LICENSE_URL, 
+                                                                              '7.1.1' => $tmp_LICENSE_URL);
+                    $R_resp[$memory_ptr]['copyright']                 = array('6.1.6' => $tmp_COPYRIGHT_TEXT, 
+                                                                              '7.1.1' => $tmp_COPYRIGHT_TEXT);
 
                     if($request_type === 'meta'){
                         // 5 :: Friday, May 22, 2026 @ 1303 hrs.
@@ -15490,6 +16505,7 @@ function _crnrstn_native_resource_registry(
                         $R_resp[$memory_ptr]['clr_ssl_admin']['last_modified']['timestamp']['LINUX_MAC_OS'][] = 'Sun Aug 25 00:39:26.661974 2024';
                         $R_resp[$memory_ptr]['clr_ssl_admin']['last_modified']['timestamp']['LINUX_MAC_OS'][] = 'Thu Oct 30 00:53:59.242098 2025';
                         $R_resp[$memory_ptr]['clr_ssl_admin']['last_modified']['timestamp']['LINUX_MAC_OS'][] = 'Thu Aug 20 22:44:34.019467 2026';
+                        $R_resp[$memory_ptr]['clr_ssl_admin']['last_modified']['timestamp']['LINUX_MAC_OS'][] = 'Thu Oct 1 06:13:18.903778 2026';
                         $R_resp[$memory_ptr]['clr_ssl_admin']['last_modified']['ip_address']                  = '172.16.225.1';
                         $R_resp[$memory_ptr]['clr_ssl_admin']['datecreated']['timestamp']['LINUX_MAC_OS'][]   = 'Tue Jul 02 09:22:32.089882 2024';
                         $R_resp[$memory_ptr]['clr_ssl_admin']['datecreated']['ip_address']                    = '172.16.225.1';
@@ -15506,7 +16522,8 @@ function _crnrstn_native_resource_registry(
                      * include
                      * include_once
                      */
-                    $R_resp[$memory_ptr]['evaluation_protocol']       = array('6.1.6' => 'require');
+                    $R_resp[$memory_ptr]['evaluation_protocol']       = array('6.1.6' => 'require', 
+                                                                              '7.1.1' => 'require');
 
                     /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
                      * SOAP_ENDPOINT
@@ -15516,7 +16533,8 @@ function _crnrstn_native_resource_registry(
                      */
                     $R_resp[$memory_ptr]['resource_type']             = 'CLASS_DEFINITION';
                     $R_resp[$memory_ptr]['public_key']                = $tmp_public_key;
-                    $R_resp[$memory_ptr]['storage_arch']              = array('6.1.6' => $tmp_storage_arch);
+                    $R_resp[$memory_ptr]['storage_arch']              = array('6.1.6' => $tmp_storage_arch, 
+                                                                              '7.1.1' => $tmp_storage_arch);
 
                     /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
                      * (int) $int_flag['R_load_many_to_1_request']
@@ -15524,13 +16542,18 @@ function _crnrstn_native_resource_registry(
                      * (int) $int_flag['R_load_1_to_1_session']
                      * (int) $int_flag['R_load_on_ttl_expire']
                      */
-                    $R_resp[$memory_ptr]['loading_arch']              = array('6.1.6' => $int_flag['R_load_many_to_1_request']);
+                    $R_resp[$memory_ptr]['loading_arch']              = array('6.1.6' => $int_flag['R_load_many_to_1_request'], 
+                                                                              '7.1.1' => $int_flag['R_load_many_to_1_request']);
                     $R_resp[$memory_ptr]['namespace']                 = __NAMESPACE__;
-                    $R_resp[$memory_ptr]['file_path']['definition']   = array('6.1.6' => $tmp_file_path);
-                    $R_resp[$memory_ptr]['file_path']['new_obj_exe']  = array('6.1.6' => $tmp_obj_exe_path);
-                    $R_resp[$memory_ptr]['file_name']                 = array('6.1.6' => $tmp_file_name);
-                    $R_resp[$memory_ptr]['software_version']          = array('6.1.6');
-                    $R_resp[$memory_ptr]['is_active']                 = array('6.1.6' => true);
+                    $R_resp[$memory_ptr]['file_path']['definition']   = array('6.1.6' => $tmp_file_path_6_1_6, 
+                                                                              '7.1.1' => $tmp_file_path_7_1_1);
+                    $R_resp[$memory_ptr]['file_path']['new_obj_exe']  = array('6.1.6' => $tmp_obj_exe_path, 
+                                                                              '7.1.1' => $tmp_obj_exe_path);
+                    $R_resp[$memory_ptr]['file_name']                 = array('6.1.6' => $tmp_file_name, 
+                                                                              '7.1.1' => $tmp_file_name);
+                    $R_resp[$memory_ptr]['software_version']          = array('6.1.6', '7.1.1');
+                    $R_resp[$memory_ptr]['is_active']                 = array('6.1.6' => true, 
+                                                                              '7.1.1' => true);
 
                     /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
                      * Raw function input. Do we support this? 
@@ -15560,17 +16583,27 @@ function _crnrstn_native_resource_registry(
 
                     }
 
-                    $R_resp[$memory_ptr]['input_parameter_count']     = array('6.1.6' => 1);
+                    $R_resp[$memory_ptr]['input_parameter_count']     = array('6.1.6' => 1, '7.1.1' => 1);
                     $R_resp[$memory_ptr]['input_parameter_defaults']  = array('6.1.6' => array(
                                                                                          'provider'     => $provider, 
                                                                                          'userName'     => $userName, 
                                                                                          'clientSecret' => $clientSecret, 
                                                                                          'clientId'     => $clientId, 
+                                                                                         'refreshToken' => $refreshToken), 
+                                                                              '7.1.1' => array(
+                                                                                         'provider'     => $provider, 
+                                                                                         'userName'     => $userName, 
+                                                                                         'clientSecret' => $clientSecret, 
+                                                                                         'clientId'     => $clientId, 
                                                                                          'refreshToken' => $refreshToken));
-                    $R_resp[$memory_ptr]['eval_ttl']                  = array('6.1.6' => -1);
-                    $R_resp[$memory_ptr]['file_evaluate_enabled']     = array('6.1.6' => true);
-                    $R_resp[$memory_ptr]['auto_eval_mode_enabled']    = array('6.1.6' => true);
-                    $R_resp[$memory_ptr]['auto_obj_mode_enabled']     = array('6.1.6' => true);
+                    $R_resp[$memory_ptr]['eval_ttl']                  = array('6.1.6' => -1, 
+                                                                              '7.1.1' => -1);
+                    $R_resp[$memory_ptr]['file_evaluate_enabled']     = array('6.1.6' => true, 
+                                                                              '7.1.1' => true);
+                    $R_resp[$memory_ptr]['auto_eval_mode_enabled']    = array('6.1.6' => true, 
+                                                                              '7.1.1' => true);
+                    $R_resp[$memory_ptr]['auto_obj_mode_enabled']     = array('6.1.6' => true, 
+                                                                              '7.1.1' => true);
 
                     /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
                      * view_source_safe = 0 for admin 
@@ -15583,7 +16616,7 @@ function _crnrstn_native_resource_registry(
                      * Only an update to admin server 
                      * settings should change this. 
                      */
-                    $R_resp[$memory_ptr]['view_source_safe']          = array('6.1.6' => 0);
+                    $R_resp[$memory_ptr]['view_source_safe']          = array('6.1.6' => 0, '7.1.1' => 0);
 
                     /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
                      * All 'extends_class' 
@@ -15605,7 +16638,8 @@ function _crnrstn_native_resource_registry(
                     $R_resp[$memory_ptr]['dependencies']              = array();
                     $R_resp[$memory_ptr]['php_version']['removed']    = array();
                     $R_resp[$memory_ptr]['php_version']['deprecated'] = array();
-                    $R_resp[$memory_ptr]['php_version']['supported']  = array('6.1.6' => 'PHP > 5.5, PHP 7, PHP 8');
+                    $R_resp[$memory_ptr]['php_version']['supported']  = array('6.1.6' => 'PHP >= 5.5, PHP 7, PHP 8', 
+                                                                              '7.1.1' => 'PHP >= 5.5, PHP 7, PHP 8');
 
                     $clr_ssl_msg = 'Request received for ' . 
                                    $R_syntax['resource_type'][$R_resp[$memory_ptr]['resource_type']] . 
@@ -16255,9 +17289,903 @@ function _crnrstn_native_resource_registry(
                      'class' . $os_path_dir_separator_char . 
                      'thirdparty' . $os_path_dir_separator_char . 
                      'phpmailer' . $os_path_dir_separator_char . 
+                     '7.1.1' . $os_path_dir_separator_char . 
+                     'src' . $os_path_dir_separator_char . 
+                     'OAuthTokenProvider.php':
+                case '7.1.1' . $os_path_dir_separator_char . 
+                     'OAuthTokenProvider.php':
+                case __NAMESPACE__ . 
+                     '\OAuthTokenProvider':
+                case 'OAuthTokenProvider':
+                case 'gabriel_oauth_token':
+
+                    /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
+                     * Initialize the system 
+                     * configuration resource 
+                     * file path. 
+                     *
+                     */
+                    $tmp_resource_name                      = 'OAuthTokenProvider';
+                    $tmp_file_name                          = 'OAuthTokenProvider.php';
+                    $tmp_type_dir                           = 'obj';
+                    $tmp_public_key                         = 'gabriel_oauth_token';
+                    $tmp_storage_arch                       = 'general_resource';
+                    $tmp_file_path_7_1_1                    = $root . $os_path_dir_separator_char . 
+                                                              'class' . $os_path_dir_separator_char . 
+                                                              'thirdparty' . $os_path_dir_separator_char . 
+                                                              'phpmailer' . $os_path_dir_separator_char . 
+                                                              '7.1.1' . $os_path_dir_separator_char . 
+                                                              'src' . $os_path_dir_separator_char . 
+                                                              $tmp_file_name;
+                    $tmp_obj_exe_path                       = ''; // PHP interfaces are not instantiated.
+
+                    /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
+                     * Initialize the CRNRSTN :: 
+                     * Lightsaber RoCEv2 SOAP 
+                     * Services Layer (CLR-SSL) 
+                     * Multi-Language Services 
+                     * Layer for resource 
+                     * meta return. 
+                     *
+                     *
+                     * 5
+                     *
+                     * Saturday, August 24, 2024 @ 0458 hrs.
+                     *
+                     */
+                    switch($tmp_iso_lang_code){
+                        //case 'es':
+                        case 'en':
+                        default:
+
+                            /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
+                             * Initialize a title for this 
+                             * natively registered resource of 
+                             * the CRNRSTN :: Lightsaber RoCEv2 
+                             * SOAP Services Layer (CLR-SSL) 
+                             * System Resource Registry. 
+                             *
+                             *
+                             * 5
+                             *
+                             */
+                            $tmp_TITLE_TEXT = 'The OAuth2 Token Provider ' . 
+                            'Interface for PHPMailer, a ' . 
+                            'full-featured email creation ' . 
+                            'and transfer class for PHP';
+
+                            /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
+                             * Initialize the license name for 
+                             * this natively registered resource 
+                             * of the CRNRSTN :: Lightsaber 
+                             * RoCEv2 SOAP Services Layer 
+                             * (CLR-SSL) Resource Registry. 
+                             *
+                             *
+                             * 5
+                             *
+                             */
+                            $tmp_LICENSE_NAME_TEXT = 'GNU Lesser General Public License';
+
+                            /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
+                             * Initialize the license URL 
+                             * for this natively registered 
+                             * resource of the CRNRSTN :: 
+                             * Lightsaber RoCEv2 SOAP 
+                             * Services Layer (CLR-SSL) 
+                             * System Resource Registry. 
+                             *
+                             *
+                             * 5
+                             *
+                             * Saturday, November 1, 2025 @ 2131 hrs.
+                             *
+                             */
+                            $tmp_LICENSE_URL = 'https://www.gnu.org/licenses/old-licenses/lgpl-2.1.html';
+
+                            /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
+                             * Initialize the copyright 
+                             * data for this natively 
+                             * registered resource of 
+                             * the CRNRSTN :: Lightsaber 
+                             * RoCEv2 SOAP Services 
+                             * Layer (CLR-SSL) System 
+                             * Resource Registry. 
+                             *
+                             *
+                             * 5
+                             *
+                             * Saturday, August 24, 2024 @ 0700 hrs.
+                             *
+                             */
+                            $tmp_COPYRIGHT_TEXT = 'Copyright (c) 2012 - 2023 Marcus Bointon. ' . 
+                            'Copyright (c)  2010 - 2012 Jim Jagielski. ' . 
+                            'Copyright (c)  2004 - 2009 Andy Prevost.';
+
+                        break;
+
+                    }
+
+                    /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
+                     * Prepare a memory pointer 
+                     * in order to index this 
+                     * resource in the CLR-SSL 
+                     * Resource Registry data 
+                     * output container. 
+                     *
+                     *
+                     * 5 :: Wednesday, April 15, 2026 @ 0817 hrs.
+                     *
+                     */
+                    $memory_ptr = $R->generate_memory_pointer($tmp_file_path_7_1_1);
+
+                    /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
+                     * Initialize a CLR-SSL 
+                     * Resource Registry 
+                     * response output 
+                     * data container. 
+                     *
+                     * $R_resp = array();
+                     *
+                     *
+                     * 5 :: Saturday, April 4, 2026 @ 1453 hrs.
+                     *
+                     */
+                    $R_resp                                           = array();
+                    $R_resp['clr_ssl_resource']['memory_pointer'][]   = $memory_ptr;
+                    $R_resp[$memory_ptr]['resource_name']             = $tmp_resource_name;
+                    $R_resp[$memory_ptr]['iso_lang_code']             = $tmp_iso_lang_code;
+                    $R_resp[$memory_ptr]['background_color_hex']      = $tmp_background_color_hex;
+                    $R_resp[$memory_ptr]['title']['TEXT']             = $tmp_TITLE_TEXT;
+                    $R_resp[$memory_ptr]['software_company']['key']   = 'PHPMailer';
+                    $R_resp[$memory_ptr]['software_default']          = '7.1.1';
+                    $R_resp[$memory_ptr]['license']['key']            = array('6.1.6' => 'GNU_Lesser', 
+                                                                              '7.1.1' => 'GNU_Lesser');
+                    $R_resp[$memory_ptr]['license']['name']           = array('6.1.6' => $tmp_LICENSE_NAME_TEXT, 
+                                                                              '7.1.1' => $tmp_LICENSE_NAME_TEXT);
+                    $R_resp[$memory_ptr]['license']['url']            = array('6.1.6' => $tmp_LICENSE_URL, 
+                                                                              '7.1.1' => $tmp_LICENSE_URL);
+                    $R_resp[$memory_ptr]['copyright']                 = array('6.1.6' => $tmp_COPYRIGHT_TEXT, 
+                                                                              '7.1.1' => $tmp_COPYRIGHT_TEXT);
+
+                    if($request_type === 'meta'){
+                        // 5 :: Friday, May 22, 2026 @ 1303 hrs.
+
+                        $R_resp[$memory_ptr]['clr_ssl_admin']['last_modified']['timestamp']['LINUX_MAC_OS'][] = 'Thu Oct 1 03:45:48.033513 2026';
+                        $R_resp[$memory_ptr]['clr_ssl_admin']['last_modified']['ip_address']                  = '172.16.225.1';
+                        $R_resp[$memory_ptr]['clr_ssl_admin']['datecreated']['timestamp']['LINUX_MAC_OS'][]   = 'Thu Oct 1 03:45:48.033513 2026';
+                        $R_resp[$memory_ptr]['clr_ssl_admin']['datecreated']['ip_address']                    = '172.16.225.1';
+
+                    }
+
+                    $R_resp[$memory_ptr]['microtime']                 = $R->microtime_float();
+                    $R_resp[$memory_ptr]['timestamp']                 = \gettimeofday();
+                    $R_resp[$memory_ptr]['runtime']                   = $R->wall_time();
+
+                    /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
+                     * require 
+                     * require_once
+                     * include
+                     * include_once
+                     */
+                    $R_resp[$memory_ptr]['evaluation_protocol']       = array('7.1.1' => 'require');
+
+                    /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
+                     * SOAP_ENDPOINT
+                     * CLASS_DEFINITION
+                     * FUNCTION_DEFINITION
+                     * RUNTIME_EXECUTABLE
+                     * TODO :: Add support for the PHP 
+                     *         INTERFACE_DEFINITION 
+                     *         resource type. 
+                     *         5 :: Thursday, October 1, 2026 @ 0349 hrs.
+                     */
+                    $R_resp[$memory_ptr]['resource_type']             = 'CLASS_DEFINITION'; // Note: This is an interface.
+                    //$R_resp[$memory_ptr]['resource_type']             = 'INTERFACE_DEFINITION';
+                    $R_resp[$memory_ptr]['public_key']                = $tmp_public_key;
+                    $R_resp[$memory_ptr]['storage_arch']              = array('7.1.1' => $tmp_storage_arch);
+
+                    /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
+                     * (int) $int_flag['R_load_many_to_1_request']
+                     * (int) $int_flag['R_load_1_to_1_request']
+                     * (int) $int_flag['R_load_1_to_1_session']
+                     * (int) $int_flag['R_load_on_ttl_expire']
+                     */
+                    $R_resp[$memory_ptr]['loading_arch']              = array('7.1.1' => $int_flag['R_load_many_to_1_request']);
+                    $R_resp[$memory_ptr]['namespace']                 = __NAMESPACE__;
+                    $R_resp[$memory_ptr]['file_path']['definition']   = array('7.1.1' => $tmp_file_path_7_1_1);
+                    $R_resp[$memory_ptr]['file_path']['new_obj_exe']  = array('7.1.1' => $tmp_obj_exe_path);
+                    $R_resp[$memory_ptr]['file_name']                 = array('7.1.1' => $tmp_file_name);
+                    $R_resp[$memory_ptr]['software_version']          = array('7.1.1');
+                    $R_resp[$memory_ptr]['is_active']                 = array('7.1.1' => true);
+                    $R_resp[$memory_ptr]['input_parameter_count']     = array('7.1.1' => 0);
+                    $R_resp[$memory_ptr]['input_parameter_defaults']  = array('7.1.1' => array());
+                    $R_resp[$memory_ptr]['eval_ttl']                  = array('7.1.1' => -1);
+                    $R_resp[$memory_ptr]['file_evaluate_enabled']     = array('7.1.1' => true);
+                    $R_resp[$memory_ptr]['auto_eval_mode_enabled']    = array('7.1.1' => true);
+                    $R_resp[$memory_ptr]['auto_obj_mode_enabled']     = array('7.1.1' => false);
+
+                    /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
+                     * view_source_safe = 0 for admin 
+                     *                    only access. 
+                     * -----
+                     * This will grant a browser authenticated 
+                     * PHP admin session read access to 
+                     * source code. 
+                     *
+                     * Only an update to admin server 
+                     * settings should change this. 
+                     */
+                    $R_resp[$memory_ptr]['view_source_safe']          = array('7.1.1' => 0);
+
+                    /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
+                     * All 'extends_class' 
+                     * resources should be 
+                     * officially registered 
+                     * with the CRNRSTN :: 
+                     * Lightsaber RoCEv2 
+                     * SOAP Services Layer 
+                     * (CLR-SSL) Resource 
+                     * Registry. 
+                     *
+                     *
+                     * 5
+                     *
+                     * Monday, July 29, 2024 @ 0147 hrs.
+                     *
+                     */
+                    $R_resp[$memory_ptr]['extends_class']             = array();
+                    $R_resp[$memory_ptr]['dependencies']              = array();
+                    $R_resp[$memory_ptr]['php_version']['removed']    = array();
+                    $R_resp[$memory_ptr]['php_version']['deprecated'] = array();
+                    $R_resp[$memory_ptr]['php_version']['supported']  = array('7.1.1' => 'PHP >= 5.5, PHP 7, PHP 8');
+
+                    $clr_ssl_msg = 'Request received for ' . 
+                                   $R_syntax['resource_type'][$R_resp[$memory_ptr]['resource_type']] . 
+                                   ', ' . 
+                                   $R_resp[$memory_ptr]['resource_name'] . 
+                                   ' v' . 
+                                   $R_resp[$memory_ptr]['software_default'] . 
+                                   '.';
+                    // 5 :: Frixxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                    $msg_token = '8f3046abc4bd029426a9133e484d7470' . 
+                                 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx';
+                    $token_generation_date = '2026xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx';
+                    $token = array(
+                             'token'                   => $msg_token, 
+                             'token_generation_date'   => $token_generation_date, 
+                             'request_type'            => $request_type, 
+                             'code'                    => 200, 
+                             'clr_ssl_msg'             => $clr_ssl_msg, 
+                             'memory_ptr'              => $memory_ptr, 
+                             'resource_ping_runtime'   => $R_resp[$memory_ptr]['runtime'], 
+                             'resource_ping_microtime' => $R_resp[$memory_ptr]['microtime'], 
+                             'file_evaluate_enabled'   => $R_resp[$memory_ptr]['file_evaluate_enabled'][$R_resp[$memory_ptr]['software_default']], 
+                             'auto_eval_mode_enabled'  => $R_resp[$memory_ptr]['auto_eval_mode_enabled'][$R_resp[$memory_ptr]['software_default']], 
+                             'auto_obj_mode_enabled'   => $R_resp[$memory_ptr]['auto_obj_mode_enabled'][$R_resp[$memory_ptr]['software_default']], 
+                             'namespace'               => $R_resp[$memory_ptr]['namespace'], 
+                             'resource_loading_arch'   => $R_resp[$memory_ptr]['loading_arch'][$R_resp[$memory_ptr]['software_default']], 
+                             'resource_eval_ttl'       => $R_resp[$memory_ptr]['eval_ttl'][$R_resp[$memory_ptr]['software_default']], 
+                             'resource_type'           => $R_resp[$memory_ptr]['resource_type'], 
+                             'resource_name'           => $R_resp[$memory_ptr]['resource_name'], 
+                             'software_version'        => $R_resp[$memory_ptr]['software_default'], 
+                             'resource_title'          => $R_resp[$memory_ptr]['title']['TEXT'], 
+                             'software_company'        => $R_resp[$memory_ptr]['software_company']['key'], 
+                             'copyright'               => $R_resp[$memory_ptr]['copyright'][$R_resp[$memory_ptr]['software_default']], 
+                             'license_key'             => $R_resp[$memory_ptr]['license']['key'][$R_resp[$memory_ptr]['software_default']]);
+                    $R->error_log(
+                        $clr_ssl_msg, 
+                        \LOG_DEBUG, 
+                        \E_NOTICE, 
+                        __LINE__, 
+                        __FUNCTION__, 
+                        __FILE__, 
+                        $token);
+
+                    /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
+                     * CLR-SSL Registry Resource 
+                     * High Level Architecture for 
+                     * Resource and Meta Access: 
+                     * - ping 
+                     * - evaluate 
+                     * - return 
+                     * - meta 
+                     *
+                     * Are we checking on the 
+                     * existence of the requested 
+                     * resource in the server 
+                     * file system? A resource 
+                     * ping? 
+                     *
+                     * Perhaps a function call or 
+                     * even an object needs to 
+                     * be returned? 
+                     *
+                     * Does someone need a class title 
+                     * in HTML? Maybe. 
+                     *
+                     *
+                     * 5 :: Friday, April 3, 2026 @ 0808 hrs.
+                     * Last Updated: Wednesday, April 15, 2026 @ 1825 hrs.
+                     *
+                     */
+                    switch($request_type){
+                        case 'ping':
+
+                            if($R->by_pass_is_file(
+                                   NULL, 
+                                   $R_resp[$memory_ptr]['resource_name'], 
+                                   $R_resp[$memory_ptr]['software_default']))
+                            {
+
+                                if($R_resp[$memory_ptr]['file_evaluate_enabled'][$R_resp[$memory_ptr]['software_default']] !== false){
+
+                                    /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
+                                     * Do we automatically 
+                                     * return this resource? 
+                                     *
+                                     *
+                                     * 5 :: Tuesday, June 9, 2026 @ 1705 hrs.
+                                     *
+                                     */
+                                    if($R_resp[$memory_ptr]['auto_obj_mode_enabled'][$R_resp[$memory_ptr]['software_default']] !== false){
+
+                                        $R_resp = _crnrstn_native_resource_registry(
+                                                  __FUNCTION__, 
+                                                  $R, 
+                                                  'return[' . 
+                                                  $R_resp[$memory_ptr]['resource_type'] . ']', 
+                                                  $R_resp, 
+                                                  $R_debug_mode, 
+                                                  $memory_ptr, 
+                                                  true);                // <-- true means skip the file check.
+
+                                        return $R_resp;
+
+                                    }
+
+                                    /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
+                                     * Do we automatically 
+                                     * evaluate this resource? 
+                                     *
+                                     *
+                                     * 5 :: Thursday, May 21, 2026 @ 0720 hrs.
+                                     *
+                                     */
+                                    if($R_resp[$memory_ptr]['auto_eval_mode_enabled'][$R_resp[$memory_ptr]['software_default']] !== false)
+                                        $R_resp = _crnrstn_native_resource_registry(
+                                                  __FUNCTION__, 
+                                                  $R, 
+                                                  'evaluate[' . 
+                                                  $R_resp[$memory_ptr]['resource_type'] . ']', 
+                                                  $R_resp, 
+                                                  $R_debug_mode, 
+                                                  $memory_ptr, 
+                                                  true);               // <-- true means skip the file check.
+
+                                }
+
+                                // 5 :: Saturday, May 9, 2026 @ 1307 hrs.
+                                return $R_resp;
+
+                            }
+
+                            if(!($R->is_file(
+                                     $R_resp[$memory_ptr]['file_path']['definition'][$R_resp[$memory_ptr]['software_default']], 
+                                     $R_resp[$memory_ptr]['resource_name'], 
+                                     $R_resp[$memory_ptr]['software_default'])))
+                            {
+
+                                $clr_ssl_msg = 'File not found: ' . 
+                                               $R_resp[$memory_ptr]['file_path']['definition'][$R_resp[$memory_ptr]['software_default']] . 
+                                               '.';
+                                // 5 :: Tuexxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                                $msg_token = '8febb5003e6792dbeeac97bd025a256d' . 
+                                             'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx';
+                                $token_generation_date = '2026xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx';
+                                $token = array(
+                                         'token'                   => $msg_token, 
+                                         'token_generation_date'   => $token_generation_date, 
+                                         'request_type'            => $request_type, 
+                                         'code'                    => 200, 
+                                         'clr_ssl_msg'             => $clr_ssl_msg, 
+                                         'memory_ptr'              => $memory_ptr, 
+                                         'resource_ping_runtime'   => $R_resp[$memory_ptr]['runtime'], 
+                                         'resource_ping_microtime' => $R_resp[$memory_ptr]['microtime'], 
+                                         'file_evaluate_enabled'   => $R_resp[$memory_ptr]['file_evaluate_enabled'][$R_resp[$memory_ptr]['software_default']], 
+                                         'auto_eval_mode_enabled'  => $R_resp[$memory_ptr]['auto_eval_mode_enabled'][$R_resp[$memory_ptr]['software_default']], 
+                                         'auto_obj_mode_enabled'   => $R_resp[$memory_ptr]['auto_obj_mode_enabled'][$R_resp[$memory_ptr]['software_default']], 
+                                         'namespace'               => $R_resp[$memory_ptr]['namespace'], 
+                                         'resource_loading_arch'   => $R_resp[$memory_ptr]['loading_arch'][$R_resp[$memory_ptr]['software_default']], 
+                                         'resource_eval_ttl'       => $R_resp[$memory_ptr]['eval_ttl'][$R_resp[$memory_ptr]['software_default']], 
+                                         'resource_type'           => $R_resp[$memory_ptr]['resource_type'], 
+                                         'resource_name'           => $R_resp[$memory_ptr]['resource_name'], 
+                                         'software_version'        => $R_resp[$memory_ptr]['software_default'], 
+                                         'resource_title'          => $R_resp[$memory_ptr]['title']['TEXT'], 
+                                         'software_company'        => $R_resp[$memory_ptr]['software_company']['key'], 
+                                         'copyright'               => $R_resp[$memory_ptr]['copyright'][$R_resp[$memory_ptr]['software_default']], 
+                                         'license_key'             => $R_resp[$memory_ptr]['license']['key'][$R_resp[$memory_ptr]['software_default']]);
+                                $R->error_log(
+                                    $clr_ssl_msg, 
+                                    \LOG_CRIT, 
+                                    \E_ERROR, 
+                                    __LINE__, 
+                                    __FUNCTION__, 
+                                    __FILE__, 
+                                    $token);
+
+                                return false;
+
+                            }else{
+
+                                $clr_ssl_msg = 'The file system is ready for the ' . 
+                                               $R_syntax['resource_type'][$R_resp[$memory_ptr]['resource_type']] . 
+                                               ', ' . 
+                                               $R_resp[$memory_ptr]['resource_name'] . 
+                                               ' v' . 
+                                               $R_resp[$memory_ptr]['software_default'] . 
+                                               '.';
+                                // 5 :: Frixxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                                $msg_token = '1f137e9e37759ba10b5f675b5bef0819' . 
+                                             'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx';
+                                $token_generation_date = '2026xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx';
+                                $token = array(
+                                         'token'                   => $msg_token, 
+                                         'token_generation_date'   => $token_generation_date, 
+                                         'request_type'            => $request_type, 
+                                         'code'                    => 200, 
+                                         'clr_ssl_msg'             => $clr_ssl_msg, 
+                                         'memory_ptr'              => $memory_ptr, 
+                                         'resource_ping_runtime'   => $R_resp[$memory_ptr]['runtime'], 
+                                         'resource_ping_microtime' => $R_resp[$memory_ptr]['microtime'], 
+                                         'file_evaluate_enabled'   => $R_resp[$memory_ptr]['file_evaluate_enabled'][$R_resp[$memory_ptr]['software_default']], 
+                                         'auto_eval_mode_enabled'  => $R_resp[$memory_ptr]['auto_eval_mode_enabled'][$R_resp[$memory_ptr]['software_default']], 
+                                         'auto_obj_mode_enabled'   => $R_resp[$memory_ptr]['auto_obj_mode_enabled'][$R_resp[$memory_ptr]['software_default']], 
+                                         'namespace'               => $R_resp[$memory_ptr]['namespace'], 
+                                         'resource_loading_arch'   => $R_resp[$memory_ptr]['loading_arch'][$R_resp[$memory_ptr]['software_default']], 
+                                         'resource_eval_ttl'       => $R_resp[$memory_ptr]['eval_ttl'][$R_resp[$memory_ptr]['software_default']], 
+                                         'resource_type'           => $R_resp[$memory_ptr]['resource_type'], 
+                                         'resource_name'           => $R_resp[$memory_ptr]['resource_name'], 
+                                         'software_version'        => $R_resp[$memory_ptr]['software_default'], 
+                                         'resource_title'          => $R_resp[$memory_ptr]['title']['TEXT'], 
+                                         'software_company'        => $R_resp[$memory_ptr]['software_company']['key'], 
+                                         'copyright'               => $R_resp[$memory_ptr]['copyright'][$R_resp[$memory_ptr]['software_default']], 
+                                         'license_key'             => $R_resp[$memory_ptr]['license']['key'][$R_resp[$memory_ptr]['software_default']]);
+                                $R->error_log(
+                                    $clr_ssl_msg, 
+                                    \LOG_DEBUG, 
+                                    \E_NOTICE, 
+                                    __LINE__, 
+                                    __FUNCTION__, 
+                                    __FILE__, 
+                                    $token);
+
+                                if($R_resp[$memory_ptr]['file_evaluate_enabled'][$R_resp[$memory_ptr]['software_default']] !== false){
+
+                                    /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
+                                     * Do we automatically 
+                                     * return this resource? 
+                                     *
+                                     *
+                                     * 5 :: Tuesday, June 9, 2026 @ 1705 hrs.
+                                     *
+                                     */
+                                    if($R_resp[$memory_ptr]['auto_obj_mode_enabled'][$R_resp[$memory_ptr]['software_default']] !== false){
+
+                                        $R_resp = _crnrstn_native_resource_registry(
+                                                  __FUNCTION__, 
+                                                  $R, 
+                                                  'return[' . 
+                                                  $R_resp[$memory_ptr]['resource_type'] . ']', 
+                                                  $R_resp, 
+                                                  $R_debug_mode, 
+                                                  $memory_ptr, 
+                                                  true);                // <-- true means skip the file check.
+
+                                        return $R_resp;
+
+                                    }
+
+                                    /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
+                                     * Do we automatically 
+                                     * evaluate this resource? 
+                                     *
+                                     *
+                                     * 5 :: Thursday, May 21, 2026 @ 0711 hrs.
+                                     *
+                                     */
+                                    if($R_resp[$memory_ptr]['auto_eval_mode_enabled'][$R_resp[$memory_ptr]['software_default']] !== false)
+                                        $R_resp = _crnrstn_native_resource_registry(
+                                                  __FUNCTION__, 
+                                                  $R, 
+                                                  'evaluate[' . 
+                                                  $R_resp[$memory_ptr]['resource_type'] . ']', 
+                                                  $R_resp, 
+                                                  $R_debug_mode, 
+                                                  $memory_ptr, 
+                                                  true);               // <-- true means skip the file check.
+
+                                }
+
+                                return $R_resp;
+
+                            }
+
+                        break;
+                        case 'return':
+                        case 'evaluate':
+
+                            /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
+                             * If the resource is inactive, 
+                             * (bool) $R_resp[$memory_ptr]['is_active']['2.00.0001'] == false, 
+                             * or the file path is not 
+                             * successfully pointing to 
+                             * a valid file, the CLR-SSL 
+                             * will neither evaluate nor 
+                             * return the result of a 
+                             * class, function or 
+                             * runtime executable 
+                             * system resource. 
+                             *
+                             * It is worth mentioning 
+                             * that viewing the file 
+                             * source code could still 
+                             * be technically allowed to 
+                             * work on an "inactive" 
+                             * CLR-SSL resource. 
+                             *
+                             *
+                             * 5 :: Tuesday, April 20, 2026 @ 2206 hrs.
+                             *
+                             */
+                            if(!((bool) $R_resp[$memory_ptr]['is_active'][$R_resp[$memory_ptr]['software_default']] !== false)){
+
+                                if($request_type == 'evaluate') 
+                                    $tmp_action_type = 'evaluation of the';
+                                else
+                                    $tmp_action_type = 'return of the';
+
+                                $clr_ssl_msg = 'Resource inactive: ' . 
+                                               $R_resp[$memory_ptr]['resource_name'] . 
+                                               ' v' . 
+                                               $R_resp[$memory_ptr]['software_default'] . 
+                                               '.';
+                                // 5 :: Tuexxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                                $msg_token = 'f5825c29c97bc5aa61142abe37c838cf' . 
+                                             'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx';
+                                $token_generation_date = '2026xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx';
+                                $token = array(
+                                         'token'                   => $msg_token, 
+                                         'token_generation_date'   => $token_generation_date, 
+                                         'request_type'            => $request_type, 
+                                         'code'                    => 200, 
+                                         'clr_ssl_msg'             => $clr_ssl_msg, 
+                                         'memory_ptr'              => $memory_ptr, 
+                                         'resource_ping_runtime'   => $R_resp[$memory_ptr]['runtime'], 
+                                         'resource_ping_microtime' => $R_resp[$memory_ptr]['microtime'], 
+                                         'file_evaluate_enabled'   => $R_resp[$memory_ptr]['file_evaluate_enabled'][$R_resp[$memory_ptr]['software_default']], 
+                                         'auto_eval_mode_enabled'  => $R_resp[$memory_ptr]['auto_eval_mode_enabled'][$R_resp[$memory_ptr]['software_default']], 
+                                         'auto_obj_mode_enabled'   => $R_resp[$memory_ptr]['auto_obj_mode_enabled'][$R_resp[$memory_ptr]['software_default']], 
+                                         'namespace'               => $R_resp[$memory_ptr]['namespace'], 
+                                         'resource_loading_arch'   => $R_resp[$memory_ptr]['loading_arch'][$R_resp[$memory_ptr]['software_default']], 
+                                         'resource_eval_ttl'       => $R_resp[$memory_ptr]['eval_ttl'][$R_resp[$memory_ptr]['software_default']], 
+                                         'resource_type'           => $R_resp[$memory_ptr]['resource_type'], 
+                                         'resource_name'           => $R_resp[$memory_ptr]['resource_name'], 
+                                         'software_version'        => $R_resp[$memory_ptr]['software_default'], 
+                                         'resource_title'          => $R_resp[$memory_ptr]['title']['TEXT'], 
+                                         'software_company'        => $R_resp[$memory_ptr]['software_company']['key'], 
+                                         'copyright'               => $R_resp[$memory_ptr]['copyright'][$R_resp[$memory_ptr]['software_default']], 
+                                         'license_key'             => $R_resp[$memory_ptr]['license']['key'][$R_resp[$memory_ptr]['software_default']]);
+                                $R->error_log(
+                                    $clr_ssl_msg, 
+                                    \LOG_DEBUG, 
+                                    \E_NOTICE, 
+                                    __LINE__, 
+                                    __FUNCTION__, 
+                                    __FILE__, 
+                                    $token);
+
+                                // 5 :: Tuesday, April 20, 2026 @ 2213 hrs.
+                                $clr_ssl_msg = 'Suppressed the ' . 
+                                               $tmp_action_type . ' of an inactive ' . 
+                                               $R_syntax['resource_type'][$R_resp[$memory_ptr]['resource_type']] . 
+                                               ' at ' . 
+                                               $R_resp[$memory_ptr]['file_path']['definition'][$R_resp[$memory_ptr]['software_default']] . 
+                                               '.';
+                                // 5 :: Tuexxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                                $msg_token = 'fad7d387ad074d524b611d216d0c1efc' . 
+                                             'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx';
+                                $token_generation_date = '2026xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx';
+                                $token = array(
+                                         'token'                   => $msg_token, 
+                                         'token_generation_date'   => $token_generation_date, 
+                                         'request_type'            => $request_type, 
+                                         'code'                    => 200, 
+                                         'clr_ssl_msg'             => $clr_ssl_msg, 
+                                         'memory_ptr'              => $memory_ptr, 
+                                         'resource_ping_runtime'   => $R_resp[$memory_ptr]['runtime'], 
+                                         'resource_ping_microtime' => $R_resp[$memory_ptr]['microtime'], 
+                                         'file_evaluate_enabled'   => $R_resp[$memory_ptr]['file_evaluate_enabled'][$R_resp[$memory_ptr]['software_default']], 
+                                         'auto_eval_mode_enabled'  => $R_resp[$memory_ptr]['auto_eval_mode_enabled'][$R_resp[$memory_ptr]['software_default']], 
+                                         'auto_obj_mode_enabled'   => $R_resp[$memory_ptr]['auto_obj_mode_enabled'][$R_resp[$memory_ptr]['software_default']], 
+                                         'namespace'               => $R_resp[$memory_ptr]['namespace'], 
+                                         'resource_loading_arch'   => $R_resp[$memory_ptr]['loading_arch'][$R_resp[$memory_ptr]['software_default']], 
+                                         'resource_eval_ttl'       => $R_resp[$memory_ptr]['eval_ttl'][$R_resp[$memory_ptr]['software_default']], 
+                                         'resource_type'           => $R_resp[$memory_ptr]['resource_type'], 
+                                         'resource_name'           => $R_resp[$memory_ptr]['resource_name'], 
+                                         'software_version'        => $R_resp[$memory_ptr]['software_default'], 
+                                         'resource_title'          => $R_resp[$memory_ptr]['title']['TEXT'], 
+                                         'software_company'        => $R_resp[$memory_ptr]['software_company']['key'], 
+                                         'copyright'               => $R_resp[$memory_ptr]['copyright'][$R_resp[$memory_ptr]['software_default']], 
+                                         'license_key'             => $R_resp[$memory_ptr]['license']['key'][$R_resp[$memory_ptr]['software_default']]);
+                                $R->error_log(
+                                    $clr_ssl_msg, 
+                                    \LOG_INFO, 
+                                    \E_NOTICE, 
+                                    __LINE__, 
+                                    __FUNCTION__, 
+                                    __FILE__, 
+                                    $token);
+
+                                return false;
+
+                            }
+
+                            // True = skip file check. 
+                            if($R_data_001 != true)
+                            {
+
+                                if(!($R->is_file(
+                                         $R_resp[$memory_ptr]['file_path']['definition'][$R_resp[$memory_ptr]['software_default']], 
+                                         $R_resp[$memory_ptr]['resource_name'], 
+                                         $R_resp[$memory_ptr]['software_default'])))
+                                {
+
+                                    if($request_type == 'evaluate') 
+                                        $tmp_action_type = 'evaluate the';
+                                    else
+                                        $tmp_action_type = 'return the';
+
+                                    $clr_ssl_msg = 'File not found: ' . 
+                                                   $R_resp[$memory_ptr]['file_path']['definition'][$R_resp[$memory_ptr]['software_default']] . 
+                                                   '.';
+                                    // 5 :: Tuexxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                                    $msg_token = '4e8ed75f85e5e6b6da59199ed07d9e03' . 
+                                                 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx';
+                                    $token_generation_date = '2026xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx';
+                                    $token = array(
+                                             'token'                   => $msg_token, 
+                                             'token_generation_date'   => $token_generation_date, 
+                                             'request_type'            => $request_type, 
+                                             'code'                    => 200, 
+                                             'clr_ssl_msg'             => $clr_ssl_msg, 
+                                             'memory_ptr'              => $memory_ptr, 
+                                             'resource_ping_runtime'   => $R_resp[$memory_ptr]['runtime'], 
+                                             'resource_ping_microtime' => $R_resp[$memory_ptr]['microtime'], 
+                                             'file_evaluate_enabled'   => $R_resp[$memory_ptr]['file_evaluate_enabled'][$R_resp[$memory_ptr]['software_default']], 
+                                             'auto_eval_mode_enabled'  => $R_resp[$memory_ptr]['auto_eval_mode_enabled'][$R_resp[$memory_ptr]['software_default']], 
+                                             'auto_obj_mode_enabled'   => $R_resp[$memory_ptr]['auto_obj_mode_enabled'][$R_resp[$memory_ptr]['software_default']], 
+                                             'namespace'               => $R_resp[$memory_ptr]['namespace'], 
+                                             'resource_loading_arch'   => $R_resp[$memory_ptr]['loading_arch'][$R_resp[$memory_ptr]['software_default']], 
+                                             'resource_eval_ttl'       => $R_resp[$memory_ptr]['eval_ttl'][$R_resp[$memory_ptr]['software_default']], 
+                                             'resource_type'           => $R_resp[$memory_ptr]['resource_type'], 
+                                             'resource_name'           => $R_resp[$memory_ptr]['resource_name'], 
+                                             'software_version'        => $R_resp[$memory_ptr]['software_default'], 
+                                             'resource_title'          => $R_resp[$memory_ptr]['title']['TEXT'], 
+                                             'software_company'        => $R_resp[$memory_ptr]['software_company']['key'], 
+                                             'copyright'               => $R_resp[$memory_ptr]['copyright'][$R_resp[$memory_ptr]['software_default']], 
+                                             'license_key'             => $R_resp[$memory_ptr]['license']['key'][$R_resp[$memory_ptr]['software_default']]);
+                                    $R->error_log(
+                                        $clr_ssl_msg, 
+                                        \LOG_CRIT, 
+                                        \E_ERROR, 
+                                        __LINE__, 
+                                        __FUNCTION__, 
+                                        __FILE__, 
+                                        $token);
+
+                                    // 5 :: Friday, April 3, 2026 @ 0316 hrs.
+                                    $clr_ssl_msg = 'Failed to ' . 
+                                                   $tmp_action_type . ' the ' . 
+                                                   $R_syntax['resource_type'][$R_resp[$memory_ptr]['resource_type']] . 
+                                                   ': ' . 
+                                                   $R_resp[$memory_ptr]['resource_name'] . 
+                                                   ' v' . 
+                                                   $R_resp[$memory_ptr]['software_default'] . 
+                                                   '.';
+                                    // 5 :: Tuexxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                                    $msg_token = '11424925f03506b6a2c0b66cfc4a4ba5' . 
+                                                 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx';
+                                    $token_generation_date = '2026xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx';
+                                    $token = array(
+                                             'token'                   => $msg_token, 
+                                             'token_generation_date'   => $token_generation_date, 
+                                             'request_type'            => $request_type, 
+                                             'code'                    => 200, 
+                                             'clr_ssl_msg'             => $clr_ssl_msg, 
+                                             'memory_ptr'              => $memory_ptr, 
+                                             'resource_ping_runtime'   => $R_resp[$memory_ptr]['runtime'], 
+                                             'resource_ping_microtime' => $R_resp[$memory_ptr]['microtime'], 
+                                             'file_evaluate_enabled'   => $R_resp[$memory_ptr]['file_evaluate_enabled'][$R_resp[$memory_ptr]['software_default']], 
+                                             'auto_eval_mode_enabled'  => $R_resp[$memory_ptr]['auto_eval_mode_enabled'][$R_resp[$memory_ptr]['software_default']], 
+                                             'auto_obj_mode_enabled'   => $R_resp[$memory_ptr]['auto_obj_mode_enabled'][$R_resp[$memory_ptr]['software_default']], 
+                                             'namespace'               => $R_resp[$memory_ptr]['namespace'], 
+                                             'resource_loading_arch'   => $R_resp[$memory_ptr]['loading_arch'][$R_resp[$memory_ptr]['software_default']], 
+                                             'resource_eval_ttl'       => $R_resp[$memory_ptr]['eval_ttl'][$R_resp[$memory_ptr]['software_default']], 
+                                             'resource_type'           => $R_resp[$memory_ptr]['resource_type'], 
+                                             'resource_name'           => $R_resp[$memory_ptr]['resource_name'], 
+                                             'software_version'        => $R_resp[$memory_ptr]['software_default'], 
+                                             'resource_title'          => $R_resp[$memory_ptr]['title']['TEXT'], 
+                                             'software_company'        => $R_resp[$memory_ptr]['software_company']['key'], 
+                                             'copyright'               => $R_resp[$memory_ptr]['copyright'][$R_resp[$memory_ptr]['software_default']], 
+                                             'license_key'             => $R_resp[$memory_ptr]['license']['key'][$R_resp[$memory_ptr]['software_default']]);
+                                    $R->error_log(
+                                        $clr_ssl_msg, 
+                                        \LOG_ERR, 
+                                        \E_ERROR, 
+                                        __LINE__, 
+                                        __FUNCTION__, 
+                                        __FILE__, 
+                                        $token);
+
+                                    return false;
+
+                                }
+
+                                $clr_ssl_msg = 'The file system is ready for the ' . 
+                                               $R_syntax['resource_type'][$R_resp[$memory_ptr]['resource_type']] . 
+                                               ', ' . 
+                                               $R_resp[$memory_ptr]['resource_name'] . 
+                                               ' v' . 
+                                               $R_resp[$memory_ptr]['software_default'] . 
+                                               '.';
+                                // 5 :: Frixxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                                $msg_token = 'b5c7bedaf930910485642d1b8f960138' . 
+                                             '1c6c1e6ce45989159472da48deb276b1' . 
+                                             '6418a1b7bf04ba3b37a10eb97c64ede8' . 
+                                             'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx';
+                                $token_generation_date = '2026xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx';
+                                $token = array(
+                                         'token'                   => $msg_token, 
+                                         'token_generation_date'   => $token_generation_date, 
+                                         'request_type'            => $request_type, 
+                                         'code'                    => 200, 
+                                         'clr_ssl_msg'             => $clr_ssl_msg, 
+                                         'memory_ptr'              => $memory_ptr, 
+                                         'resource_ping_runtime'   => $R_resp[$memory_ptr]['runtime'], 
+                                         'resource_ping_microtime' => $R_resp[$memory_ptr]['microtime'], 
+                                         'file_evaluate_enabled'   => $R_resp[$memory_ptr]['file_evaluate_enabled'][$R_resp[$memory_ptr]['software_default']], 
+                                         'auto_eval_mode_enabled'  => $R_resp[$memory_ptr]['auto_eval_mode_enabled'][$R_resp[$memory_ptr]['software_default']], 
+                                         'auto_obj_mode_enabled'   => $R_resp[$memory_ptr]['auto_obj_mode_enabled'][$R_resp[$memory_ptr]['software_default']], 
+                                         'namespace'               => $R_resp[$memory_ptr]['namespace'], 
+                                         'resource_loading_arch'   => $R_resp[$memory_ptr]['loading_arch'][$R_resp[$memory_ptr]['software_default']], 
+                                         'resource_eval_ttl'       => $R_resp[$memory_ptr]['eval_ttl'][$R_resp[$memory_ptr]['software_default']], 
+                                         'resource_type'           => $R_resp[$memory_ptr]['resource_type'], 
+                                         'resource_name'           => $R_resp[$memory_ptr]['resource_name'], 
+                                         'software_version'        => $R_resp[$memory_ptr]['software_default'], 
+                                         'resource_title'          => $R_resp[$memory_ptr]['title']['TEXT'], 
+                                         'software_company'        => $R_resp[$memory_ptr]['software_company']['key'], 
+                                         'copyright'               => $R_resp[$memory_ptr]['copyright'][$R_resp[$memory_ptr]['software_default']], 
+                                         'license_key'             => $R_resp[$memory_ptr]['license']['key'][$R_resp[$memory_ptr]['software_default']]);
+                                $R->error_log(
+                                    $clr_ssl_msg, 
+                                    \LOG_DEBUG, 
+                                    \E_NOTICE, 
+                                    __LINE__, 
+                                    __FUNCTION__, 
+                                    __FILE__, 
+                                    $token);
+
+                            }
+
+                            /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
+                             * Evaluate the resource definition 
+                             * for a CLR-SSL Registry Resource 
+                             * and/or return a CLR-SSL 
+                             * resource...or return the 
+                             * output of said resource, e.g., 
+                             * if the resource is a function. 
+                             *
+                             *
+                             * 5 :: Monday, April 20, 2026 @ 0328 hrs.
+                             *
+                             */
+                            return _crnrstn_native_resource_registry(
+                                   __FUNCTION__, 
+                                   $R, 
+                                   $request_type . '[' . 
+                                   $R_resp[$memory_ptr]['resource_type'] . ']', 
+                                   $R_resp, 
+                                   $R_debug_mode, 
+                                   $memory_ptr);
+
+                        break;
+                        case 'meta':
+
+                            /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
+                             * CLR-SSL Registry Resource 
+                             * meta data fulfillment call. 
+                             *
+                             *
+                             * 5 :: Friday, April 10, 2026 @ 1248 hrs.
+                             *
+                             */
+                            return _crnrstn_native_resource_registry(
+                                   __FUNCTION__, 
+                                   $R, 
+                                   'return[' . 
+                                   $request_type . ']', 
+                                   $R_resp, 
+                                   $R_debug_mode, 
+                                   $memory_ptr, 
+                                   $R_data_000);
+
+                        break;
+                        default:
+
+                            $clr_ssl_msg = 'Unknown CLR-SSL Resource ' . 
+                                           'Registry action received: ' . 
+                                           \strval($request_type);
+                            // 5 :: Tuexxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                            $msg_token = '9c78974e20e83c630025c04ae0e1036a' . 
+                                         'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx';
+                            $token_generation_date = '2026xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx';
+                            $token = array(
+                                     'token'                   => $msg_token, 
+                                     'token_generation_date'   => $token_generation_date, 
+                                     'request_type'            => $request_type, 
+                                     'code'                    => 200, 
+                                     'clr_ssl_msg'             => $clr_ssl_msg, 
+                                     'memory_ptr'              => $memory_ptr, 
+                                     'resource_ping_runtime'   => $R_resp[$memory_ptr]['runtime'], 
+                                     'resource_ping_microtime' => $R_resp[$memory_ptr]['microtime'], 
+                                     'file_evaluate_enabled'   => $R_resp[$memory_ptr]['file_evaluate_enabled'][$R_resp[$memory_ptr]['software_default']], 
+                                     'auto_eval_mode_enabled'  => $R_resp[$memory_ptr]['auto_eval_mode_enabled'][$R_resp[$memory_ptr]['software_default']], 
+                                     'auto_obj_mode_enabled'   => $R_resp[$memory_ptr]['auto_obj_mode_enabled'][$R_resp[$memory_ptr]['software_default']], 
+                                     'namespace'               => $R_resp[$memory_ptr]['namespace'], 
+                                     'resource_loading_arch'   => $R_resp[$memory_ptr]['loading_arch'][$R_resp[$memory_ptr]['software_default']], 
+                                     'resource_eval_ttl'       => $R_resp[$memory_ptr]['eval_ttl'][$R_resp[$memory_ptr]['software_default']], 
+                                     'resource_type'           => $R_resp[$memory_ptr]['resource_type'], 
+                                     'resource_name'           => $R_resp[$memory_ptr]['resource_name'], 
+                                     'software_version'        => $R_resp[$memory_ptr]['software_default'], 
+                                     'resource_title'          => $R_resp[$memory_ptr]['title']['TEXT'], 
+                                     'software_company'        => $R_resp[$memory_ptr]['software_company']['key'], 
+                                     'copyright'               => $R_resp[$memory_ptr]['copyright'][$R_resp[$memory_ptr]['software_default']], 
+                                     'license_key'             => $R_resp[$memory_ptr]['license']['key'][$R_resp[$memory_ptr]['software_default']]);
+                            $R->error_log(
+                                $clr_ssl_msg, 
+                                \LOG_ERR, 
+                                \E_ERROR, 
+                                __LINE__, 
+                                __FUNCTION__, 
+                                __FILE__, 
+                                $token);
+
+                            return false;
+
+                        break;
+
+                    }
+
+                break;
+                case $root . $os_path_dir_separator_char . 
+                     'class' . $os_path_dir_separator_char . 
+                     'thirdparty' . $os_path_dir_separator_char . 
+                     'phpmailer' . $os_path_dir_separator_char . 
+                     '6.1.6' . $os_path_dir_separator_char . 
                      'src' . $os_path_dir_separator_char . 
                      'POP3.php': // <= $name. Where, _foo_factory(x, x, x, $name, x_000, x_001)
-                case 'POP3.php':
+                case '6.1.6' . $os_path_dir_separator_char . 
+                     'POP3.php':
+                case $root . $os_path_dir_separator_char . 
+                     'class' . $os_path_dir_separator_char . 
+                     'thirdparty' . $os_path_dir_separator_char . 
+                     'phpmailer' . $os_path_dir_separator_char . 
+                     '7.1.1' . $os_path_dir_separator_char . 
+                     'src' . $os_path_dir_separator_char . 
+                     'POP3.php':
+                case '7.1.1' . $os_path_dir_separator_char . 
+                     'POP3.php':
                 case __NAMESPACE__ . 
                      '\POP3':
                 case 'POP3':
@@ -16281,10 +18209,18 @@ function _crnrstn_native_resource_registry(
                     $tmp_type_dir                           = 'obj';
                     $tmp_public_key                         = 'gabriel_pop3';
                     $tmp_storage_arch                       = 'general_resource';
-                    $tmp_file_path                          = $root . $os_path_dir_separator_char . 
+                    $tmp_file_path_6_1_6                    = $root . $os_path_dir_separator_char . 
                                                               'class' . $os_path_dir_separator_char . 
                                                               'thirdparty' . $os_path_dir_separator_char . 
                                                               'phpmailer' . $os_path_dir_separator_char . 
+                                                              '6.1.6' . $os_path_dir_separator_char . 
+                                                              'src' . $os_path_dir_separator_char . 
+                                                              $tmp_file_name;
+                    $tmp_file_path_7_1_1                    = $root . $os_path_dir_separator_char . 
+                                                              'class' . $os_path_dir_separator_char . 
+                                                              'thirdparty' . $os_path_dir_separator_char . 
+                                                              'phpmailer' . $os_path_dir_separator_char . 
+                                                              '7.1.1' . $os_path_dir_separator_char . 
                                                               'src' . $os_path_dir_separator_char . 
                                                               $tmp_file_name;
                     $tmp_obj_exe_path                       = $root . $os_path_dir_separator_char . 
@@ -16358,7 +18294,7 @@ function _crnrstn_native_resource_registry(
                              * Saturday, November 1, 2025 @ 2131 hrs.
                              *
                              */
-                            $tmp_LICENSE_URL = 'http://www.gnu.org/copyleft/lesser.html';
+                            $tmp_LICENSE_URL = 'https://www.gnu.org/licenses/old-licenses/lgpl-2.1.html';
 
                             /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
                              * Initialize the copyright 
@@ -16375,7 +18311,7 @@ function _crnrstn_native_resource_registry(
                              * Saturday, August 24, 2024 @ 0700 hrs.
                              *
                              */
-                            $tmp_COPYRIGHT_TEXT = 'Copyright (c) 2012 - 2017 Marcus Bointon. ' . 
+                            $tmp_COPYRIGHT_TEXT = 'Copyright (c) 2012 - 2023 Marcus Bointon. ' . 
                             'Copyright (c)  2010 - 2012 Jim Jagielski. ' . 
                             'Copyright (c)  2004 - 2009 Andy Prevost.';
 
@@ -16415,11 +18351,15 @@ function _crnrstn_native_resource_registry(
                     $R_resp[$memory_ptr]['background_color_hex']      = $tmp_background_color_hex;
                     $R_resp[$memory_ptr]['title']['TEXT']             = $tmp_TITLE_TEXT;
                     $R_resp[$memory_ptr]['software_company']['key']   = 'PHPMailer';
-                    $R_resp[$memory_ptr]['software_default']          = '6.1.6';
-                    $R_resp[$memory_ptr]['license']['key']            = array('6.1.6' => 'GNU_Lesser');
-                    $R_resp[$memory_ptr]['license']['name']           = array('6.1.6' => $tmp_LICENSE_NAME_TEXT);
-                    $R_resp[$memory_ptr]['license']['url']            = array('6.1.6' => $tmp_LICENSE_URL);
-                    $R_resp[$memory_ptr]['copyright']                 = array('6.1.6' => $tmp_COPYRIGHT_TEXT);
+                    $R_resp[$memory_ptr]['software_default']          = '7.1.1';
+                    $R_resp[$memory_ptr]['license']['key']            = array('6.1.6' => 'GNU_Lesser', 
+                                                                              '7.1.1' => 'GNU_Lesser');
+                    $R_resp[$memory_ptr]['license']['name']           = array('6.1.6' => $tmp_LICENSE_NAME_TEXT, 
+                                                                              '7.1.1' => $tmp_LICENSE_NAME_TEXT);
+                    $R_resp[$memory_ptr]['license']['url']            = array('6.1.6' => $tmp_LICENSE_URL, 
+                                                                              '7.1.1' => $tmp_LICENSE_URL);
+                    $R_resp[$memory_ptr]['copyright']                 = array('6.1.6' => $tmp_COPYRIGHT_TEXT, 
+                                                                              '7.1.1' => $tmp_COPYRIGHT_TEXT);
 
                     if($request_type === 'meta'){
                         // 5 :: Friday, May 22, 2026 @ 1303 hrs.
@@ -16427,6 +18367,7 @@ function _crnrstn_native_resource_registry(
                         $R_resp[$memory_ptr]['clr_ssl_admin']['last_modified']['timestamp']['LINUX_MAC_OS'][] = 'Sun Aug 25 00:43:01.609466 2024';
                         $R_resp[$memory_ptr]['clr_ssl_admin']['last_modified']['timestamp']['LINUX_MAC_OS'][] = 'Thu Oct 30 00:56:32.399322 2025';
                         $R_resp[$memory_ptr]['clr_ssl_admin']['last_modified']['timestamp']['LINUX_MAC_OS'][] = 'Thu Aug 20 22:49:00.919619 2026';
+                        $R_resp[$memory_ptr]['clr_ssl_admin']['last_modified']['timestamp']['LINUX_MAC_OS'][] = 'Thu Oct 1 06:13:56.103642 2026';
                         $R_resp[$memory_ptr]['clr_ssl_admin']['last_modified']['ip_address']                  = '172.16.225.1';
                         $R_resp[$memory_ptr]['clr_ssl_admin']['datecreated']['timestamp']['LINUX_MAC_OS'][]   = 'Tue Jul 02 09:22:58.596602 2024';
                         $R_resp[$memory_ptr]['clr_ssl_admin']['datecreated']['ip_address']                    = '172.16.225.1';
@@ -16443,7 +18384,8 @@ function _crnrstn_native_resource_registry(
                      * include
                      * include_once
                      */
-                    $R_resp[$memory_ptr]['evaluation_protocol']       = array('6.1.6' => 'require');
+                    $R_resp[$memory_ptr]['evaluation_protocol']       = array('6.1.6' => 'require', 
+                                                                              '7.1.1' => 'require');
 
                     /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
                      * SOAP_ENDPOINT
@@ -16453,7 +18395,8 @@ function _crnrstn_native_resource_registry(
                      */
                     $R_resp[$memory_ptr]['resource_type']             = 'CLASS_DEFINITION';
                     $R_resp[$memory_ptr]['public_key']                = $tmp_public_key;
-                    $R_resp[$memory_ptr]['storage_arch']              = array('6.1.6' => $tmp_storage_arch);
+                    $R_resp[$memory_ptr]['storage_arch']              = array('6.1.6' => $tmp_storage_arch, 
+                                                                              '7.1.1' => $tmp_storage_arch);
 
                     /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
                      * (int) $int_flag['R_load_many_to_1_request']
@@ -16461,19 +18404,30 @@ function _crnrstn_native_resource_registry(
                      * (int) $int_flag['R_load_1_to_1_session']
                      * (int) $int_flag['R_load_on_ttl_expire']
                      */
-                    $R_resp[$memory_ptr]['loading_arch']              = array('6.1.6' => $int_flag['R_load_many_to_1_request']);
+                    $R_resp[$memory_ptr]['loading_arch']              = array('6.1.6' => $int_flag['R_load_many_to_1_request'], 
+                                                                              '7.1.1' => $int_flag['R_load_many_to_1_request']);
                     $R_resp[$memory_ptr]['namespace']                 = __NAMESPACE__;
-                    $R_resp[$memory_ptr]['file_path']['definition']   = array('6.1.6' => $tmp_file_path);
-                    $R_resp[$memory_ptr]['file_path']['new_obj_exe']  = array('6.1.6' => $tmp_obj_exe_path);
-                    $R_resp[$memory_ptr]['file_name']                 = array('6.1.6' => $tmp_file_name);
-                    $R_resp[$memory_ptr]['software_version']          = array('6.1.6');
-                    $R_resp[$memory_ptr]['is_active']                 = array('6.1.6' => true);
-                    $R_resp[$memory_ptr]['input_parameter_count']     = array('6.1.6' => 0);
-                    $R_resp[$memory_ptr]['input_parameter_defaults']  = array('6.1.6' => array());
-                    $R_resp[$memory_ptr]['eval_ttl']                  = array('6.1.6' => -1);
-                    $R_resp[$memory_ptr]['file_evaluate_enabled']     = array('6.1.6' => true);
-                    $R_resp[$memory_ptr]['auto_eval_mode_enabled']    = array('6.1.6' => true);
-                    $R_resp[$memory_ptr]['auto_obj_mode_enabled']     = array('6.1.6' => true);
+                    $R_resp[$memory_ptr]['file_path']['definition']   = array('6.1.6' => $tmp_file_path_6_1_6, 
+                                                                              '7.1.1' => $tmp_file_path_7_1_1);
+                    $R_resp[$memory_ptr]['file_path']['new_obj_exe']  = array('6.1.6' => $tmp_obj_exe_path, 
+                                                                              '7.1.1' => $tmp_obj_exe_path);
+                    $R_resp[$memory_ptr]['file_name']                 = array('6.1.6' => $tmp_file_name, 
+                                                                              '7.1.1' => $tmp_file_name);
+                    $R_resp[$memory_ptr]['software_version']          = array('6.1.6', '7.1.1');
+                    $R_resp[$memory_ptr]['is_active']                 = array('6.1.6' => true, 
+                                                                              '7.1.1' => true);
+                    $R_resp[$memory_ptr]['input_parameter_count']     = array('6.1.6' => 0, 
+                                                                              '7.1.1' => 0);
+                    $R_resp[$memory_ptr]['input_parameter_defaults']  = array('6.1.6' => array(), 
+                                                                              '7.1.1' => array());
+                    $R_resp[$memory_ptr]['eval_ttl']                  = array('6.1.6' => -1, 
+                                                                              '7.1.1' => -1);
+                    $R_resp[$memory_ptr]['file_evaluate_enabled']     = array('6.1.6' => true, 
+                                                                              '7.1.1' => true);
+                    $R_resp[$memory_ptr]['auto_eval_mode_enabled']    = array('6.1.6' => true, 
+                                                                              '7.1.1' => true);
+                    $R_resp[$memory_ptr]['auto_obj_mode_enabled']     = array('6.1.6' => true, 
+                                                                              '7.1.1' => true);
 
                     /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
                      * view_source_safe = 0 for admin 
@@ -16486,7 +18440,8 @@ function _crnrstn_native_resource_registry(
                      * Only an update to admin server 
                      * settings should change this. 
                      */
-                    $R_resp[$memory_ptr]['view_source_safe']          = array('6.1.6' => 0);
+                    $R_resp[$memory_ptr]['view_source_safe']          = array('6.1.6' => 0, 
+                                                                              '7.1.1' => 0);
 
                     /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
                      * All 'extends_class' 
@@ -16505,10 +18460,11 @@ function _crnrstn_native_resource_registry(
                      *
                      */
                     $R_resp[$memory_ptr]['extends_class']             = array();
-                    $R_resp[$memory_ptr]['dependencies']              = array('6.1.6' => array('Exception'));
+                    $R_resp[$memory_ptr]['dependencies']              = array();
                     $R_resp[$memory_ptr]['php_version']['removed']    = array();
                     $R_resp[$memory_ptr]['php_version']['deprecated'] = array();
-                    $R_resp[$memory_ptr]['php_version']['supported']  = array('6.1.6' => 'PHP > 5.5, PHP 7, PHP 8');
+                    $R_resp[$memory_ptr]['php_version']['supported']  = array('6.1.6' => 'PHP >= 5.5, PHP 7, PHP 8', 
+                                                                              '7.1.1' => 'PHP >= 5.5, PHP 7, PHP 8');
 
                     $clr_ssl_msg = 'Request received for ' . 
                                    $R_syntax['resource_type'][$R_resp[$memory_ptr]['resource_type']] . 
@@ -18027,7 +19983,8 @@ function _crnrstn_native_resource_registry(
                 case $root . $os_path_dir_separator_char . 
                      'class' . $os_path_dir_separator_char . 
                      'thirdparty' . $os_path_dir_separator_char . 
-                     'phpmailer' . $os_path_dir_separator_char . 
+                     'nette_mail' . $os_path_dir_separator_char . 
+                     '4.2.1' . $os_path_dir_separator_char . 
                      'src' . $os_path_dir_separator_char . 
                      'MimePart.php': // <= $name. Where, _foo_factory(x, x, x, $name, x_000, x_001)
                 case 'MimePart.php':
@@ -18051,6 +20008,7 @@ function _crnrstn_native_resource_registry(
                                                               'class' . $os_path_dir_separator_char . 
                                                               'thirdparty' . $os_path_dir_separator_char . 
                                                               'nette_mail' . $os_path_dir_separator_char . 
+                                                              '4.2.1' . $os_path_dir_separator_char . 
                                                               'src' . $os_path_dir_separator_char . 
                                                               'Mail' . $os_path_dir_separator_char . 
                                                               $tmp_file_name;
@@ -18121,7 +20079,7 @@ function _crnrstn_native_resource_registry(
                              * Saturday, November 1, 2025 @ 2131 hrs.
                              *
                              */
-                            $tmp_LICENSE_URL = 'http://www.gnu.org/copyleft/lesser.html';
+                            $tmp_LICENSE_URL = 'https://opensource.org/license/bsd-3-clause';
 
                             /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
                              * Initialize the copyright 
@@ -18186,6 +20144,7 @@ function _crnrstn_native_resource_registry(
                         // 5 :: Friday, May 22, 2026 @ 1303 hrs.
 
                         $R_resp[$memory_ptr]['clr_ssl_admin']['last_modified']['timestamp']['LINUX_MAC_OS'][] = 'Mon Aug 24 21:11:25.435797 2026';
+                        $R_resp[$memory_ptr]['clr_ssl_admin']['last_modified']['timestamp']['LINUX_MAC_OS'][] = 'Thu Oct 1 03:16:15.303555 2026';
                         $R_resp[$memory_ptr]['clr_ssl_admin']['last_modified']['ip_address']                  = '172.16.225.1';
                         $R_resp[$memory_ptr]['clr_ssl_admin']['datecreated']['timestamp']['LINUX_MAC_OS'][]   = 'Mon Aug 24 21:11:25.435797 2026';
                         $R_resp[$memory_ptr]['clr_ssl_admin']['datecreated']['ip_address']                    = '172.16.225.1';
@@ -41825,7 +43784,7 @@ function _crnrstn_native_resource_registry(
                      *
                      *
                      * 5 :: Tuesday, June 2, 2026 @ 0928 hrs.
-                     * 
+                     *
                      * See also, 
                      * $R->set_crnrstn('usleepWindows[usec]', $micro_secs);
                      *
@@ -44688,7 +46647,7 @@ function _crnrstn_native_resource_registry(
                     require(
                         $root . $os_path_dir_separator_char . 
                         '_config' . $os_path_dir_separator_char . 
-                        'config.database.secure' . $os_path_dir_separator_char . 
+                        'database.secure' . $os_path_dir_separator_char . 
                         'crnrstn.db_config.runtime_exe.php');
                     /*
                     $hostname = '';
@@ -51713,7 +53672,7 @@ function _crnrstn_native_resource_registry(
                 break;
                 case $root . $os_path_dir_separator_char . 
                      '_config' . $os_path_dir_separator_char . 
-                     'config.system_paths' . $os_path_dir_separator_char . 
+                     'system_paths' . $os_path_dir_separator_char . 
                      'crnrstn.system_path_initialization.runtime_exe.php': // <= $name. Where, _foo_factory(x, x, x, $name, x_000, x_001)
                 case 'crnrstn.system_path_initialization.runtime_exe.php':
                 case 'system_path_initialization':
@@ -51721,7 +53680,7 @@ function _crnrstn_native_resource_registry(
 
                     /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
                      * 5 :: Saturday, August 24, 2024 @ 0608 hrs.
-                     * 
+                     *
                      * function return_registered_resource_meta(
                      *          $name, 
                      *          $attribute = NULL, 
@@ -51741,8 +53700,8 @@ function _crnrstn_native_resource_registry(
                      * Resource Registry Content 
                      * Library global function name 
                      * and definition. 
-                     * 
-                     * 
+                     *
+                     *
                      * 5 :: Thursday, April 16, 2026 @ 0606 hrs.
                      *
                      * # C # R # N # R # S # T # N # :: # L # I # G # H # T
@@ -51758,7 +53717,7 @@ function _crnrstn_native_resource_registry(
                     $tmp_obj_exe_path                       = 
                     $tmp_resource_name                      = $root . $os_path_dir_separator_char . 
                                                               '_config' . $os_path_dir_separator_char . 
-                                                              'config.system_paths' . $os_path_dir_separator_char . 
+                                                              'system_paths' . $os_path_dir_separator_char . 
                                                               $tmp_file_name;
 
                     /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
@@ -52637,7 +54596,7 @@ function _crnrstn_native_resource_registry(
                 break;
                 case $root . $os_path_dir_separator_char . 
                      '_config' . $os_path_dir_separator_char . 
-                     'config.system_paths' . $os_path_dir_separator_char . 
+                     'system_paths' . $os_path_dir_separator_char . 
                      'crnrstn.system_paths_initialization.function.php': // <= $name. Where, _foo_factory(x, x, x, $name, x_000, x_001)
                 case 'crnrstn.system_paths_initialization.function.php':
                 case __NAMESPACE__ . 
@@ -52657,7 +54616,7 @@ function _crnrstn_native_resource_registry(
                     $tmp_storage_arch                       = 'general_resource';
                     $tmp_file_path                          = $root . $os_path_dir_separator_char . 
                                                               '_config' . $os_path_dir_separator_char . 
-                                                              'config.system_paths' . $os_path_dir_separator_char . 
+                                                              'system_paths' . $os_path_dir_separator_char . 
                                                               $tmp_file_name;
                     $tmp_obj_exe_path                       = $root . $os_path_dir_separator_char . 
                                                               '_config' . $os_path_dir_separator_char . 
@@ -58178,7 +60137,7 @@ function _crnrstn_native_resource_registry(
                 break;
                 case $root . $os_path_dir_separator_char . 
                      '_config' . $os_path_dir_separator_char . 
-                     'config.php' . $os_path_dir_separator_char . 
+                     'php' . $os_path_dir_separator_char . 
                      'crnrstn.php_initialization.function.php': // <= $name. Where, _foo_factory(x, x, x, $name, x_000, x_001)
                 case 'crnrstn.php_initialization.function.php':
                 case __NAMESPACE__ . 
@@ -58198,7 +60157,7 @@ function _crnrstn_native_resource_registry(
                     $tmp_storage_arch                       = 'general_resource';
                     $tmp_file_path                          = $root . $os_path_dir_separator_char . 
                                                               '_config' . $os_path_dir_separator_char . 
-                                                              'config.php' . $os_path_dir_separator_char . 
+                                                              'php' . $os_path_dir_separator_char . 
                                                               $tmp_file_name;
                     $tmp_obj_exe_path                       = $root . $os_path_dir_separator_char . 
                                                               '_config' . $os_path_dir_separator_char . 
@@ -66345,7 +68304,7 @@ function _crnrstn_native_resource_registry(
                 break;
                 case $root . $os_path_dir_separator_char . 
                      '_config' . $os_path_dir_separator_char . 
-                     '_config.defaults' . $os_path_dir_separator_char . 
+                     'defaults' . $os_path_dir_separator_char . 
                      'crnrstn.settings.function.php': // <= $name. Where, _foo_factory(x, x, x, $name, x_000, x_001)
                 case 'crnrstn.settings.function.php':
                 case __NAMESPACE__ . 
@@ -66364,7 +68323,7 @@ function _crnrstn_native_resource_registry(
                     $tmp_storage_arch                       = 'general_resource';
                     $tmp_file_path                          = $root . $os_path_dir_separator_char . 
                                                               '_config' . $os_path_dir_separator_char . 
-                                                              '_config.defaults' . $os_path_dir_separator_char . 
+                                                              'defaults' . $os_path_dir_separator_char . 
                                                               $tmp_file_name;
                     $tmp_obj_exe_path                       = $root . $os_path_dir_separator_char . 
                                                               '_config' . $os_path_dir_separator_char . 
@@ -69109,7 +71068,7 @@ function _crnrstn_native_resource_registry(
                              *
                              * Data Format B - Comma "," Delimited: 
                              * $R_data_000 = 'resource_0,resource_1,resource_2,xxx';
-                             * 
+                             *
                              * * Please note that all spaces will be 
                              *   stripped from string input data 
                              *   before processing. 
@@ -71966,7 +73925,7 @@ function _crnrstn_native_resource_registry(
                              *
                              * Data Format B - Comma "," Delimited: 
                              * $R_data_000 = 'resource_0,resource_1,resource_2,xxx';
-                             * 
+                             *
                              * * Please note that all spaces will be 
                              *   stripped from string input data 
                              *   before processing. 
@@ -74790,7 +76749,7 @@ function _crnrstn_native_resource_registry(
                 break;
                 case $root . $os_path_dir_separator_char . 
                      '_config' . $os_path_dir_separator_char . 
-                     'config.lightbox_helper.original' . $os_path_dir_separator_char . 
+                     'lightbox_helper' . $os_path_dir_separator_char . 
                      'lightbox_helper.admin.runtime_exe.php': // <= $name. Where, _foo_factory(x, x, x, $name, x_000, x_001)
                 case 'lightbox_helper.admin.runtime_exe.php':
                 case 'lightbox_helper.admin':
@@ -74808,7 +76767,7 @@ function _crnrstn_native_resource_registry(
                     $tmp_obj_exe_path                       = 
                     $tmp_resource_name                      = $root . $os_path_dir_separator_char . 
                                                               '_config' . $os_path_dir_separator_char . 
-                                                              'config.lightbox_helper.original' . $os_path_dir_separator_char . 
+                                                              'lightbox_helper' . $os_path_dir_separator_char . 
                                                               $tmp_file_name;
 
                     /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
@@ -75681,7 +77640,7 @@ function _crnrstn_native_resource_registry(
                 break;
                 case $root . $os_path_dir_separator_char . 
                      '_config' . $os_path_dir_separator_char . 
-                     '_config.defaults' . $os_path_dir_separator_char . 
+                     'defaults' . $os_path_dir_separator_char . 
                      'crnrstn.overrides.runtime_exe.php': // <= $name. Where, _foo_factory(x, x, x, $name, x_000, x_001)
                 case 'crnrstn.overrides.runtime_exe.php':
                 case 'crnrstn.overrides':
@@ -75699,7 +77658,7 @@ function _crnrstn_native_resource_registry(
                     $tmp_obj_exe_path                       = 
                     $tmp_resource_name                      = $root . $os_path_dir_separator_char . 
                                                               '_config' . $os_path_dir_separator_char . 
-                                                              '_config.defaults' . $os_path_dir_separator_char . 
+                                                              'defaults' . $os_path_dir_separator_char . 
                                                               $tmp_file_name;
 
                     /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
@@ -76571,7 +78530,7 @@ function _crnrstn_native_resource_registry(
                 break;
                 case $root . $os_path_dir_separator_char . 
                      '_config' . $os_path_dir_separator_char . 
-                     '_config.defaults' . $os_path_dir_separator_char . 
+                     'defaults' . $os_path_dir_separator_char . 
                      'crnrstn.settings.runtime_exe.php': // <= $name. Where, _foo_factory(x, x, x, $name, x_000, x_001)
                 case 'crnrstn.settings.runtime_exe.php':
                 case 'crnrstn.settings':
@@ -76589,7 +78548,7 @@ function _crnrstn_native_resource_registry(
                     $tmp_obj_exe_path                       = 
                     $tmp_resource_name                      = $root . $os_path_dir_separator_char . 
                                                               '_config' . $os_path_dir_separator_char . 
-                                                              '_config.defaults' . $os_path_dir_separator_char . 
+                                                              'defaults' . $os_path_dir_separator_char . 
                                                               $tmp_file_name;
 
                     /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
@@ -78313,7 +80272,7 @@ function _crnrstn_native_resource_registry(
                 break;
                 case $root . $os_path_dir_separator_char . 
                      '_config' . $os_path_dir_separator_char . 
-                     'config.database.secure' . $os_path_dir_separator_char . 
+                     'database.secure' . $os_path_dir_separator_char . 
                      'crnrstn.db_config.runtime_exe.php': // <= $name. Where, _foo_factory(x, x, x, $name, x_000, x_001)
                 case 'crnrstn.db_config.runtime_exe.php':
                 case 'crnrstn.db_config':
@@ -78331,7 +80290,7 @@ function _crnrstn_native_resource_registry(
                     $tmp_obj_exe_path                       = 
                     $tmp_resource_name                      = $root . $os_path_dir_separator_char . 
                                                               '_config' . $os_path_dir_separator_char . 
-                                                              'config.database.secure' . $os_path_dir_separator_char . 
+                                                              'database.secure' . $os_path_dir_separator_char . 
                                                               $tmp_file_name;
 
                     /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
@@ -79182,7 +81141,7 @@ function _crnrstn_native_resource_registry(
                 break;
                 case $root . $os_path_dir_separator_char . 
                      '_config' . $os_path_dir_separator_char . 
-                     'config.encryption.secure' . $os_path_dir_separator_char . 
+                     'encryption.secure' . $os_path_dir_separator_char . 
                      'crnrstn.encryption.runtime_exe.php': // <= $name. Where, _foo_factory(x, x, x, $name, x_000, x_001)
                 case 'crnrstn.encryption.runtime_exe.php':
                 case 'crnrstn.encryption':
@@ -79200,7 +81159,7 @@ function _crnrstn_native_resource_registry(
                     $tmp_obj_exe_path                       = 
                     $tmp_resource_name                      = $root . $os_path_dir_separator_char . 
                                                               '_config' . $os_path_dir_separator_char . 
-                                                              'config.encryption.secure' . $os_path_dir_separator_char . 
+                                                              'encryption.secure' . $os_path_dir_separator_char . 
                                                               $tmp_file_name;
 
                     /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
@@ -80054,7 +82013,7 @@ function _crnrstn_native_resource_registry(
                 break;
                 case $root . $os_path_dir_separator_char . 
                      '_config' . $os_path_dir_separator_char . 
-                     'config.ip_address_authorization.secure' . $os_path_dir_separator_char . 
+                     'ip_address_authorization.secure' . $os_path_dir_separator_char . 
                      'crnrstn.deny_ip_address_access.runtime_exe.php': // <= $name. Where, _foo_factory(x, x, x, $name, x_000, x_001)
                 case 'crnrstn.deny_ip_address_access.runtime_exe.php':
                 case 'crnrstn.deny_ip_address_access':
@@ -80072,7 +82031,7 @@ function _crnrstn_native_resource_registry(
                     $tmp_obj_exe_path                       = 
                     $tmp_resource_name                      = $root . $os_path_dir_separator_char . 
                                                               '_config' . $os_path_dir_separator_char . 
-                                                              'config.ip_address_authorization.secure' . $os_path_dir_separator_char . 
+                                                              'ip_address_authorization.secure' . $os_path_dir_separator_char . 
                                                               $tmp_file_name;
 
                     /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
@@ -80927,7 +82886,7 @@ function _crnrstn_native_resource_registry(
                 break;
                 case $root . $os_path_dir_separator_char . 
                      '_config' . $os_path_dir_separator_char . 
-                     'config.ip_address_authorization.secure' . $os_path_dir_separator_char . 
+                     'ip_address_authorization.secure' . $os_path_dir_separator_char . 
                      'crnrstn.grant_ip_address_exclusive.runtime_exe.php': // <= $name. Where, _foo_factory(x, x, x, $name, x_000, x_001)
                 case 'crnrstn.grant_ip_address_exclusive.runtime_exe.php':
                 case 'crnrstn.grant_ip_address_exclusive':
@@ -80945,7 +82904,7 @@ function _crnrstn_native_resource_registry(
                     $tmp_obj_exe_path                       = 
                     $tmp_resource_name                      = $root . $os_path_dir_separator_char . 
                                                               '_config' . $os_path_dir_separator_char . 
-                                                              'config.ip_address_authorization.secure' . $os_path_dir_separator_char . 
+                                                              'ip_address_authorization.secure' . $os_path_dir_separator_char . 
                                                               $tmp_file_name;
 
                     /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
@@ -81801,7 +83760,7 @@ function _crnrstn_native_resource_registry(
                 break;
                 case $root . $os_path_dir_separator_char . 
                      '_config' . $os_path_dir_separator_char . 
-                     'config.resource_wildcards.secure' . $os_path_dir_separator_char . 
+                     'resource_wildcards.secure' . $os_path_dir_separator_char . 
                      'crnrstn.resource_wildcards.runtime_exe.php': // <= $name. Where, _foo_factory(x, x, x, $name, x_000, x_001)
                 case 'crnrstn.resource_wildcards.runtime_exe.php':
                 case 'crnrstn.resource_wildcards':
@@ -81819,7 +83778,7 @@ function _crnrstn_native_resource_registry(
                     $tmp_obj_exe_path                       = 
                     $tmp_resource_name                      = $root . $os_path_dir_separator_char . 
                                                               '_config' . $os_path_dir_separator_char . 
-                                                              'config.resource_wildcards.secure' . $os_path_dir_separator_char . 
+                                                              'resource_wildcards.secure' . $os_path_dir_separator_char . 
                                                               $tmp_file_name;
 
                     /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
@@ -82672,7 +84631,7 @@ function _crnrstn_native_resource_registry(
                 break;
                 case $root . $os_path_dir_separator_char . 
                      '_config' . $os_path_dir_separator_char . 
-                     'config.seo_analytics.secure' . $os_path_dir_separator_char . 
+                     'seo_analytics.secure' . $os_path_dir_separator_char . 
                      'crnrstn.seo_analytics.runtime_exe.php': // <= $name. Where, _foo_factory(x, x, x, $name, x_000, x_001)
                 case 'crnrstn.seo_analytics.runtime_exe.php':
                 case 'crnrstn.seo_analytics':
@@ -82690,7 +84649,7 @@ function _crnrstn_native_resource_registry(
                     $tmp_obj_exe_path                       = 
                     $tmp_resource_name                      = $root . $os_path_dir_separator_char . 
                                                               '_config' . $os_path_dir_separator_char . 
-                                                              'config.seo_analytics.secure' . $os_path_dir_separator_char . 
+                                                              'seo_analytics.secure' . $os_path_dir_separator_char . 
                                                               $tmp_file_name;
 
                     /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
@@ -83544,7 +85503,7 @@ function _crnrstn_native_resource_registry(
                 break;
                 case $root . $os_path_dir_separator_char . 
                      '_config' . $os_path_dir_separator_char . 
-                     'config.seo_engagement.secure' . $os_path_dir_separator_char . 
+                     'seo_engagement.secure' . $os_path_dir_separator_char . 
                      'crnrstn.seo_engagement.runtime_exe.php': // <= $name. Where, _foo_factory(x, x, x, $name, x_000, x_001)
                 case 'crnrstn.seo_engagement.runtime_exe.php':
                 case 'crnrstn.seo_engagement':
@@ -83562,7 +85521,7 @@ function _crnrstn_native_resource_registry(
                     $tmp_obj_exe_path                       = 
                     $tmp_resource_name                      = $root . $os_path_dir_separator_char . 
                                                               '_config' . $os_path_dir_separator_char . 
-                                                              'config.seo_engagement.secure' . $os_path_dir_separator_char . 
+                                                              'seo_engagement.secure' . $os_path_dir_separator_char . 
                                                               $tmp_file_name;
 
                     /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
@@ -84416,7 +86375,7 @@ function _crnrstn_native_resource_registry(
                 break;
                 case $root . $os_path_dir_separator_char . 
                      '_config' . $os_path_dir_separator_char . 
-                     'config.soap.secure' . $os_path_dir_separator_char . 
+                     'soap.secure' . $os_path_dir_separator_char . 
                      'crnrstn.soap_config.runtime_exe.php': // <= $name. Where, _foo_factory(x, x, x, $name, x_000, x_001)
                 case 'crnrstn.soap_config.runtime_exe.php':
                 case 'crnrstn.soap_config':
@@ -84434,7 +86393,7 @@ function _crnrstn_native_resource_registry(
                     $tmp_obj_exe_path                       = 
                     $tmp_resource_name                      = $root . $os_path_dir_separator_char . 
                                                               '_config' . $os_path_dir_separator_char . 
-                                                              'config.soap.secure' . $os_path_dir_separator_char . 
+                                                              'soap.secure' . $os_path_dir_separator_char . 
                                                               $tmp_file_name;
 
                     /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
@@ -85291,7 +87250,7 @@ function _crnrstn_native_resource_registry(
                 break;
                 case $root . $os_path_dir_separator_char . 
                      '_config' . $os_path_dir_separator_char . 
-                     'config.social_media_meta.secure' . $os_path_dir_separator_char . 
+                     'social_media_meta.secure' . $os_path_dir_separator_char . 
                      'crnrstn.social_media_meta.runtime_exe.php': // <= $name. Where, _foo_factory(x, x, x, $name, x_000, x_001)
                 case 'crnrstn.social_media_meta.runtime_exe.php':
                 case 'crnrstn.social_media_meta':
@@ -85321,7 +87280,7 @@ function _crnrstn_native_resource_registry(
                     $tmp_obj_exe_path                       = 
                     $tmp_resource_name                      = $root . $os_path_dir_separator_char . 
                                                               '_config' . $os_path_dir_separator_char . 
-                                                              'config.social_media_meta.secure' . $os_path_dir_separator_char . 
+                                                              'social_media_meta.secure' . $os_path_dir_separator_char . 
                                                               $tmp_file_name;
 
                     /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
@@ -86175,7 +88134,7 @@ function _crnrstn_native_resource_registry(
                 break;
                 case $root . $os_path_dir_separator_char . 
                      '_config' . $os_path_dir_separator_char . 
-                     'config.system_resource.secure' . $os_path_dir_separator_char . 
+                     'system_resource.secure' . $os_path_dir_separator_char . 
                      'crnrstn.system_resource.runtime_exe.php': // <= $name. Where, _foo_factory(x, x, x, $name, x_000, x_001)
                 case 'crnrstn.system_resource.runtime_exe.php':
                 case 'crnrstn.system_resource':
@@ -86193,7 +88152,7 @@ function _crnrstn_native_resource_registry(
                     $tmp_obj_exe_path                       = 
                     $tmp_resource_name                      = $root . $os_path_dir_separator_char . 
                                                               '_config' . $os_path_dir_separator_char . 
-                                                              'config.system_resource.secure' . $os_path_dir_separator_char . 
+                                                              'system_resource.secure' . $os_path_dir_separator_char . 
                                                               $tmp_file_name;
 
 
@@ -87003,7 +88962,7 @@ function _crnrstn_native_resource_registry(
                              *
                              * Data Format B - Comma "," Delimited: 
                              * $R_data_000 = 'resource_0,resource_1,resource_2,xxx';
-                             * 
+                             *
                              * * Please note that all spaces will be 
                              *   stripped from string input data 
                              *   before processing. 
@@ -87140,7 +89099,7 @@ function _crnrstn_native_resource_registry(
                 break;
                 case $root . $os_path_dir_separator_char . 
                      '_config' . $os_path_dir_separator_char . 
-                     'config.wordpress.secure' . $os_path_dir_separator_char . 
+                     'wordpress.secure' . $os_path_dir_separator_char . 
                      'crnrstn.wordpress_config.runtime_exe.php': // <= $name. Where, _foo_factory(x, x, x, $name, x_000, x_001)
                 case 'crnrstn.wordpress_config.runtime_exe.php':
                 case 'crnrstn.wordpress_config':
@@ -87158,7 +89117,7 @@ function _crnrstn_native_resource_registry(
                     $tmp_obj_exe_path                       = 
                     $tmp_resource_name                      = $root . $os_path_dir_separator_char . 
                                                               '_config' . $os_path_dir_separator_char . 
-                                                              'config.wordpress.secure' . $os_path_dir_separator_char . 
+                                                              'wordpress.secure' . $os_path_dir_separator_char . 
                                                               $tmp_file_name;
 
                     /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
@@ -88010,7 +89969,7 @@ function _crnrstn_native_resource_registry(
                 break;
                 case $root . $os_path_dir_separator_char . 
                      '_config' . $os_path_dir_separator_char . 
-                     'config.integer_constants' . $os_path_dir_separator_char . 
+                     'integer_constants' . $os_path_dir_separator_char . 
                      'crnrstn.int_return.function.php': // <= $name. Where, _foo_factory(x, x, x, $name, x_000, x_001)
                 case 'crnrstn.int_return.function.php':
                 case __NAMESPACE__ . 
@@ -88188,7 +90147,7 @@ function _crnrstn_native_resource_registry(
                     $tmp_storage_arch                       = 'general_resource';
                     $tmp_file_path                          = $root . $os_path_dir_separator_char . 
                                                               '_config' . $os_path_dir_separator_char . 
-                                                              'config.integer_constants' . $os_path_dir_separator_char . 
+                                                              'integer_constants' . $os_path_dir_separator_char . 
                                                               $tmp_file_name;
                     $tmp_obj_exe_path                       = $root . $os_path_dir_separator_char . 
                                                               '_config' . $os_path_dir_separator_char . 
@@ -88599,7 +90558,7 @@ function _crnrstn_native_resource_registry(
                                  * [mthd CRNRSTN\\_crnrstn_native_resource_registry] 
                                  * Resource exists[_crnrstn_int_return]. 
                                  * Return data: /var/www/html/sysops/_crnrstn/_config
-                                 * /config.integer_constants/crnrstn.integer_return.function.php
+                                 * /integer_constants/crnrstn.integer_return.function.php
                                  *
                                  *
                                  * 5
@@ -89197,7 +91156,7 @@ function _crnrstn_native_resource_registry(
                              *
                              * Data Format B - Comma "," Delimited: 
                              * $R_data_000 = 'resource_0,resource_1,resource_2,xxx';
-                             * 
+                             *
                              * * Please note that all spaces will be 
                              *   stripped from string input data 
                              *   before processing. 
@@ -89296,7 +91255,7 @@ function _crnrstn_native_resource_registry(
                 break;
                 case $root . $os_path_dir_separator_char . 
                      '_config' . $os_path_dir_separator_char . 
-                     'config.integer_constants' . $os_path_dir_separator_char . 
+                     'integer_constants' . $os_path_dir_separator_char . 
                      'crnrstn.constants_load.runtime_exe.php': // <= $name. Where, _foo_factory(x, x, x, $name, x_000, x_001)
                 case 'crnrstn.constants_load.runtime_exe.php':
                 case 'crnrstn.constants_load':
@@ -89327,7 +91286,7 @@ function _crnrstn_native_resource_registry(
                     $tmp_obj_exe_path                       = 
                     $tmp_resource_name                      = $root . $os_path_dir_separator_char . 
                                                               '_config' . $os_path_dir_separator_char . 
-                                                              'config.integer_constants' . $os_path_dir_separator_char . 
+                                                              'integer_constants' . $os_path_dir_separator_char . 
                                                               $tmp_file_name;
 
                     /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
@@ -90179,7 +92138,7 @@ function _crnrstn_native_resource_registry(
                              *
                              * Data Format B - Comma "," Delimited: 
                              * $R_data_000 = 'resource_0,resource_1,resource_2,xxx';
-                             * 
+                             *
                              * * Please note that all spaces will be 
                              *   stripped from string input data 
                              *   before processing. 
@@ -90278,7 +92237,7 @@ function _crnrstn_native_resource_registry(
                 break;
                 case $root . $os_path_dir_separator_char . 
                      '_config' . $os_path_dir_separator_char . 
-                     'config.lightbox_helper.original' . $os_path_dir_separator_char . 
+                     'lightbox_helper' . $os_path_dir_separator_char . 
                      'lightbox_helper.settings.function.php': // <= $name. Where, _foo_factory(x, x, x, $name, x_000, x_001)
                 case 'lightbox_helper.settings.function.php':
                 case __NAMESPACE__ . 
@@ -90297,7 +92256,7 @@ function _crnrstn_native_resource_registry(
                     $tmp_storage_arch                       = 'general_resource';
                     $tmp_file_path                          = $root . $os_path_dir_separator_char . 
                                                               '_config' . $os_path_dir_separator_char . 
-                                                              'config.lightbox_helper.original' . $os_path_dir_separator_char . 
+                                                              'lightbox_helper' . $os_path_dir_separator_char . 
                                                               $tmp_file_name;
                     $tmp_obj_exe_path                       = $root . $os_path_dir_separator_char . 
                                                               '_config' . $os_path_dir_separator_char . 
@@ -91159,7 +93118,7 @@ function _crnrstn_native_resource_registry(
                 break;
                 case $root . $os_path_dir_separator_char . 
                      '_config' . $os_path_dir_separator_char . 
-                     'config.lightbox_helper.original' . $os_path_dir_separator_char . 
+                     'lightbox_helper' . $os_path_dir_separator_char . 
                      'lightbox_helper.default_page.function.php': // <= $name. Where, _foo_factory(x, x, x, $name, x_000, x_001)
                 case 'lightbox_helper.default_page.function.php':
                 case __NAMESPACE__ . 
@@ -91179,7 +93138,7 @@ function _crnrstn_native_resource_registry(
                     $tmp_storage_arch                       = 'general_resource';
                     $tmp_file_path                          = $root . $os_path_dir_separator_char . 
                                                               '_config' . $os_path_dir_separator_char . 
-                                                              'config.lightbox_helper.original' . $os_path_dir_separator_char . 
+                                                              'lightbox_helper' . $os_path_dir_separator_char . 
                                                               $tmp_file_name;
                     $tmp_obj_exe_path                       = $root . $os_path_dir_separator_char . 
                                                               '_config' . $os_path_dir_separator_char . 
@@ -92038,7 +93997,7 @@ function _crnrstn_native_resource_registry(
                 break;
                 case $root . $os_path_dir_separator_char . 
                      '_config' . $os_path_dir_separator_char . 
-                     'config.lightbox_helper.original' . $os_path_dir_separator_char . 
+                     'lightbox_helper' . $os_path_dir_separator_char . 
                      'lightbox_helper.default_gallery.function.php': // <= $name. Where, _foo_factory(x, x, x, $name, x_000, x_001)
                 case 'lightbox_helper.default_gallery.function.php':
                 case __NAMESPACE__ . 
@@ -92058,7 +94017,7 @@ function _crnrstn_native_resource_registry(
                     $tmp_storage_arch                       = 'general_resource';
                     $tmp_file_path                          = $root . $os_path_dir_separator_char . 
                                                               '_config' . $os_path_dir_separator_char . 
-                                                              'config.lightbox_helper.original' . $os_path_dir_separator_char . 
+                                                              'lightbox_helper' . $os_path_dir_separator_char . 
                                                               $tmp_file_name;
                     $tmp_obj_exe_path                       = $root . $os_path_dir_separator_char . 
                                                               '_config' . $os_path_dir_separator_char . 
@@ -92916,7 +94875,7 @@ function _crnrstn_native_resource_registry(
                 break;
                 case $root . $os_path_dir_separator_char . 
                      '_config' . $os_path_dir_separator_char . 
-                     'config.lightbox_helper.original' . $os_path_dir_separator_char . 
+                     'lightbox_helper' . $os_path_dir_separator_char . 
                      'lightbox_helper.default_thumbnail.function.php': // <= $name. Where, _foo_factory(x, x, x, $name, x_000, x_001)
                 case 'lightbox_helper.default_thumbnail.function.php':
                 case __NAMESPACE__ . 
@@ -92936,7 +94895,7 @@ function _crnrstn_native_resource_registry(
                     $tmp_storage_arch                       = 'general_resource';
                     $tmp_file_path                          = $root . $os_path_dir_separator_char . 
                                                               '_config' . $os_path_dir_separator_char . 
-                                                              'config.lightbox_helper.original' . $os_path_dir_separator_char . 
+                                                              'lightbox_helper' . $os_path_dir_separator_char . 
                                                               $tmp_file_name;
                     $tmp_obj_exe_path                       = $root . $os_path_dir_separator_char . 
                                                               '_config' . $os_path_dir_separator_char . 
@@ -93796,7 +95755,7 @@ function _crnrstn_native_resource_registry(
                 break;
                 case $root . $os_path_dir_separator_char . 
                      '_config' . $os_path_dir_separator_char . 
-                     'config.lightbox_helper.original' . $os_path_dir_separator_char . 
+                     'lightbox_helper' . $os_path_dir_separator_char . 
                      'lightbox_helper.custom_page.function.php': // <= $name. Where, _foo_factory(x, x, x, $name, x_000, x_001)
                 case 'lightbox_helper.custom_page.function.php':
                 case __NAMESPACE__ . 
@@ -93816,7 +95775,7 @@ function _crnrstn_native_resource_registry(
                     $tmp_storage_arch                       = 'general_resource';
                     $tmp_file_path                          = $root . $os_path_dir_separator_char . 
                                                               '_config' . $os_path_dir_separator_char . 
-                                                              'config.lightbox_helper.original' . $os_path_dir_separator_char . 
+                                                              'lightbox_helper' . $os_path_dir_separator_char . 
                                                               $tmp_file_name;
                     $tmp_obj_exe_path                       = $root . $os_path_dir_separator_char . 
                                                               '_config' . $os_path_dir_separator_char . 
@@ -94675,7 +96634,7 @@ function _crnrstn_native_resource_registry(
                 break;
                 case $root . $os_path_dir_separator_char . 
                      '_config' . $os_path_dir_separator_char . 
-                     'config.lightbox_helper.original' . $os_path_dir_separator_char . 
+                     'lightbox_helper' . $os_path_dir_separator_char . 
                      'lightbox_helper.custom_gallery.function.php': // <= $name. Where, _foo_factory(x, x, x, $name, x_000, x_001)
                 case 'lightbox_helper.custom_gallery.function.php':
                 case __NAMESPACE__ . 
@@ -94695,7 +96654,7 @@ function _crnrstn_native_resource_registry(
                     $tmp_storage_arch                       = 'general_resource';
                     $tmp_file_path                          = $root . $os_path_dir_separator_char . 
                                                               '_config' . $os_path_dir_separator_char . 
-                                                              'config.lightbox_helper.original' . $os_path_dir_separator_char . 
+                                                              'lightbox_helper' . $os_path_dir_separator_char . 
                                                               $tmp_file_name;
                     $tmp_obj_exe_path                       = $root . $os_path_dir_separator_char . 
                                                               '_config' . $os_path_dir_separator_char . 
@@ -95554,7 +97513,7 @@ function _crnrstn_native_resource_registry(
                 break;
                 case $root . $os_path_dir_separator_char . 
                      '_config' . $os_path_dir_separator_char . 
-                     'config.lightbox_helper.original' . $os_path_dir_separator_char . 
+                     'lightbox_helper' . $os_path_dir_separator_char . 
                      'lightbox_helper.custom_thumbnail.function.php': // <= $name. Where, _foo_factory(x, x, x, $name, x_000, x_001)
                 case 'lightbox_helper.custom_thumbnail.function.php':
                 case __NAMESPACE__ . 
@@ -95574,7 +97533,7 @@ function _crnrstn_native_resource_registry(
                     $tmp_storage_arch                       = 'general_resource';
                     $tmp_file_path                          = $root . $os_path_dir_separator_char . 
                                                               '_config' . $os_path_dir_separator_char . 
-                                                              'config.lightbox_helper.original' . $os_path_dir_separator_char . 
+                                                              'lightbox_helper' . $os_path_dir_separator_char . 
                                                               $tmp_file_name;
                     $tmp_obj_exe_path                       = $root . $os_path_dir_separator_char . 
                                                               '_config' . $os_path_dir_separator_char . 
@@ -100143,7 +102102,7 @@ function _crnrstn_native_resource_registry(
                      * $oFoo_A = $this->return_registered_resource('new', 'foo_A');
                      * $wadget = funct_B($oFoo_A);
                      *
-                     * 
+                     *
                      * 5 :: 
                      *
                      * Tuesday, July 2, 2024 @ 0105 hrs.
@@ -103747,7 +105706,7 @@ function _crnrstn_native_resource_registry(
                 break;
                 case $root . $os_path_dir_separator_char . 
                      '_config' . $os_path_dir_separator_char . 
-                     'config.system_links' . $os_path_dir_separator_char . 
+                     'system_links' . $os_path_dir_separator_char . 
                      'crnrstn.system_link_library.function.php': // <= $name. Where, _foo_factory(x, x, x, $name, x_000, x_001)
                 case 'crnrstn.system_link_library.function.php':
                 case __NAMESPACE__ . 
@@ -103767,7 +105726,7 @@ function _crnrstn_native_resource_registry(
                     $tmp_storage_arch                       = 'general_resource';
                     $tmp_file_path                          = $root . $os_path_dir_separator_char . 
                                                               '_config' . $os_path_dir_separator_char . 
-                                                              'config.system_links' . $os_path_dir_separator_char . 
+                                                              'system_links' . $os_path_dir_separator_char . 
                                                               $tmp_file_name;
                     $tmp_obj_exe_path                       = $root . $os_path_dir_separator_char . 
                                                               '_config' . $os_path_dir_separator_char . 
@@ -109124,7 +111083,8 @@ function _crnrstn_native_resource_registry(
                              *
                              */
                             $tmp_TITLE_TEXT = 'The CRNRSTN :: Lightsaber RoCEv2 ' .
-                            'SOAP Services Layer (CLR-SSL) Logging ' .
+                            'SOAP Services Layer (CLR-SSL) Advanced Multi-Channel ' . 
+                            'Logging and Exception Handling Notifications ' . 
                             'Services Layer';
 
                             /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
@@ -109223,6 +111183,7 @@ function _crnrstn_native_resource_registry(
                         $R_resp[$memory_ptr]['clr_ssl_admin']['last_modified']['timestamp']['LINUX_MAC_OS'][] = 'Fri Oct 31 21:43:52.923630 2025';
                         $R_resp[$memory_ptr]['clr_ssl_admin']['last_modified']['timestamp']['LINUX_MAC_OS'][] = 'Sat Mar 14 05:35:36.167063 2026';
                         $R_resp[$memory_ptr]['clr_ssl_admin']['last_modified']['timestamp']['LINUX_MAC_OS'][] = 'Tue Apr 21 12:12:54.448227 2026';
+                        $R_resp[$memory_ptr]['clr_ssl_admin']['last_modified']['timestamp']['LINUX_MAC_OS'][] = 'Fri Oct 23 23:00:00.000000 2026';
                         $R_resp[$memory_ptr]['clr_ssl_admin']['last_modified']['ip_address']                  = '172.16.225.1';
                         $R_resp[$memory_ptr]['clr_ssl_admin']['datecreated']['timestamp']['LINUX_MAC_OS'][]   = 'Tue Jul 02 02:59:01.224829 2024';
                         $R_resp[$memory_ptr]['clr_ssl_admin']['datecreated']['ip_address']                    = '172.16.225.1';
@@ -137251,7 +139212,7 @@ function _crnrstn_native_resource_registry(
                 break;
                 case $root . $os_path_dir_separator_char . 
                      '_config' . $os_path_dir_separator_char . 
-                     'config.integer_constants' . $os_path_dir_separator_char . 
+                     'integer_constants' . $os_path_dir_separator_char . 
                      'crnrstn.system_integer_bank.function.php': // <= $name. Where, _foo_factory(x, x, x, $name, x_000, x_001)
                 case 'crnrstn.system_integer_bank.function.php':
                 case __NAMESPACE__ . 
@@ -137271,7 +139232,7 @@ function _crnrstn_native_resource_registry(
                     $tmp_storage_arch                       = 'general_resource';
                     $tmp_file_path                          = $root . $os_path_dir_separator_char . 
                                                               '_config' . $os_path_dir_separator_char . 
-                                                              'config.integer_constants' . $os_path_dir_separator_char . 
+                                                              'integer_constants' . $os_path_dir_separator_char . 
                                                               $tmp_file_name;
                     $tmp_obj_exe_path                       = $root . $os_path_dir_separator_char . 
                                                               '_config' . $os_path_dir_separator_char . 
@@ -138136,7 +140097,7 @@ function _crnrstn_native_resource_registry(
                 break;
                 case $root . $os_path_dir_separator_char . 
                      '_config' . $os_path_dir_separator_char . 
-                     'config.system_content' . $os_path_dir_separator_char . 
+                     'system_content' . $os_path_dir_separator_char . 
                      'crnrstn.documentation_library.function.php': // <= $name. Where, _foo_factory(x, x, x, $name, x_000, x_001)
                 case 'crnrstn.documentation_library.function.php':
                 case __NAMESPACE__ . 
@@ -138156,7 +140117,7 @@ function _crnrstn_native_resource_registry(
                     $tmp_storage_arch                       = 'general_resource';
                     $tmp_file_path                          = $root . $os_path_dir_separator_char . 
                                                               '_config' . $os_path_dir_separator_char . 
-                                                              'config.system_content' . $os_path_dir_separator_char . 
+                                                              'system_content' . $os_path_dir_separator_char . 
                                                               $tmp_file_name;
                     $tmp_obj_exe_path                       = $root . $os_path_dir_separator_char . 
                                                               '_config' . $os_path_dir_separator_char . 
@@ -151368,7 +153329,7 @@ function _crnrstn_native_resource_registry(
                 break;
                 case $root . $os_path_dir_separator_char . 
                      '_config' . $os_path_dir_separator_char . 
-                     'config.database.sql' . $os_path_dir_separator_char . 
+                     'database.sql' . $os_path_dir_separator_char . 
                      'crnrstn.database_sql_silo.class.php': // <= $name. Where, _foo_factory(x, x, x, $name, x_000, x_001)
                 case 'crnrstn.database_sql_silo.class.php':
                 case __NAMESPACE__ . 
@@ -151388,7 +153349,7 @@ function _crnrstn_native_resource_registry(
                     $tmp_storage_arch                       = 'general_resource';
                     $tmp_file_path                          = $root . $os_path_dir_separator_char . 
                                                               '_config' . $os_path_dir_separator_char . 
-                                                              'config.database.sql' . $os_path_dir_separator_char . 
+                                                              'database.sql' . $os_path_dir_separator_char . 
                                                               $tmp_file_name;
                     $tmp_obj_exe_path                       = $root . $os_path_dir_separator_char . 
                                                               '_config' . $os_path_dir_separator_char . 

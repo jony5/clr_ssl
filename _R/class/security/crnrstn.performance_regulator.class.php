@@ -282,7 +282,7 @@ namespace CRNRSTN;
  *
  *                     See, max_disk_storage_utilization
  *                     and max_disk_storage_utilization_warning
- *                     in /_lightbox_helper/_config/_config.defaults/crnrstn.settings.runtime_exe.php
+ *                     in /_lightbox_helper/_config/defaults/crnrstn.settings.runtime_exe.php
  *
  *                     From a high level, all UGC
  *                     configuration input passes
@@ -3603,7 +3603,7 @@ class crnrstn_performance_regulator extends crnrstn
              * config_load_spool_system_init_resources().
              *
              * See, 
-             * /_R/_config/_config.defaults/_crnrstn.system_settings.inc.php
+             * /_R/_config/defaults/_crnrstn.system_settings.inc.php
              *
              * This will (1) process all spooled UGC 
              * input resources into the CLR-SSL MC-DDO 

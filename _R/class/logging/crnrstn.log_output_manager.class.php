@@ -257,14 +257,12 @@
 
 namespace CRNRSTN;
 
-/**
- * 
- *
- * Here are my notes from the top of
- * the file or "header notes" from
- * the original 188 line,
- * crnrstn.log.inc.php, which
- * defined the class:
+/* # C # R # N # R # S # T # N # :: # L # I # G # H # T
+ * Here are my notes from the top of 
+ * the file or "header notes" from 
+ * the original 188 line, 
+ * crnrstn.log.inc.php, which 
+ * defined the class: 
  *
  *      crnrstn_AdvancedLogger($logsource)
  *
@@ -422,6 +420,8 @@ namespace CRNRSTN;
  * [End of crnrstn_AdvancedLogger() Header Notes - 2012(GNU)]
  *
  * # C # R # N # R # S # T # N # :: # L # I # G # H # T
+ */
+/**
  *
  * CLASS DEFINITION :: crnrstn_log_output_manager
  * CLASS VERSION    :: 1.00.0000

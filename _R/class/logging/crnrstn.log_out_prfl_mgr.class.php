@@ -257,8 +257,7 @@
 
 namespace CRNRSTN;
 
-/**
- * 
+/** 
  *
  * CLASS DEFINITION :: crnrstn_log_out_prfl_mgr
  * CLASS VERSION    :: 1.00.0000
@@ -367,6 +366,145 @@ class crnrstn_log_out_prfl_mgr extends crnrstn
      *       crnrstn.logging_oprofile_manager.class.php 
      *       to crnrstn.logging_output_profile_manager.class.php. 
      *       5 :: Saturday, August 1, 2026 @ 0008 hrs.
+     *
+     * # C # R # N # R # S # T # N # :: # L # I # G # H # T
+     * Edit: Restructured CLR-SSL folder and 
+     *       file names for 1) more optimal file 
+     *       path lengths and 2) for fixing the 
+     *       "Paths too long" errors on the 
+     *       GitHub® ZIP download. 
+     * -----
+     * Path /_R/_config/_config.resource_registry
+     * to 
+     * path /_R/_config/resource_registry
+     *
+     * -----
+     * Path /_R/_config/_config.resource_registry/resource/config
+     * to 
+     * path _R/_config/resource_registry/resource/secure
+     *
+     * -----
+     * Path /_R/_config/_config.resource_registry/resource/object_return
+     * to 
+     * path /_R/_config/resource_registry/resource/obj
+     *
+     * -----
+     * Path /_R/_config/_config.resource_registry/resource/function_return
+     * to 
+     * path /_R/_config/_config.resource_registry/resource/func
+     *
+     * -----
+     * File /_R/class/assets/crnrstn.file_system_integrations_manager.class.php 
+     * to 
+     * file /_R/class/assets/crnrstn.file_sys_mgr.class.php
+     *
+     * -----
+     * Class crnrstn_file_system_integrations_manager 
+     * to 
+     * class crnrstn_file_sys_mgr
+     *
+     * -----
+     * File /_R/class/logging/crnrstn.logging_output_profile_manager.class.php 
+     * to 
+     * file /_R/class/logging/crnrstn.log_out_prfl_mgr.class.php
+     *
+     * -----
+     * Class crnrstn_logging_output_profile_manager 
+     * to 
+     * class crnrstn_log_out_prfl_mgr
+     * -----
+     * File  /_R/class/session/crnrstn.response_return_serialization_map.class.php 
+     * to 
+     * file /_R/class/session/crnrstn.rrs_map.class.php
+     *
+     * -----
+     * Class crnrstn_response_return_serialization_map 
+     * to 
+     * class crnrstn_rrs_map
+     *
+     * -----
+     * File  /_R/class/database/crnrstn.result_set_pagination_manager.class.php 
+     * to 
+     * file /_R/class/database/crnrstn.result_set_mgr.class.php
+     *
+     * -----
+     * Class crnrstn_result_set_pagination_manager 
+     * to 
+     * class crnrstn_result_set_mgr
+     *
+     * -----
+     * Deleted /_R/ui/js/_lib/frameworks
+     * to 
+     * path /_R/ui/js/_lib
+     *
+     * -----
+     * Moved /_R/ui/js/_lib/frameworks/google_ajaxslt/0.4/demo/everybodies_pizza/script/__source/scriptaculous-js-1.6.2/scriptaculous-js-1.6.2
+     * to 
+     * path /_R/ui/js/_lib/script.aculo.us/1.6.2
+     *
+     * 5 :: Thursday, September 10, 2026 @ 0330 hrs.
+     *
+     * # C # R # N # R # S # T # N # :: # L # I # G # H # T
+     * Edit: Applied additional CLR-SSL folder and 
+     *       file name edits for 1) more optimal file 
+     *       path lengths. and 2) get behind edits 
+     *       made when fixing "Paths too long" errors 
+     *       on the GitHub® ZIP download. 
+     * -----
+     * Removed 'config' and '_config' prefixes for 
+     * all folders located at, /_R/_config, 
+     * to arrive at the paths:
+     * /_R/_config/defaults
+     * /_R/_config/database.secure
+     * /_R/_config/database.sql
+     * /_R/_config/encryption.secure
+     * /_R/_config/integer_constants
+     * /_R/_config/ip_address_authorization.secure
+     * /_R/_config/lightbox_helper
+     * /_R/_config/mime_types
+     * /_R/_config/php
+     * /_R/_config/resource_wildcards.secure
+     * /_R/_config/seo_analytics.secure
+     * /_R/_config/seo_engagement.secure
+     * /_R/_config/soap.secure
+     * /_R/_config/social_media_meta.secure
+     * /_R/_config/system_content
+     * /_R/_config/system_links
+     * /_R/_config/system_paths
+     * /_R/_config/system_resource.secure
+     * /_R/_config/wordpress.secure
+     *
+     *
+     * 5 :: Thursday, September 24, 2026 @ 2344 hrs.
+     *
+     * # C # R # N # R # S # T # N # :: # L # I # G # H # T
+     * Edit: Moved the contents of 
+     *       /_R/_config/defaults/load_static_cache to 
+     *       to 
+     *       /_R/_config/defaults, and then deleted 
+     *       the empty /load_static_cache directory. 
+     *
+     *       5 :: Friday, September 25, 2026 @ 0106 hrs.
+     *
+     * # C # R # N # R # S # T # N # :: # L # I # G # H # T
+     * Edit: Changed path 
+     *       /_R/_config/resource_registry
+     *       /secure/registry_is_authorized_resource
+     *       to 
+     *       /_R/_config/resource_registry
+     *       /secure/resource_authorization.
+     *       5 :: Friday, September 25, 2026 @ 0732 hrs.
+     *
+     * # C # R # N # R # S # T # N # :: # L # I # G # H # T
+     * Edit: Renamed the path 
+     *       /_R/_config/resource_registry
+     *       /secure/registry_authorization
+     *       / crnrstn.registry_is_authorized_resource.runtime_exe.php 
+     *       to 
+     *       /_R/_config/resource_registry
+     *       /secure/resource_authorization
+     *       /crnrstn.authorized_resources.runtime_exe.php. 
+     *       5 :: Friday, September 25, 2026 @ 0821 hrs.
      *
      */
     private $R_data;

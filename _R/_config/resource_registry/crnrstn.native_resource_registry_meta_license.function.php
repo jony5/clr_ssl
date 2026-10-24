@@ -258,7 +258,7 @@
 namespace CRNRSTN;
 
 /**
- * 
+ *
  *
  * GLOBAL FUNCTION
  * RESOURCE DEFINITION :: _crnrstn_native_resource_registry_meta_license
@@ -366,10 +366,10 @@ function _crnrstn_native_resource_registry_meta_license(
      *       5 :: Tuesday, September 1, 2026 @ 1742 hrs.
      *
      * # C # R # N # R # S # T # N # :: # L # I # G # H # T
-     * Edit: Removed input parameter,
-     *       $background_color_hex = '#FFF',
-     *       from
-     *       _crnrstn_native_resource_registry_meta_license().
+     * Edit: Removed input parameter, 
+     *       $background_color_hex = '#FFF', 
+     *       from 
+     *       _crnrstn_native_resource_registry_meta_license(). 
      *       5 :: Wednesday, September 2, 2026 @ "01" 2345 hrs.
      *
      *       "01010101...split the atom...Oh,
@@ -387,13 +387,13 @@ function _crnrstn_native_resource_registry_meta_license(
      *       renamed the $attribute input 
      *       parameter to $R_meta_key, and removed 
      *       the following input parameters:
-     *       - $license_key,
-     *       - $iso_lang_code = 'en',
-     *       - $generate_version_sync_hash = false,
-     *       - $generate_search_algorithm_data = false,
+     *       - $license_key, 
+     *       - $iso_lang_code = 'en', 
+     *       - $generate_version_sync_hash = false, 
+     *       - $generate_search_algorithm_data = false, 
      *       - $resource_license_name_text = NULL, and 
-     *       - $resource_license_url = NULL.
-     * 
+     *       - $resource_license_url = NULL. 
+     *
      *       The new function definition:
      *       function _crnrstn_native_resource_registry_meta_license(
      *                $R_resp, 
@@ -403,33 +403,6 @@ function _crnrstn_native_resource_registry_meta_license(
      *                $css_data = NULL)
      *       { ... }
      *       5 :: Wednesday, September 9, 2026 @ 0611 hrs.
-     *
-     * # C # R # N # R # S # T # N # :: # L # I # G # H # T
-     * 'LICENSE_NAME_HTML'         => $R->return_registered_resource_meta(
-     *                                    $name, 
-     *                                    'LICENSE_NAME_HTML', 
-     *                                    $tmp_background_color_hex, 
-     *                                    $tmp_iso_lang_code,
-     *                                    NULL, NULL, NULL, NULL, NULL, 
-     *                                    NULL, NULL, NULL, NULL, NULL, 
-     *                                    $tmp_LICENSE_NAME_TEXT, 
-     *                                    $tmp_LICENSE_URL)
-     *
-     * 'LICENSE_NAME_TEXT'         => $R->return_registered_resource_meta(
-     *                                    $name, 
-     *                                    'LICENSE_NAME_TEXT', 
-     *                                    $tmp_background_color_hex, 
-     *                                    $tmp_iso_lang_code, 
-     *                                    NULL, NULL, NULL, NULL, NULL, 
-     *                                    NULL, NULL, NULL, NULL, NULL, 
-     *                                    $tmp_LICENSE_NAME_TEXT, 
-     *                                    $tmp_LICENSE_URL)
-     *
-     * 'LICENSE_URL'               => $tmp_LICENSE_URL;
-     *
-     * 'LICENSE_URL_HTML'          => $tmp_LICENSE_URL;
-     *
-     * 'LICENSE_URL_TEXT'          => $tmp_LICENSE_URL;
      *
      * # C # R # N # R # S # T # N # :: # L # I # G # H # T
      * CLR-SSL Resource Registry 
@@ -500,7 +473,7 @@ license url[' .
                             /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
                              * Where the multi_part_output_mode
                              * values are:
-                             * - 'HTML',
+                             * - 'HTML', 
                              * - 'TEXT', and
                              * - 'MULTI-PART'.
                              *
@@ -610,7 +583,7 @@ license url[' .
                             /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
                              * Where the multi_part_output_mode
                              * values are:
-                             * - 'HTML',
+                             * - 'HTML', 
                              * - 'TEXT', and
                              * - 'MULTI-PART'.
                              *
@@ -724,12 +697,12 @@ license url[' .
                                                 \substr($timediff, 0, -8) . 
                                                 '] ';
                             \openlog(
-                                $syslog_prefix,
+                                $syslog_prefix, 
                                 \LOG_CONS |
                                 \LOG_NDELAY |
                                 \LOG_NOWAIT |
                                 \LOG_PID |
-                                \LOG_PERROR,
+                                \LOG_PERROR, 
                                 \LOG_SYSLOG);
                             \syslog($syslog_level, $clr_ssl_msg);
                             \closelog();
@@ -743,18 +716,18 @@ license url[' .
                                      'xxxxxxxxxxxxxxxxxxxxxxxxxxx';
                         $token_generation_date = '2026xxxxxxxxxxxxxxxxxxxxxxxxxxx';
                         $token = array(
-                                 'token'                   => $msg_token,
-                                 'token_generation_date'   => $token_generation_date,
-                                 'request_type'            => __FUNCTION__,
-                                 'code'                    => 200,
+                                 'token'                   => $msg_token, 
+                                 'token_generation_date'   => $token_generation_date, 
+                                 'request_type'            => __FUNCTION__, 
+                                 'code'                    => 200, 
                                  'clr_ssl_msg'             => $clr_ssl_msg);
                         $R->error_log(
-                            $clr_ssl_msg,
-                            \LOG_ERR,
-                            \E_ERROR,
-                            __LINE__,
-                            __FUNCTION__,
-                            __FILE__,
+                            $clr_ssl_msg, 
+                            \LOG_ERR, 
+                            \E_ERROR, 
+                            __LINE__, 
+                            __FUNCTION__, 
+                            __FILE__, 
                             $token);
 
                     }
@@ -795,7 +768,7 @@ license url[' .
                             /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
                              * Where the multi_part_output_mode
                              * values are:
-                             * - 'HTML',
+                             * - 'HTML', 
                              * - 'TEXT', and
                              * - 'MULTI-PART'.
                              *
@@ -905,7 +878,7 @@ license url[' .
                             /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
                              * Where the multi_part_output_mode
                              * values are:
-                             * - 'HTML',
+                             * - 'HTML', 
                              * - 'TEXT', and
                              * - 'MULTI-PART'.
                              *
@@ -1019,12 +992,12 @@ license url[' .
                                                 \substr($timediff, 0, -8) . 
                                                 '] ';
                             \openlog(
-                                $syslog_prefix,
+                                $syslog_prefix, 
                                 \LOG_CONS |
                                 \LOG_NDELAY |
                                 \LOG_NOWAIT |
                                 \LOG_PID |
-                                \LOG_PERROR,
+                                \LOG_PERROR, 
                                 \LOG_SYSLOG);
                             \syslog($syslog_level, $clr_ssl_msg);
                             \closelog();
@@ -1038,18 +1011,18 @@ license url[' .
                                      'xxxxxxxxxxxxxxxxxxxxxxxxxxx';
                         $token_generation_date = '2026xxxxxxxxxxxxxxxxxxxxxxxxxxx';
                         $token = array(
-                                 'token'                   => $msg_token,
-                                 'token_generation_date'   => $token_generation_date,
-                                 'request_type'            => __FUNCTION__,
-                                 'code'                    => 200,
+                                 'token'                   => $msg_token, 
+                                 'token_generation_date'   => $token_generation_date, 
+                                 'request_type'            => __FUNCTION__, 
+                                 'code'                    => 200, 
                                  'clr_ssl_msg'             => $clr_ssl_msg);
                         $R->error_log(
-                            $clr_ssl_msg,
-                            \LOG_ERR,
-                            \E_ERROR,
-                            __LINE__,
-                            __FUNCTION__,
-                            __FILE__,
+                            $clr_ssl_msg, 
+                            \LOG_ERR, 
+                            \E_ERROR, 
+                            __LINE__, 
+                            __FUNCTION__, 
+                            __FILE__, 
                             $token);
 
                     }
@@ -1333,18 +1306,18 @@ license url[' .
                                      'xxxxxxxxxxxxxxxxxxxxxxxxxxx';
                         $token_generation_date = '2026xxxxxxxxxxxxxxxxxxxxxxxxxxx';
                         $token = array(
-                                 'token'                   => $msg_token,
-                                 'token_generation_date'   => $token_generation_date,
-                                 'request_type'            => __FUNCTION__,
-                                 'code'                    => 200,
+                                 'token'                   => $msg_token, 
+                                 'token_generation_date'   => $token_generation_date, 
+                                 'request_type'            => __FUNCTION__, 
+                                 'code'                    => 200, 
                                  'clr_ssl_msg'             => $clr_ssl_msg);
                         $R->error_log(
-                            $clr_ssl_msg,
-                            \LOG_ERR,
-                            \E_ERROR,
-                            __LINE__,
-                            __FUNCTION__,
-                            __FILE__,
+                            $clr_ssl_msg, 
+                            \LOG_ERR, 
+                            \E_ERROR, 
+                            __LINE__, 
+                            __FUNCTION__, 
+                            __FILE__, 
                             $token);
 
                     }
@@ -1629,18 +1602,18 @@ license url[' .
                                      'xxxxxxxxxxxxxxxxxxxxxxxxxxx';
                         $token_generation_date = '2026xxxxxxxxxxxxxxxxxxxxxxxxxxx';
                         $token = array(
-                                 'token'                   => $msg_token,
-                                 'token_generation_date'   => $token_generation_date,
-                                 'request_type'            => __FUNCTION__,
-                                 'code'                    => 200,
+                                 'token'                   => $msg_token, 
+                                 'token_generation_date'   => $token_generation_date, 
+                                 'request_type'            => __FUNCTION__, 
+                                 'code'                    => 200, 
                                  'clr_ssl_msg'             => $clr_ssl_msg);
                         $R->error_log(
-                            $clr_ssl_msg,
-                            \LOG_ERR,
-                            \E_ERROR,
-                            __LINE__,
-                            __FUNCTION__,
-                            __FILE__,
+                            $clr_ssl_msg, 
+                            \LOG_ERR, 
+                            \E_ERROR, 
+                            __LINE__, 
+                            __FUNCTION__, 
+                            __FILE__, 
                             $token);
 
                     }
@@ -1924,18 +1897,18 @@ license url[' .
                                      'xxxxxxxxxxxxxxxxxxxxxxxxxxx';
                         $token_generation_date = '2026xxxxxxxxxxxxxxxxxxxxxxxxxxx';
                         $token = array(
-                                 'token'                   => $msg_token,
-                                 'token_generation_date'   => $token_generation_date,
-                                 'request_type'            => __FUNCTION__,
-                                 'code'                    => 200,
+                                 'token'                   => $msg_token, 
+                                 'token_generation_date'   => $token_generation_date, 
+                                 'request_type'            => __FUNCTION__, 
+                                 'code'                    => 200, 
                                  'clr_ssl_msg'             => $clr_ssl_msg);
                         $R->error_log(
-                            $clr_ssl_msg,
-                            \LOG_ERR,
-                            \E_ERROR,
-                            __LINE__,
-                            __FUNCTION__,
-                            __FILE__,
+                            $clr_ssl_msg, 
+                            \LOG_ERR, 
+                            \E_ERROR, 
+                            __LINE__, 
+                            __FUNCTION__, 
+                            __FILE__, 
                             $token);
 
                     }
@@ -2219,18 +2192,18 @@ license url[' .
                                      'xxxxxxxxxxxxxxxxxxxxxxxxxxx';
                         $token_generation_date = '2026xxxxxxxxxxxxxxxxxxxxxxxxxxx';
                         $token = array(
-                                 'token'                   => $msg_token,
-                                 'token_generation_date'   => $token_generation_date,
-                                 'request_type'            => __FUNCTION__,
-                                 'code'                    => 200,
+                                 'token'                   => $msg_token, 
+                                 'token_generation_date'   => $token_generation_date, 
+                                 'request_type'            => __FUNCTION__, 
+                                 'code'                    => 200, 
                                  'clr_ssl_msg'             => $clr_ssl_msg);
                         $R->error_log(
-                            $clr_ssl_msg,
-                            \LOG_ERR,
-                            \E_ERROR,
-                            __LINE__,
-                            __FUNCTION__,
-                            __FILE__,
+                            $clr_ssl_msg, 
+                            \LOG_ERR, 
+                            \E_ERROR, 
+                            __LINE__, 
+                            __FUNCTION__, 
+                            __FILE__, 
                             $token);
 
                     }
@@ -2512,18 +2485,18 @@ license url[' .
                                      'xxxxxxxxxxxxxxxxxxxxxxxxxxx';
                         $token_generation_date = '2026xxxxxxxxxxxxxxxxxxxxxxxxxxx';
                         $token = array(
-                                 'token'                   => $msg_token,
-                                 'token_generation_date'   => $token_generation_date,
-                                 'request_type'            => __FUNCTION__,
-                                 'code'                    => 200,
+                                 'token'                   => $msg_token, 
+                                 'token_generation_date'   => $token_generation_date, 
+                                 'request_type'            => __FUNCTION__, 
+                                 'code'                    => 200, 
                                  'clr_ssl_msg'             => $clr_ssl_msg);
                         $R->error_log(
-                            $clr_ssl_msg,
-                            \LOG_ERR,
-                            \E_ERROR,
-                            __LINE__,
-                            __FUNCTION__,
-                            __FILE__,
+                            $clr_ssl_msg, 
+                            \LOG_ERR, 
+                            \E_ERROR, 
+                            __LINE__, 
+                            __FUNCTION__, 
+                            __FILE__, 
                             $token);
 
                     }
@@ -2581,18 +2554,18 @@ license url[' .
                              'xxxxxxxxxxxxxxxxxxxxxxxxxxx';
                 $token_generation_date = '2026xxxxxxxxxxxxxxxxxxxxxxxxxxx';
                 $token = array(
-                         'token'                   => $msg_token,
-                         'token_generation_date'   => $token_generation_date,
-                         'request_type'            => __FUNCTION__,
-                         'code'                    => 200,
+                         'token'                   => $msg_token, 
+                         'token_generation_date'   => $token_generation_date, 
+                         'request_type'            => __FUNCTION__, 
+                         'code'                    => 200, 
                          'clr_ssl_msg'             => $clr_ssl_msg);
                 $R->error_log(
-                    $clr_ssl_msg,
-                    \LOG_ERR,
-                    \E_ERROR,
-                    __LINE__,
-                    __FUNCTION__,
-                    __FILE__,
+                    $clr_ssl_msg, 
+                    \LOG_ERR, 
+                    \E_ERROR, 
+                    __LINE__, 
+                    __FUNCTION__, 
+                    __FILE__, 
                     $token);
 
             }

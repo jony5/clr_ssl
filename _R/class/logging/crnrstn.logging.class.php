@@ -257,9 +257,7 @@
 
 namespace CRNRSTN;
 
-/**
- * 
- *
+/* # C # R # N # R # S # T # N # :: # L # I # G # H # T
  * Here are my notes from the top of
  * the file or "header notes" from
  * the original 188 line,
@@ -422,6 +420,8 @@ namespace CRNRSTN;
  * [End of crnrstn_AdvancedLogger() Header Notes - 2012(GNU)]
  *
  * # C # R # N # R # S # T # N # :: # L # I # G # H # T
+ */
+/**
  *
  * CLASS DEFINITION :: crnrstn_logging
  * CLASS VERSION    :: 2.00.0000
@@ -429,14 +429,17 @@ namespace CRNRSTN;
  * AUTHOR           :: Jonathan '5' Harris, jharris@eVifweb.com, eVifweb@gmail.com.
  * URI              :: http://evifweb.jony5.com/
  * TITLE            :: The CRNRSTN :: Lightsaber
- *                     SOAP Services Logging
+ *                     SOAP Services Advanced Multi-
+ *                     Channel Logging and Exception 
+ *                     Handling Notifications 
  *                     Services Layer
  * DESCRIPTION      :: The CRNRSTN :: Lightsaber
  *                     SOAP Services Layer
  *                     Advanced Multi-Channel
  *                     Logging and Exception
  *                     Handling Notifications
- *                     Services Layer.
+ *                     Services Layer...where 
+ *                     do we start?
  *
  *                     This kit will
  *                     definitely log things.
@@ -3797,7 +3800,7 @@ class crnrstn_logging extends crnrstn
 
             return true;
 
-        }// End of filter.
+        }// End of deprecated logs filter. 
 
         /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
          * Edit: Moved crnrstn->error_log
@@ -4197,11 +4200,8 @@ class crnrstn_logging extends crnrstn
                  *
                  */
                 $message_str_elipse = '...';
-                if(\strlen($message_str ) < 31){
-
+                if(\strlen($message_str ) < 31)
                     $message_str_elipse = '';
-
-                }
 
                 //$message_str = \trim(\substr($message_str, 0, 34));
                 $message_str = \trim(\substr($message_str, 0, 0));
@@ -5246,11 +5246,8 @@ class crnrstn_logging extends crnrstn
         if(\strlen(\trim($syslog_prefix_passthrough)) < 1){
 
             $syslog_prefix = 'R :: ';
-            if(isset($prefix_override)){
-
+            if(isset($prefix_override))
                 $syslog_prefix = $prefix_override;
-
-            }
 
             $syslog_prefix .= '[' . $this->return_micro_time() .
                               '] ';

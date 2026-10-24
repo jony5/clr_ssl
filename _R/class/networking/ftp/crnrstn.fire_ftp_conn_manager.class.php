@@ -255,10 +255,7 @@
  * # C # R # N # R # S # T # N # :: # L # I # G # H # T
  */
 
-namespace networking\ftp;
-
-use CRNRSTN\crnrstn_user;
-use CRNRSTN\Exception;
+namespace CRNRSTN;
 
 /**
  * 

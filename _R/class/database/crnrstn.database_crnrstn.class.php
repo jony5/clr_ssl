@@ -517,6 +517,8 @@ spool [' .
 
         */
 
+        return true;
+
     }
 
     //public function return_database_value(

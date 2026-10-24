@@ -449,9 +449,22 @@ namespace CRNRSTN;
  * @access public
  *
  */
-class crnrstn_bassdrive_stream_output_controller {
-
-    public $oCRNRSTN_USR;
+class crnrstn_bassdrive_stream_output_controller extends crnrstn_user 
+{
+    /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
+     * Edit: We modified the 
+     *       crnrstn_bassdrive_stream_output_controller 
+     *       class object by adding an 
+     *       extension of the crnrstn_user object, 
+     *       by deleting the 
+     *       __construct($oCRNRSTN_USR) input 
+     *       parameter with its public 
+     *       definition, and by removing the 
+     *       object assignment to the 
+     *       public $oCRNRSTN_USR variable. 
+     *       5 :: Friday, September 25, 2026 @ 0900 hrs.
+     *
+     */
 
     protected $stream_key;
 
@@ -469,9 +482,7 @@ class crnrstn_bassdrive_stream_output_controller {
     private static $bassdrive_month_ARRAY = array();
     private static $bassdrive_day_ARRAY = array();
 
-    public function __construct($oCRNRSTN_USR){
-
-        $this->oCRNRSTN_USR = $oCRNRSTN_USR;
+    public function __construct(){
 
     }
 
@@ -690,18 +701,18 @@ class crnrstn_bassdrive_stream_output_controller {
         // COLORS META ::
         //    public function                     retrieve_data_by_id($oQueryProfileMgr, $result_set_key, $lookup_fieldname, $piped_primary_id_fields = NULL, $piped_lookup_id_data = NULL){
 
-        $this->oCRNRSTN_USR->init_lookup_by_id($oQueryProfileMgr, 'BASSDRIVE_STREAM');
-        $tmp_record_lookup_serial_ARRAY = $this->oCRNRSTN_USR->add_lookup_field_data($oQueryProfileMgr,'BASSDRIVE_STREAM', 'STREAM_KEY', $this->stream_key);
+        $this->init_lookup_by_id($oQueryProfileMgr, 'BASSDRIVE_STREAM');
+        $tmp_record_lookup_serial_ARRAY = $this->add_lookup_field_data($oQueryProfileMgr,'BASSDRIVE_STREAM', 'STREAM_KEY', $this->stream_key);
         //error_log('218 search - lookup serial array size='.sizeof($tmp_record_lookup_serial_ARRAY));
-        //$tmp_record_lookup_serial_ARRAY = self::$oCRNRSTN_USR->add_lookup_field_data($oQueryProfileMgr, 'PAGE_DATA', 'PAGE_SERIAL', $tmp_page_serial);
+        //$tmp_record_lookup_serial_ARRAY = $this->add_lookup_field_data($oQueryProfileMgr, 'PAGE_DATA', 'PAGE_SERIAL', $tmp_page_serial);
         //error_log('220 search - lookup serial array size='.sizeof($tmp_record_lookup_serial_ARRAY));
 
-        //$tmp_page_path = $oCRNRSTN_USR->retrieve_data_by_id($oQueryProfileMgr, 'PAGE_DATA','CONTENT_PATH','CONTENT_ID', $tmp_content_id);
-        //$tmp_page_path = $oCRNRSTN_USR->retrieve_data_by_id($oQueryProfileMgr, 'PAGE_DATA','CONTENT_PATH','CONTENT_ID|PAGE_SERIAL', $tmp_content_id.'|'.$tmp_page_serial);
-        //$tmp_page_path = self::$oCRNRSTN_USR->retrieve_data_by_id($oQueryProfileMgr, 'PAGE_DATA', 'CONTENT_PATH');
+        //$tmp_page_path = $this->retrieve_data_by_id($oQueryProfileMgr, 'PAGE_DATA','CONTENT_PATH','CONTENT_ID', $tmp_content_id);
+        //$tmp_page_path = $this->retrieve_data_by_id($oQueryProfileMgr, 'PAGE_DATA','CONTENT_PATH','CONTENT_ID|PAGE_SERIAL', $tmp_content_id.'|'.$tmp_page_serial);
+        //$tmp_page_path = $this->retrieve_data_by_id($oQueryProfileMgr, 'PAGE_DATA', 'CONTENT_PATH');
 
 
-        $colors_name_key = $this->oCRNRSTN_USR->retrieve_data_by_id($oQueryProfileMgr,'BASSDRIVE_STREAM', 'STREAM_KEY', 'COLORS_NAME_KEY');
+        $colors_name_key = $this->retrieve_data_by_id($oQueryProfileMgr,'BASSDRIVE_STREAM', 'STREAM_KEY', 'COLORS_NAME_KEY');
         error_log(__LINE__ . ' '. __METHOD__ .' user AUTH PATH TRACE');
 
 

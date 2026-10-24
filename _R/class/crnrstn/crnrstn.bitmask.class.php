@@ -304,97 +304,156 @@ namespace CRNRSTN;
 class bitmask 
 {
 
+    private $os_bit_size;
     protected $bitmask = array();
 
-    public function set($bit) // Set some bit
+    function __construct()
     {
-        $key = (int) ($bit / CRNRSTN_INTEGER_LENGTH);
-        $bit = (int) fmod($bit, CRNRSTN_INTEGER_LENGTH);
-        @$this->bitmask[$key] |= 1 << $bit;
-    }
+        /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
+         * Edit: We defined a constructor for the 
+         *       bitmask class in order internalize 
+         *       an initialization of os_bit_size; 
+         *       we also defined a private variable to 
+         *       hold the integer, $os_bit_size. 
+         *       5 :: Friday, October 23, 2026 @ 1523 hrs.
+         *
+         */
 
-    public function remove($bit) // Remove some bit
-    {
-        $key = (int) ($bit / CRNRSTN_INTEGER_LENGTH);
-        $bit = (int) fmod($bit, CRNRSTN_INTEGER_LENGTH);
-        $this->bitmask[$key] &= ~ (1 << $bit);
-        if(!$this->bitmask[$key])
-            unset($this->bitmask[$key]);
-    }
+        switch(\PHP_INT_SIZE){
+            case 4:
 
-    public function toggle($bit) // Toggle some bit
-    {
-        $key = (int) ($bit / CRNRSTN_INTEGER_LENGTH);
-        $bit = (int) fmod($bit, CRNRSTN_INTEGER_LENGTH);
-        @$this->bitmask[$key] ^= 1 << $bit;
-        if(!$this->bitmask[$key])
-            unset($this->bitmask[$key]);
-    }
+                $this->os_bit_size = (int) 32;
 
-    public function read($bit) // Read some bit
-    {
-        $key = (int) ($bit / CRNRSTN_INTEGER_LENGTH);
-        $bit = (int) fmod($bit, CRNRSTN_INTEGER_LENGTH);
-        return @$this->bitmask[$key] & (1 << $bit);
-    }
+            break;
+            case 8:
+            default:
 
-    public function stringin($string) // Read a string of bits that can be up to the maximum amount of bits long.
-    {
-        $this->bitmask = array();
-        $array = str_split( strrev($string), CRNRSTN_INTEGER_LENGTH );
-        foreach( $array as $key => $value )
-        {
-            if($value = bindec(strrev($value)))
-                $this->bitmask[$key] = $value;
+                $this->os_bit_size = (int) 64;
+
+            break;
+
         }
+
     }
 
-    public function stringout() // Print out a string of your nice little bits
+    function set($bit) // Set some bit
     {
-        $string = "";
 
-        $keys = array_keys($this->bitmask);
+        $key = (int) ($bit / $this->os_bit_size);
+        $bit = (int) \fmod($bit, $this->os_bit_size);
 
-        sort($keys, SORT_NUMERIC);
+        @$this->bitmask[$key] |= 1 << $bit;
 
-        for($i = array_pop($keys); $i >= 0; $i--){
+    }
+
+    function remove($bit) // Remove some bit
+    {
+
+        $key = (int) ($bit / $this->os_bit_size);
+        $bit = (int) \fmod($bit, $this->os_bit_size);
+
+        $this->bitmask[$key] &= ~ (1 << $bit);
+
+        if(!$this->bitmask[$key])
+            unset($this->bitmask[$key]);
+
+    }
+
+    function toggle($bit) // Toggle some bit
+    {
+
+        $key = (int) ($bit / $this->os_bit_size);
+        $bit = (int) \fmod($bit, $this->os_bit_size);
+
+        @$this->bitmask[$key] ^= 1 << $bit;
+
+        if(!$this->bitmask[$key])
+            unset($this->bitmask[$key]);
+
+    }
+
+    function read($bit) // Read some bit
+    {
+
+        $key = (int) ($bit / $this->os_bit_size);
+        $bit = (int) \fmod($bit, $this->os_bit_size);
+
+        return @$this->bitmask[$key] & (1 << $bit);
+
+    }
+
+    function stringin($string) // Read a string of bits that can be up to the maximum amount of bits long.
+    {
+
+        $this->bitmask = array();
+        $array         = \str_split(\strrev($string), $this->os_bit_size);
+
+        foreach($array as $key => $value)
+            if($value = \bindec(\strrev($value)))
+                $this->bitmask[$key] = $value;
+
+    }
+
+    function stringout() // Print out a string of your nice little bits
+    {
+
+        $string = '';
+        $keys   = \array_keys($this->bitmask);
+
+        \sort($keys, SORT_NUMERIC);
+
+        for($i = \array_pop($keys); $i >= 0; $i--){
 
             if(isset($this->bitmask[$i])){
 
-                $string .= sprintf("%0" . 
-                           CRNRSTN_INTEGER_LENGTH . "b", 
+                $string .= \sprintf("%0" .
+                           $this->os_bit_size . "b", 
                            $this->bitmask[$i]);
-                //error_log(__LINE__ . 
-                //    ' BITMASK index is set i=[' . 
-                //    $i . '] $string=[' . 
-                //    $string.']');
+
+                /* 
+                error_log(__LINE__ . 
+                      ' BITMASK index is set i=[' . 
+                      $i . '] $string=[' . 
+                      $string.']');
+
+                 */
 
             }else{
 
-                //error_log(__LINE__ . 
-                //    ' BITMASK index i NOT SET i=[' . 
-                //    $i . '] $string=[' . 
-                //    $string . '].');
+                /*
+                error_log(__LINE__ . 
+                     ' BITMASK index i NOT SET i=[' . 
+                     $i . '] $string=[' . 
+                     $string . '].');
+
+                 */
 
             }
 
         }
 
-        //return print_r(__METHOD__ . 
-        //       ' $keys='.print_r($keys, true), true);
+        /*
+        return print_r(__METHOD__ . 
+               ' $keys='.print_r($keys, true), true);
+
+        */
 
         return $string;
 
     }
 
-    public function clear() // Purge!
+    function clear() // Purge!
     {
+
         $this->bitmask = array();
+
     }
 
-    public function debug() // See what's going on in your bitmask array
+    function debug() // See what's going on in your bitmask array
     {
-        var_dump($this->bitmask);
+
+        \var_dump($this->bitmask);
+
     }
 
 }

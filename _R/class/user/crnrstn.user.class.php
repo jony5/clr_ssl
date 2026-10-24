@@ -257,7 +257,7 @@
 
 namespace CRNRSTN;
 
-use networking\ftp\crnrstn_wind_cloud_fire;/**
+/**
  * 
  *
  * CLASS DEFINITION :: crnrstn_user
@@ -439,8 +439,8 @@ class crnrstn_user extends crnrstn
              $R_asset_mgr, 
              $R_log_output_mgr, 
              $R_sql_profile_mgr, 
-             $R_redirect_cntrlr, 
-             $R_pagination_mgr, 
+             $R_redirect_cntrlr,
+             $R_result_set_mgr, 
              $R_ux_mgr)
     {
 
@@ -530,7 +530,7 @@ class crnrstn_user extends crnrstn
          *                            $this);
          *
          */
-        $this->R['result_set_mgr'] = $R_pagination_mgr;
+        $this->R['result_set_mgr'] = $R_result_set_mgr;
 
         $this->env_key           = $this->return_env_key();
         $this->env_key_hash      = $this->return_env_key(true);
@@ -1565,6 +1565,8 @@ class crnrstn_user extends crnrstn
                      $filetype = NULL)
     {
 
+
+        $tmp_filename       = '';
         $file_extension_jpg =
         $file_extension_png =
         $tmp_filetype       = $filetype;
@@ -1741,6 +1743,7 @@ class crnrstn_user extends crnrstn
                     // COMMENT :: https://stackoverflow.com/a/13758760
                     // AUTHOR :: Ronny Sherer :: https://stackoverflow.com/users/380561/ronny-sherer
                     $file_extension_jpg = pathinfo($crnrstn_jpg, PATHINFO_EXTENSION);
+                    $tmp_filename = $file_extension_jpg['filename'];
                     $img_binary = fread(fopen($crnrstn_jpg, 'r'), $this->find_filesize($crnrstn_jpg));
                     $mime_content_type_jpg = mime_content_type($img_binary);
                     $md5_jpg = md5_file($img_binary);
@@ -1754,7 +1757,6 @@ class crnrstn_user extends crnrstn
                     //$this->assetParams['FILE_MD5'] = md5_file($_FILES["assetfile"]["tmp_name"]);  // 32
                     //$this->assetParams['FILE_SHA1'] = sha1_file($_FILES["assetfile"]["tmp_name"]);  // 40
                 }
-
 
             }
 
@@ -13125,6 +13127,7 @@ ACCESS TYPE: SYSTEM LEVEL ACCESS
 
                     $tmp_social_serial = $this->generate_new_key(50);
 
+                    $js_return_str = 'return false;';
                     $tmp_script = '<script>
 function crnrstn_sticky_' . $tmp_social_serial . '(ux_action, url, target, elem){
 
@@ -13153,7 +13156,7 @@ function crnrstn_sticky_' . $tmp_social_serial . '(ux_action, url, target, elem)
 
             }
 
-            return false;
+            ' . $js_return_str . '
 
         }
 

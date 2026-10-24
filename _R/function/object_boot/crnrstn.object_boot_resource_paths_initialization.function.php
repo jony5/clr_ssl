@@ -365,7 +365,7 @@ function _crnrstn_object_boot_resource_paths_initialization(
                                                             $application_directory . $slsh .
                                                             $framework_directory . $slsh .
                                                             '_config' . $slsh .
-                                                            '_config.defaults';
+                                                            'defaults';
     $crnrstn_directory_paths['function_object_boot']        = $_SERVER['DOCUMENT_ROOT'] . $slsh .
                                                               $application_directory . $slsh .
                                                               $framework_directory . $slsh .
@@ -385,17 +385,17 @@ function _crnrstn_object_boot_resource_paths_initialization(
 //                                                              $application_directory . $slsh .
 //                                                              $framework_directory . $slsh .
 //                                                              '_config' . $slsh .
-//                                                              'config.php';
+//                                                              'php';
 //    $crnrstn_directory_paths['config_integer_constants']    = $_SERVER['DOCUMENT_ROOT'] . $slsh .
 //                                                              $application_directory . $slsh .
 //                                                              $framework_directory . $slsh .
 //                                                              '_config' . $slsh .
-//                                                              'config.integer_constants';
+//                                                              'integer_constants';
 //    $crnrstn_directory_paths['config_ip_authorization']     = $_SERVER['DOCUMENT_ROOT'] . $slsh .
 //                                                              $application_directory . $slsh .
 //                                                              $framework_directory . $slsh .
 //                                                              '_config' . $slsh .
-//                                                              'config.ip_address_authorization.secure';
+//                                                              'ip_address_authorization.secure';
     $crnrstn_directory_paths['config_resource_registry']    = $_SERVER['DOCUMENT_ROOT'] . $slsh .
                                                               $application_directory . $slsh .
                                                               $framework_directory . $slsh .
@@ -405,17 +405,17 @@ function _crnrstn_object_boot_resource_paths_initialization(
 //                                                              $application_directory . $slsh .
 //                                                              $framework_directory . $slsh .
 //                                                              '_config' . $slsh .
-//                                                              'config.system_paths';
+//                                                              'system_paths';
 //    $crnrstn_directory_paths['config_system_content']       = $_SERVER['DOCUMENT_ROOT'] . $slsh .
 //                                                              $application_directory . $slsh .
 //                                                              $framework_directory . $slsh .
 //                                                              '_config' . $slsh .
-//                                                              'config.system_content';
+//                                                              'system_content';
 //    $crnrstn_directory_paths['config_system_links']         = $_SERVER['DOCUMENT_ROOT'] . $slsh .
 //                                                              $application_directory . $slsh .
 //                                                              $framework_directory . $slsh .
 //                                                              '_config' . $slsh .
-//                                                              'config.system_links';
+//                                                              'system_links';
     $crnrstn_directory_paths['class_session']               = $_SERVER['DOCUMENT_ROOT'] . $slsh .
                                                               $application_directory . $slsh .
                                                               $framework_directory . $slsh .
@@ -1556,7 +1556,7 @@ function _crnrstn_object_boot_resource_paths_initialization(
                             // Layer System Paths
                             // Initialization Runtime
                             // Executable, here:
-                            // /_R/_config/config.system_paths/crnrstn.system_path_initialization.runtime_exe.php
+                            // /_R/_config/system_paths/crnrstn.system_path_initialization.runtime_exe.php
                             //
                             //
                             // 5

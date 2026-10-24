@@ -258,7 +258,7 @@
 namespace CRNRSTN;
 
 /**
- * 
+ *
  *
  * GLOBAL FUNCTION
  * RESOURCE DEFINITION :: _crnrstn_native_resource_registry_meta_social_media
@@ -304,9 +304,9 @@ namespace CRNRSTN;
  *
  */
 function _crnrstn_native_resource_registry_meta_social_media(
-         $R_resp,
-         $R_meta_key,
-         $R,
+         $R_resp, 
+         $R_meta_key, 
+         $R, 
          $R_debug_mode = 0)
 {
     /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
@@ -358,14 +358,14 @@ function _crnrstn_native_resource_registry_meta_social_media(
      *       5 :: Tuesday, September 1, 2026 @ 0221 hrs.
      *
      * # C # R # N # R # S # T # N # :: # L # I # G # H # T
-     * Edit: Removed input parameter,
-     *       $background_color_hex = '#FFF',
-     *       from
-     *       _crnrstn_native_resource_registry_meta_social_media().
+     * Edit: Removed input parameter, 
+     *       $background_color_hex = '#FFF', 
+     *       from 
+     *       _crnrstn_native_resource_registry_meta_social_media(). 
      *       5 :: Wednesday, September 2, 2026 @ "01" 2345 hrs.
      *
-     *       "01010101...split the atom...Oh,
-     *       Oh, Oh, Oh. You know what I mean.
+     *       "01010101...split the atom...Oh, 
+     *       Oh, Oh, Oh. You know what I mean. 
      *
      *       Yeah, you know what I mean:
      *       "Oh, Oh, Oh"...
@@ -378,9 +378,9 @@ function _crnrstn_native_resource_registry_meta_social_media(
      *       by renaming the $attribute input 
      *       parameter to $R_meta_key, and removing 
      *       the following input parameters:
-     *       - $iso_lang_code = 'en',
-     *       - $generate_version_sync_hash = false,
-     *       - $generate_search_algorithm_data = false,
+     *       - $iso_lang_code = 'en', 
+     *       - $generate_version_sync_hash = false, 
+     *       - $generate_search_algorithm_data = false, 
      *       - $resource_title_text = NULL, 
      *       - $resource_license_name_text = NULL, 
      *       - $resource_license_url = NULL, and 
@@ -594,44 +594,44 @@ license url[' .
 
                     $memory_pointer = $R_resp['clr_ssl_resource']['memory_pointer'][0];
                     $R_resp[$memory_pointer]['social'][] = array(
-                        'HTML_HEAD_TITLE' => $tmp_page_title,
+                        'HTML_HEAD_TITLE' => $tmp_page_title, 
                         'HTML_HEAD_FAVICON_FILEPATH' => array(
                             $R->system_path('https') . 
                             '/ui/imgs/favicon/system/crnrstn/favicon.ico/favicon.ico' => 1
-                        ),
+                        ), 
                         'HEAD_PROFILE' => array(
                             0 => array(
-                                'DESCRIPTION'                           => '',
-                                'HTTP-EQUIV=CONTENT-TYPE'               => 'text/html',
-                                'VIEWPORT'                              => 'width=device-width',
-                                'ROBOTS'                                => 'index,follow',
-                                'HOSTNAME'                              => 'jony5.com',
-                                'EXPECTED-HOSTNAME'                     => 'jony5.com',
-                                'CANONICAL'                             => '',
+                                'DESCRIPTION'                           => '', 
+                                'HTTP-EQUIV=CONTENT-TYPE'               => 'text/html', 
+                                'VIEWPORT'                              => 'width=device-width', 
+                                'ROBOTS'                                => 'index,follow', 
+                                'HOSTNAME'                              => 'jony5.com', 
+                                'EXPECTED-HOSTNAME'                     => 'jony5.com', 
+                                'CANONICAL'                             => '', 
                                 'LOCALE' => array(
-                                    'CHARSET'                           => 'utf-8',
-                                    'DISTRIBUTION'                      => 'Global',
+                                    'CHARSET'                           => 'utf-8', 
+                                    'DISTRIBUTION'                      => 'Global', 
                                     'HTTP-EQUIV=CONTENT-LANGUAGE'       => 'en-US'
-                                ),
+                                ), 
                                 'SOCIAL_PREVIEW_META' => array(
                                     'TWITTER' => array(
-                                        'TWITTER:IMAGE:SRC'             => '',
-                                        'TWITTER:SITE'                  => '@jony5',
-                                        'TWITTER:CARD'                  => 'summary_large_image',
-                                        'TWITTER:TITLE'                 => '',
+                                        'TWITTER:IMAGE:SRC'             => '', 
+                                        'TWITTER:SITE'                  => '@jony5', 
+                                        'TWITTER:CARD'                  => 'summary_large_image', 
+                                        'TWITTER:TITLE'                 => '', 
                                         'TWITTER:DESCRIPTION'           => ''
-                                    ),
+                                    ), 
                                     'OPENGRAPH' => array(
-                                        'OG:IMAGE'                      => '',
-                                        'OG:IMAGE:ALT'                  => '',
-                                        'OG:SITE_NAME'                  => '',
-                                        'OG:TYPE'                       => '',
-                                        'OG:TITLE'                      => '',
-                                        'OG:URL'                        => '',
+                                        'OG:IMAGE'                      => '', 
+                                        'OG:IMAGE:ALT'                  => '', 
+                                        'OG:SITE_NAME'                  => '', 
+                                        'OG:TYPE'                       => '', 
+                                        'OG:TITLE'                      => '', 
+                                        'OG:URL'                        => '', 
                                         'OG:DESCRIPTION'                => ''
                                     )
-                                ),
-                                'LASTMODIFIED'                          => '',
+                                ), 
+                                'LASTMODIFIED'                          => '', 
                                 'DATECREATED'                           => ''
 
                             )
@@ -652,9 +652,9 @@ license url[' .
                      * for the page meta data
                      * population for search
                      * will be:
-                     *      1) case-insensitive,
+                     *      1) case-insensitive, 
                      *      2) <meta> attribute name/
-                     *         property agnostic,
+                     *         property agnostic, 
                      *      3) and attempt to return
                      *         data in the format:
                      *          array('twitter:card' => '{the screen
@@ -665,61 +665,61 @@ license url[' .
                     $R_resp[$memory_pointer]['social'][] = array(
                         array('name' =>
                             array(
-                                array('twitter:card'        => 'Must be set to a value of "summary_large_image". Yes, this is required.'),
-                                array('twitter:site'        => 'The Twitter @username to which the card should be attributed. This is not required.'),
-                                array('twitter:title'       => 'A concise title for the related content. Platform specific behaviors: iOS, Android: Truncated to two lines in timeline and expanded Tweet. Web: Truncated to one line in timeline and expanded Tweet. Yes, this is required.'),
-                                array('twitter:description' => 'A description that concisely summarizes the content as appropriate for presentation within a Tweet. You should not re-use the title as the description or use this field to describe the general services provided by the website. Platform specific behaviors: iOS, Android: Not displayed. Web: Truncated to three lines in timeline and expanded Tweet. This is not required.'),
-                                array('twitter:image'       => 'A URL to a unique image representing the content of the page. You should not use a generic image such as your website logo, author photo, or other image that spans multiple pages. Images for this Card support an aspect ratio of 2:1 with minimum dimensions of 300x157 or maximum of 4096x4096 pixels. Images must be less than 5MB in size. JPG, PNG, WEBP and GIF formats are supported. Only the first frame of an animated GIF will be used. SVG is not supported. This is not required.'),
-                                array('twitter:image:alt'   => 'A text description of the image conveying the essential nature of an image to users who are visually impaired. Maximum 420 characters. This is not required.'),
-                                array('twitter:creator'     => '@username for the content creator / author. This is not required.'),
-                                array('description'         => 'A concise description of the page. This is not required.'),
+                                array('twitter:card'        => 'Must be set to a value of "summary_large_image". Yes, this is required.'), 
+                                array('twitter:site'        => 'The Twitter @username to which the card should be attributed. This is not required.'), 
+                                array('twitter:title'       => 'A concise title for the related content. Platform specific behaviors: iOS, Android: Truncated to two lines in timeline and expanded Tweet. Web: Truncated to one line in timeline and expanded Tweet. Yes, this is required.'), 
+                                array('twitter:description' => 'A description that concisely summarizes the content as appropriate for presentation within a Tweet. You should not re-use the title as the description or use this field to describe the general services provided by the website. Platform specific behaviors: iOS, Android: Not displayed. Web: Truncated to three lines in timeline and expanded Tweet. This is not required.'), 
+                                array('twitter:image'       => 'A URL to a unique image representing the content of the page. You should not use a generic image such as your website logo, author photo, or other image that spans multiple pages. Images for this Card support an aspect ratio of 2:1 with minimum dimensions of 300x157 or maximum of 4096x4096 pixels. Images must be less than 5MB in size. JPG, PNG, WEBP and GIF formats are supported. Only the first frame of an animated GIF will be used. SVG is not supported. This is not required.'), 
+                                array('twitter:image:alt'   => 'A text description of the image conveying the essential nature of an image to users who are visually impaired. Maximum 420 characters. This is not required.'), 
+                                array('twitter:creator'     => '@username for the content creator / author. This is not required.'), 
+                                array('description'         => 'A concise description of the page. This is not required.'), 
                                 array('keywords'            => 'The keyword <meta> element (<meta name="keywords" content="fill, in, your, keywords, here">) — which is supposed to provide keywords for search engines to determine the relevance of that page for different search terms — is ignored by search engines, because spammers were just filling the keyword list with hundreds of keywords, biasing results.')
                             )
-                        ),
+                        ), 
                         array('property' =>
                             array(
-                                array('og:url'              => 'The canonical URL for your page. This should be the undecorated URL, without session variables, user identifying parameters, or counters. Likes and Shares for this URL will aggregate at this URL. For example, mobile domain URLs should point to the desktop version of the URL as the canonical URL to aggregate Likes and Shares across different versions of the page.'),
-                                array('og:title'            => 'The title of your article without any branding such as your site name.'),
-                                array('og:description'      => 'A brief description of the content, usually between 2 and 4 sentences. This will displayed below the title of the post on Facebook.'),
-                                array('og:image'            => 'The URL of the image that appears when someone shares the content to Facebook. See below for more info, and check out Facebook\'s best practices guide to learn how to specify a high quality preview image.'),
-                                array('fb:app_id'           => 'In order to use Facebook Insights you must add the app ID to your page. Insights lets you view analytics for traffic to your site from Facebook. Find the app ID in your App Dashboard.'),
-                                array('og:type'             => 'The type of media of your content. This tag impacts how your content shows up in Feed. If you don\'t specify a type,the default is website. Each URL should be a single object, so multiple og:type values are not possible. Find the full list of object types in Object Types Reference.'),
-                                array('og:locale'           => 'The locale of the resource. Defaults to en_US. You can also use og:locale:alternate if you have other available language translations available. Learn about the locales we support in Facebook\'s documentation on localization.'),
-                                array('og:video'            => 'The URL for the video. If you want the video to play in-line in Feed, you should use the https:// URL if possible.'),
-                                array('og:video:url'        => 'Equivalent to og:video.'),
-                                array('og:video:secure_url' => 'Secure URL for the video. Include this even if you set the secure URL in og:video.'),
-                                array('og:video:type'       => 'MIME type of the video. Either application/x-shockwave-flash or video/mp4.'),
-                                array('og:video:width'      => 'Width of video in pixels. This property is required for videos.'),
-                                array('og:video:height'     => 'Height of video in pixels. This property is required for videos.'),
-                                array('og:image'            => 'Specify an image for a high quality preview in Feed.'),
-                                array('og:image'            => 'URL for the image. To update an image after it\'s been published, use a new URL for the new image. Images are cached based on the URL and won\'t be updated unless the URL changes.'),
-                                array('og:image:url'        => 'Equivalent to og:image.'),
-                                array('og:image:secure_url' => 'https:// URL for the image.'),
-                                array('og:image:type'       => 'MIME type of the image. One of image/jpeg, image/gif or image/png.'),
-                                array('og:image:width'      => 'Width of image in pixels. Specify height and width for your image to ensure that the image loads properly the first time it\'s shared.'),
-                                array('og:image:height'     => 'Height of image in pixels. Specify height and width for your image to ensure that the image loads properly the first time it\'s shared.'),
-                                array('og:url'              => 'The canonical URL for your page. This should be the undecorated URL, without session variables, user identifying parameters, or counters. Likes and Shares for this URL will aggregate at this URL. For example, mobile domain URLs should point to the desktop version of the URL as the canonical URL to aggregate Likes and Shares across different versions of the page.'),
-                                array('og:title'            => 'The title of your article without any branding such as your site name.'),
-                                array('og:description'      => 'A brief description of the content, usually between 2 and 4 sentences. This will displayed below the title of the post on Facebook.'),
-                                array('og:image'            => 'The URL of the image that appears when someone shares the content to Facebook. See below for more info, and check out Facebook\'s best practices guide to learn how to specify a high quality preview image.'),
-                                array('fb:app_id'           => 'In order to use Facebook Insights you must add the app ID to your page. Insights lets you view analytics for traffic to your site from Facebook. Find the app ID in your App Dashboard.'),
-                                array('og:type'             => 'The type of media of your content. This tag impacts how your content shows up in Feed. If you don\'t specify a type,the default is website. Each URL should be a single object, so multiple og:type values are not possible. Find the full list of object types in Object Types Reference.'),
-                                array('og:locale'           => 'The locale of the resource. Defaults to en_US. You can also use og:locale:alternate if you have other available language translations available. Learn about the locales we support in Facebook\'s documentation on localization.'),
-                                array('og:locale:alternate' => 'The locale of the resource. Defaults to en_US. You can also use og:locale:alternate if you have other available language translations available. Learn about the locales we support in Facebook\'s documentation on localization.'),
-                                array('og:video'            => 'The URL for the video. If you want the video to play in-line in Feed, you should use the https:// URL if possible.'),
-                                array('og:video:url'        => 'Equivalent to og:video.'),
-                                array('og:video:secure_url' => 'Secure URL for the video. Include this even if you set the secure URL in og:video.'),
-                                array('og:video:type'       => 'MIME type of the video. Either application/x-shockwave-flash or video/mp4.'),
-                                array('og:video:width'      => 'Width of video in pixels. This property is required for videos.'),
-                                array('og:video:height'     => 'Height of video in pixels. This property is required for videos.'),
-                                array('og:image'            => 'URL for the image. Specify an image for a high quality preview in Feed. To update an image after it\'s been published, use a new URL for the new image. Images are cached based on the URL and won\'t be updated unless the URL changes.'),
-                                array('og:image:url'        => 'Equivalent to og:image.'),
-                                array('og:image:secure_url' => 'https:// URL for the image.'),
-                                array('og:image:type'       => 'MIME type of the image. One of image/jpeg, image/gif or image/png.'),
-                                array('og:image:width'      => 'Width of image in pixels. Specify height and width for your image to ensure that the image loads properly the first time it\'s shared.'),
+                                array('og:url'              => 'The canonical URL for your page. This should be the undecorated URL, without session variables, user identifying parameters, or counters. Likes and Shares for this URL will aggregate at this URL. For example, mobile domain URLs should point to the desktop version of the URL as the canonical URL to aggregate Likes and Shares across different versions of the page.'), 
+                                array('og:title'            => 'The title of your article without any branding such as your site name.'), 
+                                array('og:description'      => 'A brief description of the content, usually between 2 and 4 sentences. This will displayed below the title of the post on Facebook.'), 
+                                array('og:image'            => 'The URL of the image that appears when someone shares the content to Facebook. See below for more info, and check out Facebook\'s best practices guide to learn how to specify a high quality preview image.'), 
+                                array('fb:app_id'           => 'In order to use Facebook Insights you must add the app ID to your page. Insights lets you view analytics for traffic to your site from Facebook. Find the app ID in your App Dashboard.'), 
+                                array('og:type'             => 'The type of media of your content. This tag impacts how your content shows up in Feed. If you don\'t specify a type,the default is website. Each URL should be a single object, so multiple og:type values are not possible. Find the full list of object types in Object Types Reference.'), 
+                                array('og:locale'           => 'The locale of the resource. Defaults to en_US. You can also use og:locale:alternate if you have other available language translations available. Learn about the locales we support in Facebook\'s documentation on localization.'), 
+                                array('og:video'            => 'The URL for the video. If you want the video to play in-line in Feed, you should use the https:// URL if possible.'), 
+                                array('og:video:url'        => 'Equivalent to og:video.'), 
+                                array('og:video:secure_url' => 'Secure URL for the video. Include this even if you set the secure URL in og:video.'), 
+                                array('og:video:type'       => 'MIME type of the video. Either application/x-shockwave-flash or video/mp4.'), 
+                                array('og:video:width'      => 'Width of video in pixels. This property is required for videos.'), 
+                                array('og:video:height'     => 'Height of video in pixels. This property is required for videos.'), 
+                                array('og:image'            => 'Specify an image for a high quality preview in Feed.'), 
+                                array('og:image'            => 'URL for the image. To update an image after it\'s been published, use a new URL for the new image. Images are cached based on the URL and won\'t be updated unless the URL changes.'), 
+                                array('og:image:url'        => 'Equivalent to og:image.'), 
+                                array('og:image:secure_url' => 'https:// URL for the image.'), 
+                                array('og:image:type'       => 'MIME type of the image. One of image/jpeg, image/gif or image/png.'), 
+                                array('og:image:width'      => 'Width of image in pixels. Specify height and width for your image to ensure that the image loads properly the first time it\'s shared.'), 
+                                array('og:image:height'     => 'Height of image in pixels. Specify height and width for your image to ensure that the image loads properly the first time it\'s shared.'), 
+                                array('og:url'              => 'The canonical URL for your page. This should be the undecorated URL, without session variables, user identifying parameters, or counters. Likes and Shares for this URL will aggregate at this URL. For example, mobile domain URLs should point to the desktop version of the URL as the canonical URL to aggregate Likes and Shares across different versions of the page.'), 
+                                array('og:title'            => 'The title of your article without any branding such as your site name.'), 
+                                array('og:description'      => 'A brief description of the content, usually between 2 and 4 sentences. This will displayed below the title of the post on Facebook.'), 
+                                array('og:image'            => 'The URL of the image that appears when someone shares the content to Facebook. See below for more info, and check out Facebook\'s best practices guide to learn how to specify a high quality preview image.'), 
+                                array('fb:app_id'           => 'In order to use Facebook Insights you must add the app ID to your page. Insights lets you view analytics for traffic to your site from Facebook. Find the app ID in your App Dashboard.'), 
+                                array('og:type'             => 'The type of media of your content. This tag impacts how your content shows up in Feed. If you don\'t specify a type,the default is website. Each URL should be a single object, so multiple og:type values are not possible. Find the full list of object types in Object Types Reference.'), 
+                                array('og:locale'           => 'The locale of the resource. Defaults to en_US. You can also use og:locale:alternate if you have other available language translations available. Learn about the locales we support in Facebook\'s documentation on localization.'), 
+                                array('og:locale:alternate' => 'The locale of the resource. Defaults to en_US. You can also use og:locale:alternate if you have other available language translations available. Learn about the locales we support in Facebook\'s documentation on localization.'), 
+                                array('og:video'            => 'The URL for the video. If you want the video to play in-line in Feed, you should use the https:// URL if possible.'), 
+                                array('og:video:url'        => 'Equivalent to og:video.'), 
+                                array('og:video:secure_url' => 'Secure URL for the video. Include this even if you set the secure URL in og:video.'), 
+                                array('og:video:type'       => 'MIME type of the video. Either application/x-shockwave-flash or video/mp4.'), 
+                                array('og:video:width'      => 'Width of video in pixels. This property is required for videos.'), 
+                                array('og:video:height'     => 'Height of video in pixels. This property is required for videos.'), 
+                                array('og:image'            => 'URL for the image. Specify an image for a high quality preview in Feed. To update an image after it\'s been published, use a new URL for the new image. Images are cached based on the URL and won\'t be updated unless the URL changes.'), 
+                                array('og:image:url'        => 'Equivalent to og:image.'), 
+                                array('og:image:secure_url' => 'https:// URL for the image.'), 
+                                array('og:image:type'       => 'MIME type of the image. One of image/jpeg, image/gif or image/png.'), 
+                                array('og:image:width'      => 'Width of image in pixels. Specify height and width for your image to ensure that the image loads properly the first time it\'s shared.'), 
                                 array('og:image:height'     => 'Height of image in pixels. Specify height and width for your image to ensure that the image loads properly the first time it\'s shared.')
                             )
-                        ),
+                        ), 
                         array('dom_tag' =>
                             array(
                                 array('title'               => 'The <title> element is metadata that represents the title of the overall HTML document (not the document\'s content.)')
@@ -756,7 +756,7 @@ license url[' .
                                                                   timeline and expanded Tweet.
 
                     twitter:image           A URL to a unique image representing the content of the page.       No
-                                            You should not use a generic image such as your website logo,
+                                            You should not use a generic image such as your website logo, 
                                             author photo, or other image that spans multiple pages. Images
                                             for this Card support an aspect ratio of 2:1 with minimum
                                             dimensions of 300x157 or maximum of 4096x4096 pixels. Images
@@ -840,18 +840,18 @@ license url[' .
                                      'xxxxxxxxxxxxxxxxxxxxxxxxxxx';
                         $token_generation_date = '2026xxxxxxxxxxxxxxxxxxxxxxxxxxx';
                         $token = array(
-                                 'token'                   => $msg_token,
-                                 'token_generation_date'   => $token_generation_date,
-                                 'request_type'            => __FUNCTION__,
-                                 'code'                    => 200,
+                                 'token'                   => $msg_token, 
+                                 'token_generation_date'   => $token_generation_date, 
+                                 'request_type'            => __FUNCTION__, 
+                                 'code'                    => 200, 
                                  'clr_ssl_msg'             => $clr_ssl_msg);
                         $R->error_log(
-                            $clr_ssl_msg,
-                            \LOG_ERR,
-                            \E_ERROR,
-                            __LINE__,
-                            __FUNCTION__,
-                            __FILE__,
+                            $clr_ssl_msg, 
+                            \LOG_ERR, 
+                            \E_ERROR, 
+                            __LINE__, 
+                            __FUNCTION__, 
+                            __FILE__, 
                             $token);
 
                     }
@@ -909,18 +909,18 @@ license url[' .
                              'xxxxxxxxxxxxxxxxxxxxxxxxxxx';
                 $token_generation_date = '2026xxxxxxxxxxxxxxxxxxxxxxxxxxx';
                 $token = array(
-                         'token'                   => $msg_token,
-                         'token_generation_date'   => $token_generation_date,
-                         'request_type'            => __FUNCTION__,
-                         'code'                    => 200,
+                         'token'                   => $msg_token, 
+                         'token_generation_date'   => $token_generation_date, 
+                         'request_type'            => __FUNCTION__, 
+                         'code'                    => 200, 
                          'clr_ssl_msg'             => $clr_ssl_msg);
                 $R->error_log(
-                    $clr_ssl_msg,
-                    \LOG_ERR,
-                    \E_ERROR,
-                    __LINE__,
-                    __FUNCTION__,
-                    __FILE__,
+                    $clr_ssl_msg, 
+                    \LOG_ERR, 
+                    \E_ERROR, 
+                    __LINE__, 
+                    __FUNCTION__, 
+                    __FILE__, 
                     $token);
 
             }

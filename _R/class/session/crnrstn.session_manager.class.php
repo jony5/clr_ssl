@@ -364,6 +364,9 @@ class crnrstn_session_manager extends crnrstn
          *       5 :: Saturday, April 25, 2026 @ 0649 hrs.
          */
 
+        // 5 :: Saturday, October 3, 2026 @ 0746 hrs.
+        $this->R_data['int_flag'] = $this->get_crnrstn('int_flag');
+
         /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
          * Perform the necessary
          * input validation

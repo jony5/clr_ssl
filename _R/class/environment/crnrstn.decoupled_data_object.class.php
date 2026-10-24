@@ -974,7 +974,7 @@ class crnrstn_decoupled_data_object extends crnrstn
 
         //
         // WHERE, $data_channel_init_sequence = 'GPHSJCDROF';
-        // SEE, /_R/_config/_config.defaults/_crnrstn.system_settings.inc.php.
+        // SEE, /_R/_config/defaults/_crnrstn.system_settings.inc.php.
         // THIS DATA IS REFERENCED ALOT, SO WE SAVE IT PUBLIC, PROTECTED, OR PRIVATE STATIC.
         $tmp_data_channel_init_sequence = $this->get_resource('data_channel_init_sequence', 0, 'CRNRSTN::RESOURCE::MULTI_CHANNEL');
 
@@ -1050,7 +1050,7 @@ class crnrstn_decoupled_data_object extends crnrstn
                         // $_GET[] DATA PARAMETERS REFERENCED BY
                         // get_channel_system_parameter_exclusions_ARRAY
                         // WILL BE BYPASSED INTERNALLY.
-                        // SEE, /_R/_config/_config.defaults/_crnrstn.system_settings.inc.php
+                        // SEE, /_R/_config/defaults/_crnrstn.system_settings.inc.php
                         //
                         // Saturday, November 4, 2023 @ 1620 hrs.
                         //$this->initialize_http_get_params();
@@ -1066,8 +1066,8 @@ class crnrstn_decoupled_data_object extends crnrstn
                         // (2) THE CRNRSTN :: MULTI-CHANNEL GET DATA
                         // CHANNEL IS ACTIVE PER $oCRNRSTN->config_init_channel()
                         // SETTINGS IN CRNRSTN :: CONFIGURATION. (SEE, _crnrstn.config.inc.php),
-                        // AND (3) MAX BYTE CONFIGURATION SETTINGS (SEE, /_R/_config/_config.defaults/_crnrstn.system_settings.inc.php)
-                        // AND SYSTEM OVERRIDES (SEE, /_R/_config/_config.defaults/_crnrstn.system_overrides.inc.php)
+                        // AND (3) MAX BYTE CONFIGURATION SETTINGS (SEE, /_R/_config/defaults/_crnrstn.system_settings.inc.php)
+                        // AND SYSTEM OVERRIDES (SEE, /_R/_config/defaults/_crnrstn.system_overrides.inc.php)
                         // ARE NEVER VIOLATED WHEN DATA IS PROCESSED
                         // INTO RUNTIME (THIS WOULD BE ATYPICAL).
                         //
@@ -1212,8 +1212,8 @@ class crnrstn_decoupled_data_object extends crnrstn
                         // (2) THE CRNRSTN :: MULTI-CHANNEL POST DATA
                         // CHANNEL IS ACTIVE PER $oCRNRSTN->config_init_channel()
                         // SETTINGS IN CRNRSTN :: CONFIGURATION. (SEE, _crnrstn.config.inc.php),
-                        // AND (3) MAX BYTE CONFIGURATION SETTINGS (SEE, /_R/_config/_config.defaults/_crnrstn.system_settings.inc.php)
-                        // AND SYSTEM OVERRIDES (SEE, /_R/_config/_config.defaults/_crnrstn.system_overrides.inc.php)
+                        // AND (3) MAX BYTE CONFIGURATION SETTINGS (SEE, /_R/_config/defaults/_crnrstn.system_settings.inc.php)
+                        // AND SYSTEM OVERRIDES (SEE, /_R/_config/defaults/_crnrstn.system_overrides.inc.php)
                         // ARE NEVER VIOLATED WHEN DATA IS PROCESSED
                         // INTO RUNTIME (THIS WOULD BE ATYPICAL).
                         //
@@ -1366,8 +1366,8 @@ class crnrstn_decoupled_data_object extends crnrstn
                         // (2) THE CRNRSTN :: MULTI-CHANNEL COOKIE DATA
                         // CHANNEL IS ACTIVE PER $oCRNRSTN->config_init_channel()
                         // SETTINGS IN CRNRSTN :: CONFIGURATION. (SEE, _crnrstn.config.inc.php),
-                        // AND (3) MAX BYTE CONFIGURATION SETTINGS (SEE, /_R/_config/_config.defaults/_crnrstn.system_settings.inc.php)
-                        // AND SYSTEM OVERRIDES (SEE, /_R/_config/_config.defaults/_crnrstn.system_overrides.inc.php)
+                        // AND (3) MAX BYTE CONFIGURATION SETTINGS (SEE, /_R/_config/defaults/_crnrstn.system_settings.inc.php)
+                        // AND SYSTEM OVERRIDES (SEE, /_R/_config/defaults/_crnrstn.system_overrides.inc.php)
                         // ARE NEVER VIOLATED WHEN DATA IS PROCESSED
                         // INTO RUNTIME (THIS WOULD BE ATYPICAL).
                         //
@@ -1546,8 +1546,8 @@ class crnrstn_decoupled_data_object extends crnrstn
                         // (2) THE CRNRSTN :: MULTI-CHANNEL SESSION DATA
                         // CHANNEL IS ACTIVE PER $oCRNRSTN->config_init_channel()
                         // SETTINGS IN CRNRSTN :: CONFIGURATION. (SEE, _crnrstn.config.inc.php),
-                        // AND (3) MAX BYTE CONFIGURATION SETTINGS (SEE, /_R/_config/_config.defaults/_crnrstn.system_settings.inc.php)
-                        // AND SYSTEM OVERRIDES (SEE, /_R/_config/_config.defaults/_crnrstn.system_overrides.inc.php)
+                        // AND (3) MAX BYTE CONFIGURATION SETTINGS (SEE, /_R/_config/defaults/_crnrstn.system_settings.inc.php)
+                        // AND SYSTEM OVERRIDES (SEE, /_R/_config/defaults/_crnrstn.system_overrides.inc.php)
                         // ARE NEVER VIOLATED WHEN DATA IS PROCESSED
                         // INTO RUNTIME (THIS WOULD BE ATYPICAL).
                         //
@@ -1695,8 +1695,8 @@ class crnrstn_decoupled_data_object extends crnrstn
                         // (2) THE CRNRSTN :: MULTI-CHANNEL DATABASE
                         // DATA CHANNEL IS ACTIVE PER $oCRNRSTN->config_init_channel()
                         // SETTINGS IN CRNRSTN :: CONFIGURATION. (SEE, _crnrstn.config.inc.php),
-                        // AND (3) MAX BYTE CONFIGURATION SETTINGS (SEE, /_R/_config/_config.defaults/_crnrstn.system_settings.inc.php)
-                        // AND SYSTEM OVERRIDES (SEE, /_R/_config/_config.defaults/_crnrstn.system_overrides.inc.php)
+                        // AND (3) MAX BYTE CONFIGURATION SETTINGS (SEE, /_R/_config/defaults/_crnrstn.system_settings.inc.php)
+                        // AND SYSTEM OVERRIDES (SEE, /_R/_config/defaults/_crnrstn.system_overrides.inc.php)
                         // ARE NEVER VIOLATED WHEN DATA IS PROCESSED
                         // INTO RUNTIME (THIS WOULD BE ATYPICAL).
                         //
@@ -1845,8 +1845,8 @@ class crnrstn_decoupled_data_object extends crnrstn
                         // (2) THE CRNRSTN :: MULTI-CHANNEL SSDTLA DATA
                         // CHANNEL IS ACTIVE PER $oCRNRSTN->config_init_channel()
                         // SETTINGS IN CRNRSTN :: CONFIGURATION. (SEE, _crnrstn.config.inc.php),
-                        // AND (3) MAX BYTE CONFIGURATION SETTINGS (SEE, /_R/_config/_config.defaults/_crnrstn.system_settings.inc.php)
-                        // AND SYSTEM OVERRIDES (SEE, /_R/_config/_config.defaults/_crnrstn.system_overrides.inc.php)
+                        // AND (3) MAX BYTE CONFIGURATION SETTINGS (SEE, /_R/_config/defaults/_crnrstn.system_settings.inc.php)
+                        // AND SYSTEM OVERRIDES (SEE, /_R/_config/defaults/_crnrstn.system_overrides.inc.php)
                         // ARE NEVER VIOLATED WHEN DATA IS PROCESSED
                         // INTO RUNTIME (THIS WOULD BE ATYPICAL).
                         //
@@ -1995,8 +1995,8 @@ class crnrstn_decoupled_data_object extends crnrstn
                         // (2) THE CRNRSTN :: MULTI-CHANNEL PSSDTLA DATA
                         // CHANNEL IS ACTIVE PER $oCRNRSTN->config_init_channel()
                         // SETTINGS IN CRNRSTN :: CONFIGURATION. (SEE, _crnrstn.config.inc.php),
-                        // AND (3) MAX BYTE CONFIGURATION SETTINGS (SEE, /_R/_config/_config.defaults/_crnrstn.system_settings.inc.php)
-                        // AND SYSTEM OVERRIDES (SEE, /_R/_config/_config.defaults/_crnrstn.system_overrides.inc.php)
+                        // AND (3) MAX BYTE CONFIGURATION SETTINGS (SEE, /_R/_config/defaults/_crnrstn.system_settings.inc.php)
+                        // AND SYSTEM OVERRIDES (SEE, /_R/_config/defaults/_crnrstn.system_overrides.inc.php)
                         // ARE NEVER VIOLATED WHEN DATA IS PROCESSED
                         // INTO RUNTIME (THIS WOULD BE ATYPICAL).
                         //
@@ -2145,8 +2145,8 @@ class crnrstn_decoupled_data_object extends crnrstn
                         // (2) THE CRNRSTN :: MULTI-CHANNEL RUNTIME DATA
                         // CHANNEL IS ACTIVE PER $oCRNRSTN->config_init_channel()
                         // SETTINGS IN CRNRSTN :: CONFIGURATION. (SEE, _crnrstn.config.inc.php),
-                        // AND (3) MAX BYTE CONFIGURATION SETTINGS (SEE, /_R/_config/_config.defaults/_crnrstn.system_settings.inc.php)
-                        // AND SYSTEM OVERRIDES (SEE, /_R/_config/_config.defaults/_crnrstn.system_overrides.inc.php)
+                        // AND (3) MAX BYTE CONFIGURATION SETTINGS (SEE, /_R/_config/defaults/_crnrstn.system_settings.inc.php)
+                        // AND SYSTEM OVERRIDES (SEE, /_R/_config/defaults/_crnrstn.system_overrides.inc.php)
                         // ARE NEVER VIOLATED WHEN DATA IS PROCESSED
                         // INTO RUNTIME (THIS WOULD BE ATYPICAL).
                         //
@@ -2305,8 +2305,8 @@ class crnrstn_decoupled_data_object extends crnrstn
                         // (2) THE CRNRSTN :: MULTI-CHANNEL SOAP DATA
                         // CHANNEL IS ACTIVE PER $oCRNRSTN->config_init_channel()
                         // SETTINGS IN CRNRSTN :: CONFIGURATION. (SEE, _crnrstn.config.inc.php),
-                        // AND (3) MAX BYTE CONFIGURATION SETTINGS (SEE, /_R/_config/_config.defaults/_crnrstn.system_settings.inc.php)
-                        // AND SYSTEM OVERRIDES (SEE, /_R/_config/_config.defaults/_crnrstn.system_overrides.inc.php)
+                        // AND (3) MAX BYTE CONFIGURATION SETTINGS (SEE, /_R/_config/defaults/_crnrstn.system_settings.inc.php)
+                        // AND SYSTEM OVERRIDES (SEE, /_R/_config/defaults/_crnrstn.system_overrides.inc.php)
                         // ARE NEVER VIOLATED WHEN DATA IS PROCESSED
                         // INTO RUNTIME (THIS WOULD BE ATYPICAL).
                         //
@@ -2455,8 +2455,8 @@ class crnrstn_decoupled_data_object extends crnrstn
                         // (2) THE CRNRSTN :: MULTI-CHANNEL FILE DATA
                         // CHANNEL IS ACTIVE PER $oCRNRSTN->config_init_channel()
                         // SETTINGS IN CRNRSTN :: CONFIGURATION. (SEE, _crnrstn.config.inc.php),
-                        // AND (3) MAX BYTE CONFIGURATION SETTINGS (SEE, /_R/_config/_config.defaults/_crnrstn.system_settings.inc.php)
-                        // AND SYSTEM OVERRIDES (SEE, /_R/_config/_config.defaults/_crnrstn.system_overrides.inc.php)
+                        // AND (3) MAX BYTE CONFIGURATION SETTINGS (SEE, /_R/_config/defaults/_crnrstn.system_settings.inc.php)
+                        // AND SYSTEM OVERRIDES (SEE, /_R/_config/defaults/_crnrstn.system_overrides.inc.php)
                         // ARE NEVER VIOLATED WHEN DATA IS PROCESSED
                         // INTO RUNTIME (THIS WOULD BE ATYPICAL).
                         //

@@ -75,7 +75,7 @@
 // application folder.
 $tmp_slsh = DIRECTORY_SEPARATOR;
 $tmp_application_folder = $tmp_slsh . 'lightbox_helper';
-$tmp_framework_dir = $tmp_slsh . '_lightbox_helper';
+$tmp_framework_dir = $tmp_slsh . '_R';
 
 //
 // Initialize session.
@@ -107,7 +107,7 @@ $tmp_file_path = $_SERVER['DOCUMENT_ROOT'] .
                  $tmp_application_folder . $tmp_slsh . 
                  '_R' . $tmp_slsh . 
                  '_config' . $tmp_slsh . 
-                 'config.system_paths' . $tmp_slsh;
+                 'system_paths' . $tmp_slsh;
 require($tmp_file_path . 'crnrstn.system_paths.function.php');
 require($tmp_file_path . 'crnrstn.system_path_initialization.runtime_exe.php');
 #error_log("/services/ index.php (8) Value for DOCUMENT_ROOT: ".$oCRNRSTN_USR->get_resource('DOCUMENT_ROOT')." and _CRNRSTN_ENV_KEY :: ".$_SESSION['jRs72bd0'.'CRNRSTN'.self::$oCRNRSTN_USR->crc_int32('_CRNRSTN_ENV_KEY')]);

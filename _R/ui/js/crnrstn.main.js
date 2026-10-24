@@ -450,12 +450,12 @@ CRNRSTN :: Lightsaber oCRNRSTN_JS (now R_JS()) v1.00.0000
      * CRNRSTN JS :: Debug Modes
      *
      */
-    this.CRNRSTN_DEBUG_OFF = 0;
-    this.CRNRSTN_DEBUG_BASIC = 100;
-    this.CRNRSTN_DEBUG_VERBOSE = 200;
+    this.CRNRSTN_DEBUG_OFF              = 0;
+    this.CRNRSTN_DEBUG_BASIC            = 100;
+    this.CRNRSTN_DEBUG_VERBOSE          = 200;
     this.CRNRSTN_DEBUG_LIFESTYLE_BANNER = 300;
-    this.CRNRSTN_DEBUG_BASSDRIVE = 420;
-    this.CRNRSTN_DEBUG_CONTROLS = 500;
+    this.CRNRSTN_DEBUG_BASSDRIVE        = 420;
+    this.CRNRSTN_DEBUG_CONTROLS         = 500;
 
     /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
      * CRNRSTN :: Lightsaber 
@@ -464,13 +464,13 @@ CRNRSTN :: Lightsaber oCRNRSTN_JS (now R_JS()) v1.00.0000
      * Defaults and Initialization 
      *
      */
-    this.wall_time_seconds = 1;
-    this.max_num_iframe_agents = 1;
-    this.oSystem_date = 0;
-    this.system_date_str = '';
-    this.session_salt = '';
-    this.R_debug_mode = this.CRNRSTN_DEBUG_OFF;
-    this.crnrstn_overlay_mode = 'OFF';
+    this.wall_time_seconds                = 1;
+    this.max_num_iframe_agents            = 1;
+    this.oSystem_date                     = 0;
+    this.system_date_str                  = '';
+    this.session_salt                     = '';
+    this.R_debug_mode                     = this.CRNRSTN_DEBUG_OFF;
+    this.crnrstn_overlay_mode             = 'OFF';
     this.crnrstn_ui_component_state_ARRAY = [];
 
     this.CRNRSTN_INTERACT_UI_MOUSE = {
@@ -480,16 +480,16 @@ CRNRSTN :: Lightsaber oCRNRSTN_JS (now R_JS()) v1.00.0000
 
     this.CRNRSTN_INTERACT_UI_ELEM_AT_MOUSE = [];
 
-    this.client_rtime = '0:00:00';
-    this.client_rtime_year = '';
-    this.client_rtime_month = '';
-    this.client_rtime_week = '';
-    this.client_rtime_day = '';
-    this.client_rtime_hour = '0';
-    this.client_rtime_mins = '0';
-    this.client_rtime_secs = '0';
-    this.client_rtime_millisecs = '0';
-    this.client_rtime_pretty = '';
+    this.client_rtime               = '0:00:00';
+    this.client_rtime_year          = '';
+    this.client_rtime_month         = '';
+    this.client_rtime_week          = '';
+    this.client_rtime_day           = '';
+    this.client_rtime_hour          = '0';
+    this.client_rtime_mins          = '0';
+    this.client_rtime_secs          = '0';
+    this.client_rtime_millisecs     = '0';
+    this.client_rtime_pretty        = '';
     this.ttl_tunnel_monitor_seconds = 0;
 
     /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
@@ -545,8 +545,8 @@ CRNRSTN :: Lightsaber oCRNRSTN_JS (now R_JS()) v1.00.0000
   };
 
   R_JS.prototype.imageCountLabel = function(
-                        currentImageNum, 
-                        totalImages) 
+                                   currentImageNum, 
+                                   totalImages) 
   {
     return this.options.albumLabel.replace(/%1/g, currentImageNum).replace(/%2/g, totalImages);
   };

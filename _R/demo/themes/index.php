@@ -582,7 +582,7 @@ $tmp_str = '/*
 
     Example ::
     $R->add_resource(\'BLUEHOST\', \'DOMAIN\', \'jony5.com\', CRNRSTN_AUTHORIZE & CRNRSTN_CHANNEL_RUNTIME);
-    For demonstration of use, see: /_R/_config/config.system_resource.secure/_crnrstn.system_resource.inc.php
+    For demonstration of use, see: /_R/_config/system_resource.secure/_crnrstn.system_resource.inc.php
 
     */';
 $R->print_r($tmp_str, 'CRNRSTN :: CODE NOTES. crnrstn::', $tmp_theme_style_int, __LINE__, __METHOD__, __FILE__);

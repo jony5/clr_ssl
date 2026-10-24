@@ -351,7 +351,7 @@ namespace CRNRSTN;
  * Debug to System Log...(int) 2
  * System Test...........(int) 3  // Added System Test. 5 :: Monday, July 6, 2026 @ 0601 hrs.
  */
-$R_debug_mode_override = 2;
+$R_debug_mode_override = 0;
 
 /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
  * Initialize an optional
@@ -774,307 +774,341 @@ else
 
 ?><!DOCTYPE html>
 <html lang="en">
-<head><?php /* TODO :: Replace h */  ?>
-    <meta http-equiv="Content-Type" content="text/html" />
-    <meta http-equiv="Content-Language" content="en-US" />
-    <meta name="distribution" content="global" />
-    <meta name="robots" content="index,follow" />
-    <title>The CRNRSTN :: Lightsaber RoCEv2 SOAP Services Layer v<?php
+    <head>
+        <meta http-equiv="Content-Type" content="text/html" />
+        <meta http-equiv="Content-Language" content="en-US" />
+        <meta name="distribution" content="global" />
+        <meta name="robots" content="index,follow" />
+        <title>The CRNRSTN :: Lightsaber RoCEv2 SOAP Services Layer v<?php
         echo $R->version_crnrstn();
         ?></title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="hostname" content="<?php echo $_SERVER['SERVER_NAME']; ?>" />
-    <meta name="expected-hostname" content="<?php echo $_SERVER['SERVER_NAME']; ?>" />
-    <link rel="shortcut icon" type="image/x-icon" href="<?php 
-        echo $R_directory_shift . '/' .
-             $R_framework_directory .
-             '/ui/imgs/favicon/system/crnrstn' .
-             '/favicon.ico?'.
-             $session_salt . '=favicon.ico&R_cache=' .
-             $R->file_url_cache_id(
-                 $root .
-                 '/ui/imgs/favicon/system/crnrstn/favicon.ico');
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="hostname" content="<?php echo $_SERVER['SERVER_NAME']; ?>" />
+        <meta name="expected-hostname" content="<?php echo $_SERVER['SERVER_NAME']; ?>" />
+        <link rel="shortcut icon" type="image/x-icon" href="<?php 
+            echo $R_directory_shift . '/' .
+                 $R_framework_directory .
+                 '/ui/imgs/favicon/system/crnrstn' .
+                 '/favicon.ico?'.
+                 $session_salt . '=favicon.ico&R_cache=' .
+                 $R->file_url_cache_id(
+                     $root .
+                     '/ui/imgs/favicon/system/crnrstn/favicon.ico');
     ?>"/>
-    <link type="text/css" rel="stylesheet" href="<?php 
-        echo $R_directory_shift . '/' .
-             $R_framework_directory .
-             '/ui/css/crnrstn.main_desktop.css?' .
-             $session_salt . '=crnrstn.main_desktop.css' .
-             '&R_cache=' .
-             $R->file_url_cache_id(
-                 $root .
-                 '/ui/css/crnrstn.main_desktop.css');
+        <link type="text/css" rel="stylesheet" href="<?php 
+            echo $R_directory_shift . '/' .
+                 $R_framework_directory .
+                 '/ui/css/crnrstn.main_desktop.css?' .
+                 $session_salt . '=crnrstn.main_desktop.css' .
+                 '&R_cache=' .
+                 $R->file_url_cache_id(
+                     $root .
+                     '/ui/css/crnrstn.main_desktop.css');
     ?>">
-    <script type="application/json" src="<?php
-        echo $R_directory_shift . '/' .
-             $R_framework_directory .
-             '/ui/js/_lib/jquery/4.0.0/' .
-             'jquery-4.0.0.min.map?'.
-             $session_salt . '=jquery-4.0.0.min.map' .
-             '&R_cache=' .
-             $R->file_url_cache_id(
-                 $root .
+        <script type="application/json" src="<?php
+            echo $R_directory_shift . '/' .
+                 $R_framework_directory .
                  '/ui/js/_lib/jquery/4.0.0/' .
-                 'jquery-4.0.0.min.map');
+                 'jquery-4.0.0.min.map?'.
+                 $session_salt . '=jquery-4.0.0.min.map' .
+                 '&R_cache=' .
+                 $R->file_url_cache_id(
+                     $root .
+                     '/ui/js/_lib/jquery/4.0.0/' .
+                     'jquery-4.0.0.min.map');
     ?>"></script>
-    <script type="text/javascript" src="<?php
-        echo $R_directory_shift . '/' .
-             $R_framework_directory .
-             '/ui/js/_lib/jquery/4.0.0/' .
-             'jquery-4.0.0.min.js?'.
-             $session_salt . '=jquery-4.0.0.min.js' .
-             '&R_cache=' .
-             $R->file_url_cache_id(
-                 $root .
+        <script type="text/javascript" src="<?php
+            echo $R_directory_shift . '/' .
+                 $R_framework_directory .
                  '/ui/js/_lib/jquery/4.0.0/' .
-                 'jquery-4.0.0.min.js');
+                 'jquery-4.0.0.min.js?'.
+                 $session_salt . '=jquery-4.0.0.min.js' .
+                 '&R_cache=' .
+                 $R->file_url_cache_id(
+                     $root .
+                     '/ui/js/_lib/jquery/4.0.0/' .
+                     'jquery-4.0.0.min.js');
     ?>"></script>
-    <link type="text/css" rel="stylesheet" href="<?php
-        echo $R_directory_shift . '/' .
-             $R_framework_directory .
-             '/ui/js/_lib/lightbox.js' .
-             '/2.12.0/dist/css/lightbox.min.css?' .
-             $session_salt . '=lightbox.min.css' .
-             '&R_cache=' .
-             $R->file_url_cache_id($root .
+        <link type="text/css" rel="stylesheet" href="<?php
+            echo $R_directory_shift . '/' .
+                 $R_framework_directory .
                  '/ui/js/_lib/lightbox.js' .
-                 '/2.12.0/dist/css/lightbox.min.css');
+                 '/2.12.0/dist/css/lightbox.min.css?' .
+                 $session_salt . '=lightbox.min.css' .
+                 '&R_cache=' .
+                 $R->file_url_cache_id($root .
+                     '/ui/js/_lib/lightbox.js' .
+                     '/2.12.0/dist/css/lightbox.min.css');
     ?>">
-    <link type="text/css" rel="stylesheet" href="<?php
-        echo $R_directory_shift . '/' .
-             $R_framework_directory .
-             '/ui/js/_lib/jquery_ui/1.14.2/' .
-             'jquery-ui.theme.min.css?' .
-             $session_salt . '=jquery-ui-1.14.2/jquery-ui.theme.min.css' .
-             '&R_cache=' .
-             $R->file_url_cache_id(
-                 $root .
+        <link type="text/css" rel="stylesheet" href="<?php
+            echo $R_directory_shift . '/' .
+                 $R_framework_directory .
                  '/ui/js/_lib/jquery_ui/1.14.2/' .
-                 'jquery-ui.theme.min.css');
+                 'jquery-ui.theme.min.css?' .
+                 $session_salt . '=jquery-ui-1.14.2/jquery-ui.theme.min.css' .
+                 '&R_cache=' .
+                 $R->file_url_cache_id(
+                     $root .
+                     '/ui/js/_lib/jquery_ui/1.14.2/' .
+                     'jquery-ui.theme.min.css');
     ?>">
-    <link type="text/css" rel="stylesheet" href="<?php
-        echo $R_directory_shift . '/' .
-             $R_framework_directory .
-             '/ui/js/_lib/jquery_ui/1.14.2' .
-             '/jquery-ui.structure.min.css?' .
-             $session_salt . '=jquery-ui-1.14.2/jquery-ui.structure.min.css' .
-             '&R_cache=' .
-             $R->file_url_cache_id($root .
+        <link type="text/css" rel="stylesheet" href="<?php
+            echo $R_directory_shift . '/' .
+                 $R_framework_directory .
                  '/ui/js/_lib/jquery_ui/1.14.2' .
-                 '/jquery-ui.structure.min.css');
+                 '/jquery-ui.structure.min.css?' .
+                 $session_salt . '=jquery-ui-1.14.2/jquery-ui.structure.min.css' .
+                 '&R_cache=' .
+                 $R->file_url_cache_id($root .
+                     '/ui/js/_lib/jquery_ui/1.14.2' .
+                     '/jquery-ui.structure.min.css');
     ?>">
-    <link type="text/css" rel="stylesheet" href="<?php
-        echo $R_directory_shift . '/' .
-             $R_framework_directory .
-             '/ui/js/_lib/jquery_ui/1.14.2/' .
-             'jquery-ui.min.css?'.
-             $session_salt . '=jquery-ui-1.14.2/jquery-ui.min.css' .
-             '&R_cache=' .
-             $R->file_url_cache_id($root .
+        <link type="text/css" rel="stylesheet" href="<?php
+            echo $R_directory_shift . '/' .
+                 $R_framework_directory .
                  '/ui/js/_lib/jquery_ui/1.14.2/' .
-                 'jquery-ui.min.css');
+                 'jquery-ui.min.css?'.
+                 $session_salt . '=jquery-ui-1.14.2/jquery-ui.min.css' .
+                 '&R_cache=' .
+                 $R->file_url_cache_id($root .
+                     '/ui/js/_lib/jquery_ui/1.14.2/' .
+                     'jquery-ui.min.css');
     ?>">
-    <script type="text/javascript" src="<?php
-        echo $R_directory_shift . '/' .
-             $R_framework_directory .
-             '/ui/js/_lib/jquery_ui/1.14.2/' .
-             'jquery-ui.min.js?'.
-             $session_salt . '=jquery-ui-1.14.2/jquery-ui.min.js' .
-             '&R_cache=' .
-             $R->file_url_cache_id($root .
+        <script type="text/javascript" src="<?php
+            echo $R_directory_shift . '/' .
+                 $R_framework_directory .
                  '/ui/js/_lib/jquery_ui/1.14.2/' .
-                 'jquery-ui.min.js');
+                 'jquery-ui.min.js?'.
+                 $session_salt . '=jquery-ui-1.14.2/jquery-ui.min.js' .
+                 '&R_cache=' .
+                 $R->file_url_cache_id($root .
+                     '/ui/js/_lib/jquery_ui/1.14.2/' .
+                     'jquery-ui.min.js');
     ?>"></script>
-    <script type="text/javascript" src="<?php
-        echo $R_directory_shift . '/' .
-             $R_framework_directory .
-             '/ui/js/crnrstn.main.js?'.
-             $session_salt . '=crnrstn.main.js' .
-             '&R_cache=' .
-             $R->file_url_cache_id($root .
-                 '/ui/js/crnrstn.main.js');
+        <script type="text/javascript" src="<?php
+            echo $R_directory_shift . '/' .
+                 $R_framework_directory .
+                 '/ui/js/crnrstn.main.js?'.
+                 $session_salt . '=crnrstn.main.js' .
+                 '&R_cache=' .
+                 $R->file_url_cache_id($root .
+                     '/ui/js/crnrstn.main.js');
     ?>"></script>
-    <script>
+        <script>
 
-        function log_activity(message){
+            $(document).ready(function() {
+               init();
+            });
 
-          console.log(message);
+            function log_activity(message){
 
-        }
-        
-        function init(){
+              console.log(message);
 
-            //var iframe = document.getElementsByTagName('iframe')[0];
-            //var iframe = document.getElementById(proxy_iframe_id);
-            //var iframeParent = iframe.parentElement;
-            //var iframeParent = window.parent.document;
-            //const parentDocument = window.parent.document;
-            //var div = document.createElement('div');
-            //iframeParent.insertBefore(div, iframe);
-
-            //
-            // Google AI
-            const parentDocument   = window.parent.document;
-            var application_output = document.getElementById("crnrstn_iframe_content_test").innerHTML;
-            var proxy_iframe_id    = "crnrstn_dom_proxy_<?php echo $iframe_salt; ?>";
-
-            if(parentDocument){
-
-              /* Select an element 
-               * with a specific ID 
-               * in the parent document.
-               *
-               * Google AI
-               * https://www.google.com/search?q=jquery+get+iframe+parent+document+element&oq=jquery+get+iframe+parent+document+element&aqs=chrome..69i57j33i160l4j33i671l3.23775j0j7&sourceid=chrome&ie=UTF-8
-               * 5 :: Monday, March 9, 2026 @ 0343 hrs.
-               * var parentElement = $('#elementID_in_parent', window.parent.document);
-               *
-               */
-              if($('#crnrstn_ui_proxy_<?php echo $iframe_salt; ?>', parentDocument)){
-
-                const crnrstn_ui_proxy_div = parentDocument.getElementById('crnrstn_ui_proxy_<?php echo $iframe_salt; ?>');
-
-                /* <div id="crnrstn_ui_proxy_' . $dom_proxy_id . '">
-                 *    <div id="crnrstn_ui_stage"></div>
-                 *    <div id="crnrstn_ui_stage_background"></div>
-                 *    <div id="crnrstn_ui_overlay"></div>
-                 * </div>
-                 * 
-                 */
-
-                crnrstn_ui_proxy_div.style.backgroundColor = '#F90000';
-                crnrstn_ui_proxy_div.style.opacity = 0;
-                crnrstn_ui_proxy_div.style.padding = '0';
-                //crnrstn_ui_proxy_div.style.width = '100%';
-                //crnrstn_ui_proxy_div.style.height = '100%';
-                crnrstn_ui_proxy_div.style.position = 'absolute';
-                //crnrstn_ui_proxy_div.style.zIndex = 99999;
-                crnrstn_ui_proxy_div.innerHTML = application_output;
-
-                //console.log('Begin Animation [<?php echo $iframe_salt; ?>]');
-                log_activity('Begin Animation [<?php echo $iframe_salt; ?>]')
-                
-                //
-                // oCRNRSTN_JS Animation Technology Opacity Test
-                // Copied here on Wednesday, March 4, 2026 @ 1522 hrs.
-                var self = this;
-                crnrstn_ui_proxy_div.animate({
-                      opacity: 0.8,
-                      backgroundColor: '#FFFFFF',
-                      width: '100%',
-                      height: '100%'
-                  }, {
-                      duration: 5000,
-                      queue: false,
-                      specialEasing: {
-                          opacity: "swing"
-                      },
-                      step: function( now, fx ) {
-
-                        crnrstn_ui_proxy_div.style.backgroundColor = '#F90000';
-                        self.log_activity('Animation moving! [<?php echo $iframe_salt; ?>]');
-                        console.log('Animation is moving! [<?php echo $iframe_salt; ?>]');
-
-                      },
-                      complete: function () {
-
-                        //crnrstn_ui_proxy_div.style.backgroundColor = '#FFFFFF';
-                        crnrstn_ui_proxy_div.style.opacity = 1;
-                        crnrstn_ui_proxy_div.style.padding = '0';
-                        crnrstn_ui_proxy_div.style.width = '100%';
-                        crnrstn_ui_proxy_div.style.height = '100%';
-                        crnrstn_ui_proxy_div.style.position = 'absolute';
-                        //crnrstn_ui_proxy_div.style.zIndex = 99999;
-                        crnrstn_ui_proxy_div.innerHTML = application_output;
-                        self.addClass('crnrstn_proxy_crnrstn_window');
-
-                        //console.log('Animation complete! [<?php echo $iframe_salt; ?>]');
-                        self.log_activity('Animation complete! [<?php echo $iframe_salt; ?>]');
-
-                      }
-
-                  });
-
-                /*
-                
-                width: '100%',
-                height: '100%',
-
-                 $('#crnrstn_documentation_dyn_shell_bg').animate({
-                      backgroundColor: this.get_theme_attribute('interact.ui.document_bg_overlay_background_color'),
-                      top: this.docs_page_css_top + 'px',
-                      left: this.docs_page_css_left + 'px',
-                      width: $(document).width() + 'px',
-                      height: $(document).height() + 'px',
-                      opacity: this.get_theme_attribute('interact.ui.document_bg_overlay_background_opacity'),
-                      zIndex: this.get_theme_attribute('interact.ui.document_bg_overlay_background_zindex')
-                  }, {
-                      duration: 1000,
-                      queue: false,
-                      complete: function () {
-
-                      }
-
-                  });
-
-                 */
-
-              }
             }
 
-            // 
-            // Send `message` to the 
-            // parent using the postMessage 
-            // method on the window.parent 
-            // reference.
-            //window.parent.postMessage(message, "*");
-            //window.parent.('body').prepend(crnrstn_view_state_div);
-            //iframeParent.insertBefore(crnrstn_view_state_div);
-            //iframeParent.prepend(crnrstn_view_state_div);
+            function init(){
 
-            /**
+                // var iframe = document.getElementsByTagName('iframe')[0];
+                // var iframe = document.getElementById(proxy_iframe_id);
+                // var iframeParent = iframe.parentElement;
+                // var iframeParent = window.parent.document;
+                // const parentDocument = window.parent.document;
+                // var div = document.createElement('div');
+                // iframeParent.insertBefore(div, iframe);
 
-            // 2. Create the new div element with`in the context of the parent document
-            const newDivInParent = parentDocument.createElement('div');
-        
-            // 3. (Optional) Set attributes or content for the new div
-            newDivInParent.id = 'crnrstn_view_state_<?php echo $iframe_salt; ?>';
-            newDivInParent.style.backgroundColor = '#FFFFFF';
-            newDivInParent.style.opacity = 0;
-            newDivInParent.style.opacity = 0.5;
-            newDivInParent.style.padding = '0';
-            newDivInParent.style.width = '100%';
-            newDivInParent.style.height = '100%';
-            newDivInParent.style.position = 'absolute';
-            //newDivInParent.style.zIndex = 99999;
-            newDivInParent.innerHTML = application_output;
-        
-            // 4. Append the new div to the parent's body
-            parentDocument.body.prepend(newDivInParent);
+                //
+                // Google AI
+                const parentDocument   = window.parent.document;
+                var application_output = document.getElementById("crnrstn_iframe_content_test").innerHTML;
+                var proxy_iframe_id    = "crnrstn_dom_proxy_<?php echo $iframe_salt; ?>";
 
-            newDivInParent.animate({
-                  opacity: 0.5
-              }, {
-                  duration: 1000,
-                  queue: false,
-                  specialEasing: {
-                      opacity: "swing"
-                  },
-                  complete: function () {
+                if(parentDocument){
 
-                    crnrstn_ui_proxy_div.class = 'crnrstn_proxy_crnrstn_window';
+                    /* Select an element 
+                     * with a specific ID 
+                     * in the parent document.
+                     *
+                     * Google AI
+                     * https://www.google.com/search?q=jquery+get+iframe+parent+document+element&oq=jquery+get+iframe+parent+document+element&aqs=chrome..69i57j33i160l4j33i671l3.23775j0j7&sourceid=chrome&ie=UTF-8
+                     * 5 :: Monday, March 9, 2026 @ 0343 hrs.
+                     * var parentElement = $('#elementID_in_parent', window.parent.document);
+                     *
+                     */
+                    if($('#crnrstn_ui_proxy_<?php echo $iframe_salt; ?>', parentDocument)){
 
-                  }
+                        const crnrstn_ui_proxy_div = parentDocument.getElementById('crnrstn_ui_proxy_<?php echo $iframe_salt; ?>');
 
-              });
+                        /* <div id="crnrstn_ui_proxy_' . $dom_proxy_id . '">
+                         *    <div id="crnrstn_ui_stage"></div>
+                         *    <div id="crnrstn_ui_stage_background"></div>
+                         *    <div id="crnrstn_ui_overlay"></div>
+                         * </div>
+                         * 
+                         */
 
-             */
+                        crnrstn_ui_proxy_div.style.backgroundColor = '#04050A';
+                        crnrstn_ui_proxy_div.style.border          = '3px solid #9F9393';
+                        crnrstn_ui_proxy_div.style.color           = '#7AF94F';
+                        crnrstn_ui_proxy_div.style.fontsize        = '12px';
+                        crnrstn_ui_proxy_div.style.fontFamily      = '"Courier New", Courier, monospace';
+                        crnrstn_ui_proxy_div.style.textShadow      = 'none';
+                        crnrstn_ui_proxy_div.style.width           = '420px';
+                        crnrstn_ui_proxy_div.style.height          = '175px';
+                        crnrstn_ui_proxy_div.style.opacity         = 1;
+                        crnrstn_ui_proxy_div.style.padding         = '10px';
+                        crnrstn_ui_proxy_div.style.position        = 'relative';
+                        crnrstn_ui_proxy_div.style.overflowWrap    = 'anywhere';
+                        //crnrstn_ui_proxy_div.style.top             = '30px';
+                        //crnrstn_ui_proxy_div.style.left            = '350px';
+                        //crnrstn_ui_proxy_div.style.zIndex        = 99999;
+                        crnrstn_ui_proxy_div.innerHTML             = application_output;
 
-        }
+                        //console.log('Begin Animation [<?php echo $iframe_salt; ?>]');
+                        log_activity('Begin Animation [<?php echo $iframe_salt; ?>]')
 
-    </script>
-</head>
-<body onload="init();">
-	<div id="crnrstn_iframe_content_test" style="font-family: Arial, Helvetica, sans-serif; font-size:15px;">Hello world! Hello Static Iframe.</div>
-</body>
+                        /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
+                         * oCRNRSTN_JS Animation Technology Opacity Test
+                         * Copied here on Wednesday, March 4, 2026 @ 1522 hrs.
+                         *
+                         */
+                        //var self = this;
+                        crnrstn_ui_proxy_div.animate({
+                                opacity: 1, 
+                            }, {
+                                duration: 15000,
+                                queue: false,
+                                specialEasing: {
+                                    opacity: "swing"
+                                },
+                                step: function( now, fx ) {
+
+                                    //crnrstn_ui_proxy_div.style.opacity           = 1;
+                                    //crnrstn_ui_proxy_div.style.backgroundColor = '#04050A';
+                                    //crnrstn_ui_proxy_div.style.border          = '3px solid #9F9393';
+                                    //crnrstn_ui_proxy_div.style.padding         = '10px';
+                                    //crnrstn_ui_proxy_div.style.margin          = '10px 20px 0 10px';
+                                    //crnrstn_ui_proxy_div.style.color           = '#7AF94F';
+                                    //crnrstn_ui_proxy_div.style.fontsize        = '12px';
+                                    //crnrstn_ui_proxy_div.style.fontfamily      = '"Courier New", Courier, monospace';
+
+                                    //self.log_activity('Animation moving! [<?php echo $iframe_salt; ?>]');
+                                    //console.log('Animation is moving! [<?php echo $iframe_salt; ?>]');
+
+                                },
+                                complete: function(){
+
+                                    crnrstn_ui_proxy_div.animate({
+                                        opacity: 1,
+                                    }, {
+                                        duration: 15000,
+                                        queue: false,
+                                        specialEasing: {
+                                            opacity: "swing"
+                                        },
+                                        complete: function(){
+
+                                            console.log('Animation complete! [<?php echo $iframe_salt; ?>]');
+                                            self.log_activity('Animation complete! [<?php echo $iframe_salt; ?>]');
+
+                                        }
+
+                                    });
+
+                                }
+
+                            });
+
+                        /*
+                        width: '100%',
+                        height: '100%',
+
+                         $('#crnrstn_documentation_dyn_shell_bg').animate({
+                              backgroundColor: this.get_theme_attribute('interact.ui.document_bg_overlay_background_color'),
+                              top: this.docs_page_css_top + 'px',
+                              left: this.docs_page_css_left + 'px',
+                              width: $(document).width() + 'px',
+                              height: $(document).height() + 'px',
+                              opacity: this.get_theme_attribute('interact.ui.document_bg_overlay_background_opacity'),
+                              zIndex: this.get_theme_attribute('interact.ui.document_bg_overlay_background_zindex')
+                          }, {
+                              duration: 1000,
+                              queue: false,
+                              complete: function () {
+
+                              }
+
+                          });
+
+                         */
+
+                    }
+
+                }
+
+                /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
+                 * Send `message` to the 
+                 * parent using the postMessage 
+                 * method on the window.parent 
+                 * reference.
+                 */
+                //window.parent.postMessage(message, "*");
+                //window.parent.('body').prepend(crnrstn_view_state_div);
+                //iframeParent.insertBefore(crnrstn_view_state_div);
+                //iframeParent.prepend(crnrstn_view_state_div);
+
+                /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
+                 * 2. Create the new div element within the 
+                 *    context of the parent document.
+                 */
+                //const newDivInParent = parentDocument.createElement('div');
+
+                /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
+                 * 3. (Optional) Set attributes or 
+                 *    content for the new div.
+                 *//*
+                newDivInParent.id                    = 'crnrstn_view_state_<?php echo $iframe_salt; ?>';
+                newDivInParent.style.backgroundColor = '#FFFFFF';
+                newDivInParent.style.opacity         = 0;
+                newDivInParent.style.opacity         = 0.5;
+                newDivInParent.style.padding         = '0';
+                newDivInParent.style.width           = '300px';
+                newDivInParent.style.height          = '42%';
+                newDivInParent.style.position        = 'absolute';
+                //newDivInParent.style.zIndex         = 99999;
+                newDivInParent.innerHTML             = application_output;
+
+                 */
+
+                /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
+                 * 4. Append the new div to the parent's body
+                 */
+                //parentDocument.body.prepend(newDivInParent);
+
+                /*
+                newDivInParent.animate({
+                    opacity: 0.5
+                }, {
+                    duration: 1000,
+                    queue: false,
+                    specialEasing: {
+                        opacity: "swing"
+                    },
+                    complete: function () {
+                            crnrstn_ui_proxy_div.class = 'crnrstn_proxy_crnrstn_window';
+                    }
+              
+                });
+
+                */
+
+            }
+
+        </script>
+    </head>
+    <body>
+        <div id="crnrstn_iframe_content_test" style="font-family: Arial, Helvetica, sans-serif; font-size:19px;"><?php 
+            echo 'R :: [' . $R->return_micro_time() . 
+                 '] [lnum ' .  __LINE__ . '] [iframe rtime ' .
+                 $R->wall_time() . '] Hello world! Hello from the CLR-SSL Iframe Messaging DOM Proxy.<br><br>Proxy Salt: <br>' . $iframe_salt; ?></div>
+    </body>
 </html>

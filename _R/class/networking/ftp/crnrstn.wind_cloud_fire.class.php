@@ -255,16 +255,7 @@
  * # C # R # N # R # S # T # N # :: # L # I # G # H # T
  */
 
-namespace networking\ftp;
-
-use CRNRSTN\crnrstn_user;
-use CRNRSTN\Exception;
-use CRNRSTN\RecursiveDirectoryIterator;
-use CRNRSTN\RecursiveIteratorIterator;
-use const CRNRSTN\CRNRSTN_CHANNEL_SOAP;
-use const CRNRSTN\CRNRSTN_ELECTRUM;
-use const CRNRSTN\CRNRSTN_ELECTRUM_THREAD;
-use const CRNRSTN\CRNRSTN_ENCRYPT_TUNNEL;
+namespace CRNRSTN;
 
 /**
  * 
@@ -11218,11 +11209,18 @@ class crnrstn_wind_cloud_fire extends crnrstn_user
      *
      * @param
      * @return
-     * @access private
+     * @access public
      *
      */
-    private function find_filesize($file)
+    function find_filesize($file)
     {
+        /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
+         * Edit: Changed find_filesize 
+         *       method visibility from 
+         *       private to public. 
+         *       5 :: Thursday, October 1, 2026 @ 0642 hrs.
+         *
+         */
 
         if(substr(PHP_OS, 0, 3) == "WIN"){
 

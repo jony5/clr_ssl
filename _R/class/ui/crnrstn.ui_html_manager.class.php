@@ -529,7 +529,7 @@ class crnrstn_ui_html_manager extends crnrstn
         $tmp_flag_built_dir_ARRAY = array();
         $tmp_sync_mime_type_config = false;     // Where passing true might 
                                                 // add new mime-type folders 
-                                                // to /_R/_config/config.mime_types.
+                                                // to /_R/_config/mime_types.
 
         $this->error_log('TODO :: Check that all CSS ' . 
                                    'Units (pixels, or other) ARE ' . 
@@ -581,7 +581,7 @@ class crnrstn_ui_html_manager extends crnrstn
                                      DIRECTORY_SEPARATOR . 
                                      '_config' . 
                                      DIRECTORY_SEPARATOR . 
-                                     'config.mime_types';
+                                     'mime_types';
             if(is_dir($mime_type_config_path) == true){
 
                 //$tmp_asset_handling_serial = $this->generate_new_key(100);
@@ -629,18 +629,18 @@ class crnrstn_ui_html_manager extends crnrstn
                 $tmp_endpoint_serial[Array]. system_integrations_dir_content_touch_ARRAY[
                     Array ( [5ca06597ca96fd51e9db52580c3c7c77b2196de456155b1d086de56b0b4ab16e] => Array (
                         [b0e326085976b155bc50921c48762433c2ee0533728cd61bae2e61e29847adad] => Array (
-                            [DIR_PATH] => /var/www/html/evifweb.com/_crnrstn/_config/config.mime_types
+                            [DIR_PATH] => /var/www/html/evifweb.com/_crnrstn/_config/mime_types
 
-                            [FILESIZE] => Array ( [/var/www/html/evifweb.com/_crnrstn/_config/config.mime_types/application_x_macbinary] => 0
-                            [/var/www/html/evifweb.com/_crnrstn/_config/config.mime_types/application_x_macbinary/CRNRSTN_BIN] => 0
-                            [/var/www/html/evifweb.com/_crnrstn/_config/config.mime_types/application_x_macbinary/CRNRSTN_BIN/HelveNeuBlaExtObl.bin] => 46592
-                            [/var/www/html/evifweb.com/_crnrstn/_config/config.mime_types/application_x_macbinary/CRNRSTN_BIN/HelveNeuHeaIta.bin] => 30976 [/var/www/html/evifweb.com/_crnrstn/_config/config.mime_types/application_x_macbinary/CRNRSTN_BIN/HelveNeuExtBlaConObl.bin] => 46976
-                            [/var/www/html/evifweb.com/_crnrstn/_config/config.mime_types/application_x_macbinary/CRNRSTN_BIN/.] => 0 [/var/www/html/evifweb.com/_crnrstn/_config/config.mime_types/application_x_macbinary/CRNRSTN_BIN/plugincache.bin] => 72512
-                            [/var/www/html/evifweb.com/_crnrstn/_config/config.mime_types/application_x_macbinary/CRNRSTN_BIN/CannedText.bin] => 1215 [/var/www/html/evifweb.com/_crnrstn/_config/config.mime_types/application_x_macbinary/CRNRSTN_BIN/en-US_ta.bin] => 651752
-                            [/var/www/html/evifweb.com/_crnrstn/_config/config.mime_types/application_x_macbinary/.] => 0 [/var/www/html/evifweb.com/_crnrstn/_config/config.mime_types/application_xhtml_xml] => 0 [/var/www/html/evifweb.com/_crnrstn/_config/config.mime_types/application_xhtml_xml/CRNRSTN_XHTML] => 0 [/var/www/html/evifweb.com/_crnrstn/_config/config.mime_types/application_xhtml_xml/CRNRSTN_XHTML/.] => 0
-                            [/var/www/html/evifweb.com/_crnrstn/_config/config.mime_types/application_xhtml_xml/CRNRSTN_XHTML/ImplementationGuide_CNP_TRANKEY.xhtml] => 599390 [/var/www/html/evifweb.com/_crnrstn/_config/config.mime_types/application_xhtml_xml/.] => 0 [/var/www/html/evifweb.com/_crnrstn/_config/config.mime_types/image_gif] => 0
-                            [/var/www/html/evifweb.com/_crnrstn/_config/config.mime_types/image_gif/.] => 0
-                            [/var/www/html/evifweb.com/_crnrstn/_config/config.mime_types/image_gif/CRNRSTN_GIF] => 0 [/var/www/html/evifweb.com/_crnrstn/_config/config.mime_types/image_gif/CRNRSTN_GIF/.] => 0 [/var/www/html/evifweb.com/_crnrstn/_config/config.mime_types/image_gif/CRNRSTN_GIF/c++boost.gif] => 8819
+                            [FILESIZE] => Array ( [/var/www/html/evifweb.com/_crnrstn/_config/mime_types/application_x_macbinary] => 0
+                            [/var/www/html/evifweb.com/_crnrstn/_config/mime_types/application_x_macbinary/CRNRSTN_BIN] => 0
+                            [/var/www/html/evifweb.com/_crnrstn/_config/mime_types/application_x_macbinary/CRNRSTN_BIN/HelveNeuBlaExtObl.bin] => 46592
+                            [/var/www/html/evifweb.com/_crnrstn/_config/mime_types/application_x_macbinary/CRNRSTN_BIN/HelveNeuHeaIta.bin] => 30976 [/var/www/html/evifweb.com/_crnrstn/_config/mime_types/application_x_macbinary/CRNRSTN_BIN/HelveNeuExtBlaConObl.bin] => 46976
+                            [/var/www/html/evifweb.com/_crnrstn/_config/mime_types/application_x_macbinary/CRNRSTN_BIN/.] => 0 [/var/www/html/evifweb.com/_crnrstn/_config/mime_types/application_x_macbinary/CRNRSTN_BIN/plugincache.bin] => 72512
+                            [/var/www/html/evifweb.com/_crnrstn/_config/mime_types/application_x_macbinary/CRNRSTN_BIN/CannedText.bin] => 1215 [/var/www/html/evifweb.com/_crnrstn/_config/mime_types/application_x_macbinary/CRNRSTN_BIN/en-US_ta.bin] => 651752
+                            [/var/www/html/evifweb.com/_crnrstn/_config/mime_types/application_x_macbinary/.] => 0 [/var/www/html/evifweb.com/_crnrstn/_config/mime_types/application_xhtml_xml] => 0 [/var/www/html/evifweb.com/_crnrstn/_config/mime_types/application_xhtml_xml/CRNRSTN_XHTML] => 0 [/var/www/html/evifweb.com/_crnrstn/_config/mime_types/application_xhtml_xml/CRNRSTN_XHTML/.] => 0
+                            [/var/www/html/evifweb.com/_crnrstn/_config/mime_types/application_xhtml_xml/CRNRSTN_XHTML/ImplementationGuide_CNP_TRANKEY.xhtml] => 599390 [/var/www/html/evifweb.com/_crnrstn/_config/mime_types/application_xhtml_xml/.] => 0 [/var/www/html/evifweb.com/_crnrstn/_config/mime_types/image_gif] => 0
+                            [/var/www/html/evifweb.com/_crnrstn/_config/mime_types/image_gif/.] => 0
+                            [/var/www/html/evifweb.com/_crnrstn/_config/mime_types/image_gif/CRNRSTN_GIF] => 0 [/var/www/html/evifweb.com/_crnrstn/_config/mime_types/image_gif/CRNRSTN_GIF/.] => 0 [/var/www/html/evifweb.com/_crnrstn/_config/mime_types/image_gif/CRNRSTN_GIF/c++boost.gif] => 8819
 
                 */
 

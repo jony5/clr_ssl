@@ -759,10 +759,10 @@ $R = require($R_exe_filepath);
 if(!\is_object($R))
     __NAMESPACE__ . '\\' .
     _R_server_response(
-            500,
-            false,
-            '',
-            $R_directory_shift);
+        500,
+        false,
+        '',
+        $R_directory_shift);
 else
     $session_salt = $R->session_salt();
 
@@ -772,22 +772,29 @@ else
         <title><?php
             echo $R->get_crnrstn('CLR_SSL_long_TEXT'); ?> v<?php
             echo $R->version_crnrstn();
-            ?>. The CLR-SSL.</title>
+            ?>. <?php
+            echo $R->get_crnrstn('CLR_SSL_short_TEXT'); ?>.</title>
         <link rel="shortcut icon" type="image/x-icon" href="<?php echo $R_directory_shift . 
         $R_framework_directory; 
         ?>/ui/imgs/favicon/system/crnrstn/favicon.ico?<?php
         echo $session_salt; ?>=favicon&R_cache='<?php
         echo $R->file_url_cache_id($R->get_crnrstn('R_framework_path') .
                  '/ui/imgs/favicon/system/crnrstn/favicon.ico'); ?>" />
+        <link type="text/css" rel="stylesheet" href="<?php echo $R_directory_shift . 
+        $R_framework_directory; 
+        ?>/ui/css/crnrstn.main_desktop.css?<?php
+        echo $session_salt; ?>=main_desktop.css&R_cache='<?php
+        echo $R->file_url_cache_id($R->get_crnrstn('R_framework_path') .
+                 '/ui/css/crnrstn.main_desktop.css'); ?>" />
     </head>
     <body>
         <img src="<?php echo $R_directory_shift . 
         $R_framework_directory; 
         ?>/ui/imgs/png/system/crnrstn_logo_lg.png?<?php
-        echo $session_salt; ?>=crnrstn_logo_lg&R_cache='<?php
+        echo $session_salt; ?>=crnrstn_logo_lg&R_cache=<?php
         echo $R->file_url_cache_id($R->get_crnrstn('R_framework_path') .
                  '/ui/imgs/png/system/crnrstn_logo_lg.png');
-        ?>'"
+        ?>"
         'width="" height="70" alt="<?php
         echo $R->get_crnrstn('CLR_SSL_long_TEXT'); ?> v<?php
         echo $R->version_crnrstn();
@@ -795,6 +802,12 @@ else
         echo $R->get_crnrstn('CLR_SSL_long_TEXT'); ?> v<?php
         echo $R->version_crnrstn();
         ?>. The CLR-SSL." style="padding:20px;">
+
+        <?php echo $R->ui_module_out('R_lightsaber_2022-2025_copy'); ?>
+
         <?php echo $R->ui_module_out('R_dom_iframe_proxy'); ?>
+
+        <?php echo $R->get_crnrstn('R_seo_analytics'); ?>
+
     </body>
 </html>

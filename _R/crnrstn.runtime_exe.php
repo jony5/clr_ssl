@@ -831,8 +831,7 @@ if(!\function_exists('_R_resource_return')){
                              '.runtime_exe.php';
         $tmp_obj_exe_path  = $root . $os_path_dir_separator_char . 
                              '_config' . $os_path_dir_separator_char . 
-                             '_config.defaults' . $os_path_dir_separator_char . 
-                             'load_static_cache' . $os_path_dir_separator_char . 
+                             'defaults' . $os_path_dir_separator_char . 
                              $resource . $os_path_dir_separator_char . 
                              $resource_filename;
 
@@ -840,8 +839,8 @@ if(!\function_exists('_R_resource_return')){
          * The default timezone is 
          * returned from here: 
          *
-         * /_R/_config/_config.defaults
-         * /load_static_cache/R_timezone_default
+         * /_R/_config/defaults
+         * /R_timezone_default
          * /crnrstn.R_timezone_default.runtime_exe.php
          *
          * The return data is a timezone identifier, 

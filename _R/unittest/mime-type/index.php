@@ -38,7 +38,7 @@
 // application folder.
 $tmp_slsh = DIRECTORY_SEPARATOR;
 $tmp_application_folder = $tmp_slsh . 'lightbox_helper';
-$tmp_framework_dir = $tmp_slsh . '_lightbox_helper';
+$tmp_framework_dir = $tmp_slsh . '_R';
 
 //
 // Initialize session.
@@ -66,7 +66,7 @@ $CRNRSTN_ROOT_OFFSET = '../../';
 // TODO :: Move this to
 //         the system registry.
 //         5 :: Friday, August 2, 2024 @ 0019 hrs.
-$tmp_file_path = $_SERVER['DOCUMENT_ROOT'] . $tmp_application_folder .  $tmp_slsh . '_lightbox_helper' . $tmp_slsh . '_config' . $tmp_slsh . 'config.system_paths' . $tmp_slsh;
+$tmp_file_path = $_SERVER['DOCUMENT_ROOT'] . $tmp_application_folder .  $tmp_slsh . '_R' . $tmp_slsh . '_config' . $tmp_slsh . 'system_paths' . $tmp_slsh;
 require($tmp_file_path . 'crnrstn.system_paths.function.php');
 require($tmp_file_path . 'crnrstn.system_path_initialization.runtime_exe.php');
 

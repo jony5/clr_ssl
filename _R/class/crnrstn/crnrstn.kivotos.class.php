@@ -878,17 +878,17 @@ class crnrstn_kivotos extends crnrstn
             case __NAMESPACE__ . '===\nusoapservermime':
             case __NAMESPACE__ . '===\nusoap_wsdlcache':
             case __NAMESPACE__ . '===\nusoap_xmlschema':
-            case __NAMESPACE__ . '\soapclientmime':
+            case __NAMESPACE__ . '===\soapclientmime':
             case __NAMESPACE__ . '===\soapclient':
-            case __NAMESPACE__ . '\soap_fault':
-            case __NAMESPACE__ . '\soap_parser':
+            case __NAMESPACE__ . '===\soap_fault':
+            case __NAMESPACE__ . '===\soap_parser':
             case __NAMESPACE__ . '===\soap_server':
             case __NAMESPACE__ . '===\soap_transport_http':
             case __NAMESPACE__ . '===\soapval':
             case __NAMESPACE__ . '===\wsdlcache':
             case __NAMESPACE__ . '===\wsdl':
-            case __NAMESPACE__ . '\XMLSchema':
-            case __NAMESPACE__ . '\nusoap_server':
+            case __NAMESPACE__ . '===\XMLSchema':
+            case __NAMESPACE__ . '===\nusoap_server':
             case __NAMESPACE__ . '===\nusoap_client':
 
             // PHPMailer

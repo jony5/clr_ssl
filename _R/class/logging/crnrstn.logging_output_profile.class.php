@@ -259,7 +259,6 @@ namespace CRNRSTN;
 
 /**
  * 
- *
  * CLASS DEFINITION :: crnrstn_logging_output_profile
  * CLASS VERSION    :: 1.00.0000
  * DATE             :: Monday, October 26, 2020 @ 2101 hrs.

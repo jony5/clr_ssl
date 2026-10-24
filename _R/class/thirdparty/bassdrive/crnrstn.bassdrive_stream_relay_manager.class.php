@@ -452,9 +452,23 @@ namespace CRNRSTN;
  * @access public
  *
  */
-class crnrstn_bassdrive_stream_relay_manager {
+class crnrstn_bassdrive_stream_relay_manager extends crnrstn_user 
+{
+    /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
+     * Edit: We modified the 
+     *       crnrstn_bassdrive_stream_relay_manager 
+     *       class object by adding an 
+     *       extension of the crnrstn_user object, 
+     *       by deleting the 
+     *       __construct($oCRNRSTN_USR) input 
+     *       parameter with its public 
+     *       definition, and by removing the 
+     *       object assignment to the 
+     *       public $oCRNRSTN_USR variable. 
+     *       5 :: Friday, September 25, 2026 @ 0845 hrs.
+     *
+     */
 
-    public $oCRNRSTN_USR;
     protected $oSTREAM_OUTPUT_CONTROLLER;
 
     protected $stream_oRELAY_ARRAY = array();
@@ -470,9 +484,7 @@ class crnrstn_bassdrive_stream_relay_manager {
     private static $stream_totals_capacity;
     private static $stream_totals_bandwidthFormat;
 
-    public function __construct($oCRNRSTN_USR, $oJSON = NULL){
-
-        $this->oCRNRSTN_USR = $oCRNRSTN_USR;
+    public function __construct($oJSON = NULL){
 
         if(isset($oJSON)){
 
@@ -644,31 +656,41 @@ class crnrstn_bassdrive_stream_relay_manager {
 
         */
 
-        //
-        // # C # R # N # R # S # T # N # :: # L # I # G # H # T
-        // Return an instantiation of
-        // the CRNRSTN :: Bassdrive.com
-        // JSON Relay Integrations
-        // Stream Output Controller
-        // class object.
-        //
-        //
-        // 5 :: Monday, July 15, 2024 @ 2238 hrs.
-        //
-        // $this->oSTREAM_OUTPUT_CONTROLLER = new crnrstn_bassdrive_stream_output_controller($this->oCRNRSTN_USR);
-        $this->oSTREAM_OUTPUT_CONTROLLER = $this->oCRNRSTN_USR->return_registered_resource('new', 'crnrstn_bassdrive_stream_output_controller', $this->oCRNRSTN_USR);
+        /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
+         * Return an instantiation of
+         * the CRNRSTN :: Bassdrive.com
+         * JSON Relay Integrations
+         * Stream Output Controller
+         * class object.
+         *
+         *
+         * 5 :: Monday, July 15, 2024 @ 2238 hrs.
+         *
+         * $this->oSTREAM_OUTPUT_CONTROLLER = new crnrstn_bassdrive_stream_output_controller($this->oCRNRSTN_USR);
+         *
+         * $this->oSTREAM_OUTPUT_CONTROLLER = $this->oCRNRSTN_USR->return_registered_resource(
+         *                                                         'new', 
+         *                                                         'crnrstn_bassdrive_stream_output_controller', 
+         *                                                         $this->oCRNRSTN_USR);
+         *
+         */
+        $spice_salt_mem_ptr = NULL;
+        // 5 :: Friday, September 25, 2026 @ 0832 hrs.
+        $this->anoint(
+               'crnrstn_bassdrive_stream_output_controller',
+               $this->oSTREAM_OUTPUT_CONTROLLER);
 
-        if(!$this->oCRNRSTN_USR->ping_value_existence( 'LOG_BASSDRIVE_PROCESSED', 'BASSDRIVE_LOG_ID', $BASSDRIVE_LOG_ID)){
+        if(!$this->ping_value_existence( 'LOG_BASSDRIVE_PROCESSED', 'BASSDRIVE_LOG_ID', $BASSDRIVE_LOG_ID)){
 
-            $tmp_STREAM_KEY = '';
-            $tmp_BASSDRIVE_STREAM_KEY_PATTERN_LOOKUP_count = $this->oCRNRSTN_USR->return_record_count('BASSDRIVE_STREAM_KEY_PATTERN_LOOKUP');
-            $tmp_BASSDRIVE_STREAM_SOCIAL_CONFIG_count = $this->oCRNRSTN_USR->return_record_count('BASSDRIVE_STREAM_SOCIAL_CONFIG');
+            $tmp_STREAM_KEY                                = '';
+            $tmp_BASSDRIVE_STREAM_KEY_PATTERN_LOOKUP_count = $this->return_record_count('BASSDRIVE_STREAM_KEY_PATTERN_LOOKUP');
+            $tmp_BASSDRIVE_STREAM_SOCIAL_CONFIG_count      = $this->return_record_count('BASSDRIVE_STREAM_SOCIAL_CONFIG');
 
             //
             // STREAM_LOOKUP PARSE TO FIND STREAM_KEY
             for($i = 0; $i < $tmp_BASSDRIVE_STREAM_KEY_PATTERN_LOOKUP_count; $i++){
 
-                $tmp_STREAM_STRING_PATTERN = $this->oCRNRSTN_USR->return_database_value('BASSDRIVE_STREAM_KEY_PATTERN_LOOKUP', 'STRING_PATTERN', $i);
+                $tmp_STREAM_STRING_PATTERN = $this->return_database_value('BASSDRIVE_STREAM_KEY_PATTERN_LOOKUP', 'STRING_PATTERN', $i);
 
                 error_log(__LINE__ . ' user pattern ' . $i . ' ' . $title . '[' . $tmp_STREAM_STRING_PATTERN . ']');
 
@@ -676,7 +698,7 @@ class crnrstn_bassdrive_stream_relay_manager {
                 if($pos !== false){
                     error_log(__LINE__ . ' user pattern ' . $i . ' [' . $tmp_STREAM_STRING_PATTERN . '][' . $title . ']');
 
-                    $tmp_STREAM_KEY = $this->oCRNRSTN_USR->return_database_value('BASSDRIVE_STREAM_KEY_PATTERN_LOOKUP', 'STREAM_KEY', $i);
+                    $tmp_STREAM_KEY = $this->return_database_value('BASSDRIVE_STREAM_KEY_PATTERN_LOOKUP', 'STREAM_KEY', $i);
 
                     //
                     // CAN AUGMENT STRENGTH IN LAYERS OF CHECKS HERE USING
@@ -753,8 +775,8 @@ class crnrstn_bassdrive_stream_relay_manager {
 
     private function load_stream_relays($oJSON){
 
-        $oJSON = json_decode($oJSON, TRUE);
-        self::$stream_relay_ojson_serial = $this->oCRNRSTN_USR->hash(print_r($oJSON, true), 'md5');
+        $oJSON = json_decode($oJSON, true);
+        self::$stream_relay_ojson_serial = $this->hash(print_r($oJSON, true), 'md5');
 
         $raw_json_nowplaying = $oJSON['nowplaying'];
         $tmp_cnt_nowplaying = count($raw_json_nowplaying);
@@ -818,25 +840,47 @@ class crnrstn_bassdrive_stream_relay_manager {
 
             for($i = 0; $i < $tmp_cnt_relays; $i++) {
 
-                $tmp_relay_serial = $this->oCRNRSTN_USR->generate_new_key(100);
+                $tmp_relay_serial = $this->generate_new_key(100);
 
-                //
-                // # C # R # N # R # S # T # N # :: # L # I # G # H # T
-                // Return an instantiation of
-                // the CRNRSTN :: Bassdrive.com
-                // JSON Relay Integrations
-                // Stream Relay class object.
-                //
-                //
-                // 5 :: Monday, July 15, 2024 @ 2240 hrs.
-                //
-                // $tmp_orelay = new crnrstn_bassdrive_stream_relay($tmp_relay_serial, self::$stream_relay_ojson_serial, self::$stream_relay_nowplaying_title);
-                $tmp_orelay = $this->oCRNRSTN_USR->return_registered_resource('new', 'crnrstn_bassdrive_stream_relay', $tmp_relay_serial, self::$stream_relay_ojson_serial, self::$stream_relay_nowplaying_title);
+                /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
+                 * Return an instantiation of
+                 * the CRNRSTN :: Bassdrive.com
+                 * JSON Relay Integrations
+                 * Stream Relay class object.
+                 *
+                 *
+                 * 5 :: Monday, July 15, 2024 @ 2240 hrs.
+                 *
+                 * $tmp_orelay = new crnrstn_bassdrive_stream_relay(
+                 *                   $tmp_relay_serial, 
+                 *                   self::$stream_relay_ojson_serial, 
+                 *                   self::$stream_relay_nowplaying_title);
+                 *
+                 * $tmp_orelay = $this->oCRNRSTN_USR->return_registered_resource(
+                 *                                    'new', 
+                 *                                    'crnrstn_bassdrive_stream_relay', 
+                 *                                    $tmp_relay_serial, 
+                 *                                    self::$stream_relay_ojson_serial, 
+                 *                                    self::$stream_relay_nowplaying_title);
+                 *
+                 */
+                $tmp_orelay         =
+                $spice_salt_mem_ptr = NULL;
+                // 5 :: Friday, September 25, 2026 @ 0836 hrs.
+                $this->compound_ointment(
+                       $spice_salt_mem_ptr,
+                       'crnrstn_bassdrive_stream_relay',
+                       $tmp_relay_serial, 
+                       self::$stream_relay_ojson_serial, 
+                       self::$stream_relay_nowplaying_title);
+                $this->anoint(
+                       'crnrstn_bassdrive_stream_relay',
+                       $tmp_orelay);
 
                 $tmp_orelay->load_meta($raw_json_relays[$i]);
 
                 $this->stream_oRELAY_ISACTIVE_ARRAY[$tmp_orelay->return_serial()] = $tmp_orelay->return_isactive();
-                $this->stream_oRELAY_ARRAY[] = $tmp_orelay;
+                $this->stream_oRELAY_ARRAY[]                                      = $tmp_orelay;
 
             }
 

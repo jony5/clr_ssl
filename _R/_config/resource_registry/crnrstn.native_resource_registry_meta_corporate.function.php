@@ -258,7 +258,7 @@
 namespace CRNRSTN;
 
 /**
- * 
+ *
  *
  * GLOBAL FUNCTION
  * RESOURCE DEFINITION :: _crnrstn_native_resource_registry_meta_corporate
@@ -275,7 +275,7 @@ namespace CRNRSTN;
  *                        silo for corporate sponsors and for
  *                        license owners of the third-party
  *                        software that has been used or
- *                        integrated into the CLR-SSL framework,
+ *                        integrated into the CLR-SSL framework, 
  *                        but is not directly affiliated with
  *                        eVifweb® or the CLR-SSL.
  *
@@ -304,10 +304,10 @@ namespace CRNRSTN;
  *
  */
 function _crnrstn_native_resource_registry_meta_corporate(
-         $R_resp,
-         $R_meta_key,
-         $R,
-         $R_debug_mode = 0,
+         $R_resp, 
+         $R_meta_key, 
+         $R, 
+         $R_debug_mode = 0, 
          $css_data = NULL)
 {
     /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
@@ -369,10 +369,10 @@ function _crnrstn_native_resource_registry_meta_corporate(
      *       5 :: Tuesday, September 1, 2026 @ 1742 hrs.
      *
      * # C # R # N # R # S # T # N # :: # L # I # G # H # T
-     * Edit: Removed input parameter,
-     *       $background_color_hex = '#FFF',
-     *       from
-     *       _crnrstn_native_resource_registry_meta_corporate().
+     * Edit: Removed input parameter, 
+     *       $background_color_hex = '#FFF', 
+     *       from 
+     *       _crnrstn_native_resource_registry_meta_corporate(). 
      *       5 :: Wednesday, September 2, 2026 @ "01" 2345 hrs.
      *
      *       "01010101...split the atom...Oh,
@@ -390,12 +390,12 @@ function _crnrstn_native_resource_registry_meta_corporate(
      *       renamed the $attribute input 
      *       parameter to $R_meta_key, and removed 
      *       the following input parameters:
-     *       - $software_company_key,
-     *       - $background_color_hex = '#FFF',
-     *       - $iso_lang_code = 'en',
-     *       - $generate_version_sync_hash = false,
+     *       - $software_company_key, 
+     *       - $background_color_hex = '#FFF', 
+     *       - $iso_lang_code = 'en', 
+     *       - $generate_version_sync_hash = false, 
      *       - $generate_search_algorithm_data = false, and 
-     *       - $resource_copyright_text = NULL.
+     *       - $resource_copyright_text = NULL. 
      *
      *       The new function definition:
      *       function _crnrstn_native_resource_registry_meta_corporate(
@@ -408,86 +408,27 @@ function _crnrstn_native_resource_registry_meta_corporate(
      *       5 :: Wednesday, September 9, 2026 @ 0630 hrs.
      *
      * # C # R # N # R # S # T # N # :: # L # I # G # H # T
-     * 'COMPANY_NAME_HTML'         => $R->return_registered_resource_meta(
-     *                                    $name,
-     *                                    'COMPANY_NAME_HTML', 
-     *                                    $tmp_background_color_hex,
-     *                                    $tmp_iso_lang_code)
-     *
-     * 'COMPANY_NAME_TEXT'         => $R->return_registered_resource_meta(
-     *                                    $name,
-     *                                    'COMPANY_NAME_TEXT', 
-     *                                    $tmp_background_color_hex,
-     *                                    $tmp_iso_lang_code)
-     *
-     * 'AUTHOR_CONTRIBUTORS_HTML'  => $R->return_registered_resource_meta(
-     *                                    $name,
-     *                                    'AUTHOR_CONTRIBUTORS_HTML', 
-     *                                    $tmp_background_color_hex,
-     *                                    $tmp_iso_lang_code)
-     *
-     * 'AUTHOR_CONTRIBUTORS_TEXT'  => $R->return_registered_resource_meta(
-     *                                    $name,
-     *                                    'AUTHOR_CONTRIBUTORS_TEXT', 
-     *                                    $tmp_background_color_hex,
-     *                                    $tmp_iso_lang_code)
-     *
-     * 'MEDIA_ELEMENT_KEY'         => $R->return_registered_resource_meta(
-     *                                    $name, 
-     *                                    'MEDIA_ELEMENT_KEY', 
-     *                                    $tmp_background_color_hex, 
-     *                                    $tmp_iso_lang_code)
-     *
-     * 'URL'                       => $R->return_registered_resource_meta(
-     *                                    $name, 
-     *                                    'URL', 
-     *                                    $tmp_background_color_hex, 
-     *                                    $tmp_iso_lang_code)
-     *
-     * 'COPYRIGHT_HTML'            => $R->return_registered_resource_meta(
-     *                                    $name,
-     *                                    'COPYRIGHT_HTML',
-     *                                    $tmp_background_color_hex, 
-     *                                    $tmp_iso_lang_code,
-     *                                    NULL, NULL, NULL, NULL,
-     *                                    NULL, NULL, NULL, NULL, 
-     *                                    NULL, NULL, NULL, NULL,
-     *                                    $tmp_COPYRIGHT_TEXT)
-     *
-     * 'COPYRIGHT_TEXT'            => $R->return_registered_resource_meta(
-     *                                    $name,
-     *                                    'COPYRIGHT_TEXT',
-     *                                    $tmp_background_color_hex, 
-     *                                    $tmp_iso_lang_code,
-     *                                    NULL, NULL, NULL, NULL,
-     *                                    NULL, NULL, NULL, NULL, 
-     *                                    NULL, NULL, NULL, NULL,
-     *                                    $tmp_COPYRIGHT_TEXT)
-     *
-     *
-     *
-     * # C # R # N # R # S # T # N # :: # L # I # G # H # T
      * CLR-SSL Resource Registry 
-     * Corporate Sponsorship
-     * and Third-Party Software
-     * Integrations Copyright
-     * Meta Data Corporate Keys
+     * Corporate Sponsorship 
+     * and Third-Party Software 
+     * Integrations Copyright 
+     * Meta Data Corporate Keys 
      *
      * Where:
      * $corp_author_key = 'company name';
      *
-     * Available corporate author
+     * Available corporate author 
      * key options include:
-     * - (string) 'Digital ITCC',
-     * - (string) 'Mobile Detect',
-     * - (string) 'MonstaApps®',
-     * - (string) 'Nette®',
-     * - (string) 'NuSphere Corporation',
-     * - (string) 'The PHP Group',
-     * - (string) 'PHPMailer', and
+     * - (string) 'Digital ITCC', 
+     * - (string) 'Mobile Detect', 
+     * - (string) 'MonstaApps®', 
+     * - (string) 'Nette®', 
+     * - (string) 'NuSphere Corporation', 
+     * - (string) 'The PHP Group', 
+     * - (string) 'PHPMailer', and 
      * - (string) 'eVifweb® development',...
      *
-     * ...and finishing with some sweet,
+     * ...and finishing with some sweet, 
      * sweet bong rips. 
      *
      *
@@ -546,9 +487,9 @@ $R_resp[$memory_pointer]['copyright'][$R_resp[$memory_pointer]['software_default
                             /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
                              * Where the multi_part_output_mode
                              * values are:
-                             * - 'HTML',
-                             * - 'TEXT', and
-                             * - 'MULTI-PART'.
+                             * - 'HTML', 
+                             * - 'TEXT', and 
+                             * - 'MULTI-PART'.  
                              *
                              */
                             $output_mode = 'HTML';
@@ -658,9 +599,9 @@ $R_resp[$memory_pointer]['copyright'][$R_resp[$memory_pointer]['software_default
                             /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
                              * Where the multi_part_output_mode
                              * values are:
-                             * - 'HTML',
-                             * - 'TEXT', and
-                             * - 'MULTI-PART'.
+                             * - 'HTML', 
+                             * - 'TEXT', and 
+                             * - 'MULTI-PART'.  
                              *
                              */
                             $output_mode = 'HTML';
@@ -757,13 +698,13 @@ $R_resp[$memory_pointer]['copyright'][$R_resp[$memory_pointer]['software_default
                         $R->url('language.operators.bitwise.php#50299')
 
                          _crnrstn_system_link_library(
-                         $url_key,
-                         $R,
-                         $background_color_hex = '#FFF',
-                         $iso_lang_code = 'en',
-                         $output_mode = 'MULTI-PART',
-                         $generate_version_sync_hash = false,
-                         $generate_search_algorithm_data = false,
+                         $url_key, 
+                         $R, 
+                         $background_color_hex = '#FFF', 
+                         $iso_lang_code = 'en', 
+                         $output_mode = 'MULTI-PART', 
+                         $generate_version_sync_hash = false, 
+                         $generate_search_algorithm_data = false, 
                          $css_data = NULL){}
 
                          */
@@ -802,9 +743,9 @@ $R_resp[$memory_pointer]['copyright'][$R_resp[$memory_pointer]['software_default
                             /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
                              * Where the multi_part_output_mode
                              * values are:
-                             * - 'HTML',
-                             * - 'TEXT', and
-                             * - 'MULTI-PART'.
+                             * - 'HTML', 
+                             * - 'TEXT', and 
+                             * - 'MULTI-PART'.  
                              *
                              */
                             $output_mode = 'HTML';
@@ -914,22 +855,22 @@ $R_resp[$memory_pointer]['copyright'][$R_resp[$memory_pointer]['software_default
                         $version_mysqli = 'MySQLi';
 
                     $R_cache_transport_packet['media_element'] = array(
-                    'CRNRSTN_LOGO'      => array('TARGET' => '_blank',
-                                           'URL' => 'https://lightsaber.crnrstn.jony5.com/',
+                    'CRNRSTN_LOGO'      => array('TARGET' => '_blank', 
+                                           'URL' => 'https://lightsaber.crnrstn.jony5.com/', 
                                            'ALT' => 'CRNRSTN :: Lightsaber SOAP Services Layer v' . 
-                                           $R->version_crnrstn()),
-                    'POWER_BY_PHP'      => array('TARGET' => '_blank',
-                                           'URL' => 'https://www.php.net/',
+                                           $R->version_crnrstn()), 
+                    'POWER_BY_PHP'      => array('TARGET' => '_blank', 
+                                           'URL' => 'https://www.php.net/', 
                                            'ALT' => 'PHP v' . 
-                                           $R->version_php()),
-                    'MYSQL_DOLPHIN'     => array('TARGET' => '_blank',
-                                           'URL' => 'https://www.mysql.com/',
-                                           'ALT' => $version_mysqli),
-                    'APACHE_POWER'      => array('TARGET' => '_blank',
-                                           'URL' => 'https://apache.org/',
-                                           'ALT' => 'Powered by Apache'),
-                    'LINUX_PENGUIN_LRG' => array('TARGET' => '_blank',
-                                           'URL' => 'https://www.linux.com/',
+                                           $R->version_php()), 
+                    'MYSQL_DOLPHIN'     => array('TARGET' => '_blank', 
+                                           'URL' => 'https://www.mysql.com/', 
+                                           'ALT' => $version_mysqli), 
+                    'APACHE_POWER'      => array('TARGET' => '_blank', 
+                                           'URL' => 'https://apache.org/', 
+                                           'ALT' => 'Powered by Apache'), 
+                    'LINUX_PENGUIN_LRG' => array('TARGET' => '_blank', 
+                                           'URL' => 'https://www.linux.com/', 
                                            'ALT' => 'Linux :: Tux the Penguin'));
 
                 break;
@@ -964,12 +905,12 @@ $R_resp[$memory_pointer]['copyright'][$R_resp[$memory_pointer]['software_default
                                                 \substr($timediff, 0, -8) . 
                                                 '] ';
                             \openlog(
-                                $syslog_prefix,
+                                $syslog_prefix, 
                                 \LOG_CONS |
                                 \LOG_NDELAY |
                                 \LOG_NOWAIT |
                                 \LOG_PID |
-                                \LOG_PERROR,
+                                \LOG_PERROR, 
                                 \LOG_SYSLOG);
                             \syslog($syslog_level, $clr_ssl_msg);
                             \closelog();
@@ -983,18 +924,18 @@ $R_resp[$memory_pointer]['copyright'][$R_resp[$memory_pointer]['software_default
                                      'xxxxxxxxxxxxxxxxxxxxxxxxxxx';
                         $token_generation_date = '2026xxxxxxxxxxxxxxxxxxxxxxxxxxx';
                         $token = array(
-                                 'token'                   => $msg_token,
-                                 'token_generation_date'   => $token_generation_date,
-                                 'request_type'            => __FUNCTION__,
-                                 'code'                    => 200,
+                                 'token'                   => $msg_token, 
+                                 'token_generation_date'   => $token_generation_date, 
+                                 'request_type'            => __FUNCTION__, 
+                                 'code'                    => 200, 
                                  'clr_ssl_msg'             => $clr_ssl_msg);
                         $R->error_log(
-                            $clr_ssl_msg,
-                            \LOG_ERR,
-                            \E_ERROR,
-                            __LINE__,
-                            __FUNCTION__,
-                            __FILE__,
+                            $clr_ssl_msg, 
+                            \LOG_ERR, 
+                            \E_ERROR, 
+                            __LINE__, 
+                            __FUNCTION__, 
+                            __FILE__, 
                             $token);
 
                     }
@@ -1045,9 +986,9 @@ $R_resp[$memory_pointer]['copyright'][$R_resp[$memory_pointer]['software_default
                             /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
                              * Where the multi_part_output_mode
                              * values are:
-                             * - 'HTML',
-                             * - 'TEXT', and
-                             * - 'MULTI-PART'.
+                             * - 'HTML', 
+                             * - 'TEXT', and 
+                             * - 'MULTI-PART'.  
                              *
                              */
                             $output_mode = 'HTML';
@@ -1156,9 +1097,9 @@ $R_resp[$memory_pointer]['copyright'][$R_resp[$memory_pointer]['software_default
                             /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
                              * Where the multi_part_output_mode
                              * values are:
-                             * - 'HTML',
-                             * - 'TEXT', and
-                             * - 'MULTI-PART'.
+                             * - 'HTML', 
+                             * - 'TEXT', and 
+                             * - 'MULTI-PART'.  
                              *
                              */
                             $output_mode = 'HTML';
@@ -1360,9 +1301,9 @@ $R_resp[$memory_pointer]['copyright'][$R_resp[$memory_pointer]['software_default
                             /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
                              * Where the multi_part_output_mode
                              * values are:
-                             * - 'HTML',
-                             * - 'TEXT', and
-                             * - 'MULTI-PART'.
+                             * - 'HTML', 
+                             * - 'TEXT', and 
+                             * - 'MULTI-PART'.  
                              *
                              */
                             $output_mode = 'HTML';
@@ -1489,28 +1430,28 @@ $R_resp[$memory_pointer]['copyright'][$R_resp[$memory_pointer]['software_default
                      *
                      */
                     $R_cache_transport_packet['media_element'] = array(
-                    'CRNRSTN_LOGO'      => array('TARGET' => '_blank',
-                                           'URL' => 'https://lightsaber.crnrstn.jony5.com/',
+                    'CRNRSTN_LOGO'      => array('TARGET' => '_blank', 
+                                           'URL' => 'https://lightsaber.crnrstn.jony5.com/', 
                                            'ALT' => 'CRNRSTN :: Lightsaber SOAP Services Layer v' . 
-                                           $R->version_crnrstn()),
-                    'POWER_BY_PHP'      => array('TARGET' => '_blank',
-                                           'URL' => 'https://www.php.net/',
+                                           $R->version_crnrstn()), 
+                    'POWER_BY_PHP'      => array('TARGET' => '_blank', 
+                                           'URL' => 'https://www.php.net/', 
                                            'ALT' => 'PHP v' . 
-                                           $R->version_php()),
-                    'MYSQL_DOLPHIN'     => array('TARGET' => '_blank',
-                                           'URL' => 'https://www.mysql.com/',
-                                           'ALT' => $version_mysqli),
-                    'APACHE_POWER'      => array('TARGET' => '_blank',
-                                           'URL' => 'https://apache.org/',
-                                           'ALT' => 'Powered by Apache'),
-                    'LINUX_PENGUIN_LRG' => array('TARGET' => '_blank',
-                                           'URL' => 'https://www.linux.com/',
-                                           'ALT' => 'Linux :: Tux the Penguin'),
-                    'FIVE'              => array('TARGET' => '_blank',
-                                           'URL' => 'http://evifweb.jony5.com/',
-                                           'ALT' => 'eVifweb® development'),
-                    'STACHE'            => array('TARGET' => '_blank',
-                                           'URL' => 'https://jony5.com/',
+                                           $R->version_php()), 
+                    'MYSQL_DOLPHIN'     => array('TARGET' => '_blank', 
+                                           'URL' => 'https://www.mysql.com/', 
+                                           'ALT' => $version_mysqli), 
+                    'APACHE_POWER'      => array('TARGET' => '_blank', 
+                                           'URL' => 'https://apache.org/', 
+                                           'ALT' => 'Powered by Apache'), 
+                    'LINUX_PENGUIN_LRG' => array('TARGET' => '_blank', 
+                                           'URL' => 'https://www.linux.com/', 
+                                           'ALT' => 'Linux :: Tux the Penguin'), 
+                    'FIVE'              => array('TARGET' => '_blank', 
+                                           'URL' => 'http://evifweb.jony5.com/', 
+                                           'ALT' => 'eVifweb® development'), 
+                    'STACHE'            => array('TARGET' => '_blank', 
+                                           'URL' => 'https://jony5.com/', 
                                            'ALT' => 'Jonathan \'5\' Harris, CEO, ' . 
                                            'CTO, Lead Full Stack Developer, ' . 
                                            'Chief Creative here at eVifweb® ' . 
@@ -1549,12 +1490,12 @@ $R_resp[$memory_pointer]['copyright'][$R_resp[$memory_pointer]['software_default
                                                 \substr($timediff, 0, -8) . 
                                                 '] ';
                             \openlog(
-                                $syslog_prefix,
+                                $syslog_prefix, 
                                 \LOG_CONS |
                                 \LOG_NDELAY |
                                 \LOG_NOWAIT |
                                 \LOG_PID |
-                                \LOG_PERROR,
+                                \LOG_PERROR, 
                                 \LOG_SYSLOG);
                             \syslog($syslog_level, $clr_ssl_msg);
                             \closelog();
@@ -1568,18 +1509,18 @@ $R_resp[$memory_pointer]['copyright'][$R_resp[$memory_pointer]['software_default
                                      'xxxxxxxxxxxxxxxxxxxxxxxxxxx';
                         $token_generation_date = '2026xxxxxxxxxxxxxxxxxxxxxxxxxxx';
                         $token = array(
-                                 'token'                   => $msg_token,
-                                 'token_generation_date'   => $token_generation_date,
-                                 'request_type'            => __FUNCTION__,
-                                 'code'                    => 200,
+                                 'token'                   => $msg_token, 
+                                 'token_generation_date'   => $token_generation_date, 
+                                 'request_type'            => __FUNCTION__, 
+                                 'code'                    => 200, 
                                  'clr_ssl_msg'             => $clr_ssl_msg);
                         $R->error_log(
-                            $clr_ssl_msg,
-                            \LOG_ERR,
-                            \E_ERROR,
-                            __LINE__,
-                            __FUNCTION__,
-                            __FILE__,
+                            $clr_ssl_msg, 
+                            \LOG_ERR, 
+                            \E_ERROR, 
+                            __LINE__, 
+                            __FUNCTION__, 
+                            __FILE__, 
                             $token);
 
                     }
@@ -1620,9 +1561,9 @@ $R_resp[$memory_pointer]['copyright'][$R_resp[$memory_pointer]['software_default
                             /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
                              * Where the multi_part_output_mode
                              * values are:
-                             * - 'HTML',
-                             * - 'TEXT', and
-                             * - 'MULTI-PART'.
+                             * - 'HTML', 
+                             * - 'TEXT', and 
+                             * - 'MULTI-PART'.  
                              *
                              */
                             $output_mode = 'HTML';
@@ -1729,9 +1670,9 @@ $R_resp[$memory_pointer]['copyright'][$R_resp[$memory_pointer]['software_default
                             /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
                              * Where the multi_part_output_mode
                              * values are:
-                             * - 'HTML',
-                             * - 'TEXT', and
-                             * - 'MULTI-PART'.
+                             * - 'HTML', 
+                             * - 'TEXT', and 
+                             * - 'MULTI-PART'.  
                              *
                              */
                             $output_mode = 'HTML';
@@ -1860,9 +1801,9 @@ Icon by: Dragoș Gavrilă.';
                             /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
                              * Where the multi_part_output_mode
                              * values are:
-                             * - 'HTML',
-                             * - 'TEXT', and
-                             * - 'MULTI-PART'.
+                             * - 'HTML', 
+                             * - 'TEXT', and 
+                             * - 'MULTI-PART'.  
                              *
                              */
                             $output_mode = 'HTML';
@@ -1970,22 +1911,22 @@ Icon by: Dragoș Gavrilă.';
                         $version_mysqli = 'MySQLi';
 
                     $R_cache_transport_packet['media_element'] = array(
-                    'CRNRSTN_LOGO'      => array('TARGET' => '_blank',
-                                           'URL' => 'https://lightsaber.crnrstn.jony5.com/',
+                    'CRNRSTN_LOGO'      => array('TARGET' => '_blank', 
+                                           'URL' => 'https://lightsaber.crnrstn.jony5.com/', 
                                            'ALT' => 'CRNRSTN :: Lightsaber SOAP Services Layer v' . 
-                                           $R->version_crnrstn()),
-                    'POWER_BY_PHP'      => array('TARGET' => '_blank',
-                                           'URL' => 'https://www.php.net/',
+                                           $R->version_crnrstn()), 
+                    'POWER_BY_PHP'      => array('TARGET' => '_blank', 
+                                           'URL' => 'https://www.php.net/', 
                                            'ALT' => 'PHP v' . 
-                                           $R->version_php()),
-                    'MYSQL_DOLPHIN'     => array('TARGET' => '_blank',
-                                           'URL' => 'https://www.mysql.com/',
-                                           'ALT' => $version_mysqli),
-                    'APACHE_POWER'      => array('TARGET' => '_blank',
-                                           'URL' => 'https://apache.org/',
-                                           'ALT' => 'Powered by Apache'),
-                    'LINUX_PENGUIN_LRG' => array('TARGET' => '_blank',
-                                           'URL' => 'https://www.linux.com/',
+                                           $R->version_php()), 
+                    'MYSQL_DOLPHIN'     => array('TARGET' => '_blank', 
+                                           'URL' => 'https://www.mysql.com/', 
+                                           'ALT' => $version_mysqli), 
+                    'APACHE_POWER'      => array('TARGET' => '_blank', 
+                                           'URL' => 'https://apache.org/', 
+                                           'ALT' => 'Powered by Apache'), 
+                    'LINUX_PENGUIN_LRG' => array('TARGET' => '_blank', 
+                                           'URL' => 'https://www.linux.com/', 
                                            'ALT' => 'Linux :: Tux the Penguin'));
 
                 break;
@@ -2020,12 +1961,12 @@ Icon by: Dragoș Gavrilă.';
                                                 \substr($timediff, 0, -8) . 
                                                 '] ';
                             \openlog(
-                                $syslog_prefix,
+                                $syslog_prefix, 
                                 \LOG_CONS |
                                 \LOG_NDELAY |
                                 \LOG_NOWAIT |
                                 \LOG_PID |
-                                \LOG_PERROR,
+                                \LOG_PERROR, 
                                 \LOG_SYSLOG);
                             \syslog($syslog_level, $clr_ssl_msg);
                             \closelog();
@@ -2039,18 +1980,18 @@ Icon by: Dragoș Gavrilă.';
                                      'xxxxxxxxxxxxxxxxxxxxxxxxxxx';
                         $token_generation_date = '2026xxxxxxxxxxxxxxxxxxxxxxxxxxx';
                         $token = array(
-                                 'token'                   => $msg_token,
-                                 'token_generation_date'   => $token_generation_date,
-                                 'request_type'            => __FUNCTION__,
-                                 'code'                    => 200,
+                                 'token'                   => $msg_token, 
+                                 'token_generation_date'   => $token_generation_date, 
+                                 'request_type'            => __FUNCTION__, 
+                                 'code'                    => 200, 
                                  'clr_ssl_msg'             => $clr_ssl_msg);
                         $R->error_log(
-                            $clr_ssl_msg,
-                            \LOG_ERR,
-                            \E_ERROR,
-                            __LINE__,
-                            __FUNCTION__,
-                            __FILE__,
+                            $clr_ssl_msg, 
+                            \LOG_ERR, 
+                            \E_ERROR, 
+                            __LINE__, 
+                            __FUNCTION__, 
+                            __FILE__, 
                             $token);
 
                     }
@@ -2090,9 +2031,9 @@ Icon by: Dragoș Gavrilă.';
                             /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
                              * Where the multi_part_output_mode
                              * values are:
-                             * - 'HTML',
-                             * - 'TEXT', and
-                             * - 'MULTI-PART'.
+                             * - 'HTML', 
+                             * - 'TEXT', and 
+                             * - 'MULTI-PART'.  
                              *
                              */
                             $output_mode = 'HTML';
@@ -2202,9 +2143,9 @@ Icon by: Dragoș Gavrilă.';
                             /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
                              * Where the multi_part_output_mode
                              * values are:
-                             * - 'HTML',
-                             * - 'TEXT', and
-                             * - 'MULTI-PART'.
+                             * - 'HTML', 
+                             * - 'TEXT', and 
+                             * - 'MULTI-PART'.  
                              *
                              */
                             $output_mode = 'HTML';
@@ -2319,9 +2260,9 @@ Icon by: Dragoș Gavrilă.';
                             /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
                              * Where the multi_part_output_mode
                              * values are:
-                             * - 'HTML',
-                             * - 'TEXT', and
-                             * - 'MULTI-PART'.
+                             * - 'HTML', 
+                             * - 'TEXT', and 
+                             * - 'MULTI-PART'.  
                              *
                              */
                             $output_mode = 'HTML';
@@ -2430,22 +2371,22 @@ Icon by: Dragoș Gavrilă.';
                         $version_mysqli = 'MySQLi';
 
                     $R_cache_transport_packet['media_element'] = array(
-                    'CRNRSTN_LOGO'      => array('TARGET' => '_blank',
-                                           'URL' => 'https://lightsaber.crnrstn.jony5.com/',
+                    'CRNRSTN_LOGO'      => array('TARGET' => '_blank', 
+                                           'URL' => 'https://lightsaber.crnrstn.jony5.com/', 
                                            'ALT' => 'CRNRSTN :: Lightsaber SOAP Services Layer v' . 
-                                           $R->version_crnrstn()),
-                    'POWER_BY_PHP'      => array('TARGET' => '_blank',
-                                           'URL' => 'https://www.php.net/',
+                                           $R->version_crnrstn()), 
+                    'POWER_BY_PHP'      => array('TARGET' => '_blank', 
+                                           'URL' => 'https://www.php.net/', 
                                            'ALT' => 'PHP v' . 
-                                           $R->version_php()),
-                    'MYSQL_DOLPHIN'     => array('TARGET' => '_blank',
-                                           'URL' => 'https://www.mysql.com/',
-                                           'ALT' => $version_mysqli),
-                    'APACHE_POWER'      => array('TARGET' => '_blank',
-                                           'URL' => 'https://apache.org/',
-                                           'ALT' => 'Powered by Apache'),
-                    'LINUX_PENGUIN_LRG' => array('TARGET' => '_blank',
-                                           'URL' => 'https://www.linux.com/',
+                                           $R->version_php()), 
+                    'MYSQL_DOLPHIN'     => array('TARGET' => '_blank', 
+                                           'URL' => 'https://www.mysql.com/', 
+                                           'ALT' => $version_mysqli), 
+                    'APACHE_POWER'      => array('TARGET' => '_blank', 
+                                           'URL' => 'https://apache.org/', 
+                                           'ALT' => 'Powered by Apache'), 
+                    'LINUX_PENGUIN_LRG' => array('TARGET' => '_blank', 
+                                           'URL' => 'https://www.linux.com/', 
                                            'ALT' => 'Linux :: Tux the Penguin'));
 
                 break;
@@ -2480,12 +2421,12 @@ Icon by: Dragoș Gavrilă.';
                                                 \substr($timediff, 0, -8) . 
                                                 '] ';
                             \openlog(
-                                $syslog_prefix,
+                                $syslog_prefix, 
                                 \LOG_CONS |
                                 \LOG_NDELAY |
                                 \LOG_NOWAIT |
                                 \LOG_PID |
-                                \LOG_PERROR,
+                                \LOG_PERROR, 
                                 \LOG_SYSLOG);
                             \syslog($syslog_level, $clr_ssl_msg);
                             \closelog();
@@ -2499,18 +2440,18 @@ Icon by: Dragoș Gavrilă.';
                                      'xxxxxxxxxxxxxxxxxxxxxxxxxxx';
                         $token_generation_date = '2026xxxxxxxxxxxxxxxxxxxxxxxxxxx';
                         $token = array(
-                                 'token'                   => $msg_token,
-                                 'token_generation_date'   => $token_generation_date,
-                                 'request_type'            => __FUNCTION__,
-                                 'code'                    => 200,
+                                 'token'                   => $msg_token, 
+                                 'token_generation_date'   => $token_generation_date, 
+                                 'request_type'            => __FUNCTION__, 
+                                 'code'                    => 200, 
                                  'clr_ssl_msg'             => $clr_ssl_msg);
                         $R->error_log(
-                            $clr_ssl_msg,
-                            \LOG_ERR,
-                            \E_ERROR,
-                            __LINE__,
-                            __FUNCTION__,
-                            __FILE__,
+                            $clr_ssl_msg, 
+                            \LOG_ERR, 
+                            \E_ERROR, 
+                            __LINE__, 
+                            __FUNCTION__, 
+                            __FILE__, 
                             $token);
 
                     }
@@ -2524,7 +2465,7 @@ Icon by: Dragoș Gavrilă.';
             /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
              * 5 :: Monday, August 24, 2026 @ "00" 2000 hrs.
              *
-             * "00"..."00"..."00"...Oh,
+             * "00"..."00"..."00"...Oh, 
              * Oh, Oh, Oh. You know what I mean.
              *
              * Yeah, you know what I mean:
@@ -2561,9 +2502,9 @@ Icon by: Dragoș Gavrilă.';
                             /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
                              * Where the multi_part_output_mode
                              * values are:
-                             * - 'HTML',
-                             * - 'TEXT', and
-                             * - 'MULTI-PART'.
+                             * - 'HTML', 
+                             * - 'TEXT', and 
+                             * - 'MULTI-PART'.  
                              *
                              */
                             $output_mode = 'HTML';
@@ -2673,9 +2614,9 @@ Icon by: Dragoș Gavrilă.';
                             /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
                              * Where the multi_part_output_mode
                              * values are:
-                             * - 'HTML',
-                             * - 'TEXT', and
-                             * - 'MULTI-PART'.
+                             * - 'HTML', 
+                             * - 'TEXT', and 
+                             * - 'MULTI-PART'.  
                              *
                              */
                             $output_mode = 'HTML';
@@ -2805,9 +2746,9 @@ Milan Felix Šulc';
                             /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
                              * Where the multi_part_output_mode
                              * values are:
-                             * - 'HTML',
-                             * - 'TEXT', and
-                             * - 'MULTI-PART'.
+                             * - 'HTML', 
+                             * - 'TEXT', and 
+                             * - 'MULTI-PART'.  
                              *
                              */
                             $output_mode = 'HTML';
@@ -2918,22 +2859,22 @@ Milan Felix Šulc';
                         $version_mysqli = 'MySQLi';
 
                     $R_cache_transport_packet['media_element'] = array(
-                    'CRNRSTN_LOGO'      => array('TARGET' => '_blank',
-                                           'URL' => 'https://lightsaber.crnrstn.jony5.com/',
+                    'CRNRSTN_LOGO'      => array('TARGET' => '_blank', 
+                                           'URL' => 'https://lightsaber.crnrstn.jony5.com/', 
                                            'ALT' => 'CRNRSTN :: Lightsaber SOAP Services Layer v' . 
-                                           $R->version_crnrstn()),
-                    'POWER_BY_PHP'      => array('TARGET' => '_blank',
-                                           'URL' => 'https://www.php.net/',
+                                           $R->version_crnrstn()), 
+                    'POWER_BY_PHP'      => array('TARGET' => '_blank', 
+                                           'URL' => 'https://www.php.net/', 
                                            'ALT' => 'PHP v' . 
-                                           $R->version_php()),
-                    'MYSQL_DOLPHIN'     => array('TARGET' => '_blank',
-                                           'URL' => 'https://www.mysql.com/',
-                                           'ALT' => $version_mysqli),
-                    'APACHE_POWER'      => array('TARGET' => '_blank',
-                                           'URL' => 'https://apache.org/',
-                                           'ALT' => 'Powered by Apache'),
-                    'LINUX_PENGUIN_LRG' => array('TARGET' => '_blank',
-                                           'URL' => 'https://www.linux.com/',
+                                           $R->version_php()), 
+                    'MYSQL_DOLPHIN'     => array('TARGET' => '_blank', 
+                                           'URL' => 'https://www.mysql.com/', 
+                                           'ALT' => $version_mysqli), 
+                    'APACHE_POWER'      => array('TARGET' => '_blank', 
+                                           'URL' => 'https://apache.org/', 
+                                           'ALT' => 'Powered by Apache'), 
+                    'LINUX_PENGUIN_LRG' => array('TARGET' => '_blank', 
+                                           'URL' => 'https://www.linux.com/', 
                                            'ALT' => 'Linux :: Tux the Penguin'));
 
                 break;
@@ -2968,12 +2909,12 @@ Milan Felix Šulc';
                                                 \substr($timediff, 0, -8) . 
                                                 '] ';
                             \openlog(
-                                $syslog_prefix,
+                                $syslog_prefix, 
                                 \LOG_CONS |
                                 \LOG_NDELAY |
                                 \LOG_NOWAIT |
                                 \LOG_PID |
-                                \LOG_PERROR,
+                                \LOG_PERROR, 
                                 \LOG_SYSLOG);
                             \syslog($syslog_level, $clr_ssl_msg);
                             \closelog();
@@ -2987,18 +2928,18 @@ Milan Felix Šulc';
                                      'xxxxxxxxxxxxxxxxxxxxxxxxxxx';
                         $token_generation_date = '2026xxxxxxxxxxxxxxxxxxxxxxxxxxx';
                         $token = array(
-                                 'token'                   => $msg_token,
-                                 'token_generation_date'   => $token_generation_date,
-                                 'request_type'            => __FUNCTION__,
-                                 'code'                    => 200,
+                                 'token'                   => $msg_token, 
+                                 'token_generation_date'   => $token_generation_date, 
+                                 'request_type'            => __FUNCTION__, 
+                                 'code'                    => 200, 
                                  'clr_ssl_msg'             => $clr_ssl_msg);
                         $R->error_log(
-                            $clr_ssl_msg,
-                            \LOG_ERR,
-                            \E_ERROR,
-                            __LINE__,
-                            __FUNCTION__,
-                            __FILE__,
+                            $clr_ssl_msg, 
+                            \LOG_ERR, 
+                            \E_ERROR, 
+                            __LINE__, 
+                            __FUNCTION__, 
+                            __FILE__, 
                             $token);
 
                     }
@@ -3038,9 +2979,9 @@ Milan Felix Šulc';
                             /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
                              * Where the multi_part_output_mode
                              * values are:
-                             * - 'HTML',
-                             * - 'TEXT', and
-                             * - 'MULTI-PART'.
+                             * - 'HTML', 
+                             * - 'TEXT', and 
+                             * - 'MULTI-PART'.  
                              *
                              */
                             $output_mode = 'HTML';
@@ -3149,9 +3090,9 @@ Milan Felix Šulc';
                             /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
                              * Where the multi_part_output_mode
                              * values are:
-                             * - 'HTML',
-                             * - 'TEXT', and
-                             * - 'MULTI-PART'.
+                             * - 'HTML', 
+                             * - 'TEXT', and 
+                             * - 'MULTI-PART'.  
                              *
                              */
                             $output_mode = 'HTML';
@@ -3283,9 +3224,9 @@ Hey! I am Milan Šulc better known as ' .
                             /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
                              * Where the multi_part_output_mode
                              * values are:
-                             * - 'HTML',
-                             * - 'TEXT', and
-                             * - 'MULTI-PART'.
+                             * - 'HTML', 
+                             * - 'TEXT', and 
+                             * - 'MULTI-PART'.  
                              *
                              */
                             $output_mode = 'HTML';
@@ -3392,22 +3333,22 @@ Hey! I am Milan Šulc better known as ' .
                         $version_mysqli = 'MySQLi';
 
                     $R_cache_transport_packet['media_element'] = array(
-                    'CRNRSTN_LOGO'      => array('TARGET' => '_blank',
-                                           'URL' => 'https://lightsaber.crnrstn.jony5.com/',
+                    'CRNRSTN_LOGO'      => array('TARGET' => '_blank', 
+                                           'URL' => 'https://lightsaber.crnrstn.jony5.com/', 
                                            'ALT' => 'CRNRSTN :: Lightsaber SOAP Services Layer v' . 
-                                           $R->version_crnrstn()),
-                    'POWER_BY_PHP'      => array('TARGET' => '_blank',
-                                           'URL' => 'https://www.php.net/',
+                                           $R->version_crnrstn()), 
+                    'POWER_BY_PHP'      => array('TARGET' => '_blank', 
+                                           'URL' => 'https://www.php.net/', 
                                            'ALT' => 'PHP v' . 
-                                           $R->version_php()),
-                    'MYSQL_DOLPHIN'     => array('TARGET' => '_blank',
-                                           'URL' => 'https://www.mysql.com/',
-                                           'ALT' => $version_mysqli),
-                    'APACHE_POWER'      => array('TARGET' => '_blank',
-                                           'URL' => 'https://apache.org/',
-                                           'ALT' => 'Powered by Apache'),
-                    'LINUX_PENGUIN_LRG' => array('TARGET' => '_blank',
-                                           'URL' => 'https://www.linux.com/',
+                                           $R->version_php()), 
+                    'MYSQL_DOLPHIN'     => array('TARGET' => '_blank', 
+                                           'URL' => 'https://www.mysql.com/', 
+                                           'ALT' => $version_mysqli), 
+                    'APACHE_POWER'      => array('TARGET' => '_blank', 
+                                           'URL' => 'https://apache.org/', 
+                                           'ALT' => 'Powered by Apache'), 
+                    'LINUX_PENGUIN_LRG' => array('TARGET' => '_blank', 
+                                           'URL' => 'https://www.linux.com/', 
                                            'ALT' => 'Linux :: Tux the Penguin'));
 
                 break;
@@ -3442,12 +3383,12 @@ Hey! I am Milan Šulc better known as ' .
                                                 \substr($timediff, 0, -8) . 
                                                 '] ';
                             \openlog(
-                                $syslog_prefix,
+                                $syslog_prefix, 
                                 \LOG_CONS |
                                 \LOG_NDELAY |
                                 \LOG_NOWAIT |
                                 \LOG_PID |
-                                \LOG_PERROR,
+                                \LOG_PERROR, 
                                 \LOG_SYSLOG);
                             \syslog($syslog_level, $clr_ssl_msg);
                             \closelog();
@@ -3461,18 +3402,18 @@ Hey! I am Milan Šulc better known as ' .
                                      'xxxxxxxxxxxxxxxxxxxxxxxxxxx';
                         $token_generation_date = '2026xxxxxxxxxxxxxxxxxxxxxxxxxxx';
                         $token = array(
-                                 'token'                   => $msg_token,
-                                 'token_generation_date'   => $token_generation_date,
-                                 'request_type'            => __FUNCTION__,
-                                 'code'                    => 200,
+                                 'token'                   => $msg_token, 
+                                 'token_generation_date'   => $token_generation_date, 
+                                 'request_type'            => __FUNCTION__, 
+                                 'code'                    => 200, 
                                  'clr_ssl_msg'             => $clr_ssl_msg);
                         $R->error_log(
-                            $clr_ssl_msg,
-                            \LOG_ERR,
-                            \E_ERROR,
-                            __LINE__,
-                            __FUNCTION__,
-                            __FILE__,
+                            $clr_ssl_msg, 
+                            \LOG_ERR, 
+                            \E_ERROR, 
+                            __LINE__, 
+                            __FUNCTION__, 
+                            __FILE__, 
                             $token);
 
                     }
@@ -3512,9 +3453,9 @@ Hey! I am Milan Šulc better known as ' .
                             /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
                              * Where the multi_part_output_mode
                              * values are:
-                             * - 'HTML',
-                             * - 'TEXT', and
-                             * - 'MULTI-PART'.
+                             * - 'HTML', 
+                             * - 'TEXT', and 
+                             * - 'MULTI-PART'.  
                              *
                              */
                             $output_mode = 'HTML';
@@ -3621,9 +3562,9 @@ Hey! I am Milan Šulc better known as ' .
                             /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
                              * Where the multi_part_output_mode
                              * values are:
-                             * - 'HTML',
-                             * - 'TEXT', and
-                             * - 'MULTI-PART'.
+                             * - 'HTML', 
+                             * - 'TEXT', and 
+                             * - 'MULTI-PART'.  
                              *
                              */
                             $output_mode = 'HTML';
@@ -3735,9 +3676,9 @@ Hey! I am Milan Šulc better known as ' .
                             /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
                              * Where the multi_part_output_mode
                              * values are:
-                             * - 'HTML',
-                             * - 'TEXT', and
-                             * - 'MULTI-PART'.
+                             * - 'HTML', 
+                             * - 'TEXT', and 
+                             * - 'MULTI-PART'.  
                              *
                              */
                             $output_mode = 'HTML';
@@ -3845,28 +3786,28 @@ Hey! I am Milan Šulc better known as ' .
                         $version_mysqli = 'MySQLi';
 
                     $R_cache_transport_packet['media_element'] = array(
-                    'CRNRSTN_LOGO'      => array('TARGET' => '_blank',
-                                           'URL' => 'https://lightsaber.crnrstn.jony5.com/',
+                    'CRNRSTN_LOGO'      => array('TARGET' => '_blank', 
+                                           'URL' => 'https://lightsaber.crnrstn.jony5.com/', 
                                            'ALT' => 'CRNRSTN :: Lightsaber SOAP Services Layer v' . 
-                                           $R->version_crnrstn()),
-                    'POWER_BY_PHP'      => array('TARGET' => '_blank',
-                                           'URL' => 'https://www.php.net/',
+                                           $R->version_crnrstn()), 
+                    'POWER_BY_PHP'      => array('TARGET' => '_blank', 
+                                           'URL' => 'https://www.php.net/', 
                                            'ALT' => 'PHP v' . 
-                                           $R->version_php()),
-                    'MYSQL_DOLPHIN'     => array('TARGET' => '_blank',
-                                           'URL' => 'https://www.mysql.com/',
-                                           'ALT' => $version_mysqli),
-                    'APACHE_POWER'      => array('TARGET' => '_blank',
-                                           'URL' => 'https://apache.org/',
-                                           'ALT' => 'Powered by Apache'),
-                    'LINUX_PENGUIN_LRG' => array('TARGET' => '_blank',
-                                           'URL' => 'https://www.linux.com/',
-                                           'ALT' => 'Linux :: Tux the Penguin'),
-                    'FIVE'              => array('TARGET' => '_blank',
-                                           'URL' => 'http://evifweb.jony5.com/',
-                                           'ALT' => 'eVifweb® development'),
-                    'STACHE'            => array('TARGET' => '_blank',
-                                           'URL' => 'https://jony5.com/',
+                                           $R->version_php()), 
+                    'MYSQL_DOLPHIN'     => array('TARGET' => '_blank', 
+                                           'URL' => 'https://www.mysql.com/', 
+                                           'ALT' => $version_mysqli), 
+                    'APACHE_POWER'      => array('TARGET' => '_blank', 
+                                           'URL' => 'https://apache.org/', 
+                                           'ALT' => 'Powered by Apache'), 
+                    'LINUX_PENGUIN_LRG' => array('TARGET' => '_blank', 
+                                           'URL' => 'https://www.linux.com/', 
+                                           'ALT' => 'Linux :: Tux the Penguin'), 
+                    'FIVE'              => array('TARGET' => '_blank', 
+                                           'URL' => 'http://evifweb.jony5.com/', 
+                                           'ALT' => 'eVifweb® development'), 
+                    'STACHE'            => array('TARGET' => '_blank', 
+                                           'URL' => 'https://jony5.com/', 
                                            'ALT' => 'Jonathan \'5\' Harris, CEO, ' . 
                                            'CTO, Lead Full Stack Developer, ' . 
                                            'Chief Creative here at eVifweb® ' . 
@@ -3905,12 +3846,12 @@ Hey! I am Milan Šulc better known as ' .
                                                 \substr($timediff, 0, -8) . 
                                                 '] ';
                             \openlog(
-                                $syslog_prefix,
+                                $syslog_prefix, 
                                 \LOG_CONS |
                                 \LOG_NDELAY |
                                 \LOG_NOWAIT |
                                 \LOG_PID |
-                                \LOG_PERROR,
+                                \LOG_PERROR, 
                                 \LOG_SYSLOG);
                             \syslog($syslog_level, $clr_ssl_msg);
                             \closelog();
@@ -3924,18 +3865,18 @@ Hey! I am Milan Šulc better known as ' .
                                      'xxxxxxxxxxxxxxxxxxxxxxxxxxx';
                         $token_generation_date = '2026xxxxxxxxxxxxxxxxxxxxxxxxxxx';
                         $token = array(
-                                 'token'                   => $msg_token,
-                                 'token_generation_date'   => $token_generation_date,
-                                 'request_type'            => __FUNCTION__,
-                                 'code'                    => 200,
+                                 'token'                   => $msg_token, 
+                                 'token_generation_date'   => $token_generation_date, 
+                                 'request_type'            => __FUNCTION__, 
+                                 'code'                    => 200, 
                                  'clr_ssl_msg'             => $clr_ssl_msg);
                         $R->error_log(
-                            $clr_ssl_msg,
-                            \LOG_ERR,
-                            \E_ERROR,
-                            __LINE__,
-                            __FUNCTION__,
-                            __FILE__,
+                            $clr_ssl_msg, 
+                            \LOG_ERR, 
+                            \E_ERROR, 
+                            __LINE__, 
+                            __FUNCTION__, 
+                            __FILE__, 
                             $token);
 
                     }
@@ -3976,7 +3917,7 @@ Hey! I am Milan Šulc better known as ' .
                              * values are:
                              * - 'HTML', 
                              * - 'TEXT', and 
-                             * - 'MULTI-PART'.
+                             * - 'MULTI-PART'. 
                              *
                              */
                             $output_mode = 'HTML';
@@ -4087,7 +4028,7 @@ Hey! I am Milan Šulc better known as ' .
                              * values are:
                              * - 'HTML', 
                              * - 'TEXT', and 
-                             * - 'MULTI-PART'.
+                             * - 'MULTI-PART'. 
                              *
                              */
                             $output_mode = 'HTML';
@@ -4303,22 +4244,22 @@ on ' .
                         $version_mysqli = 'MySQLi';
 
                     $R_cache_transport_packet['media_element'] = array(
-                    'CRNRSTN_LOGO'      => array('TARGET' => '_blank',
-                                           'URL' => 'https://lightsaber.crnrstn.jony5.com/',
+                    'CRNRSTN_LOGO'      => array('TARGET' => '_blank', 
+                                           'URL' => 'https://lightsaber.crnrstn.jony5.com/', 
                                            'ALT' => 'CRNRSTN :: Lightsaber SOAP Services Layer v' . 
-                                           $R->version_crnrstn()),
-                    'POWER_BY_PHP'      => array('TARGET' => '_blank',
-                                           'URL' => 'https://www.php.net/',
+                                           $R->version_crnrstn()), 
+                    'POWER_BY_PHP'      => array('TARGET' => '_blank', 
+                                           'URL' => 'https://www.php.net/', 
                                            'ALT' => 'PHP v' . 
-                                           $R->version_php()),
-                    'MYSQL_DOLPHIN'     => array('TARGET' => '_blank',
-                                           'URL' => 'https://www.mysql.com/',
-                                           'ALT' => $version_mysqli),
-                    'APACHE_POWER'      => array('TARGET' => '_blank',
-                                           'URL' => 'https://apache.org/',
-                                           'ALT' => 'Powered by Apache'),
-                    'LINUX_PENGUIN_LRG' => array('TARGET' => '_blank',
-                                           'URL' => 'https://www.linux.com/',
+                                           $R->version_php()), 
+                    'MYSQL_DOLPHIN'     => array('TARGET' => '_blank', 
+                                           'URL' => 'https://www.mysql.com/', 
+                                           'ALT' => $version_mysqli), 
+                    'APACHE_POWER'      => array('TARGET' => '_blank', 
+                                           'URL' => 'https://apache.org/', 
+                                           'ALT' => 'Powered by Apache'), 
+                    'LINUX_PENGUIN_LRG' => array('TARGET' => '_blank', 
+                                           'URL' => 'https://www.linux.com/', 
                                            'ALT' => 'Linux :: Tux the Penguin'));
 
                 break;
@@ -4360,7 +4301,7 @@ on ' .
                              * values are:
                              * - 'HTML', 
                              * - 'TEXT', and 
-                             * - 'MULTI-PART'.
+                             * - 'MULTI-PART'. 
                              *
                              */
                             $output_mode = 'HTML';
@@ -4495,18 +4436,18 @@ on ' .
                                      'xxxxxxxxxxxxxxxxxxxxxxxxxxx';
                         $token_generation_date = '2026xxxxxxxxxxxxxxxxxxxxxxxxxxx';
                         $token = array(
-                                 'token'                   => $msg_token,
-                                 'token_generation_date'   => $token_generation_date,
-                                 'request_type'            => __FUNCTION__,
-                                 'code'                    => 200,
+                                 'token'                   => $msg_token, 
+                                 'token_generation_date'   => $token_generation_date, 
+                                 'request_type'            => __FUNCTION__, 
+                                 'code'                    => 200, 
                                  'clr_ssl_msg'             => $clr_ssl_msg);
                         $R->error_log(
-                            $clr_ssl_msg,
-                            \LOG_ERR,
-                            \E_ERROR,
-                            __LINE__,
-                            __FUNCTION__,
-                            __FILE__,
+                            $clr_ssl_msg, 
+                            \LOG_ERR, 
+                            \E_ERROR, 
+                            __LINE__, 
+                            __FUNCTION__, 
+                            __FILE__, 
                             $token);
 
                     }
@@ -4564,18 +4505,18 @@ on ' .
                              'xxxxxxxxxxxxxxxxxxxxxxxxxxx';
                 $token_generation_date = '2026xxxxxxxxxxxxxxxxxxxxxxxxxxx';
                 $token = array(
-                         'token'                   => $msg_token,
-                         'token_generation_date'   => $token_generation_date,
-                         'request_type'            => __FUNCTION__,
-                         'code'                    => 200,
+                         'token'                   => $msg_token, 
+                         'token_generation_date'   => $token_generation_date, 
+                         'request_type'            => __FUNCTION__, 
+                         'code'                    => 200, 
                          'clr_ssl_msg'             => $clr_ssl_msg);
                 $R->error_log(
-                    $clr_ssl_msg,
-                    \LOG_ERR,
-                    \E_ERROR,
-                    __LINE__,
-                    __FUNCTION__,
-                    __FILE__,
+                    $clr_ssl_msg, 
+                    \LOG_ERR, 
+                    \E_ERROR, 
+                    __LINE__, 
+                    __FUNCTION__, 
+                    __FILE__, 
                     $token);
 
             }
@@ -4702,15 +4643,15 @@ on ' .
      *
      */
     return $R->soap_data_initialization_cache_output(
-               $R_resp[$memory_pointer]['iso_lang_code'],
-               $R_meta_key,
-               $R_text,
-               $R_html,
-               NULL,
-               $R_cache_transport_packet,
-               $output_mode,
-               $generate_version_sync_hash,
-               $generate_search_algorithm_data,
+               $R_resp[$memory_pointer]['iso_lang_code'], 
+               $R_meta_key, 
+               $R_text, 
+               $R_html, 
+               NULL, 
+               $R_cache_transport_packet, 
+               $output_mode, 
+               $generate_version_sync_hash, 
+               $generate_search_algorithm_data, 
                $css_data);
 
 }

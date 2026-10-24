@@ -294,6 +294,13 @@ return new crnrstn_ui_content_assembler();
  * 2) $var = $R->compound_ointment_extract('wsdl', 0, false);
  * 3) $var = $R_resp[$memory_pointer]['input_parameter_defaults'][$R_resp[$memory_pointer]['software_default']][0];
  *
+ * Note: The 'ascii_art' string input 
+ *       parameter (see 1 above or A below) is 
+ *       the Kivotós public key for the class, 
+ *       crnrstn_ascii_art, and 'wsdl' 
+ *       (see 2 above or B below) is simply 
+ *       the name of another class. 
+ *
  * # C # R # N # R # S # T # N # :: # L # I # G # H # T
  * A) CLR-SSL Kivotós Advanced 
  *    Object Storage Ark. 
@@ -317,7 +324,7 @@ return new crnrstn_ui_content_assembler();
  *                          a registered class, function or exe.......filepath, 
  *                          namespace + a registered class/function...name, 
  *                          a registered class or function ...........name, or 
- *                          the public software key of the class/function]
+ *                          the public software key of the class/function].
  *
  * E.g., to access an instantiation of crnrstn_ascii_art:
  * $obj = $R->kivotos_storage($R->get_crnrstn('public_key', 'crnrstn_ascii_art'));
@@ -346,19 +353,25 @@ return new crnrstn_ui_content_assembler();
  *             $input_default = NULL)
  *             {}
  *
- * E.g.:
- *    $var = $R->compound_ointment_extract($R->get_crnrstn('public_key', 'wsdl'), 0, false);
+ * E.g., to get the __contruct() or function 
+ * input param zero (0) for a class or 
+ * function, $resource_name:
+ *
+ *    $var = $R->compound_ointment_extract(
+ *               $R->get_crnrstn('public_key', $resource_name), 
+ *               0, 
+ *               false);
  *
  * Note: For Just-In-Time resource returns 
  *       behind this architecture, please see: 
  *
- *       $var = $R->return_anointed_resource($resource_name)
+ *       $obj = $R->return_anointed_resource($resource_name);
  *
  * Where, $resource_name = [a registered class or function............filename, 
  *                          a registered class, function or exe.......filepath, 
  *                          namespace + a registered class/function...name, 
  *                          a registered class or function ...........name, or 
- *                          the public software key of the class/function]
+ *                          the public software key of the class/function].
  *
  * # C # R # N # R # S # T # N # :: # L # I # G # H # T
  * C) A direct and static integration with 
@@ -370,6 +383,6 @@ return new crnrstn_ui_content_assembler();
  *
  *
  * 5 :: Saturday, August 22, 2026 @ 0742 hrs.
- * Last Modified: Wednesday, September 9, 2026 @ 1049 hrs.
+ * Last Modified: Friday, September 25, 2026 @ 0930 hrs.
  *
  */

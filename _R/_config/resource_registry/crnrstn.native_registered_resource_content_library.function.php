@@ -258,7 +258,7 @@
 namespace CRNRSTN;
 
 /**
- * 
+ *
  *
  * GLOBAL FUNCTION
  * RESOURCE DEFINITION :: _crnrstn_native_resource_registry_content_library
@@ -370,64 +370,6 @@ function _crnrstn_native_resource_registry_content_library(
     {
          /* Designed _crnrstn_native_resource_registry_meta_corporate()
           * 5 :: Saturday, April 11, 2026 @ 0654 hrs.
-          *
-
-        'AUTHOR_CONTRIBUTORS_HTML'  => $R->return_registered_resource_meta(
-                                           $name,
-                                           'AUTHOR_CONTRIBUTORS_HTML', 
-                                           $tmp_background_color_hex,
-                                           $tmp_iso_lang_code)
-
-        'AUTHOR_CONTRIBUTORS_TEXT'  => $R->return_registered_resource_meta(
-                                           $name,
-                                           'AUTHOR_CONTRIBUTORS_TEXT', 
-                                           $tmp_background_color_hex,
-                                           $tmp_iso_lang_code)
-
-        'COMPANY_NAME_HTML'         => $R->return_registered_resource_meta(
-                                           $name,
-                                           'COMPANY_NAME_HTML', 
-                                           $tmp_background_color_hex,
-                                           $tmp_iso_lang_code)
-
-        'COMPANY_NAME_TEXT'         => $R->return_registered_resource_meta(
-                                           $name,
-                                           'COMPANY_NAME_TEXT', 
-                                           $tmp_background_color_hex,
-                                           $tmp_iso_lang_code)
-
-        'MEDIA_ELEMENT_KEY'         => $R->return_registered_resource_meta(
-                                           $name, 
-                                           'MEDIA_ELEMENT_KEY', 
-                                           $tmp_background_color_hex, 
-                                           $tmp_iso_lang_code)
-
-        'URL'                       => $R->return_registered_resource_meta(
-                                           $name, 
-                                           'URL', 
-                                           $tmp_background_color_hex, 
-                                           $tmp_iso_lang_code)
-
-        'COPYRIGHT_HTML'            => $R->return_registered_resource_meta(
-                                           $name,
-                                           'COPYRIGHT_HTML',
-                                           $tmp_background_color_hex, 
-                                           $tmp_iso_lang_code,
-                                           NULL, NULL, NULL, NULL,
-                                           NULL, NULL, NULL, NULL, 
-                                           NULL, NULL, NULL, NULL,
-                                           $tmp_COPYRIGHT_TEXT)
-
-        'COPYRIGHT_TEXT'            => $R->return_registered_resource_meta(
-                                           $name,
-                                           'COPYRIGHT_TEXT',
-                                           $tmp_background_color_hex, 
-                                           $tmp_iso_lang_code,
-                                           NULL, NULL, NULL, NULL,
-                                           NULL, NULL, NULL, NULL, 
-                                           NULL, NULL, NULL, NULL,
-                                           $tmp_COPYRIGHT_TEXT)
-
     }
 
     Licenses Meta: 
@@ -440,36 +382,6 @@ function _crnrstn_native_resource_registry_content_library(
     {
          /* Designed _crnrstn_native_resource_registry_meta_license().
           * 5 :: Saturday, April 11, 2026 @ 0654 hrs.
-          *
-
-        'LICENSE_NAME_HTML'         => $R->return_registered_resource_meta(
-                                           $name,
-                                           'LICENSE_NAME_HTML',
-                                           $tmp_background_color_hex, 
-                                           $tmp_iso_lang_code,
-                                           NULL, NULL, NULL, 
-                                           NULL, NULL, NULL, 
-                                           NULL, NULL, NULL, NULL,
-                                           $tmp_LICENSE_NAME_TEXT, 
-                                           $tmp_LICENSE_URL)
-
-        'LICENSE_NAME_TEXT'         => $R->return_registered_resource_meta(
-                                           $name,
-                                           'LICENSE_NAME_TEXT',
-                                           $tmp_background_color_hex, 
-                                           $tmp_iso_lang_code,
-                                           NULL, NULL, NULL, 
-                                           NULL, NULL, NULL, 
-                                           NULL, NULL, NULL, NULL,
-                                           $tmp_LICENSE_NAME_TEXT, 
-                                           $tmp_LICENSE_URL)
-
-       'LICENSE_URL'               => $tmp_LICENSE_URL;
-
-       'LICENSE_URL_HTML'          => $tmp_LICENSE_URL;
-
-       'LICENSE_URL_TEXT'          => $tmp_LICENSE_URL;
-
     }
 
     Social Media Meta:
@@ -535,18 +447,18 @@ function _crnrstn_native_resource_registry_content_library(
     /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
      * Edit: Original function definition:
      *       function return_registered_resource_meta(
-     *                $name,
-     *                $attribute = NULL,
-     *                $tmp_background_color_hex = '#FFF',
-     *                $tmp_iso_lang_code = 'en',
-     *                $generate_search_algorithm_data = false,
-     *                $generate_version_sync_hash = false,
-     *                $title_dom_element = 'auto',
-     *                $description_dom_element = 'auto',
-     *                $author_dom_element = 'auto',
-     *                $company_name_dom_element = 'auto',
-     *                $constructor_function_dom_element = 'auto',
-     *                $TITLE_TEXT_override = NULL,
+     *                $name, 
+     *                $attribute = NULL, 
+     *                $tmp_background_color_hex = '#FFF', 
+     *                $tmp_iso_lang_code = 'en', 
+     *                $generate_search_algorithm_data = false, 
+     *                $generate_version_sync_hash = false, 
+     *                $title_dom_element = 'auto', 
+     *                $description_dom_element = 'auto', 
+     *                $author_dom_element = 'auto', 
+     *                $company_name_dom_element = 'auto', 
+     *                $constructor_function_dom_element = 'auto', 
+     *                $TITLE_TEXT_override = NULL, 
      *                $LICENSE_TEXT_override = NULL){}
      *       5 :: Saturday, August 24, 2024 @ 0608 hrs.
      *
@@ -887,9 +799,9 @@ function _crnrstn_native_resource_registry_content_library(
              *
              */
             if(!($R_data = _crnrstn_native_resource_registry_content_library(
-                           $R_resp,
-                           $meta_key,
-                           $R,
+                           $R_resp, 
+                           $meta_key, 
+                           $R, 
                            $R_debug_mode)))
             {
 
@@ -901,18 +813,18 @@ function _crnrstn_native_resource_registry_content_library(
                              'xxxxxxxxxxxxxxxxxxxxxxxxxxx';
                 $token_generation_date = '2026xxxxxxxxxxxxxxxxxxxxxxxxxxx';
                 $token = array(
-                         'token'                   => $msg_token,
-                         'token_generation_date'   => $token_generation_date,
-                         'request_type'            => __FUNCTION__,
-                         'code'                    => 200,
+                         'token'                   => $msg_token, 
+                         'token_generation_date'   => $token_generation_date, 
+                         'request_type'            => __FUNCTION__, 
+                         'code'                    => 200, 
                          'clr_ssl_msg'             => $clr_ssl_msg);
                 $R->error_log(
-                    $clr_ssl_msg,
-                    \LOG_DEBUG,
-                    \E_NOTICE,
-                    __LINE__,
-                    __FUNCTION__,
-                    __FILE__,
+                    $clr_ssl_msg, 
+                    \LOG_DEBUG, 
+                    \E_NOTICE, 
+                    __LINE__, 
+                    __FUNCTION__, 
+                    __FILE__, 
                     $token);
 
             }else{
@@ -1238,9 +1150,647 @@ function _crnrstn_native_resource_registry_content_library(
              'class' . $os_path_dir_separator_char . 
              'thirdparty' . $os_path_dir_separator_char . 
              'phpmailer' . $os_path_dir_separator_char . 
+             '7.1.1' . $os_path_dir_separator_char . 
+             'src' . $os_path_dir_separator_char . 
+             'DSNConfigurator.php':
+        case '7.1.1' . $os_path_dir_separator_char . 
+             'DSNConfigurator.php':
+        case __NAMESPACE__ . 
+             '\DSNConfigurator':
+        case 'DSNConfigurator':
+        case 'gabriel_dsn_config':
+            /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
+             * CLASS_DEFINITION
+             *
+             * # C # R # N # R # S # T # N # :: # L # I # G # H # T
+             * Initialize an output type 
+             * control parameter to support 
+             * HTML, Text, and Multi-Part output. 
+             *
+             * Where, 
+             * $output_mode = ['HTML', 
+             *                 'TEXT', 
+             *                 'MULTI-PART']
+             *
+             *
+             * 5 :: Thursday, November 6, 2025 @ 0324 hrs.
+             *
+             */
+            $output_mode = NULL;
+
+            switch($R_meta_key){
+                case 'TITLE':
+                case 'TITLE_HTML':
+                case 'TITLE_TEXT':
+
+                    /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
+                     * CLR-SSL Resource Registry
+                     * Content Library Meta Data
+                     * Output Controller.
+                     *
+                     * TITLE_HTML   = HTML Output
+                     * TITLE_TEXT   = Text Output
+                     * TITLE        = Multi-Part HTML
+                     *                & Text Output
+                     *
+                     *
+                     * 5 ::
+                     *
+                     * Thursday, October 30, 2025 @ 0728 hrs.
+                     *
+                     */
+                    switch($R_meta_key){
+                        case 'TITLE_HTML':
+
+                            /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
+                             * Where the multi_part_output_mode 
+                             * values are:
+                             * - 'HTML', 
+                             * - 'TEXT', and 
+                             * - 'MULTI-PART'.
+                             *
+                             */
+                            $output_mode = 'HTML';
+
+                        break;
+                        case 'TITLE_TEXT':
+
+                            $output_mode = 'TEXT';
+
+                        break;
+                        case 'TITLE':
+                        default:
+
+                            $output_mode = 'MULTI-PART';
+
+                        break;
+
+                    }
+
+                    /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
+                     * Do we temporarily load the 
+                     * CLR-SSL Content Library 
+                     * Resource low-level 
+                     * language default $iso = 'en' 
+                     * Text data into server memory? 
+                     *
+                     *
+                     * 5 :: Thursday, November 6, 2025 @ 0336 hrs.
+                     *
+                     */
+                    if(($output_mode == 'TEXT') || 
+                        ($output_mode == 'MULTI-PART'))
+                        /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
+                         * Standardize the Text data 
+                         * parameter variable name in 
+                         * order to hold the Text 
+                         * data handling parallel to 
+                         * to the HTML data handling 
+                         * in the same architecture. 
+                         *
+                         *
+                         * 5
+                         *
+                         * Thursday, October 30, 2025 @ 1420 hrs.
+                         *
+                         */
+                        $R_text = $R_resp[$memory_pointer]['title']['TEXT'];
+
+                    /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
+                     * Do we temporarily load the
+                     * CLR-SSL Content Library 
+                     * Resource low-level
+                     * language default $iso = 'en'
+                     * HTML data into server memory?
+                     *
+                     *
+                     * 5 :: Thursday, November 6, 2025 @ 0338 hrs.
+                     *
+                     */
+                    if(($output_mode == 'HTML') || 
+                        ($output_mode == 'MULTI-PART'))
+                        /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
+                         * Initialize the multi-part
+                         * title data for this natively
+                         * registered resource of the
+                         * CRNRSTN :: Lightsaber RoCEv2
+                         * SOAP Services Layer (CLR-SSL)
+                         * System Resource Registry.
+                         *
+                         *
+                         * 5
+                         *
+                         * Sunday, August 25, 2024 @ 0547 hrs.
+                         *
+                         */
+                        $R_html = '<span ' . $css_data['title'] . 
+                        '>The DSN Configuration ' . 
+                        'Wrapper for PHPMailer, a ' . 
+                        'full-featured email creation ' . 
+                        'and transfer class for PHP</span>';
+
+                break;
+                case 'DESCRIPTION':
+                case 'DESCRIPTION_HTML':
+                case 'DESCRIPTION_TEXT':
+
+                    /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
+                     * CLR-SSL Resource Registry
+                     * Content Library Meta Data
+                     * Output Controller.
+                     *
+                     * DESCRIPTION_HTML   = HTML Output
+                     * DESCRIPTION_TEXT   = Text Output
+                     * DESCRIPTION        = Multi-Part HTML
+                     *                      & Text Output
+                     *
+                     *
+                     * 5 ::
+                     *
+                     * Friday, November 7, 2025 @ 0420 hrs.
+                     *
+                     */
+                    switch($R_meta_key){
+                        case 'DESCRIPTION_HTML':
+
+                            /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
+                             * Where the multi_part_output_mode 
+                             * values are:
+                             * - 'HTML', 
+                             * - 'TEXT', and 
+                             * - 'MULTI-PART'.
+                             *
+                             */
+                            $output_mode = 'HTML';
+
+                        break;
+                        case 'DESCRIPTION_TEXT':
+
+                            $output_mode = 'TEXT';
+
+                        break;
+                        case 'DESCRIPTION':
+                        default:
+
+                            $output_mode = 'MULTI-PART';
+
+                        break;
+
+                    }
+
+                    /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
+                     * Do we temporarily load the 
+                     * CLR-SSL Content Library 
+                     * Resource low-level 
+                     * language default $iso = 'en' 
+                     * Text data into server memory? 
+                     *
+                     *
+                     * 5 :: Thursday, November 6, 2025 @ 0336 hrs.
+                     *
+                     */
+                    if(($output_mode == 'TEXT') || 
+                        ($output_mode == 'MULTI-PART'))
+                        /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
+                         * Initialize the software
+                         * description Text data
+                         * for this natively
+                         * registered resource of
+                         * the CRNRSTN :: Lightsaber
+                         * RoCEv2 SOAP Services
+                         * Layer (CLR-SSL) System
+                         * Resource Registry.
+                         *
+                         *
+                         * 5
+                         *
+                         * Sunday, August 25, 2024 @ 1014 hrs.
+                         *
+                         */
+                        $R_text = 'Configure PHPMailer with a DSN string.
+
+Be aware that a DSN string can 
+configure *all* PHPMailer properties,
+ncluding those that have security 
+consequences, so do not use
+user-provided DSN strings without 
+strict validation of all parameters.
+
+PHPMailer is a full-featured email 
+creation and transfer class for 
+PHP and is GNU Lesser 
+General Public Licensed email 
+messaging service software.';
+
+                    /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
+                     * Do we temporarily load the
+                     * CLR-SSL Content Library 
+                     * Resource low-level
+                     * language default $iso = 'en'
+                     * HTML data into server memory?
+                     *
+                     *
+                     * 5 :: Thursday, November 6, 2025 @ 0338 hrs.
+                     *
+                     */
+                    if(($output_mode == 'HTML') || 
+                        ($output_mode == 'MULTI-PART'))
+                        /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
+                         * Initialize the software
+                         * description HTML data
+                         * for this natively
+                         * registered resource of
+                         * the CRNRSTN :: Lightsaber
+                         * RoCEv2 SOAP Services
+                         * Layer (CLR-SSL) System
+                         * Resource Registry.
+                         *
+                         *
+                         * 5
+                         *
+                         * Sunday, August 25, 2024 @ 1014 hrs.
+                         *
+                         */
+                        $R_html = '<div ' . $css_data['description'] . 
+                        '>Configure PHPMailer with a DSN string. 
+
+<div ' . $css_data['line_break'] . '><br><br></div>
+Be aware that a DSN string can 
+configure *all* PHPMailer properties, 
+ncluding those that have security 
+consequences, so do not use 
+user-provided DSN strings without 
+strict validation of all parameters. 
+
+<div ' . $css_data['line_break'] . '><br><br></div>
+PHPMailer is a full-featured email 
+creation and transfer class for 
+PHP and is GNU Lesser 
+General Public Licensed email 
+messaging service software.</div>';
+
+                break;
+                case 'CONSTRUCTOR_FUNCTION':
+                case 'CONSTRUCTOR_FUNCTION_HTML':
+                case 'CONSTRUCTOR_FUNCTION_TEXT':
+
+                    /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
+                     * CLR-SSL Resource Registry 
+                     * Content Library Meta Data 
+                     * Output Controller. 
+                     *
+                     * CONSTRUCTOR_FUNCTION_HTML   = HTML Output 
+                     * CONSTRUCTOR_FUNCTION_TEXT   = Text Output 
+                     * CONSTRUCTOR_FUNCTION        = Multi-Part HTML 
+                     *                               & Text Output 
+                     *
+                     *
+                     * 5 ::
+                     *
+                     * Friday, November 7, 2025 @ 0420 hrs.
+                     *
+                     */
+                    switch($R_meta_key){
+                        case 'CONSTRUCTOR_FUNCTION_HTML':
+
+                            /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
+                             * Where the multi_part_output_mode 
+                             * values are:
+                             * - 'HTML', 
+                             * - 'TEXT', and 
+                             * - 'MULTI-PART'.
+                             *
+                             */
+                            $output_mode = 'HTML';
+
+                        break;
+                        case 'CONSTRUCTOR_FUNCTION_TEXT':
+
+                            $output_mode = 'TEXT';
+
+                        break;
+                        case 'CONSTRUCTOR_FUNCTION':
+                        default:
+
+                            $output_mode = 'MULTI-PART';
+
+                        break;
+
+                    }
+
+                    /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
+                     * Do we temporarily load the 
+                     * CLR-SSL Content Library 
+                     * Resource low-level 
+                     * language default $iso = 'en' 
+                     * Text data into server memory? 
+                     *
+                     *
+                     * 5 :: Thursday, November 6, 2025 @ 0336 hrs.
+                     *
+                     */
+                    if(($output_mode == 'TEXT') || 
+                        ($output_mode == 'MULTI-PART'))
+                        /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
+                         * Initialize the software
+                         * constructor function Text
+                         * data for this natively
+                         * registered resource of
+                         * the CRNRSTN :: Lightsaber
+                         * RoCEv2 SOAP Services
+                         * Layer (CLR-SSL) System
+                         * Resource Registry.
+                         *
+                         *
+                         * 5
+                         *
+                         * Sunday, August 25, 2024 @ 1010 hrs.
+                         *
+                         */
+                        $R_text = '__construct()';
+
+                    /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
+                     * Do we temporarily load the
+                     * CLR-SSL Content Library 
+                     * Resource low-level
+                     * language default $iso = 'en'
+                     * HTML data into server memory?
+                     *
+                     *
+                     * 5 :: Thursday, November 6, 2025 @ 0338 hrs.
+                     *
+                     */
+                    if(($output_mode == 'HTML') || 
+                        ($output_mode == 'MULTI-PART'))
+                        /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
+                         * Initialize the software
+                         * constructor function HTML 
+                         * data for this natively 
+                         * registered resource of
+                         * the CRNRSTN :: Lightsaber
+                         * RoCEv2 SOAP Services
+                         * Layer (CLR-SSL) System
+                         * Resource Registry.
+                         *
+                         *
+                         * 5
+                         *
+                         * Sunday, August 25, 2024 @ 1010 hrs.
+                         *
+                         */
+                        $R_html = '<span ' . 
+                        $css_data['constructor_function'] . 
+                        '>__construct()</span>';
+
+                break;
+                case 'PREVIEW_RESOURCE':
+                case 'PREVIEW_RESOURCE_HTML':
+                case 'PREVIEW_RESOURCE_TEXT':
+
+                    /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
+                     * CLR-SSL Resource Registry
+                     * Content Library Meta Data
+                     * Output Controller.
+                     *
+                     * PREVIEW_RESOURCE_HTML   = HTML Output
+                     * PREVIEW_RESOURCE_TEXT   = Text Output
+                     * PREVIEW_RESOURCE        = Multi-Part HTML
+                     *                           & Text Output
+                     *
+                     *
+                     * 5 ::
+                     *
+                     * Friday, November 7, 2025 @ 0420 hrs.
+                     *
+                     */
+                    switch($R_meta_key){
+                        case 'PREVIEW_RESOURCE_HTML':
+
+                            /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
+                             * Where the multi_part_output_mode 
+                             * values are:
+                             * - 'HTML', 
+                             * - 'TEXT', and 
+                             * - 'MULTI-PART'.
+                             *
+                             */
+                            $output_mode = 'HTML';
+
+                        break;
+                        case 'PREVIEW_RESOURCE_TEXT':
+
+                            $output_mode = 'TEXT';
+
+                        break;
+                        case 'PREVIEW_RESOURCE':
+                        default:
+
+                            $output_mode = 'MULTI-PART';
+
+                        break;
+
+                    }
+
+                    /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
+                     * Do we temporarily load the 
+                     * CLR-SSL Content Library 
+                     * Resource low-level 
+                     * language default $iso = 'en' 
+                     * Text data into server memory? 
+                     *
+                     *
+                     * 5 :: Thursday, November 6, 2025 @ 0336 hrs.
+                     *
+                     */
+                    if(($output_mode == 'TEXT') || 
+                        ($output_mode == 'MULTI-PART'))
+                        /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
+                         * Initialize the software
+                         * resource Text preview data
+                         * for this natively
+                         * registered resource of
+                         * the CRNRSTN :: Lightsaber
+                         * RoCEv2 SOAP Services
+                         * Layer (CLR-SSL) System
+                         * Resource Registry.
+                         *
+                         *
+                         * 5
+                         *
+                         * Sunday, August 25, 2024 @ 1017 hrs.
+                         *
+                         */
+                        $R_text = '';
+
+                    /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
+                     * Do we temporarily load the
+                     * CLR-SSL Content Library 
+                     * Resource low-level
+                     * language default $iso = 'en'
+                     * HTML data into server memory?
+                     *
+                     *
+                     * 5 :: Thursday, November 6, 2025 @ 0338 hrs.
+                     *
+                     */
+                    if(($output_mode == 'HTML') || 
+                        ($output_mode == 'MULTI-PART'))
+                        /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
+                         * Initialize the software
+                         * resource HTML preview data
+                         * for this natively
+                         * registered resource of
+                         * the CRNRSTN :: Lightsaber
+                         * RoCEv2 SOAP Services
+                         * Layer (CLR-SSL) System
+                         * Resource Registry.
+                         *
+                         *
+                         * 5
+                         *
+                         * Sunday, August 25, 2024 @ 1017 hrs.
+                         *
+                         */
+                        $R_html = '';
+
+                break;
+                case 'SOCIAL_MEDIA_PREVIEW_META':
+                    // 5 :: Thursday, July 18, 2024 @ 0215 hrs.
+
+                    $R_resp[$memory_pointer]['meta'] = _crnrstn_native_resource_registry_meta_social_media(
+                                                       $R_resp, 
+                                                       $R_meta_key, 
+                                                       $R, 
+                                                       $R_debug_mode);
+
+                break;
+                case 'LICENSE_NAME':
+                case 'LICENSE_NAME_HTML':
+                case 'LICENSE_NAME_TEXT':
+                    // 5 :: Friday, April 17, 2026 @ 0605 hrs.
+                case 'LICENSE_URL':
+                case 'LICENSE_URL_HTML':
+                case 'LICENSE_URL_TEXT':
+                    // 5 :: Monday, April 20, 2026 @ 0913 hrs.
+
+                    $R_resp[$memory_pointer]['meta'] = _crnrstn_native_resource_registry_meta_license(
+                                                       $R_resp, 
+                                                       $R_meta_key, 
+                                                       $R, 
+                                                       $R_debug_mode, 
+                                                       $css_data);
+
+                break;
+                case 'COMPANY_NAME':
+                case 'COMPANY_NAME_HTML':
+                case 'COMPANY_NAME_TEXT':
+                case 'AUTHOR_CONTRIBUTORS':
+                case 'AUTHOR_CONTRIBUTORS_HTML':
+                case 'AUTHOR_CONTRIBUTORS_TEXT':
+                case 'COPYRIGHT':
+                case 'COPYRIGHT_HTML':
+                case 'COPYRIGHT_TEXT':
+                case 'URL':
+                case 'URL_HTML':
+                case 'URL_TEXT':
+                case 'MEDIA_ELEMENT_KEY':
+                    // 5 :: Friday, April 17, 2026 @ 0605 hrs.
+
+                    $R_resp[$memory_pointer]['meta'] = _crnrstn_native_resource_registry_meta_corporate(
+                                                       $R_resp, 
+                                                       $R_meta_key, 
+                                                       $R, 
+                                                       $R_debug_mode, 
+                                                       $css_data);
+
+                break;
+                default:
+
+                    $clr_ssl_msg = 'Unable to return unknown ' . 
+                                   $R_meta_key . 
+                                   ' copy data for the system resource, ' . 
+                                   $R_resp[$memory_pointer]['resource_name'] . '.';
+
+                    if(!\method_exists($R, 'process_R_resp')){
+
+                        // 5 :: Tuesday, May 19, 2026 @ 0816 hrs.
+                        if(($R_debug_mode === CRNRSTN_DEBUG_ON) || 
+                            ($R_debug_mode === CRNRSTN_DEBUG_SYSLOG) || 
+                            ($R_debug_mode === CRNRSTN_SYSTEM_TEST))
+                        {
+
+                            $syslog_level     = LOG_WARNING;
+                            $tod              = \gettimeofday();
+                            $sec              = $tod['sec'];
+                            $usec             = $tod['usec'];
+                            $micro_time_float = $sec . '.' . \sprintf('%06d', $usec);
+                            $timediff         = (float) $micro_time_float - $_SERVER['REQUEST_TIME_FLOAT'];
+                            $syslog_prefix    = 'R :: [' . \strftime('%Y-%m-%d %H:%M:%S', $sec) . 
+                                                '.' . \sprintf('%06d', $usec) . 
+                                                '] [func ' . 
+                                                __FUNCTION__ . '] [lnum ' . 
+                                                __LINE__ . '] [rtime ' . 
+                                                \substr($timediff, 0, -8) . 
+                                                '] ';
+                            \openlog(
+                                $syslog_prefix, 
+                                \LOG_CONS | 
+                                \LOG_NDELAY | 
+                                \LOG_NOWAIT | 
+                                \LOG_PID | 
+                                \LOG_PERROR, 
+                                \LOG_SYSLOG);
+                            \syslog($syslog_level, $clr_ssl_msg);
+                            \closelog();
+
+                        }
+
+                    }else{
+
+                        // 5 :: Mon May xxxxxxxxxxxxxxxxxxxxxxxxxxx
+                        $msg_token = 'd9c5ca131ab8615a1738c340cf44c4ff' . 
+                                     'xxxxxxxxxxxxxxxxxxxxxxxxxxx';
+                        $token_generation_date = '2026xxxxxxxxxxxxxxxxxxxxxxxxxxx';
+                        $token = array(
+                                 'token'                   => $msg_token, 
+                                 'token_generation_date'   => $token_generation_date, 
+                                 'request_type'            => __FUNCTION__, 
+                                 'code'                    => 200, 
+                                 'clr_ssl_msg'             => $clr_ssl_msg);
+                        $R->error_log(
+                            $clr_ssl_msg, 
+                            \LOG_ERR, 
+                            \E_ERROR, 
+                            __LINE__, 
+                            __FUNCTION__, 
+                            __FILE__, 
+                            $token);
+
+                    }
+
+                break;
+
+            }
+
+        break;
+        case $root . $os_path_dir_separator_char . 
+             'class' . $os_path_dir_separator_char . 
+             'thirdparty' . $os_path_dir_separator_char . 
+             'phpmailer' . $os_path_dir_separator_char . 
+             '6.1.6' . $os_path_dir_separator_char . 
              'src' . $os_path_dir_separator_char . 
              'Exception.php':
-        case 'Exception.php':
+        case '6.1.6' . $os_path_dir_separator_char . 
+             'Exception.php':
+        case $root . $os_path_dir_separator_char . 
+             'class' . $os_path_dir_separator_char . 
+             'thirdparty' . $os_path_dir_separator_char . 
+             'phpmailer' . $os_path_dir_separator_char . 
+             '7.1.1' . $os_path_dir_separator_char . 
+             'src' . $os_path_dir_separator_char . 
+             'Exception.php': 
+        case '7.1.1' . $os_path_dir_separator_char . 
+             'Exception.php':
         case __NAMESPACE__ . 
              '\Exception': // 5 :: Wednesday, June 17, 2026 @ 1106 hrs.
         case 'Exception':
@@ -1873,9 +2423,20 @@ messaging service software.</div>';
              'class' . $os_path_dir_separator_char . 
              'thirdparty' . $os_path_dir_separator_char . 
              'phpmailer' . $os_path_dir_separator_char . 
+             '6.1.6' . $os_path_dir_separator_char . 
              'src' . $os_path_dir_separator_char . 
              'PHPMailer.php':
-        case 'PHPMailer.php':
+        case '6.1.6' . $os_path_dir_separator_char . 
+             'PHPMailer.php':
+        case $root . $os_path_dir_separator_char . 
+             'class' . $os_path_dir_separator_char . 
+             'thirdparty' . $os_path_dir_separator_char . 
+             'phpmailer' . $os_path_dir_separator_char . 
+             '7.1.1' . $os_path_dir_separator_char . 
+             'src' . $os_path_dir_separator_char . 
+             'PHPMailer.php':
+        case '7.1.1' . $os_path_dir_separator_char . 
+             'PHPMailer.php':
         case __NAMESPACE__ . 
              '\PHPMailer':
         case 'PHPMailer':
@@ -2524,9 +3085,20 @@ messaging service software.</div>';
              'class' . $os_path_dir_separator_char . 
              'thirdparty' . $os_path_dir_separator_char . 
              'phpmailer' . $os_path_dir_separator_char . 
+             '6.1.6' . $os_path_dir_separator_char . 
              'src' . $os_path_dir_separator_char . 
              'SMTP.php':
-        case 'SMTP.php':
+        case '6.1.6' . $os_path_dir_separator_char . 
+             'SMTP.php':
+        case $root . $os_path_dir_separator_char . 
+             'class' . $os_path_dir_separator_char . 
+             'thirdparty' . $os_path_dir_separator_char . 
+             'phpmailer' . $os_path_dir_separator_char . 
+             '7.1.1' . $os_path_dir_separator_char . 
+             'src' . $os_path_dir_separator_char . 
+             'SMTP.php':
+        case '7.1.1' . $os_path_dir_separator_char . 
+             'SMTP.php':
         case __NAMESPACE__ . 
              '\SMTP':
         case 'SMTP':
@@ -3160,9 +3732,20 @@ messaging service software.</div>';
              'class' . $os_path_dir_separator_char . 
              'thirdparty' . $os_path_dir_separator_char . 
              'phpmailer' . $os_path_dir_separator_char . 
+             '6.1.6' . $os_path_dir_separator_char . 
              'src' . $os_path_dir_separator_char . 
              'OAuth.php':
-        case 'OAuth.php':
+        case '6.1.6' . $os_path_dir_separator_char . 
+             'OAuth.php':
+        case $root . $os_path_dir_separator_char . 
+             'class' . $os_path_dir_separator_char . 
+             'thirdparty' . $os_path_dir_separator_char . 
+             'phpmailer' . $os_path_dir_separator_char . 
+             '7.1.1' . $os_path_dir_separator_char . 
+             'src' . $os_path_dir_separator_char . 
+             'OAuth.php':
+        case '7.1.1' . $os_path_dir_separator_char . 
+             'OAuth.php':
         case __NAMESPACE__ . 
              '\OAuth':
         case 'OAuth':
@@ -3792,9 +4375,635 @@ messaging service software.</div>';
              'class' . $os_path_dir_separator_char . 
              'thirdparty' . $os_path_dir_separator_char . 
              'phpmailer' . $os_path_dir_separator_char . 
+             '7.1.1' . $os_path_dir_separator_char . 
+             'src' . $os_path_dir_separator_char . 
+             'OAuthTokenProvider.php':
+        case '7.1.1' . $os_path_dir_separator_char . 
+             'OAuthTokenProvider.php':
+        case __NAMESPACE__ . 
+             '\OAuthTokenProvider':
+        case 'OAuthTokenProvider':
+        case 'gabriel_oauth_token':
+            /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
+             * INTERFACE_DEFINITION
+             *
+             * # C # R # N # R # S # T # N # :: # L # I # G # H # T
+             * Initialize an output type 
+             * control parameter to support 
+             * HTML, Text, and Multi-Part output. 
+             *
+             * Where, 
+             * $output_mode = ['HTML', 
+             *                 'TEXT', 
+             *                 'MULTI-PART']
+             *
+             *
+             * 5 :: Thursday, November 6, 2025 @ 0324 hrs.
+             *
+             */
+            $output_mode = NULL;
+
+            switch($R_meta_key){
+                case 'TITLE':
+                case 'TITLE_HTML':
+                case 'TITLE_TEXT':
+
+                    /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
+                     * CLR-SSL Resource Registry
+                     * Content Library Meta Data
+                     * Output Controller.
+                     *
+                     * TITLE_HTML   = HTML Output
+                     * TITLE_TEXT   = Text Output
+                     * TITLE        = Multi-Part HTML
+                     *                & Text Output
+                     *
+                     *
+                     * 5 ::
+                     *
+                     * Thursday, October 30, 2025 @ 0728 hrs.
+                     *
+                     */
+                    switch($R_meta_key){
+                        case 'TITLE_HTML':
+
+                            /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
+                             * Where the multi_part_output_mode 
+                             * values are:
+                             * - 'HTML', 
+                             * - 'TEXT', and 
+                             * - 'MULTI-PART'.
+                             *
+                             */
+                            $output_mode = 'HTML';
+
+                        break;
+                        case 'TITLE_TEXT':
+
+                            $output_mode = 'TEXT';
+
+                        break;
+                        case 'TITLE':
+                        default:
+
+                            $output_mode = 'MULTI-PART';
+
+                        break;
+
+                    }
+
+                    /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
+                     * Do we temporarily load the 
+                     * CLR-SSL Content Library 
+                     * Resource low-level 
+                     * language default $iso = 'en' 
+                     * Text data into server memory? 
+                     *
+                     *
+                     * 5 :: Thursday, November 6, 2025 @ 0336 hrs.
+                     *
+                     */
+                    if(($output_mode == 'TEXT') || 
+                        ($output_mode == 'MULTI-PART'))
+                        /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
+                         * Standardize the Text data 
+                         * parameter variable name in 
+                         * order to hold the Text 
+                         * data handling parallel to 
+                         * to the HTML data handling 
+                         * in the same architecture. 
+                         *
+                         *
+                         * 5
+                         *
+                         * Thursday, October 30, 2025 @ 1420 hrs.
+                         *
+                         */
+                        $R_text = $R_resp[$memory_pointer]['title']['TEXT'];
+
+                    /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
+                     * Do we temporarily load the
+                     * CLR-SSL Content Library 
+                     * Resource low-level
+                     * language default $iso = 'en'
+                     * HTML data into server memory?
+                     *
+                     *
+                     * 5 :: Thursday, November 6, 2025 @ 0338 hrs.
+                     *
+                     */
+                    if(($output_mode == 'HTML') || 
+                        ($output_mode == 'MULTI-PART'))
+                        /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
+                         * Initialize the multi-part
+                         * title data for this natively
+                         * registered resource of the
+                         * CRNRSTN :: Lightsaber RoCEv2
+                         * SOAP Services Layer (CLR-SSL)
+                         * System Resource Registry.
+                         *
+                         *
+                         * 5
+                         *
+                         */
+                        $R_html = '<span ' . $css_data['title'] . 
+                        '>The OAuth2 Token Provider ' . 
+                        'Interface for PHPMailer, a ' . 
+                        'full-featured email creation ' . 
+                        'and transfer class for PHP</span>';
+
+                break;
+                case 'DESCRIPTION':
+                case 'DESCRIPTION_HTML':
+                case 'DESCRIPTION_TEXT':
+
+                    /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
+                     * CLR-SSL Resource Registry
+                     * Content Library Meta Data
+                     * Output Controller.
+                     *
+                     * DESCRIPTION_HTML   = HTML Output
+                     * DESCRIPTION_TEXT   = Text Output
+                     * DESCRIPTION        = Multi-Part HTML
+                     *                      & Text Output
+                     *
+                     *
+                     * 5 ::
+                     *
+                     * Friday, November 7, 2025 @ 0420 hrs.
+                     *
+                     */
+                    switch($R_meta_key){
+                        case 'DESCRIPTION_HTML':
+
+                            /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
+                             * Where the multi_part_output_mode 
+                             * values are:
+                             * - 'HTML', 
+                             * - 'TEXT', and 
+                             * - 'MULTI-PART'.
+                             *
+                             */
+                            $output_mode = 'HTML';
+
+                        break;
+                        case 'DESCRIPTION_TEXT':
+
+                            $output_mode = 'TEXT';
+
+                        break;
+                        case 'DESCRIPTION':
+                        default:
+
+                            $output_mode = 'MULTI-PART';
+
+                        break;
+
+                    }
+
+                    /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
+                     * Do we temporarily load the 
+                     * CLR-SSL Content Library 
+                     * Resource low-level 
+                     * language default $iso = 'en' 
+                     * Text data into server memory? 
+                     *
+                     *
+                     * 5 :: Thursday, November 6, 2025 @ 0336 hrs.
+                     *
+                     */
+                    if(($output_mode == 'TEXT') || 
+                        ($output_mode == 'MULTI-PART'))
+                        /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
+                         * Initialize the software
+                         * description Text data
+                         * for this natively
+                         * registered resource of
+                         * the CRNRSTN :: Lightsaber
+                         * RoCEv2 SOAP Services
+                         * Layer (CLR-SSL) System
+                         * Resource Registry.
+                         *
+                         *
+                         * 5
+                         *
+                         * Thursday, October 30, 2025 @ 1420 hrs.
+                         *
+                         */
+                        $R_text = 'The PHPMailer OAuth2 token provider 
+interface provides base64 encoded 
+OAuth2 auth strings for 
+SMTP authentication. 
+
+PHPMailer is a full-featured email 
+creation and transfer class for 
+PHP and is GNU Lesser 
+General Public Licensed email 
+messaging service software.';
+
+                    /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
+                     * Do we temporarily load the
+                     * CLR-SSL Content Library 
+                     * Resource low-level
+                     * language default $iso = 'en'
+                     * HTML data into server memory?
+                     *
+                     *
+                     * 5 :: Thursday, November 6, 2025 @ 0338 hrs.
+                     *
+                     */
+                    if(($output_mode == 'HTML') || 
+                        ($output_mode == 'MULTI-PART'))
+                        /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
+                         * Initialize the software
+                         * description HTML data
+                         * for this natively
+                         * registered resource of
+                         * the CRNRSTN :: Lightsaber
+                         * RoCEv2 SOAP Services
+                         * Layer (CLR-SSL) System
+                         * Resource Registry.
+                         *
+                         *
+                         * 5
+                         *
+                         * Sunday, August 25, 2024 @ 1109 hrs.
+                         *
+                         */
+                        $R_html = '<div ' . $css_data['description'] . 
+                        '>The PHPMailer OAuth2 token provider 
+interface provides base64 encoded 
+OAuth2 auth strings for 
+SMTP authentication. 
+
+<div ' . $css_data['line_break'] . '><br><br></div>
+PHPMailer is a full-featured email 
+creation and transfer class for 
+PHP and is GNU Lesser 
+General Public Licensed email 
+messaging service software.</div>';
+
+                break;
+                case 'CONSTRUCTOR_FUNCTION':
+                case 'CONSTRUCTOR_FUNCTION_HTML':
+                case 'CONSTRUCTOR_FUNCTION_TEXT':
+
+                    /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
+                     * CLR-SSL Resource Registry 
+                     * Content Library Meta Data 
+                     * Output Controller. 
+                     *
+                     * CONSTRUCTOR_FUNCTION_HTML   = HTML Output 
+                     * CONSTRUCTOR_FUNCTION_TEXT   = Text Output 
+                     * CONSTRUCTOR_FUNCTION        = Multi-Part HTML 
+                     *                               & Text Output 
+                     *
+                     *
+                     * 5 ::
+                     *
+                     * Friday, November 7, 2025 @ 0420 hrs.
+                     *
+                     */
+                    switch($R_meta_key){
+                        case 'CONSTRUCTOR_FUNCTION_HTML':
+
+                            /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
+                             * Where the multi_part_output_mode 
+                             * values are:
+                             * - 'HTML', 
+                             * - 'TEXT', and 
+                             * - 'MULTI-PART'.
+                             *
+                             */
+                            $output_mode = 'HTML';
+
+                        break;
+                        case 'CONSTRUCTOR_FUNCTION_TEXT':
+
+                            $output_mode = 'TEXT';
+
+                        break;
+                        case 'CONSTRUCTOR_FUNCTION':
+                        default:
+
+                            $output_mode = 'MULTI-PART';
+
+                        break;
+
+                    }
+
+                    /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
+                     * Do we temporarily load the 
+                     * CLR-SSL Content Library 
+                     * Resource low-level 
+                     * language default $iso = 'en' 
+                     * Text data into server memory? 
+                     *
+                     *
+                     * 5 :: Thursday, November 6, 2025 @ 0336 hrs.
+                     *
+                     */
+                    if(($output_mode == 'TEXT') || 
+                        ($output_mode == 'MULTI-PART'))
+                        /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
+                         * Initialize the software
+                         * constructor function Text
+                         * data for this natively
+                         * registered resource of
+                         * the CRNRSTN :: Lightsaber
+                         * RoCEv2 SOAP Services
+                         * Layer (CLR-SSL) System
+                         * Resource Registry.
+                         *
+                         *
+                         * 5
+                         *
+                         * Sunday, August 25, 2024 @ 1108 hrs.
+                         *
+                         */
+                        $R_text = '';
+
+                    /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
+                     * Do we temporarily load the
+                     * CLR-SSL Content Library 
+                     * Resource low-level
+                     * language default $iso = 'en'
+                     * HTML data into server memory?
+                     *
+                     *
+                     * 5 :: Thursday, November 6, 2025 @ 0338 hrs.
+                     *
+                     */
+                    if(($output_mode == 'HTML') || 
+                        ($output_mode == 'MULTI-PART'))
+                        /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
+                         * Initialize the software
+                         * constructor function HTML
+                         * data for this natively
+                         * registered resource of
+                         * the CRNRSTN :: Lightsaber
+                         * RoCEv2 SOAP Services
+                         * Layer (CLR-SSL) System
+                         * Resource Registry.
+                         *
+                         *
+                         * 5
+                         *
+                         * Sunday, August 25, 2024 @ 1108 hrs.
+                         *
+                         */
+                        $R_html = '<span ' . $css_data['constructor_function'] . 
+                        '></span>';
+
+                break;
+                case 'PREVIEW_RESOURCE':
+                case 'PREVIEW_RESOURCE_HTML':
+                case 'PREVIEW_RESOURCE_TEXT':
+
+                    /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
+                     * CLR-SSL Resource Registry
+                     * Content Library Meta Data
+                     * Output Controller.
+                     *
+                     * PREVIEW_RESOURCE_HTML   = HTML Output
+                     * PREVIEW_RESOURCE_TEXT   = Text Output
+                     * PREVIEW_RESOURCE        = Multi-Part HTML
+                     *                           & Text Output
+                     *
+                     *
+                     * 5 ::
+                     *
+                     * Friday, November 7, 2025 @ 0420 hrs.
+                     *
+                     */
+                    switch($R_meta_key){
+                        case 'PREVIEW_RESOURCE_HTML':
+
+                            /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
+                             * Where the multi_part_output_mode 
+                             * values are:
+                             * - 'HTML', 
+                             * - 'TEXT', and 
+                             * - 'MULTI-PART'.
+                             *
+                             */
+                            $output_mode = 'HTML';
+
+                        break;
+                        case 'PREVIEW_RESOURCE_TEXT':
+
+                            $output_mode = 'TEXT';
+
+                        break;
+                        case 'PREVIEW_RESOURCE':
+                        default:
+
+                            $output_mode = 'MULTI-PART';
+
+                        break;
+
+                    }
+
+                    /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
+                     * Do we temporarily load the 
+                     * CLR-SSL Content Library 
+                     * Resource low-level 
+                     * language default $iso = 'en' 
+                     * Text data into server memory? 
+                     *
+                     *
+                     * 5 :: Thursday, November 6, 2025 @ 0336 hrs.
+                     *
+                     */
+                    if(($output_mode == 'TEXT') || 
+                        ($output_mode == 'MULTI-PART'))
+                        /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
+                         * Initialize the software
+                         * resource HTML preview data
+                         * for this natively
+                         * registered resource of
+                         * the CRNRSTN :: Lightsaber
+                         * RoCEv2 SOAP Services
+                         * Layer (CLR-SSL) System
+                         * Resource Registry.
+                         *
+                         *
+                         * 5
+                         *
+                         * Thursday, October 30, 2025 @ 1420 hrs.
+                         *
+                         */
+                        $R_text = '';
+
+                    /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
+                     * Do we temporarily load the
+                     * CLR-SSL Content Library 
+                     * Resource low-level
+                     * language default $iso = 'en'
+                     * HTML data into server memory?
+                     *
+                     *
+                     * 5 :: Thursday, November 6, 2025 @ 0338 hrs.
+                     *
+                     */
+                    if(($output_mode == 'HTML') || 
+                        ($output_mode == 'MULTI-PART'))
+                        /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
+                         * Initialize the software
+                         * resource HTML preview data
+                         * for this natively
+                         * registered resource of
+                         * the CRNRSTN :: Lightsaber
+                         * RoCEv2 SOAP Services
+                         * Layer (CLR-SSL) System
+                         * Resource Registry.
+                         *
+                         *
+                         * 5
+                         *
+                         * Sunday, August 25, 2024 @ 1112 hrs.
+                         *
+                         */
+                        $R_html = '';
+
+                break;
+                case 'SOCIAL_MEDIA_PREVIEW_META':
+                    // 5 :: Friday, April 17, 2026 @ 1238 hrs.
+
+                    $R_resp[$memory_pointer]['meta'] = _crnrstn_native_resource_registry_meta_social_media(
+                                                       $R_resp, 
+                                                       $R_meta_key, 
+                                                       $R, 
+                                                       $R_debug_mode);
+
+                break;
+                case 'LICENSE_NAME':
+                case 'LICENSE_NAME_HTML':
+                case 'LICENSE_NAME_TEXT':
+                    // 5 :: Friday, April 17, 2026 @ 0605 hrs.
+                case 'LICENSE_URL':
+                case 'LICENSE_URL_HTML':
+                case 'LICENSE_URL_TEXT':
+                    // 5 :: Monday, April 20, 2026 @ 0913 hrs.
+
+                    $R_resp[$memory_pointer]['meta'] = _crnrstn_native_resource_registry_meta_license(
+                                                       $R_resp, 
+                                                       $R_meta_key, 
+                                                       $R, 
+                                                       $R_debug_mode, 
+                                                       $css_data);
+
+                break;
+                case 'COMPANY_NAME':
+                case 'COMPANY_NAME_HTML':
+                case 'COMPANY_NAME_TEXT':
+                case 'AUTHOR_CONTRIBUTORS':
+                case 'AUTHOR_CONTRIBUTORS_HTML':
+                case 'AUTHOR_CONTRIBUTORS_TEXT':
+                case 'COPYRIGHT':
+                case 'COPYRIGHT_HTML':
+                case 'COPYRIGHT_TEXT':
+                case 'URL':
+                case 'URL_HTML':
+                case 'URL_TEXT':
+                case 'MEDIA_ELEMENT_KEY':
+                    // 5 :: Friday, April 17, 2026 @ 0605 hrs.
+
+                    $R_resp[$memory_pointer]['meta'] = _crnrstn_native_resource_registry_meta_corporate(
+                                                       $R_resp, 
+                                                       $R_meta_key, 
+                                                       $R, 
+                                                       $R_debug_mode, 
+                                                       $css_data);
+
+                break;
+                default:
+
+                    $clr_ssl_msg = 'Unable to return unknown ' . 
+                                   $R_meta_key . 
+                                   ' copy data for the system resource, ' . 
+                                   $R_resp[$memory_pointer]['resource_name'] . '.';
+
+                    if(!\method_exists($R, 'process_R_resp')){
+
+                        // 5 :: Tuesday, May 19, 2026 @ 0820 hrs.
+                        if(($R_debug_mode === CRNRSTN_DEBUG_ON) || 
+                            ($R_debug_mode === CRNRSTN_DEBUG_SYSLOG) || 
+                            ($R_debug_mode === CRNRSTN_SYSTEM_TEST))
+                        {
+
+                            $syslog_level     = LOG_WARNING;
+                            $tod              = \gettimeofday();
+                            $sec              = $tod['sec'];
+                            $usec             = $tod['usec'];
+                            $micro_time_float = $sec . '.' . \sprintf('%06d', $usec);
+                            $timediff         = (float) $micro_time_float - $_SERVER['REQUEST_TIME_FLOAT'];
+                            $syslog_prefix    = 'R :: [' . \strftime('%Y-%m-%d %H:%M:%S', $sec) . 
+                                                '.' . \sprintf('%06d', $usec) . 
+                                                '] [func ' . 
+                                                __FUNCTION__ . '] [lnum ' . 
+                                                __LINE__ . '] [rtime ' . 
+                                                \substr($timediff, 0, -8) . 
+                                                '] ';
+                            \openlog(
+                                $syslog_prefix, 
+                                \LOG_CONS | 
+                                \LOG_NDELAY | 
+                                \LOG_NOWAIT | 
+                                \LOG_PID | 
+                                \LOG_PERROR, 
+                                \LOG_SYSLOG);
+                            \syslog($syslog_level, $clr_ssl_msg);
+                            \closelog();
+
+                        }
+
+                    }else{
+
+                        // 5 :: Mon May xxxxxxxxxxxxxxxxxxxxxxxxxxx
+                        $msg_token = 'd9c5ca131ab8615a1738c340cf44c4ff' . 
+                                     'xxxxxxxxxxxxxxxxxxxxxxxxxxx';
+                        $token_generation_date = '2026xxxxxxxxxxxxxxxxxxxxxxxxxxx';
+                        $token = array(
+                                 'token'                   => $msg_token, 
+                                 'token_generation_date'   => $token_generation_date, 
+                                 'request_type'            => __FUNCTION__, 
+                                 'code'                    => 200, 
+                                 'clr_ssl_msg'             => $clr_ssl_msg);
+                        $R->error_log(
+                            $clr_ssl_msg, 
+                            \LOG_ERR, 
+                            \E_ERROR, 
+                            __LINE__, 
+                            __FUNCTION__, 
+                            __FILE__, 
+                            $token);
+
+                    }
+
+                break;
+
+            }
+
+        break;
+        case $root . $os_path_dir_separator_char . 
+             'class' . $os_path_dir_separator_char . 
+             'thirdparty' . $os_path_dir_separator_char . 
+             'phpmailer' . $os_path_dir_separator_char . 
+             '6.1.6' . $os_path_dir_separator_char . 
              'src' . $os_path_dir_separator_char . 
              'POP3.php':
-        case 'POP3.php':
+        case '6.1.6' . $os_path_dir_separator_char . 
+             'POP3.php':
+        case $root . $os_path_dir_separator_char . 
+             'class' . $os_path_dir_separator_char . 
+             'thirdparty' . $os_path_dir_separator_char . 
+             'phpmailer' . $os_path_dir_separator_char . 
+             '7.1.1' . $os_path_dir_separator_char . 
+             'src' . $os_path_dir_separator_char . 
+             'POP3.php':
+        case '7.1.1' . $os_path_dir_separator_char . 
+             'POP3.php':
         case __NAMESPACE__ . 
              '\POP3':
         case 'POP3':
@@ -4453,10 +5662,10 @@ messaging service software.</div>';
              * control parameter to support
              * HTML, Text, and Multi-Part output.
              *
-             * Where,
-             * $output_mode = ['HTML',
-             *                                'TEXT',
-             *                                'MULTI-PART']
+             * Where, 
+             * $output_mode = ['HTML', 
+             *                 'TEXT', 
+             *                 'MULTI-PART']
              *
              *
              * 5 :: Thursday, November 6, 2025 @ 0324 hrs.
@@ -4489,11 +5698,11 @@ messaging service software.</div>';
                         case 'TITLE_HTML':
 
                             /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
-                             * Where the multi_part_output_mode
+                             * Where the multi_part_output_mode 
                              * values are:
-                             * - 'HTML',
-                             * - 'TEXT', and
-                             * - 'MULTI-PART'.
+                             * - 'HTML', 
+                             * - 'TEXT', and 
+                             * - 'MULTI-PART'. 
                              *
                              */
                             $output_mode = 'HTML';
@@ -4597,11 +5806,11 @@ messaging service software.</div>';
                         case 'DESCRIPTION_HTML':
 
                             /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
-                             * Where the multi_part_output_mode
+                             * Where the multi_part_output_mode 
                              * values are:
-                             * - 'HTML',
-                             * - 'TEXT', and
-                             * - 'MULTI-PART'.
+                             * - 'HTML', 
+                             * - 'TEXT', and 
+                             * - 'MULTI-PART'. 
                              *
                              */
                             $output_mode = 'HTML';
@@ -4715,11 +5924,11 @@ messaging service software.</div>';
                         case 'CONSTRUCTOR_FUNCTION_HTML':
 
                             /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
-                             * Where the multi_part_output_mode
+                             * Where the multi_part_output_mode 
                              * values are:
-                             * - 'HTML',
-                             * - 'TEXT', and
-                             * - 'MULTI-PART'.
+                             * - 'HTML', 
+                             * - 'TEXT', and 
+                             * - 'MULTI-PART'. 
                              *
                              */
                             $output_mode = 'HTML';
@@ -4827,11 +6036,11 @@ messaging service software.</div>';
                         case 'PREVIEW_RESOURCE_HTML':
 
                             /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
-                             * Where the multi_part_output_mode
+                             * Where the multi_part_output_mode 
                              * values are:
-                             * - 'HTML',
-                             * - 'TEXT', and
-                             * - 'MULTI-PART'.
+                             * - 'HTML', 
+                             * - 'TEXT', and 
+                             * - 'MULTI-PART'. 
                              *
                              */
                             $output_mode = 'HTML';
@@ -4989,12 +6198,12 @@ messaging service software.</div>';
                                                 \substr($timediff, 0, -8) . 
                                                 '] ';
                             \openlog(
-                                $syslog_prefix,
+                                $syslog_prefix, 
                                 \LOG_CONS |
                                 \LOG_NDELAY |
                                 \LOG_NOWAIT |
                                 \LOG_PID |
-                                \LOG_PERROR,
+                                \LOG_PERROR, 
                                 \LOG_SYSLOG);
                             \syslog($syslog_level, $clr_ssl_msg);
                             \closelog();
@@ -5008,18 +6217,18 @@ messaging service software.</div>';
                                      'xxxxxxxxxxxxxxxxxxxxxxxxxxx';
                         $token_generation_date = '2026xxxxxxxxxxxxxxxxxxxxxxxxxxx';
                         $token = array(
-                                 'token'                   => $msg_token,
-                                 'token_generation_date'   => $token_generation_date,
-                                 'request_type'            => __FUNCTION__,
-                                 'code'                    => 200,
+                                 'token'                   => $msg_token, 
+                                 'token_generation_date'   => $token_generation_date, 
+                                 'request_type'            => __FUNCTION__, 
+                                 'code'                    => 200, 
                                  'clr_ssl_msg'             => $clr_ssl_msg);
                         $R->error_log(
-                            $clr_ssl_msg,
-                            \LOG_ERR,
-                            \E_ERROR,
-                            __LINE__,
-                            __FUNCTION__,
-                            __FILE__,
+                            $clr_ssl_msg, 
+                            \LOG_ERR, 
+                            \E_ERROR, 
+                            __LINE__, 
+                            __FUNCTION__, 
+                            __FILE__, 
                             $token);
 
                     }
@@ -5032,7 +6241,8 @@ messaging service software.</div>';
         case $root . $os_path_dir_separator_char . 
              'class' . $os_path_dir_separator_char . 
              'thirdparty' . $os_path_dir_separator_char . 
-             'phpmailer' . $os_path_dir_separator_char . 
+             'nette_mail' . $os_path_dir_separator_char . 
+             '4.2.1' . $os_path_dir_separator_char . 
              'src' . $os_path_dir_separator_char . 
              'MimePart.php':
         case 'MimePart.php':
@@ -5063,10 +6273,10 @@ messaging service software.</div>';
              * control parameter to support
              * HTML, Text, and Multi-Part output.
              *
-             * Where,
-             * $output_mode = ['HTML',
-             *                                'TEXT',
-             *                                'MULTI-PART']
+             * Where, 
+             * $output_mode = ['HTML', 
+             *                 'TEXT', 
+             *                 'MULTI-PART']
              *
              *
              * 5 :: Thursday, November 6, 2025 @ 0324 hrs.
@@ -5099,11 +6309,11 @@ messaging service software.</div>';
                         case 'TITLE_HTML':
 
                             /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
-                             * Where the multi_part_output_mode
+                             * Where the multi_part_output_mode 
                              * values are:
-                             * - 'HTML',
-                             * - 'TEXT', and
-                             * - 'MULTI-PART'.
+                             * - 'HTML', 
+                             * - 'TEXT', and 
+                             * - 'MULTI-PART'. 
                              *
                              */
                             $output_mode = 'HTML';
@@ -5207,11 +6417,11 @@ messaging service software.</div>';
                         case 'DESCRIPTION_HTML':
 
                             /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
-                             * Where the multi_part_output_mode
+                             * Where the multi_part_output_mode 
                              * values are:
-                             * - 'HTML',
-                             * - 'TEXT', and
-                             * - 'MULTI-PART'.
+                             * - 'HTML', 
+                             * - 'TEXT', and 
+                             * - 'MULTI-PART'. 
                              *
                              */
                             $output_mode = 'HTML';
@@ -5326,11 +6536,11 @@ messaging service software.</div>';
                         case 'CONSTRUCTOR_FUNCTION_HTML':
 
                             /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
-                             * Where the multi_part_output_mode
+                             * Where the multi_part_output_mode 
                              * values are:
-                             * - 'HTML',
-                             * - 'TEXT', and
-                             * - 'MULTI-PART'.
+                             * - 'HTML', 
+                             * - 'TEXT', and 
+                             * - 'MULTI-PART'. 
                              *
                              */
                             $output_mode = 'HTML';
@@ -5438,11 +6648,11 @@ messaging service software.</div>';
                         case 'PREVIEW_RESOURCE_HTML':
 
                             /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
-                             * Where the multi_part_output_mode
+                             * Where the multi_part_output_mode 
                              * values are:
-                             * - 'HTML',
-                             * - 'TEXT', and
-                             * - 'MULTI-PART'.
+                             * - 'HTML', 
+                             * - 'TEXT', and 
+                             * - 'MULTI-PART'. 
                              *
                              */
                             $output_mode = 'HTML';
@@ -5600,12 +6810,12 @@ messaging service software.</div>';
                                                 \substr($timediff, 0, -8) . 
                                                 '] ';
                             \openlog(
-                                $syslog_prefix,
+                                $syslog_prefix, 
                                 \LOG_CONS |
                                 \LOG_NDELAY |
                                 \LOG_NOWAIT |
                                 \LOG_PID |
-                                \LOG_PERROR,
+                                \LOG_PERROR, 
                                 \LOG_SYSLOG);
                             \syslog($syslog_level, $clr_ssl_msg);
                             \closelog();
@@ -5619,18 +6829,18 @@ messaging service software.</div>';
                                      'xxxxxxxxxxxxxxxxxxxxxxxxxxx';
                         $token_generation_date = '2026xxxxxxxxxxxxxxxxxxxxxxxxxxx';
                         $token = array(
-                                 'token'                   => $msg_token,
-                                 'token_generation_date'   => $token_generation_date,
-                                 'request_type'            => __FUNCTION__,
-                                 'code'                    => 200,
+                                 'token'                   => $msg_token, 
+                                 'token_generation_date'   => $token_generation_date, 
+                                 'request_type'            => __FUNCTION__, 
+                                 'code'                    => 200, 
                                  'clr_ssl_msg'             => $clr_ssl_msg);
                         $R->error_log(
-                            $clr_ssl_msg,
-                            \LOG_ERR,
-                            \E_ERROR,
-                            __LINE__,
-                            __FUNCTION__,
-                            __FILE__,
+                            $clr_ssl_msg, 
+                            \LOG_ERR, 
+                            \E_ERROR, 
+                            __LINE__, 
+                            __FUNCTION__, 
+                            __FILE__, 
                             $token);
 
                     }
@@ -6682,7 +7892,7 @@ mobile environment.</div>';
                          *
                          */
                         $R_text = '__construct(
-    array $headers = null,
+    array $headers = null, 
     $userAgent = null
 )';
 
@@ -10867,10 +12077,10 @@ $css_data['copy_a'] . ' href="https://github.com/f00b4r/nusoap" ' .
              * control parameter to support
              * HTML, Text, and Multi-Part output.
              *
-             * Where,
-             * $output_mode = ['HTML',
-             *                                'TEXT',
-             *                                'MULTI-PART']
+             * Where, 
+             * $output_mode = ['HTML', 
+             *                 'TEXT', 
+             *                 'MULTI-PART']
              *
              *
              * 5 :: Thursday, November 6, 2025 @ 0324 hrs.
@@ -10903,11 +12113,11 @@ $css_data['copy_a'] . ' href="https://github.com/f00b4r/nusoap" ' .
                         case 'TITLE_HTML':
 
                             /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
-                             * Where the multi_part_output_mode
+                             * Where the multi_part_output_mode 
                              * values are:
-                             * - 'HTML',
-                             * - 'TEXT', and
-                             * - 'MULTI-PART'.
+                             * - 'HTML', 
+                             * - 'TEXT', and 
+                             * - 'MULTI-PART'. 
                              *
                              */
                             $output_mode = 'HTML';
@@ -11014,11 +12224,11 @@ $css_data['copy_a'] . ' href="https://github.com/f00b4r/nusoap" ' .
                         case 'CONSTRUCTOR_FUNCTION_HTML':
 
                             /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
-                             * Where the multi_part_output_mode
+                             * Where the multi_part_output_mode 
                              * values are:
-                             * - 'HTML',
-                             * - 'TEXT', and
-                             * - 'MULTI-PART'.
+                             * - 'HTML', 
+                             * - 'TEXT', and 
+                             * - 'MULTI-PART'. 
                              *
                              */
                             $output_mode = 'HTML';
@@ -11178,11 +12388,11 @@ $css_data['copy_a'] . ' href="https://github.com/f00b4r/nusoap" ' .
                         case 'DESCRIPTION_HTML':
 
                             /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
-                             * Where the multi_part_output_mode
+                             * Where the multi_part_output_mode 
                              * values are:
-                             * - 'HTML',
-                             * - 'TEXT', and
-                             * - 'MULTI-PART'.
+                             * - 'HTML', 
+                             * - 'TEXT', and 
+                             * - 'MULTI-PART'. 
                              *
                              */
                             $output_mode = 'HTML';
@@ -11320,11 +12530,11 @@ $css_data['copy_a'] .
                         case 'PREVIEW_RESOURCE_HTML':
 
                             /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
-                             * Where the multi_part_output_mode
+                             * Where the multi_part_output_mode 
                              * values are:
-                             * - 'HTML',
-                             * - 'TEXT', and
-                             * - 'MULTI-PART'.
+                             * - 'HTML', 
+                             * - 'TEXT', and 
+                             * - 'MULTI-PART'. 
                              *
                              */
                             $output_mode = 'HTML';
@@ -11461,10 +12671,10 @@ $css_data['copy_a'] .
                                    $R_resp[$memory_pointer]['resource_name'] . '.';
 
                     if(!(_crnrstn_native_resource_registry(
-                        __FUNCTION__,
-                        $R,
-                        'registry_access_is_authorized',
-                         NULL,
+                        __FUNCTION__, 
+                        $R, 
+                        'registry_access_is_authorized', 
+                         NULL, 
                          $R_debug_mode) !== false))
                     {
 
@@ -11488,12 +12698,12 @@ $css_data['copy_a'] .
                                                 \substr($timediff, 0, -8) . 
                                                 '] ';
                             \openlog(
-                                $syslog_prefix,
+                                $syslog_prefix, 
                                 \LOG_CONS |
                                 \LOG_NDELAY |
                                 \LOG_NOWAIT |
                                 \LOG_PID |
-                                \LOG_PERROR,
+                                \LOG_PERROR, 
                                 \LOG_SYSLOG);
                             \syslog($syslog_level, $clr_ssl_msg);
                             \closelog();
@@ -11507,18 +12717,18 @@ $css_data['copy_a'] .
                                      'xxxxxxxxxxxxxxxxxxxxxxxxxxx';
                         $token_generation_date = '2026xxxxxxxxxxxxxxxxxxxxxxxxxxx';
                         $token = array(
-                                 'token'                   => $msg_token,
-                                 'token_generation_date'   => $token_generation_date,
-                                 'request_type'            => __FUNCTION__,
-                                 'code'                    => 200,
+                                 'token'                   => $msg_token, 
+                                 'token_generation_date'   => $token_generation_date, 
+                                 'request_type'            => __FUNCTION__, 
+                                 'code'                    => 200, 
                                  'clr_ssl_msg'             => $clr_ssl_msg);
                         $R->error_log(
-                            $clr_ssl_msg,
-                            \LOG_ERR,
-                            \E_ERROR,
-                            __LINE__,
-                            __FUNCTION__,
-                            __FILE__,
+                            $clr_ssl_msg, 
+                            \LOG_ERR, 
+                            \E_ERROR, 
+                            __LINE__, 
+                            __FUNCTION__, 
+                            __FILE__, 
                             $token);
 
                     }
@@ -11550,10 +12760,10 @@ $css_data['copy_a'] .
              * control parameter to support
              * HTML, Text, and Multi-Part output.
              *
-             * Where,
-             * $output_mode = ['HTML',
-             *                                'TEXT',
-             *                                'MULTI-PART']
+             * Where, 
+             * $output_mode = ['HTML', 
+             *                 'TEXT', 
+             *                 'MULTI-PART']
              *
              *
              * 5 :: Thursday, November 6, 2025 @ 0324 hrs.
@@ -11586,11 +12796,11 @@ $css_data['copy_a'] .
                         case 'TITLE_HTML':
 
                             /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
-                             * Where the multi_part_output_mode
+                             * Where the multi_part_output_mode 
                              * values are:
-                             * - 'HTML',
-                             * - 'TEXT', and
-                             * - 'MULTI-PART'.
+                             * - 'HTML', 
+                             * - 'TEXT', and 
+                             * - 'MULTI-PART'. 
                              *
                              */
                             $output_mode = 'HTML';
@@ -11698,11 +12908,11 @@ $css_data['copy_a'] .
                         case 'CONSTRUCTOR_FUNCTION_HTML':
 
                             /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
-                             * Where the multi_part_output_mode
+                             * Where the multi_part_output_mode 
                              * values are:
-                             * - 'HTML',
-                             * - 'TEXT', and
-                             * - 'MULTI-PART'.
+                             * - 'HTML', 
+                             * - 'TEXT', and 
+                             * - 'MULTI-PART'. 
                              *
                              */
                             $output_mode = 'HTML';
@@ -11842,11 +13052,11 @@ $css_data['copy_a'] .
                         case 'DESCRIPTION_HTML':
 
                             /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
-                             * Where the multi_part_output_mode
+                             * Where the multi_part_output_mode 
                              * values are:
-                             * - 'HTML',
-                             * - 'TEXT', and
-                             * - 'MULTI-PART'.
+                             * - 'HTML', 
+                             * - 'TEXT', and 
+                             * - 'MULTI-PART'. 
                              *
                              */
                             $output_mode = 'HTML';
@@ -11981,11 +13191,11 @@ and HTTP 1.0/1.1.
                         case 'PREVIEW_RESOURCE_HTML':
 
                             /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
-                             * Where the multi_part_output_mode
+                             * Where the multi_part_output_mode 
                              * values are:
-                             * - 'HTML',
-                             * - 'TEXT', and
-                             * - 'MULTI-PART'.
+                             * - 'HTML', 
+                             * - 'TEXT', and 
+                             * - 'MULTI-PART'. 
                              *
                              */
                             $output_mode = 'HTML';
@@ -12122,10 +13332,10 @@ and HTTP 1.0/1.1.
                                    $R_resp[$memory_pointer]['resource_name'] . '.';
 
                     if(!(_crnrstn_native_resource_registry(
-                        __FUNCTION__,
-                        $R,
-                        'registry_access_is_authorized',
-                         NULL,
+                        __FUNCTION__, 
+                        $R, 
+                        'registry_access_is_authorized', 
+                         NULL, 
                          $R_debug_mode) !== false))
                     {
 
@@ -12149,12 +13359,12 @@ and HTTP 1.0/1.1.
                                                 \substr($timediff, 0, -8) . 
                                                 '] ';
                             \openlog(
-                                $syslog_prefix,
+                                $syslog_prefix, 
                                 \LOG_CONS |
                                 \LOG_NDELAY |
                                 \LOG_NOWAIT |
                                 \LOG_PID |
-                                \LOG_PERROR,
+                                \LOG_PERROR, 
                                 \LOG_SYSLOG);
                             \syslog($syslog_level, $clr_ssl_msg);
                             \closelog();
@@ -12168,18 +13378,18 @@ and HTTP 1.0/1.1.
                                      'xxxxxxxxxxxxxxxxxxxxxxxxxxx';
                         $token_generation_date = '2026xxxxxxxxxxxxxxxxxxxxxxxxxxx';
                         $token = array(
-                                 'token'                   => $msg_token,
-                                 'token_generation_date'   => $token_generation_date,
-                                 'request_type'            => __FUNCTION__,
-                                 'code'                    => 200,
+                                 'token'                   => $msg_token, 
+                                 'token_generation_date'   => $token_generation_date, 
+                                 'request_type'            => __FUNCTION__, 
+                                 'code'                    => 200, 
                                  'clr_ssl_msg'             => $clr_ssl_msg);
                         $R->error_log(
-                            $clr_ssl_msg,
-                            \LOG_ERR,
-                            \E_ERROR,
-                            __LINE__,
-                            __FUNCTION__,
-                            __FILE__,
+                            $clr_ssl_msg, 
+                            \LOG_ERR, 
+                            \E_ERROR, 
+                            __LINE__, 
+                            __FUNCTION__, 
+                            __FILE__, 
                             $token);
 
                     }
@@ -12211,10 +13421,10 @@ and HTTP 1.0/1.1.
              * control parameter to support
              * HTML, Text, and Multi-Part output.
              *
-             * Where,
-             * $output_mode = ['HTML',
-             *                                'TEXT',
-             *                                'MULTI-PART']
+             * Where, 
+             * $output_mode = ['HTML', 
+             *                 'TEXT', 
+             *                 'MULTI-PART']
              *
              *
              * 5 :: Thursday, November 6, 2025 @ 0324 hrs.
@@ -12247,11 +13457,11 @@ and HTTP 1.0/1.1.
                         case 'TITLE_HTML':
 
                             /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
-                             * Where the multi_part_output_mode
+                             * Where the multi_part_output_mode 
                              * values are:
-                             * - 'HTML',
-                             * - 'TEXT', and
-                             * - 'MULTI-PART'.
+                             * - 'HTML', 
+                             * - 'TEXT', and 
+                             * - 'MULTI-PART'. 
                              *
                              */
                             $output_mode = 'HTML';
@@ -12358,11 +13568,11 @@ and HTTP 1.0/1.1.
                         case 'CONSTRUCTOR_FUNCTION_HTML':
 
                             /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
-                             * Where the multi_part_output_mode
+                             * Where the multi_part_output_mode 
                              * values are:
-                             * - 'HTML',
-                             * - 'TEXT', and
-                             * - 'MULTI-PART'.
+                             * - 'HTML', 
+                             * - 'TEXT', and 
+                             * - 'MULTI-PART'. 
                              *
                              */
                             $output_mode = 'HTML';
@@ -12502,11 +13712,11 @@ and HTTP 1.0/1.1.
                         case 'DESCRIPTION_HTML':
 
                             /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
-                             * Where the multi_part_output_mode
+                             * Where the multi_part_output_mode 
                              * values are:
-                             * - 'HTML',
-                             * - 'TEXT', and
-                             * - 'MULTI-PART'.
+                             * - 'HTML', 
+                             * - 'TEXT', and 
+                             * - 'MULTI-PART'. 
                              *
                              */
                             $output_mode = 'HTML';
@@ -12639,11 +13849,11 @@ $css_data['copy_a'] .
                         case 'PREVIEW_RESOURCE_HTML':
 
                             /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
-                             * Where the multi_part_output_mode
+                             * Where the multi_part_output_mode 
                              * values are:
-                             * - 'HTML',
-                             * - 'TEXT', and
-                             * - 'MULTI-PART'.
+                             * - 'HTML', 
+                             * - 'TEXT', and 
+                             * - 'MULTI-PART'. 
                              *
                              */
                             $output_mode = 'HTML';
@@ -12780,10 +13990,10 @@ $css_data['copy_a'] .
                                    $R_resp[$memory_pointer]['resource_name'] . '.';
 
                     if(!(_crnrstn_native_resource_registry(
-                        __FUNCTION__,
-                        $R,
-                        'registry_access_is_authorized',
-                         NULL,
+                        __FUNCTION__, 
+                        $R, 
+                        'registry_access_is_authorized', 
+                         NULL, 
                          $R_debug_mode) !== false))
                     {
 
@@ -12807,12 +14017,12 @@ $css_data['copy_a'] .
                                                 \substr($timediff, 0, -8) . 
                                                 '] ';
                             \openlog(
-                                $syslog_prefix,
+                                $syslog_prefix, 
                                 \LOG_CONS |
                                 \LOG_NDELAY |
                                 \LOG_NOWAIT |
                                 \LOG_PID |
-                                \LOG_PERROR,
+                                \LOG_PERROR, 
                                 \LOG_SYSLOG);
                             \syslog($syslog_level, $clr_ssl_msg);
                             \closelog();
@@ -12826,18 +14036,18 @@ $css_data['copy_a'] .
                                      'xxxxxxxxxxxxxxxxxxxxxxxxxxx';
                         $token_generation_date = '2026xxxxxxxxxxxxxxxxxxxxxxxxxxx';
                         $token = array(
-                                 'token'                   => $msg_token,
-                                 'token_generation_date'   => $token_generation_date,
-                                 'request_type'            => __FUNCTION__,
-                                 'code'                    => 200,
+                                 'token'                   => $msg_token, 
+                                 'token_generation_date'   => $token_generation_date, 
+                                 'request_type'            => __FUNCTION__, 
+                                 'code'                    => 200, 
                                  'clr_ssl_msg'             => $clr_ssl_msg);
                         $R->error_log(
-                            $clr_ssl_msg,
-                            \LOG_ERR,
-                            \E_ERROR,
-                            __LINE__,
-                            __FUNCTION__,
-                            __FILE__,
+                            $clr_ssl_msg, 
+                            \LOG_ERR, 
+                            \E_ERROR, 
+                            __LINE__, 
+                            __FUNCTION__, 
+                            __FILE__, 
                             $token);
 
                     }
@@ -22844,10 +24054,10 @@ found at <a ' . $css_data['copy_a'] .
                          *
                          */
                         $R_text = 'mysql_connect(
-    string $server = ini_get("mysql.default_host"),
-    string $username = ini_get("mysql.default_user"),
-    string $password = ini_get("mysql.default_password"),
-    bool $new_link = false,
+    string $server = ini_get("mysql.default_host"), 
+    string $username = ini_get("mysql.default_user"), 
+    string $password = ini_get("mysql.default_password"), 
+    bool $new_link = false, 
     int $client_flags = 0
 ): resource|false';
 
@@ -23529,11 +24739,11 @@ which are freely available.</div>';
                          *
                          */
                         $R_text = '__construct(
-    ?string $hostname = null,
-    ?string $username = null,
-    #[\SensitiveParameter] ?string $password = null,
-    ?string $database = null,
-    ?int $port = null,
+    ?string $hostname = null, 
+    ?string $username = null, 
+    #[\SensitiveParameter] ?string $password = null, 
+    ?string $database = null, 
+    ?int $port = null, 
     ?string $socket = null
 )';
 
@@ -24142,7 +25352,7 @@ things out from the midst of the worthless.</div>';
                          *
                          */
                         $R_text = '__construct(
-    $oCRNRSTN_USR,
+    $oCRNRSTN_USR, 
     $page = \'home\'
 )';
 
@@ -24668,133 +25878,133 @@ https://lightsaber.crnrstn.jony5.com/_tmp_diagrams/bassdrive_dirty_shit/kos.mos.
   {
   "relays" : [
      {
-        "bitrate" : "128",
-        "status" : "1",
-        "name" : "bassdrive.radioca.st:8702",
-        "listenerCount" : "54",
-        "listenerCountPercentage" : "0.54",
-        "audioFormat" : "mp3",
-        "streamURL" : "http:\/\/bassdrive.radioca.st:8702",
-        "streamURLios" : "http:\/\/bassdrive.radioca.st:8702",
+        "bitrate" : "128", 
+        "status" : "1", 
+        "name" : "bassdrive.radioca.st:8702", 
+        "listenerCount" : "54", 
+        "listenerCountPercentage" : "0.54", 
+        "audioFormat" : "mp3", 
+        "streamURL" : "http:\/\/bassdrive.radioca.st:8702", 
+        "streamURLios" : "http:\/\/bassdrive.radioca.st:8702", 
         "title" : "Kos.Mos Music Presents Phuture - hosted by Freestylers"
-     },
+     }, 
      {
-        "bitrate" : "128",
-        "status" : "1",
-        "name" : "chi.bassdrive.co:80",
-        "listenerCount" : "109",
-        "listenerCountPercentage" : "1.09",
-        "audioFormat" : "mp3",
-        "streamURL" : "http:\/\/chi.bassdrive.co:80",
-        "streamURLios" : "http:\/\/chi.bassdrive.co:80",
+        "bitrate" : "128", 
+        "status" : "1", 
+        "name" : "chi.bassdrive.co:80", 
+        "listenerCount" : "109", 
+        "listenerCountPercentage" : "1.09", 
+        "audioFormat" : "mp3", 
+        "streamURL" : "http:\/\/chi.bassdrive.co:80", 
+        "streamURLios" : "http:\/\/chi.bassdrive.co:80", 
         "title" : "Kos.Mos Music Presents Phuture - hosted by Freestylers"
-     },
+     }, 
      {
-        "bitrate" : "128",
-        "status" : 0,
-        "name" : "ice.bassdrive.net:80\/stream",
-        "listenerCount" : "0",
-        "listenerCountPercentage" : 0,
-        "audioFormat" : "mp3",
-        "streamURL" : "http:\/\/ice.bassdrive.net:80\/stream",
-        "streamURLios" : "http:\/\/ice.bassdrive.net:80\/stream",
+        "bitrate" : "128", 
+        "status" : 0, 
+        "name" : "ice.bassdrive.net:80\/stream", 
+        "listenerCount" : "0", 
+        "listenerCountPercentage" : 0, 
+        "audioFormat" : "mp3", 
+        "streamURL" : "http:\/\/ice.bassdrive.net:80\/stream", 
+        "streamURLios" : "http:\/\/ice.bassdrive.net:80\/stream", 
         "title" : ""
-     },
+     }, 
      {
-        "bitrate" : "32",
-        "status" : 0,
-        "name" : "ice.bassdrive.net:80\/stream32",
-        "listenerCount" : "0",
-        "listenerCountPercentage" : 0,
-        "audioFormat" : "aac+",
-        "streamURL" : "http:\/\/ice.bassdrive.net:80\/stream32",
-        "streamURLios" : "http:\/\/ice.bassdrive.net:80\/stream32",
+        "bitrate" : "32", 
+        "status" : 0, 
+        "name" : "ice.bassdrive.net:80\/stream32", 
+        "listenerCount" : "0", 
+        "listenerCountPercentage" : 0, 
+        "audioFormat" : "aac+", 
+        "streamURL" : "http:\/\/ice.bassdrive.net:80\/stream32", 
+        "streamURLios" : "http:\/\/ice.bassdrive.net:80\/stream32", 
         "title" : ""
-     },
+     }, 
      {
-        "bitrate" : "56",
-        "status" : 0,
-        "name" : "ice.bassdrive.net:80\/stream56",
-        "listenerCount" : "0",
-        "listenerCountPercentage" : 0,
-        "audioFormat" : "mp3",
-        "streamURL" : "http:\/\/ice.bassdrive.net:80\/stream56",
-        "streamURLios" : "http:\/\/ice.bassdrive.net:80\/stream56",
+        "bitrate" : "56", 
+        "status" : 0, 
+        "name" : "ice.bassdrive.net:80\/stream56", 
+        "listenerCount" : "0", 
+        "listenerCountPercentage" : 0, 
+        "audioFormat" : "mp3", 
+        "streamURL" : "http:\/\/ice.bassdrive.net:80\/stream56", 
+        "streamURLios" : "http:\/\/ice.bassdrive.net:80\/stream56", 
         "title" : ""
-     },
+     }, 
      {
-        "bitrate" : "128",
-        "status" : "1",
-        "name" : "stream.bassdrive.uk:8200",
-        "listenerCount" : "14",
-        "listenerCountPercentage" : "2.73",
-        "audioFormat" : "mp3",
-        "streamURL" : "http:\/\/stream.bassdrive.uk:8200",
-        "streamURLios" : "http:\/\/stream.bassdrive.uk:8200",
+        "bitrate" : "128", 
+        "status" : "1", 
+        "name" : "stream.bassdrive.uk:8200", 
+        "listenerCount" : "14", 
+        "listenerCountPercentage" : "2.73", 
+        "audioFormat" : "mp3", 
+        "streamURL" : "http:\/\/stream.bassdrive.uk:8200", 
+        "streamURLios" : "http:\/\/stream.bassdrive.uk:8200", 
         "title" : "Kos.Mos Music Presents Phuture - hosted by Freestylers"
      }
-    ],
+    ], 
 
   "stats" : [
      {
-        "bandwidth" : 22.13,
-        "connections" : 177,
-        "name" : "Total",
-        "capacity" : 20510,
+        "bandwidth" : 22.13, 
+        "connections" : 177, 
+        "name" : "Total", 
+        "capacity" : 20510, 
         "bandwidthFormat" : "megabit"
-     },
+     }, 
      {
-        "bandwidth" : 15.38,
-        "connections" : 123,
-        "name" : "TotalUnique",
-        "capacity" : 20510,
+        "bandwidth" : 15.38, 
+        "connections" : 123, 
+        "name" : "TotalUnique", 
+        "capacity" : 20510, 
         "bandwidthFormat" : "megabit"
-     },
+     }, 
      {
-        "bandwidth" : 22.13,
-        "bitrateFormat" : "kilobit",
-        "bitrate" : 128,
-        "connections" : 177,
-        "name" : "Premium",
-        "capacity" : 20510,
+        "bandwidth" : 22.13, 
+        "bitrateFormat" : "kilobit", 
+        "bitrate" : 128, 
+        "connections" : 177, 
+        "name" : "Premium", 
+        "capacity" : 20510, 
         "bandwidthFormat" : "megabit"
-    },
+    }, 
     {
-        "bandwidth" : 0,
-        "bitrateFormat" : "kilobit",
-        "bitrate" : 56,
-        "connections" : 0,
-        "name" : "Midgrade",
-        "capacity" : 0,
+        "bandwidth" : 0, 
+        "bitrateFormat" : "kilobit", 
+        "bitrate" : 56, 
+        "connections" : 0, 
+        "name" : "Midgrade", 
+        "capacity" : 0, 
         "bandwidthFormat" : "megabit"
-    },
+    }, 
     {
-        "bandwidth" : 0,
-        "bitrateFormat" : "kilobit",
-        "bitrate" : 32,
-        "connections" : 0,
-        "name" : "AACplus",
-        "capacity" : 0,
+        "bandwidth" : 0, 
+        "bitrateFormat" : "kilobit", 
+        "bitrate" : 32, 
+        "connections" : 0, 
+        "name" : "AACplus", 
+        "capacity" : 0, 
         "bandwidthFormat" : "megabit"
-    },
+    }, 
     {
-        "bandwidth" : 0,
-        "bitrateFormat" : "kilobit",
-        "bitrate" : 128,
-        "connections" : null,
-        "name" : "Random",
-        "capacity" : null,
+        "bandwidth" : 0, 
+        "bitrateFormat" : "kilobit", 
+        "bitrate" : 128, 
+        "connections" : null, 
+        "name" : "Random", 
+        "capacity" : null, 
         "bandwidthFormat" : "megabit"
     }
-    ],
+    ], 
 
   "nowplaying" : [
     {
-        "name" : "Kos.Mos Music Presents Phuture - hosted by Freestylers",
+        "name" : "Kos.Mos Music Presents Phuture - hosted by Freestylers", 
         "label" : "Artist"
-    },
+    }, 
     {
-        "name" : "Kos.Mos Music Presents Phuture - hosted by Freestylers",
+        "name" : "Kos.Mos Music Presents Phuture - hosted by Freestylers", 
         "label" : "Title"
     }
     ]
@@ -24802,7 +26012,7 @@ https://lightsaber.crnrstn.jony5.com/_tmp_diagrams/bassdrive_dirty_shit/kos.mos.
 
 ❤ ❤ C ❤ R ❤ N ❤ R ❤ S ❤ T ❤ N ❤ : : ❤ ❤ ❤ ❤
 You were the best, J5. Thank you for
-everything. Happy birthday to you,
+everything. Happy birthday to you, 
 ole buddy. - From J5
 
 11/11/2005 - 08/16/2021 @ 0345 hrs.';
@@ -24874,133 +26084,133 @@ $css_data['crnrstn'] . '>c<span ' . $css_data['crnrstn_R'] .
   {
   &quot;relays&quot; : [
      {
-        &quot;bitrate&quot; : &quot;128&quot;,
-        &quot;status&quot; : &quot;1&quot;,
-        &quot;name&quot; : &quot;bassdrive.radioca.st:8702&quot;,
-        &quot;listenerCount&quot; : &quot;54&quot;,
-        &quot;listenerCountPercentage&quot; : &quot;0.54&quot;,
-        &quot;audioFormat&quot; : &quot;mp3&quot;,
-        &quot;streamURL&quot; : &quot;http:\/\/bassdrive.radioca.st:8702&quot;,
-        &quot;streamURLios&quot; : &quot;http:\/\/bassdrive.radioca.st:8702&quot;,
+        &quot;bitrate&quot; : &quot;128&quot;, 
+        &quot;status&quot; : &quot;1&quot;, 
+        &quot;name&quot; : &quot;bassdrive.radioca.st:8702&quot;, 
+        &quot;listenerCount&quot; : &quot;54&quot;, 
+        &quot;listenerCountPercentage&quot; : &quot;0.54&quot;, 
+        &quot;audioFormat&quot; : &quot;mp3&quot;, 
+        &quot;streamURL&quot; : &quot;http:\/\/bassdrive.radioca.st:8702&quot;, 
+        &quot;streamURLios&quot; : &quot;http:\/\/bassdrive.radioca.st:8702&quot;, 
         &quot;title&quot; : &quot;Kos.Mos Music Presents Phuture - hosted by Freestylers&quot;
-     },
+     }, 
      {
-        &quot;bitrate&quot; : &quot;128&quot;,
-        &quot;status&quot; : &quot;1&quot;,
-        &quot;name&quot; : &quot;chi.bassdrive.co:80&quot;,
-        &quot;listenerCount&quot; : &quot;109&quot;,
-        &quot;listenerCountPercentage&quot; : &quot;1.09&quot;,
-        &quot;audioFormat&quot; : &quot;mp3&quot;,
-        &quot;streamURL&quot; : &quot;http:\/\/chi.bassdrive.co:80&quot;,
-        &quot;streamURLios&quot; : &quot;http:\/\/chi.bassdrive.co:80&quot;,
+        &quot;bitrate&quot; : &quot;128&quot;, 
+        &quot;status&quot; : &quot;1&quot;, 
+        &quot;name&quot; : &quot;chi.bassdrive.co:80&quot;, 
+        &quot;listenerCount&quot; : &quot;109&quot;, 
+        &quot;listenerCountPercentage&quot; : &quot;1.09&quot;, 
+        &quot;audioFormat&quot; : &quot;mp3&quot;, 
+        &quot;streamURL&quot; : &quot;http:\/\/chi.bassdrive.co:80&quot;, 
+        &quot;streamURLios&quot; : &quot;http:\/\/chi.bassdrive.co:80&quot;, 
         &quot;title&quot; : &quot;Kos.Mos Music Presents Phuture - hosted by Freestylers&quot;
-     },
+     }, 
      {
-        &quot;bitrate&quot; : &quot;128&quot;,
-        &quot;status&quot; : 0,
-        &quot;name&quot; : &quot;ice.bassdrive.net:80\/stream&quot;,
-        &quot;listenerCount&quot; : &quot;0&quot;,
-        &quot;listenerCountPercentage&quot; : 0,
-        &quot;audioFormat&quot; : &quot;mp3&quot;,
-        &quot;streamURL&quot; : &quot;http:\/\/ice.bassdrive.net:80\/stream&quot;,
-        &quot;streamURLios&quot; : &quot;http:\/\/ice.bassdrive.net:80\/stream&quot;,
+        &quot;bitrate&quot; : &quot;128&quot;, 
+        &quot;status&quot; : 0, 
+        &quot;name&quot; : &quot;ice.bassdrive.net:80\/stream&quot;, 
+        &quot;listenerCount&quot; : &quot;0&quot;, 
+        &quot;listenerCountPercentage&quot; : 0, 
+        &quot;audioFormat&quot; : &quot;mp3&quot;, 
+        &quot;streamURL&quot; : &quot;http:\/\/ice.bassdrive.net:80\/stream&quot;, 
+        &quot;streamURLios&quot; : &quot;http:\/\/ice.bassdrive.net:80\/stream&quot;, 
         &quot;title&quot; : &quot;&quot;
-     },
+     }, 
      {
-        &quot;bitrate&quot; : &quot;32&quot;,
-        &quot;status&quot; : 0,
-        &quot;name&quot; : &quot;ice.bassdrive.net:80\/stream32&quot;,
-        &quot;listenerCount&quot; : &quot;0&quot;,
-        &quot;listenerCountPercentage&quot; : 0,
-        &quot;audioFormat&quot; : &quot;aac+&quot;,
-        &quot;streamURL&quot; : &quot;http:\/\/ice.bassdrive.net:80\/stream32&quot;,
-        &quot;streamURLios&quot; : &quot;http:\/\/ice.bassdrive.net:80\/stream32&quot;,
+        &quot;bitrate&quot; : &quot;32&quot;, 
+        &quot;status&quot; : 0, 
+        &quot;name&quot; : &quot;ice.bassdrive.net:80\/stream32&quot;, 
+        &quot;listenerCount&quot; : &quot;0&quot;, 
+        &quot;listenerCountPercentage&quot; : 0, 
+        &quot;audioFormat&quot; : &quot;aac+&quot;, 
+        &quot;streamURL&quot; : &quot;http:\/\/ice.bassdrive.net:80\/stream32&quot;, 
+        &quot;streamURLios&quot; : &quot;http:\/\/ice.bassdrive.net:80\/stream32&quot;, 
         &quot;title&quot; : &quot;&quot;
-     },
+     }, 
      {
-        &quot;bitrate&quot; : &quot;56&quot;,
-        &quot;status&quot; : 0,
-        &quot;name&quot; : &quot;ice.bassdrive.net:80\/stream56&quot;,
-        &quot;listenerCount&quot; : &quot;0&quot;,
-        &quot;listenerCountPercentage&quot; : 0,
-        &quot;audioFormat&quot; : &quot;mp3&quot;,
-        &quot;streamURL&quot; : &quot;http:\/\/ice.bassdrive.net:80\/stream56&quot;,
-        &quot;streamURLios&quot; : &quot;http:\/\/ice.bassdrive.net:80\/stream56&quot;,
+        &quot;bitrate&quot; : &quot;56&quot;, 
+        &quot;status&quot; : 0, 
+        &quot;name&quot; : &quot;ice.bassdrive.net:80\/stream56&quot;, 
+        &quot;listenerCount&quot; : &quot;0&quot;, 
+        &quot;listenerCountPercentage&quot; : 0, 
+        &quot;audioFormat&quot; : &quot;mp3&quot;, 
+        &quot;streamURL&quot; : &quot;http:\/\/ice.bassdrive.net:80\/stream56&quot;, 
+        &quot;streamURLios&quot; : &quot;http:\/\/ice.bassdrive.net:80\/stream56&quot;, 
         &quot;title&quot; : &quot;&quot;
-     },
+     }, 
      {
-        &quot;bitrate&quot; : &quot;128&quot;,
-        &quot;status&quot; : &quot;1&quot;,
-        &quot;name&quot; : &quot;stream.bassdrive.uk:8200&quot;,
-        &quot;listenerCount&quot; : &quot;14&quot;,
-        &quot;listenerCountPercentage&quot; : &quot;2.73&quot;,
-        &quot;audioFormat&quot; : &quot;mp3&quot;,
-        &quot;streamURL&quot; : &quot;http:\/\/stream.bassdrive.uk:8200&quot;,
-        &quot;streamURLios&quot; : &quot;http:\/\/stream.bassdrive.uk:8200&quot;,
+        &quot;bitrate&quot; : &quot;128&quot;, 
+        &quot;status&quot; : &quot;1&quot;, 
+        &quot;name&quot; : &quot;stream.bassdrive.uk:8200&quot;, 
+        &quot;listenerCount&quot; : &quot;14&quot;, 
+        &quot;listenerCountPercentage&quot; : &quot;2.73&quot;, 
+        &quot;audioFormat&quot; : &quot;mp3&quot;, 
+        &quot;streamURL&quot; : &quot;http:\/\/stream.bassdrive.uk:8200&quot;, 
+        &quot;streamURLios&quot; : &quot;http:\/\/stream.bassdrive.uk:8200&quot;, 
         &quot;title&quot; : &quot;Kos.Mos Music Presents Phuture - hosted by Freestylers&quot;
      }
-    ],
+    ], 
 
   &quot;stats&quot; : [
      {
-        &quot;bandwidth&quot; : 22.13,
-        &quot;connections&quot; : 177,
-        &quot;name&quot; : &quot;Total&quot;,
-        &quot;capacity&quot; : 20510,
+        &quot;bandwidth&quot; : 22.13, 
+        &quot;connections&quot; : 177, 
+        &quot;name&quot; : &quot;Total&quot;, 
+        &quot;capacity&quot; : 20510, 
         &quot;bandwidthFormat&quot; : &quot;megabit&quot;
-     },
+     }, 
      {
-        &quot;bandwidth&quot; : 15.38,
-        &quot;connections&quot; : 123,
-        &quot;name&quot; : &quot;TotalUnique&quot;,
-        &quot;capacity&quot; : 20510,
+        &quot;bandwidth&quot; : 15.38, 
+        &quot;connections&quot; : 123, 
+        &quot;name&quot; : &quot;TotalUnique&quot;, 
+        &quot;capacity&quot; : 20510, 
         &quot;bandwidthFormat&quot; : &quot;megabit&quot;
-     },
+     }, 
      {
-        &quot;bandwidth&quot; : 22.13,
-        &quot;bitrateFormat&quot; : &quot;kilobit&quot;,
-        &quot;bitrate&quot; : 128,
-        &quot;connections&quot; : 177,
-        &quot;name&quot; : &quot;Premium&quot;,
-        &quot;capacity&quot; : 20510,
+        &quot;bandwidth&quot; : 22.13, 
+        &quot;bitrateFormat&quot; : &quot;kilobit&quot;, 
+        &quot;bitrate&quot; : 128, 
+        &quot;connections&quot; : 177, 
+        &quot;name&quot; : &quot;Premium&quot;, 
+        &quot;capacity&quot; : 20510, 
         &quot;bandwidthFormat&quot; : &quot;megabit&quot;
-    },
+    }, 
     {
-        &quot;bandwidth&quot; : 0,
-        &quot;bitrateFormat&quot; : &quot;kilobit&quot;,
-        &quot;bitrate&quot; : 56,
-        &quot;connections&quot; : 0,
-        &quot;name&quot; : &quot;Midgrade&quot;,
-        &quot;capacity&quot; : 0,
+        &quot;bandwidth&quot; : 0, 
+        &quot;bitrateFormat&quot; : &quot;kilobit&quot;, 
+        &quot;bitrate&quot; : 56, 
+        &quot;connections&quot; : 0, 
+        &quot;name&quot; : &quot;Midgrade&quot;, 
+        &quot;capacity&quot; : 0, 
         &quot;bandwidthFormat&quot; : &quot;megabit&quot;
-    },
+    }, 
     {
-        &quot;bandwidth&quot; : 0,
-        &quot;bitrateFormat&quot; : &quot;kilobit&quot;,
-        &quot;bitrate&quot; : 32,
-        &quot;connections&quot; : 0,
-        &quot;name&quot; : &quot;AACplus&quot;,
-        &quot;capacity&quot; : 0,
+        &quot;bandwidth&quot; : 0, 
+        &quot;bitrateFormat&quot; : &quot;kilobit&quot;, 
+        &quot;bitrate&quot; : 32, 
+        &quot;connections&quot; : 0, 
+        &quot;name&quot; : &quot;AACplus&quot;, 
+        &quot;capacity&quot; : 0, 
         &quot;bandwidthFormat&quot; : &quot;megabit&quot;
-    },
+    }, 
     {
-        &quot;bandwidth&quot; : 0,
-        &quot;bitrateFormat&quot; : &quot;kilobit&quot;,
-        &quot;bitrate&quot; : 128,
-        &quot;connections&quot; : null,
-        &quot;name&quot; : &quot;Random&quot;,
-        &quot;capacity&quot; : null,
+        &quot;bandwidth&quot; : 0, 
+        &quot;bitrateFormat&quot; : &quot;kilobit&quot;, 
+        &quot;bitrate&quot; : 128, 
+        &quot;connections&quot; : null, 
+        &quot;name&quot; : &quot;Random&quot;, 
+        &quot;capacity&quot; : null, 
         &quot;bandwidthFormat&quot; : &quot;megabit&quot;
     }
-    ],
+    ], 
 
   &quot;nowplaying&quot; : [
     {
-        &quot;name&quot; : &quot;Kos.Mos Music Presents Phuture - hosted by Freestylers&quot;,
+        &quot;name&quot; : &quot;Kos.Mos Music Presents Phuture - hosted by Freestylers&quot;, 
         &quot;label&quot; : &quot;Artist&quot;
-    },
+    }, 
     {
-        &quot;name&quot; : &quot;Kos.Mos Music Presents Phuture - hosted by Freestylers&quot;,
+        &quot;name&quot; : &quot;Kos.Mos Music Presents Phuture - hosted by Freestylers&quot;, 
         &quot;label&quot; : &quot;Title&quot;
     }
     ]
@@ -25008,7 +26218,7 @@ $css_data['crnrstn'] . '>c<span ' . $css_data['crnrstn_R'] .
 
 ❤ ❤ C ❤ R ❤ N ❤ R ❤ S ❤ T ❤ N ❤ : : ❤ ❤ ❤ ❤
 You were the best, J5. Thank you for
-everything. Happy birthday to you,
+everything. Happy birthday to you, 
 ole buddy. - From J5
 
 11/11/2005 - 08/16/2021 @ 0345 hrs.</div>';
@@ -25618,133 +26828,133 @@ https://lightsaber.crnrstn.jony5.com/_tmp_diagrams/bassdrive_dirty_shit/kos.mos.
   {
    "relays" : [
        {
-         "bitrate" : "128",
-         "status" : "1",
-         "name" : "bassdrive.radioca.st:8702",
-         "listenerCount" : "54",
-         "listenerCountPercentage" : "0.54",
-         "audioFormat" : "mp3",
-         "streamURL" : "http:\/\/bassdrive.radioca.st:8702",
-         "streamURLios" : "http:\/\/bassdrive.radioca.st:8702",
+         "bitrate" : "128", 
+         "status" : "1", 
+         "name" : "bassdrive.radioca.st:8702", 
+         "listenerCount" : "54", 
+         "listenerCountPercentage" : "0.54", 
+         "audioFormat" : "mp3", 
+         "streamURL" : "http:\/\/bassdrive.radioca.st:8702", 
+         "streamURLios" : "http:\/\/bassdrive.radioca.st:8702", 
          "title" : "Kos.Mos Music Presents Phuture - hosted by Freestylers"
-      },
+      }, 
       {
-         "bitrate" : "128",
-         "status" : "1",
-         "name" : "chi.bassdrive.co:80",
-         "listenerCount" : "109",
-         "listenerCountPercentage" : "1.09",
-         "audioFormat" : "mp3",
-         "streamURL" : "http:\/\/chi.bassdrive.co:80",
-         "streamURLios" : "http:\/\/chi.bassdrive.co:80",
+         "bitrate" : "128", 
+         "status" : "1", 
+         "name" : "chi.bassdrive.co:80", 
+         "listenerCount" : "109", 
+         "listenerCountPercentage" : "1.09", 
+         "audioFormat" : "mp3", 
+         "streamURL" : "http:\/\/chi.bassdrive.co:80", 
+         "streamURLios" : "http:\/\/chi.bassdrive.co:80", 
          "title" : "Kos.Mos Music Presents Phuture - hosted by Freestylers"
-      },
+      }, 
       {
-         "bitrate" : "128",
-         "status" : 0,
-         "name" : "ice.bassdrive.net:80\/stream",
-         "listenerCount" : "0",
-         "listenerCountPercentage" : 0,
-         "audioFormat" : "mp3",
-         "streamURL" : "http:\/\/ice.bassdrive.net:80\/stream",
-         "streamURLios" : "http:\/\/ice.bassdrive.net:80\/stream",
+         "bitrate" : "128", 
+         "status" : 0, 
+         "name" : "ice.bassdrive.net:80\/stream", 
+         "listenerCount" : "0", 
+         "listenerCountPercentage" : 0, 
+         "audioFormat" : "mp3", 
+         "streamURL" : "http:\/\/ice.bassdrive.net:80\/stream", 
+         "streamURLios" : "http:\/\/ice.bassdrive.net:80\/stream", 
          "title" : ""
-      },
+      }, 
       {
-         "bitrate" : "32",
-         "status" : 0,
-         "name" : "ice.bassdrive.net:80\/stream32",
-         "listenerCount" : "0",
-         "listenerCountPercentage" : 0,
-         "audioFormat" : "aac+",
-         "streamURL" : "http:\/\/ice.bassdrive.net:80\/stream32",
-         "streamURLios" : "http:\/\/ice.bassdrive.net:80\/stream32",
+         "bitrate" : "32", 
+         "status" : 0, 
+         "name" : "ice.bassdrive.net:80\/stream32", 
+         "listenerCount" : "0", 
+         "listenerCountPercentage" : 0, 
+         "audioFormat" : "aac+", 
+         "streamURL" : "http:\/\/ice.bassdrive.net:80\/stream32", 
+         "streamURLios" : "http:\/\/ice.bassdrive.net:80\/stream32", 
          "title" : ""
-      },
+      }, 
       {
-         "bitrate" : "56",
-         "status" : 0,
-         "name" : "ice.bassdrive.net:80\/stream56",
-         "listenerCount" : "0",
-         "listenerCountPercentage" : 0,
-         "audioFormat" : "mp3",
-         "streamURL" : "http:\/\/ice.bassdrive.net:80\/stream56",
-         "streamURLios" : "http:\/\/ice.bassdrive.net:80\/stream56",
+         "bitrate" : "56", 
+         "status" : 0, 
+         "name" : "ice.bassdrive.net:80\/stream56", 
+         "listenerCount" : "0", 
+         "listenerCountPercentage" : 0, 
+         "audioFormat" : "mp3", 
+         "streamURL" : "http:\/\/ice.bassdrive.net:80\/stream56", 
+         "streamURLios" : "http:\/\/ice.bassdrive.net:80\/stream56", 
          "title" : ""
-      },
+      }, 
       {
-         "bitrate" : "128",
-         "status" : "1",
-         "name" : "stream.bassdrive.uk:8200",
-         "listenerCount" : "14",
-         "listenerCountPercentage" : "2.73",
-         "audioFormat" : "mp3",
-         "streamURL" : "http:\/\/stream.bassdrive.uk:8200",
-         "streamURLios" : "http:\/\/stream.bassdrive.uk:8200",
+         "bitrate" : "128", 
+         "status" : "1", 
+         "name" : "stream.bassdrive.uk:8200", 
+         "listenerCount" : "14", 
+         "listenerCountPercentage" : "2.73", 
+         "audioFormat" : "mp3", 
+         "streamURL" : "http:\/\/stream.bassdrive.uk:8200", 
+         "streamURLios" : "http:\/\/stream.bassdrive.uk:8200", 
          "title" : "Kos.Mos Music Presents Phuture - hosted by Freestylers"
       }
-     ],
+     ], 
 
    "stats" : [
       {
-         "bandwidth" : 22.13,
-         "connections" : 177,
-         "name" : "Total",
-         "capacity" : 20510,
+         "bandwidth" : 22.13, 
+         "connections" : 177, 
+         "name" : "Total", 
+         "capacity" : 20510, 
          "bandwidthFormat" : "megabit"
-      },
+      }, 
       {
-         "bandwidth" : 15.38,
-         "connections" : 123,
-         "name" : "TotalUnique",
-         "capacity" : 20510,
+         "bandwidth" : 15.38, 
+         "connections" : 123, 
+         "name" : "TotalUnique", 
+         "capacity" : 20510, 
          "bandwidthFormat" : "megabit"
-      },
+      }, 
       {
-         "bandwidth" : 22.13,
-         "bitrateFormat" : "kilobit",
-         "bitrate" : 128,
-         "connections" : 177,
-         "name" : "Premium",
-         "capacity" : 20510,
+         "bandwidth" : 22.13, 
+         "bitrateFormat" : "kilobit", 
+         "bitrate" : 128, 
+         "connections" : 177, 
+         "name" : "Premium", 
+         "capacity" : 20510, 
          "bandwidthFormat" : "megabit"
-     },
+     }, 
      {
-         "bandwidth" : 0,
-         "bitrateFormat" : "kilobit",
-         "bitrate" : 56,
-         "connections" : 0,
-         "name" : "Midgrade",
-         "capacity" : 0,
+         "bandwidth" : 0, 
+         "bitrateFormat" : "kilobit", 
+         "bitrate" : 56, 
+         "connections" : 0, 
+         "name" : "Midgrade", 
+         "capacity" : 0, 
          "bandwidthFormat" : "megabit"
-     },
+     }, 
      {
-         "bandwidth" : 0,
-         "bitrateFormat" : "kilobit",
-         "bitrate" : 32,
-         "connections" : 0,
-         "name" : "AACplus",
-         "capacity" : 0,
+         "bandwidth" : 0, 
+         "bitrateFormat" : "kilobit", 
+         "bitrate" : 32, 
+         "connections" : 0, 
+         "name" : "AACplus", 
+         "capacity" : 0, 
          "bandwidthFormat" : "megabit"
-     },
+     }, 
      {
-         "bandwidth" : 0,
-         "bitrateFormat" : "kilobit",
-         "bitrate" : 128,
-         "connections" : null,
-         "name" : "Random",
-         "capacity" : null,
+         "bandwidth" : 0, 
+         "bitrateFormat" : "kilobit", 
+         "bitrate" : 128, 
+         "connections" : null, 
+         "name" : "Random", 
+         "capacity" : null, 
          "bandwidthFormat" : "megabit"
      }
-     ],
+     ], 
 
    "nowplaying" : [
      {
-         "name" : "Kos.Mos Music Presents Phuture - hosted by Freestylers",
+         "name" : "Kos.Mos Music Presents Phuture - hosted by Freestylers", 
          "label" : "Artist"
-     },
+     }, 
      {
-         "name" : "Kos.Mos Music Presents Phuture - hosted by Freestylers",
+         "name" : "Kos.Mos Music Presents Phuture - hosted by Freestylers", 
          "label" : "Title"
      }
     ]
@@ -25825,133 +27035,133 @@ $css_data['crnrstn'] . '>c<span ' . $css_data['crnrstn_R'] .
   {
    &quot;relays&quot; : [
        {
-         &quot;bitrate&quot; : &quot;128&quot;,
-         &quot;status&quot; : &quot;1&quot;,
-         &quot;name&quot; : &quot;bassdrive.radioca.st:8702&quot;,
-         &quot;listenerCount&quot; : &quot;54&quot;,
-         &quot;listenerCountPercentage&quot; : &quot;0.54&quot;,
-         &quot;audioFormat&quot; : &quot;mp3&quot;,
-         &quot;streamURL&quot; : &quot;http:\/\/bassdrive.radioca.st:8702&quot;,
-         &quot;streamURLios&quot; : &quot;http:\/\/bassdrive.radioca.st:8702&quot;,
+         &quot;bitrate&quot; : &quot;128&quot;, 
+         &quot;status&quot; : &quot;1&quot;, 
+         &quot;name&quot; : &quot;bassdrive.radioca.st:8702&quot;, 
+         &quot;listenerCount&quot; : &quot;54&quot;, 
+         &quot;listenerCountPercentage&quot; : &quot;0.54&quot;, 
+         &quot;audioFormat&quot; : &quot;mp3&quot;, 
+         &quot;streamURL&quot; : &quot;http:\/\/bassdrive.radioca.st:8702&quot;, 
+         &quot;streamURLios&quot; : &quot;http:\/\/bassdrive.radioca.st:8702&quot;, 
          &quot;title&quot; : &quot;Kos.Mos Music Presents Phuture - hosted by Freestylers&quot;
-      },
+      }, 
       {
-         &quot;bitrate&quot; : &quot;128&quot;,
-         &quot;status&quot; : &quot;1&quot;,
-         &quot;name&quot; : &quot;chi.bassdrive.co:80&quot;,
-         &quot;listenerCount&quot; : &quot;109&quot;,
-         &quot;listenerCountPercentage&quot; : &quot;1.09&quot;,
-         &quot;audioFormat&quot; : &quot;mp3&quot;,
-         &quot;streamURL&quot; : &quot;http:\/\/chi.bassdrive.co:80&quot;,
-         &quot;streamURLios&quot; : &quot;http:\/\/chi.bassdrive.co:80&quot;,
+         &quot;bitrate&quot; : &quot;128&quot;, 
+         &quot;status&quot; : &quot;1&quot;, 
+         &quot;name&quot; : &quot;chi.bassdrive.co:80&quot;, 
+         &quot;listenerCount&quot; : &quot;109&quot;, 
+         &quot;listenerCountPercentage&quot; : &quot;1.09&quot;, 
+         &quot;audioFormat&quot; : &quot;mp3&quot;, 
+         &quot;streamURL&quot; : &quot;http:\/\/chi.bassdrive.co:80&quot;, 
+         &quot;streamURLios&quot; : &quot;http:\/\/chi.bassdrive.co:80&quot;, 
          &quot;title&quot; : &quot;Kos.Mos Music Presents Phuture - hosted by Freestylers&quot;
-      },
+      }, 
       {
-         &quot;bitrate&quot; : &quot;128&quot;,
-         &quot;status&quot; : 0,
-         &quot;name&quot; : &quot;ice.bassdrive.net:80\/stream&quot;,
-         &quot;listenerCount&quot; : &quot;0&quot;,
-         &quot;listenerCountPercentage&quot; : 0,
-         &quot;audioFormat&quot; : &quot;mp3&quot;,
-         &quot;streamURL&quot; : &quot;http:\/\/ice.bassdrive.net:80\/stream&quot;,
-         &quot;streamURLios&quot; : &quot;http:\/\/ice.bassdrive.net:80\/stream&quot;,
+         &quot;bitrate&quot; : &quot;128&quot;, 
+         &quot;status&quot; : 0, 
+         &quot;name&quot; : &quot;ice.bassdrive.net:80\/stream&quot;, 
+         &quot;listenerCount&quot; : &quot;0&quot;, 
+         &quot;listenerCountPercentage&quot; : 0, 
+         &quot;audioFormat&quot; : &quot;mp3&quot;, 
+         &quot;streamURL&quot; : &quot;http:\/\/ice.bassdrive.net:80\/stream&quot;, 
+         &quot;streamURLios&quot; : &quot;http:\/\/ice.bassdrive.net:80\/stream&quot;, 
          &quot;title&quot; : &quot;&quot;
-      },
+      }, 
       {
-         &quot;bitrate&quot; : &quot;32&quot;,
-         &quot;status&quot; : 0,
-         &quot;name&quot; : &quot;ice.bassdrive.net:80\/stream32&quot;,
-         &quot;listenerCount&quot; : &quot;0&quot;,
-         &quot;listenerCountPercentage&quot; : 0,
-         &quot;audioFormat&quot; : &quot;aac+&quot;,
-         &quot;streamURL&quot; : &quot;http:\/\/ice.bassdrive.net:80\/stream32&quot;,
-         &quot;streamURLios&quot; : &quot;http:\/\/ice.bassdrive.net:80\/stream32&quot;,
+         &quot;bitrate&quot; : &quot;32&quot;, 
+         &quot;status&quot; : 0, 
+         &quot;name&quot; : &quot;ice.bassdrive.net:80\/stream32&quot;, 
+         &quot;listenerCount&quot; : &quot;0&quot;, 
+         &quot;listenerCountPercentage&quot; : 0, 
+         &quot;audioFormat&quot; : &quot;aac+&quot;, 
+         &quot;streamURL&quot; : &quot;http:\/\/ice.bassdrive.net:80\/stream32&quot;, 
+         &quot;streamURLios&quot; : &quot;http:\/\/ice.bassdrive.net:80\/stream32&quot;, 
          &quot;title&quot; : &quot;&quot;
-      },
+      }, 
       {
-         &quot;bitrate&quot; : &quot;56&quot;,
-         &quot;status&quot; : 0,
-         &quot;name&quot; : &quot;ice.bassdrive.net:80\/stream56&quot;,
-         &quot;listenerCount&quot; : &quot;0&quot;,
-         &quot;listenerCountPercentage&quot; : 0,
-         &quot;audioFormat&quot; : &quot;mp3&quot;,
-         &quot;streamURL&quot; : &quot;http:\/\/ice.bassdrive.net:80\/stream56&quot;,
-         &quot;streamURLios&quot; : &quot;http:\/\/ice.bassdrive.net:80\/stream56&quot;,
+         &quot;bitrate&quot; : &quot;56&quot;, 
+         &quot;status&quot; : 0, 
+         &quot;name&quot; : &quot;ice.bassdrive.net:80\/stream56&quot;, 
+         &quot;listenerCount&quot; : &quot;0&quot;, 
+         &quot;listenerCountPercentage&quot; : 0, 
+         &quot;audioFormat&quot; : &quot;mp3&quot;, 
+         &quot;streamURL&quot; : &quot;http:\/\/ice.bassdrive.net:80\/stream56&quot;, 
+         &quot;streamURLios&quot; : &quot;http:\/\/ice.bassdrive.net:80\/stream56&quot;, 
          &quot;title&quot; : &quot;&quot;
-      },
+      }, 
       {
-         &quot;bitrate&quot; : &quot;128&quot;,
-         &quot;status&quot; : &quot;1&quot;,
-         &quot;name&quot; : &quot;stream.bassdrive.uk:8200&quot;,
-         &quot;listenerCount&quot; : &quot;14&quot;,
-         &quot;listenerCountPercentage&quot; : &quot;2.73&quot;,
-         &quot;audioFormat&quot; : &quot;mp3&quot;,
-         &quot;streamURL&quot; : &quot;http:\/\/stream.bassdrive.uk:8200&quot;,
-         &quot;streamURLios&quot; : &quot;http:\/\/stream.bassdrive.uk:8200&quot;,
+         &quot;bitrate&quot; : &quot;128&quot;, 
+         &quot;status&quot; : &quot;1&quot;, 
+         &quot;name&quot; : &quot;stream.bassdrive.uk:8200&quot;, 
+         &quot;listenerCount&quot; : &quot;14&quot;, 
+         &quot;listenerCountPercentage&quot; : &quot;2.73&quot;, 
+         &quot;audioFormat&quot; : &quot;mp3&quot;, 
+         &quot;streamURL&quot; : &quot;http:\/\/stream.bassdrive.uk:8200&quot;, 
+         &quot;streamURLios&quot; : &quot;http:\/\/stream.bassdrive.uk:8200&quot;, 
          &quot;title&quot; : &quot;Kos.Mos Music Presents Phuture - hosted by Freestylers&quot;
       }
-     ],
+     ], 
 
    &quot;stats&quot; : [
       {
-         &quot;bandwidth&quot; : 22.13,
-         &quot;connections&quot; : 177,
-         &quot;name&quot; : &quot;Total&quot;,
-         &quot;capacity&quot; : 20510,
+         &quot;bandwidth&quot; : 22.13, 
+         &quot;connections&quot; : 177, 
+         &quot;name&quot; : &quot;Total&quot;, 
+         &quot;capacity&quot; : 20510, 
          &quot;bandwidthFormat&quot; : &quot;megabit&quot;
-      },
+      }, 
       {
-         &quot;bandwidth&quot; : 15.38,
-         &quot;connections&quot; : 123,
-         &quot;name&quot; : &quot;TotalUnique&quot;,
-         &quot;capacity&quot; : 20510,
+         &quot;bandwidth&quot; : 15.38, 
+         &quot;connections&quot; : 123, 
+         &quot;name&quot; : &quot;TotalUnique&quot;, 
+         &quot;capacity&quot; : 20510, 
          &quot;bandwidthFormat&quot; : &quot;megabit&quot;
-      },
+      }, 
       {
-         &quot;bandwidth&quot; : 22.13,
-         &quot;bitrateFormat&quot; : &quot;kilobit&quot;,
-         &quot;bitrate&quot; : 128,
-         &quot;connections&quot; : 177,
-         &quot;name&quot; : &quot;Premium&quot;,
-         &quot;capacity&quot; : 20510,
+         &quot;bandwidth&quot; : 22.13, 
+         &quot;bitrateFormat&quot; : &quot;kilobit&quot;, 
+         &quot;bitrate&quot; : 128, 
+         &quot;connections&quot; : 177, 
+         &quot;name&quot; : &quot;Premium&quot;, 
+         &quot;capacity&quot; : 20510, 
          &quot;bandwidthFormat&quot; : &quot;megabit&quot;
-     },
+     }, 
      {
-         &quot;bandwidth&quot; : 0,
-         &quot;bitrateFormat&quot; : &quot;kilobit&quot;,
-         &quot;bitrate&quot; : 56,
-         &quot;connections&quot; : 0,
-         &quot;name&quot; : &quot;Midgrade&quot;,
-         &quot;capacity&quot; : 0,
+         &quot;bandwidth&quot; : 0, 
+         &quot;bitrateFormat&quot; : &quot;kilobit&quot;, 
+         &quot;bitrate&quot; : 56, 
+         &quot;connections&quot; : 0, 
+         &quot;name&quot; : &quot;Midgrade&quot;, 
+         &quot;capacity&quot; : 0, 
          &quot;bandwidthFormat&quot; : &quot;megabit&quot;
-     },
+     }, 
      {
-         &quot;bandwidth&quot; : 0,
-         &quot;bitrateFormat&quot; : &quot;kilobit&quot;,
-         &quot;bitrate&quot; : 32,
-         &quot;connections&quot; : 0,
-         &quot;name&quot; : &quot;AACplus&quot;,
-         &quot;capacity&quot; : 0,
+         &quot;bandwidth&quot; : 0, 
+         &quot;bitrateFormat&quot; : &quot;kilobit&quot;, 
+         &quot;bitrate&quot; : 32, 
+         &quot;connections&quot; : 0, 
+         &quot;name&quot; : &quot;AACplus&quot;, 
+         &quot;capacity&quot; : 0, 
          &quot;bandwidthFormat&quot; : &quot;megabit&quot;
-     },
+     }, 
      {
-         &quot;bandwidth&quot; : 0,
-         &quot;bitrateFormat&quot; : &quot;kilobit&quot;,
-         &quot;bitrate&quot; : 128,
-         &quot;connections&quot; : null,
-         &quot;name&quot; : &quot;Random&quot;,
-         &quot;capacity&quot; : null,
+         &quot;bandwidth&quot; : 0, 
+         &quot;bitrateFormat&quot; : &quot;kilobit&quot;, 
+         &quot;bitrate&quot; : 128, 
+         &quot;connections&quot; : null, 
+         &quot;name&quot; : &quot;Random&quot;, 
+         &quot;capacity&quot; : null, 
          &quot;bandwidthFormat&quot; : &quot;megabit&quot;
      }
-     ],
+     ], 
 
    &quot;nowplaying&quot; : [
      {
-         &quot;name&quot; : &quot;Kos.Mos Music Presents Phuture - hosted by Freestylers&quot;,
+         &quot;name&quot; : &quot;Kos.Mos Music Presents Phuture - hosted by Freestylers&quot;, 
          &quot;label&quot; : &quot;Artist&quot;
-     },
+     }, 
      {
-         &quot;name&quot; : &quot;Kos.Mos Music Presents Phuture - hosted by Freestylers&quot;,
+         &quot;name&quot; : &quot;Kos.Mos Music Presents Phuture - hosted by Freestylers&quot;, 
          &quot;label&quot; : &quot;Title&quot;
      }
     ]
@@ -26561,133 +27771,133 @@ https://lightsaber.crnrstn.jony5.com/_tmp_diagrams/bassdrive_dirty_shit/kos.mos.
   {
   "relays" : [
      {
-        "bitrate" : "128",
-        "status" : "1",
-        "name" : "bassdrive.radioca.st:8702",
-        "listenerCount" : "54",
-        "listenerCountPercentage" : "0.54",
-        "audioFormat" : "mp3",
-        "streamURL" : "http:\/\/bassdrive.radioca.st:8702",
-        "streamURLios" : "http:\/\/bassdrive.radioca.st:8702",
+        "bitrate" : "128", 
+        "status" : "1", 
+        "name" : "bassdrive.radioca.st:8702", 
+        "listenerCount" : "54", 
+        "listenerCountPercentage" : "0.54", 
+        "audioFormat" : "mp3", 
+        "streamURL" : "http:\/\/bassdrive.radioca.st:8702", 
+        "streamURLios" : "http:\/\/bassdrive.radioca.st:8702", 
         "title" : "Kos.Mos Music Presents Phuture - hosted by Freestylers"
-     },
+     }, 
      {
-        "bitrate" : "128",
-        "status" : "1",
-        "name" : "chi.bassdrive.co:80",
-        "listenerCount" : "109",
-        "listenerCountPercentage" : "1.09",
-        "audioFormat" : "mp3",
-        "streamURL" : "http:\/\/chi.bassdrive.co:80",
-        "streamURLios" : "http:\/\/chi.bassdrive.co:80",
+        "bitrate" : "128", 
+        "status" : "1", 
+        "name" : "chi.bassdrive.co:80", 
+        "listenerCount" : "109", 
+        "listenerCountPercentage" : "1.09", 
+        "audioFormat" : "mp3", 
+        "streamURL" : "http:\/\/chi.bassdrive.co:80", 
+        "streamURLios" : "http:\/\/chi.bassdrive.co:80", 
         "title" : "Kos.Mos Music Presents Phuture - hosted by Freestylers"
-     },
+     }, 
      {
-        "bitrate" : "128",
-        "status" : 0,
-        "name" : "ice.bassdrive.net:80\/stream",
-        "listenerCount" : "0",
-        "listenerCountPercentage" : 0,
-        "audioFormat" : "mp3",
-        "streamURL" : "http:\/\/ice.bassdrive.net:80\/stream",
-        "streamURLios" : "http:\/\/ice.bassdrive.net:80\/stream",
+        "bitrate" : "128", 
+        "status" : 0, 
+        "name" : "ice.bassdrive.net:80\/stream", 
+        "listenerCount" : "0", 
+        "listenerCountPercentage" : 0, 
+        "audioFormat" : "mp3", 
+        "streamURL" : "http:\/\/ice.bassdrive.net:80\/stream", 
+        "streamURLios" : "http:\/\/ice.bassdrive.net:80\/stream", 
         "title" : ""
-     },
+     }, 
      {
-        "bitrate" : "32",
-        "status" : 0,
-        "name" : "ice.bassdrive.net:80\/stream32",
-        "listenerCount" : "0",
-        "listenerCountPercentage" : 0,
-        "audioFormat" : "aac+",
-        "streamURL" : "http:\/\/ice.bassdrive.net:80\/stream32",
-        "streamURLios" : "http:\/\/ice.bassdrive.net:80\/stream32",
+        "bitrate" : "32", 
+        "status" : 0, 
+        "name" : "ice.bassdrive.net:80\/stream32", 
+        "listenerCount" : "0", 
+        "listenerCountPercentage" : 0, 
+        "audioFormat" : "aac+", 
+        "streamURL" : "http:\/\/ice.bassdrive.net:80\/stream32", 
+        "streamURLios" : "http:\/\/ice.bassdrive.net:80\/stream32", 
         "title" : ""
-     },
+     }, 
      {
-        "bitrate" : "56",
-        "status" : 0,
-        "name" : "ice.bassdrive.net:80\/stream56",
-        "listenerCount" : "0",
-        "listenerCountPercentage" : 0,
-        "audioFormat" : "mp3",
-        "streamURL" : "http:\/\/ice.bassdrive.net:80\/stream56",
-        "streamURLios" : "http:\/\/ice.bassdrive.net:80\/stream56",
+        "bitrate" : "56", 
+        "status" : 0, 
+        "name" : "ice.bassdrive.net:80\/stream56", 
+        "listenerCount" : "0", 
+        "listenerCountPercentage" : 0, 
+        "audioFormat" : "mp3", 
+        "streamURL" : "http:\/\/ice.bassdrive.net:80\/stream56", 
+        "streamURLios" : "http:\/\/ice.bassdrive.net:80\/stream56", 
         "title" : ""
-     },
+     }, 
      {
-        "bitrate" : "128",
-        "status" : "1",
-        "name" : "stream.bassdrive.uk:8200",
-        "listenerCount" : "14",
-        "listenerCountPercentage" : "2.73",
-        "audioFormat" : "mp3",
-        "streamURL" : "http:\/\/stream.bassdrive.uk:8200",
-        "streamURLios" : "http:\/\/stream.bassdrive.uk:8200",
+        "bitrate" : "128", 
+        "status" : "1", 
+        "name" : "stream.bassdrive.uk:8200", 
+        "listenerCount" : "14", 
+        "listenerCountPercentage" : "2.73", 
+        "audioFormat" : "mp3", 
+        "streamURL" : "http:\/\/stream.bassdrive.uk:8200", 
+        "streamURLios" : "http:\/\/stream.bassdrive.uk:8200", 
         "title" : "Kos.Mos Music Presents Phuture - hosted by Freestylers"
      }
-    ],
+    ], 
 
   "stats" : [
      {
-        "bandwidth" : 22.13,
-        "connections" : 177,
-        "name" : "Total",
-        "capacity" : 20510,
+        "bandwidth" : 22.13, 
+        "connections" : 177, 
+        "name" : "Total", 
+        "capacity" : 20510, 
         "bandwidthFormat" : "megabit"
-     },
+     }, 
      {
-        "bandwidth" : 15.38,
-        "connections" : 123,
-        "name" : "TotalUnique",
-        "capacity" : 20510,
+        "bandwidth" : 15.38, 
+        "connections" : 123, 
+        "name" : "TotalUnique", 
+        "capacity" : 20510, 
         "bandwidthFormat" : "megabit"
-     },
+     }, 
      {
-        "bandwidth" : 22.13,
-        "bitrateFormat" : "kilobit",
-        "bitrate" : 128,
-        "connections" : 177,
-        "name" : "Premium",
-        "capacity" : 20510,
+        "bandwidth" : 22.13, 
+        "bitrateFormat" : "kilobit", 
+        "bitrate" : 128, 
+        "connections" : 177, 
+        "name" : "Premium", 
+        "capacity" : 20510, 
         "bandwidthFormat" : "megabit"
-    },
+    }, 
     {
-        "bandwidth" : 0,
-        "bitrateFormat" : "kilobit",
-        "bitrate" : 56,
-        "connections" : 0,
-        "name" : "Midgrade",
-        "capacity" : 0,
+        "bandwidth" : 0, 
+        "bitrateFormat" : "kilobit", 
+        "bitrate" : 56, 
+        "connections" : 0, 
+        "name" : "Midgrade", 
+        "capacity" : 0, 
         "bandwidthFormat" : "megabit"
-    },
+    }, 
     {
-        "bandwidth" : 0,
-        "bitrateFormat" : "kilobit",
-        "bitrate" : 32,
-        "connections" : 0,
-        "name" : "AACplus",
-        "capacity" : 0,
+        "bandwidth" : 0, 
+        "bitrateFormat" : "kilobit", 
+        "bitrate" : 32, 
+        "connections" : 0, 
+        "name" : "AACplus", 
+        "capacity" : 0, 
         "bandwidthFormat" : "megabit"
-    },
+    }, 
     {
-        "bandwidth" : 0,
-        "bitrateFormat" : "kilobit",
-        "bitrate" : 128,
-        "connections" : null,
-        "name" : "Random",
-        "capacity" : null,
+        "bandwidth" : 0, 
+        "bitrateFormat" : "kilobit", 
+        "bitrate" : 128, 
+        "connections" : null, 
+        "name" : "Random", 
+        "capacity" : null, 
         "bandwidthFormat" : "megabit"
     }
-    ],
+    ], 
 
   "nowplaying" : [
     {
-        "name" : "Kos.Mos Music Presents Phuture - hosted by Freestylers",
+        "name" : "Kos.Mos Music Presents Phuture - hosted by Freestylers", 
         "label" : "Artist"
-    },
+    }, 
     {
-        "name" : "Kos.Mos Music Presents Phuture - hosted by Freestylers",
+        "name" : "Kos.Mos Music Presents Phuture - hosted by Freestylers", 
         "label" : "Title"
     }
     ]
@@ -26768,133 +27978,133 @@ $css_data['crnrstn'] . '>c<span ' . $css_data['crnrstn_R'] .
   {
   &quot;relays&quot; : [
      {
-        &quot;bitrate&quot; : &quot;128&quot;,
-        &quot;status&quot; : &quot;1&quot;,
-        &quot;name&quot; : &quot;bassdrive.radioca.st:8702&quot;,
-        &quot;listenerCount&quot; : &quot;54&quot;,
-        &quot;listenerCountPercentage&quot; : &quot;0.54&quot;,
-        &quot;audioFormat&quot; : &quot;mp3&quot;,
-        &quot;streamURL&quot; : &quot;http:\/\/bassdrive.radioca.st:8702&quot;,
-        &quot;streamURLios&quot; : &quot;http:\/\/bassdrive.radioca.st:8702&quot;,
+        &quot;bitrate&quot; : &quot;128&quot;, 
+        &quot;status&quot; : &quot;1&quot;, 
+        &quot;name&quot; : &quot;bassdrive.radioca.st:8702&quot;, 
+        &quot;listenerCount&quot; : &quot;54&quot;, 
+        &quot;listenerCountPercentage&quot; : &quot;0.54&quot;, 
+        &quot;audioFormat&quot; : &quot;mp3&quot;, 
+        &quot;streamURL&quot; : &quot;http:\/\/bassdrive.radioca.st:8702&quot;, 
+        &quot;streamURLios&quot; : &quot;http:\/\/bassdrive.radioca.st:8702&quot;, 
         &quot;title&quot; : &quot;Kos.Mos Music Presents Phuture - hosted by Freestylers&quot;
-     },
+     }, 
      {
-        &quot;bitrate&quot; : &quot;128&quot;,
-        &quot;status&quot; : &quot;1&quot;,
-        &quot;name&quot; : &quot;chi.bassdrive.co:80&quot;,
-        &quot;listenerCount&quot; : &quot;109&quot;,
-        &quot;listenerCountPercentage&quot; : &quot;1.09&quot;,
-        &quot;audioFormat&quot; : &quot;mp3&quot;,
-        &quot;streamURL&quot; : &quot;http:\/\/chi.bassdrive.co:80&quot;,
-        &quot;streamURLios&quot; : &quot;http:\/\/chi.bassdrive.co:80&quot;,
+        &quot;bitrate&quot; : &quot;128&quot;, 
+        &quot;status&quot; : &quot;1&quot;, 
+        &quot;name&quot; : &quot;chi.bassdrive.co:80&quot;, 
+        &quot;listenerCount&quot; : &quot;109&quot;, 
+        &quot;listenerCountPercentage&quot; : &quot;1.09&quot;, 
+        &quot;audioFormat&quot; : &quot;mp3&quot;, 
+        &quot;streamURL&quot; : &quot;http:\/\/chi.bassdrive.co:80&quot;, 
+        &quot;streamURLios&quot; : &quot;http:\/\/chi.bassdrive.co:80&quot;, 
         &quot;title&quot; : &quot;Kos.Mos Music Presents Phuture - hosted by Freestylers&quot;
-     },
+     }, 
      {
-        &quot;bitrate&quot; : &quot;128&quot;,
-        &quot;status&quot; : 0,
-        &quot;name&quot; : &quot;ice.bassdrive.net:80\/stream&quot;,
-        &quot;listenerCount&quot; : &quot;0&quot;,
-        &quot;listenerCountPercentage&quot; : 0,
-        &quot;audioFormat&quot; : &quot;mp3&quot;,
-        &quot;streamURL&quot; : &quot;http:\/\/ice.bassdrive.net:80\/stream&quot;,
-        &quot;streamURLios&quot; : &quot;http:\/\/ice.bassdrive.net:80\/stream&quot;,
+        &quot;bitrate&quot; : &quot;128&quot;, 
+        &quot;status&quot; : 0, 
+        &quot;name&quot; : &quot;ice.bassdrive.net:80\/stream&quot;, 
+        &quot;listenerCount&quot; : &quot;0&quot;, 
+        &quot;listenerCountPercentage&quot; : 0, 
+        &quot;audioFormat&quot; : &quot;mp3&quot;, 
+        &quot;streamURL&quot; : &quot;http:\/\/ice.bassdrive.net:80\/stream&quot;, 
+        &quot;streamURLios&quot; : &quot;http:\/\/ice.bassdrive.net:80\/stream&quot;, 
         &quot;title&quot; : &quot;&quot;
-     },
+     }, 
      {
-        &quot;bitrate&quot; : &quot;32&quot;,
-        &quot;status&quot; : 0,
-        &quot;name&quot; : &quot;ice.bassdrive.net:80\/stream32&quot;,
-        &quot;listenerCount&quot; : &quot;0&quot;,
-        &quot;listenerCountPercentage&quot; : 0,
-        &quot;audioFormat&quot; : &quot;aac+&quot;,
-        &quot;streamURL&quot; : &quot;http:\/\/ice.bassdrive.net:80\/stream32&quot;,
-        &quot;streamURLios&quot; : &quot;http:\/\/ice.bassdrive.net:80\/stream32&quot;,
+        &quot;bitrate&quot; : &quot;32&quot;, 
+        &quot;status&quot; : 0, 
+        &quot;name&quot; : &quot;ice.bassdrive.net:80\/stream32&quot;, 
+        &quot;listenerCount&quot; : &quot;0&quot;, 
+        &quot;listenerCountPercentage&quot; : 0, 
+        &quot;audioFormat&quot; : &quot;aac+&quot;, 
+        &quot;streamURL&quot; : &quot;http:\/\/ice.bassdrive.net:80\/stream32&quot;, 
+        &quot;streamURLios&quot; : &quot;http:\/\/ice.bassdrive.net:80\/stream32&quot;, 
         &quot;title&quot; : &quot;&quot;
-     },
+     }, 
      {
-        &quot;bitrate&quot; : &quot;56&quot;,
-        &quot;status&quot; : 0,
-        &quot;name&quot; : &quot;ice.bassdrive.net:80\/stream56&quot;,
-        &quot;listenerCount&quot; : &quot;0&quot;,
-        &quot;listenerCountPercentage&quot; : 0,
-        &quot;audioFormat&quot; : &quot;mp3&quot;,
-        &quot;streamURL&quot; : &quot;http:\/\/ice.bassdrive.net:80\/stream56&quot;,
-        &quot;streamURLios&quot; : &quot;http:\/\/ice.bassdrive.net:80\/stream56&quot;,
+        &quot;bitrate&quot; : &quot;56&quot;, 
+        &quot;status&quot; : 0, 
+        &quot;name&quot; : &quot;ice.bassdrive.net:80\/stream56&quot;, 
+        &quot;listenerCount&quot; : &quot;0&quot;, 
+        &quot;listenerCountPercentage&quot; : 0, 
+        &quot;audioFormat&quot; : &quot;mp3&quot;, 
+        &quot;streamURL&quot; : &quot;http:\/\/ice.bassdrive.net:80\/stream56&quot;, 
+        &quot;streamURLios&quot; : &quot;http:\/\/ice.bassdrive.net:80\/stream56&quot;, 
         &quot;title&quot; : &quot;&quot;
-     },
+     }, 
      {
-        &quot;bitrate&quot; : &quot;128&quot;,
-        &quot;status&quot; : &quot;1&quot;,
-        &quot;name&quot; : &quot;stream.bassdrive.uk:8200&quot;,
-        &quot;listenerCount&quot; : &quot;14&quot;,
-        &quot;listenerCountPercentage&quot; : &quot;2.73&quot;,
-        &quot;audioFormat&quot; : &quot;mp3&quot;,
-        &quot;streamURL&quot; : &quot;http:\/\/stream.bassdrive.uk:8200&quot;,
-        &quot;streamURLios&quot; : &quot;http:\/\/stream.bassdrive.uk:8200&quot;,
+        &quot;bitrate&quot; : &quot;128&quot;, 
+        &quot;status&quot; : &quot;1&quot;, 
+        &quot;name&quot; : &quot;stream.bassdrive.uk:8200&quot;, 
+        &quot;listenerCount&quot; : &quot;14&quot;, 
+        &quot;listenerCountPercentage&quot; : &quot;2.73&quot;, 
+        &quot;audioFormat&quot; : &quot;mp3&quot;, 
+        &quot;streamURL&quot; : &quot;http:\/\/stream.bassdrive.uk:8200&quot;, 
+        &quot;streamURLios&quot; : &quot;http:\/\/stream.bassdrive.uk:8200&quot;, 
         &quot;title&quot; : &quot;Kos.Mos Music Presents Phuture - hosted by Freestylers&quot;
      }
-    ],
+    ], 
 
   &quot;stats&quot; : [
      {
-        &quot;bandwidth&quot; : 22.13,
-        &quot;connections&quot; : 177,
-        &quot;name&quot; : &quot;Total&quot;,
-        &quot;capacity&quot; : 20510,
+        &quot;bandwidth&quot; : 22.13, 
+        &quot;connections&quot; : 177, 
+        &quot;name&quot; : &quot;Total&quot;, 
+        &quot;capacity&quot; : 20510, 
         &quot;bandwidthFormat&quot; : &quot;megabit&quot;
-     },
+     }, 
      {
-        &quot;bandwidth&quot; : 15.38,
-        &quot;connections&quot; : 123,
-        &quot;name&quot; : &quot;TotalUnique&quot;,
-        &quot;capacity&quot; : 20510,
+        &quot;bandwidth&quot; : 15.38, 
+        &quot;connections&quot; : 123, 
+        &quot;name&quot; : &quot;TotalUnique&quot;, 
+        &quot;capacity&quot; : 20510, 
         &quot;bandwidthFormat&quot; : &quot;megabit&quot;
-     },
+     }, 
      {
-        &quot;bandwidth&quot; : 22.13,
-        &quot;bitrateFormat&quot; : &quot;kilobit&quot;,
-        &quot;bitrate&quot; : 128,
-        &quot;connections&quot; : 177,
-        &quot;name&quot; : &quot;Premium&quot;,
-        &quot;capacity&quot; : 20510,
+        &quot;bandwidth&quot; : 22.13, 
+        &quot;bitrateFormat&quot; : &quot;kilobit&quot;, 
+        &quot;bitrate&quot; : 128, 
+        &quot;connections&quot; : 177, 
+        &quot;name&quot; : &quot;Premium&quot;, 
+        &quot;capacity&quot; : 20510, 
         &quot;bandwidthFormat&quot; : &quot;megabit&quot;
-    },
+    }, 
     {
-        &quot;bandwidth&quot; : 0,
-        &quot;bitrateFormat&quot; : &quot;kilobit&quot;,
-        &quot;bitrate&quot; : 56,
-        &quot;connections&quot; : 0,
-        &quot;name&quot; : &quot;Midgrade&quot;,
-        &quot;capacity&quot; : 0,
+        &quot;bandwidth&quot; : 0, 
+        &quot;bitrateFormat&quot; : &quot;kilobit&quot;, 
+        &quot;bitrate&quot; : 56, 
+        &quot;connections&quot; : 0, 
+        &quot;name&quot; : &quot;Midgrade&quot;, 
+        &quot;capacity&quot; : 0, 
         &quot;bandwidthFormat&quot; : &quot;megabit&quot;
-    },
+    }, 
     {
-        &quot;bandwidth&quot; : 0,
-        &quot;bitrateFormat&quot; : &quot;kilobit&quot;,
-        &quot;bitrate&quot; : 32,
-        &quot;connections&quot; : 0,
-        &quot;name&quot; : &quot;AACplus&quot;,
-        &quot;capacity&quot; : 0,
+        &quot;bandwidth&quot; : 0, 
+        &quot;bitrateFormat&quot; : &quot;kilobit&quot;, 
+        &quot;bitrate&quot; : 32, 
+        &quot;connections&quot; : 0, 
+        &quot;name&quot; : &quot;AACplus&quot;, 
+        &quot;capacity&quot; : 0, 
         &quot;bandwidthFormat&quot; : &quot;megabit&quot;
-    },
+    }, 
     {
-        &quot;bandwidth&quot; : 0,
-        &quot;bitrateFormat&quot; : &quot;kilobit&quot;,
-        &quot;bitrate&quot; : 128,
-        &quot;connections&quot; : null,
-        &quot;name&quot; : &quot;Random&quot;,
-        &quot;capacity&quot; : null,
+        &quot;bandwidth&quot; : 0, 
+        &quot;bitrateFormat&quot; : &quot;kilobit&quot;, 
+        &quot;bitrate&quot; : 128, 
+        &quot;connections&quot; : null, 
+        &quot;name&quot; : &quot;Random&quot;, 
+        &quot;capacity&quot; : null, 
         &quot;bandwidthFormat&quot; : &quot;megabit&quot;
     }
-    ],
+    ], 
 
   &quot;nowplaying&quot; : [
     {
-        &quot;name&quot; : &quot;Kos.Mos Music Presents Phuture - hosted by Freestylers&quot;,
+        &quot;name&quot; : &quot;Kos.Mos Music Presents Phuture - hosted by Freestylers&quot;, 
         &quot;label&quot; : &quot;Artist&quot;
-    },
+    }, 
     {
-        &quot;name&quot; : &quot;Kos.Mos Music Presents Phuture - hosted by Freestylers&quot;,
+        &quot;name&quot; : &quot;Kos.Mos Music Presents Phuture - hosted by Freestylers&quot;, 
         &quot;label&quot; : &quot;Title&quot;
     }
     ]
@@ -27400,7 +28610,7 @@ drinking buddy, J5,...who would have turned
                          * 5
                          *
                          * Sunday, August 25, 2024 @ 0625 hrs.
-                         * 
+                         *
                          * # C # R # N # R # S # T # N # :: # L # I # G # H # T
                          * Edit: Completed crnrstn_bassdrive_stream_relay 
                          *       HTML and text Title content adjustments 
@@ -27528,133 +28738,133 @@ https://lightsaber.crnrstn.jony5.com/_tmp_diagrams/bassdrive_dirty_shit/kos.mos.
   {
   "relays" : [
      {
-        "bitrate" : "128",
-        "status" : "1",
-        "name" : "bassdrive.radioca.st:8702",
-        "listenerCount" : "54",
-        "listenerCountPercentage" : "0.54",
-        "audioFormat" : "mp3",
-        "streamURL" : "http:\/\/bassdrive.radioca.st:8702",
-        "streamURLios" : "http:\/\/bassdrive.radioca.st:8702",
+        "bitrate" : "128", 
+        "status" : "1", 
+        "name" : "bassdrive.radioca.st:8702", 
+        "listenerCount" : "54", 
+        "listenerCountPercentage" : "0.54", 
+        "audioFormat" : "mp3", 
+        "streamURL" : "http:\/\/bassdrive.radioca.st:8702", 
+        "streamURLios" : "http:\/\/bassdrive.radioca.st:8702", 
         "title" : "Kos.Mos Music Presents Phuture - hosted by Freestylers"
-     },
+     }, 
      {
-        "bitrate" : "128",
-        "status" : "1",
-        "name" : "chi.bassdrive.co:80",
-        "listenerCount" : "109",
-        "listenerCountPercentage" : "1.09",
-        "audioFormat" : "mp3",
-        "streamURL" : "http:\/\/chi.bassdrive.co:80",
-        "streamURLios" : "http:\/\/chi.bassdrive.co:80",
+        "bitrate" : "128", 
+        "status" : "1", 
+        "name" : "chi.bassdrive.co:80", 
+        "listenerCount" : "109", 
+        "listenerCountPercentage" : "1.09", 
+        "audioFormat" : "mp3", 
+        "streamURL" : "http:\/\/chi.bassdrive.co:80", 
+        "streamURLios" : "http:\/\/chi.bassdrive.co:80", 
         "title" : "Kos.Mos Music Presents Phuture - hosted by Freestylers"
-     },
+     }, 
      {
-        "bitrate" : "128",
-        "status" : 0,
-        "name" : "ice.bassdrive.net:80\/stream",
-        "listenerCount" : "0",
-        "listenerCountPercentage" : 0,
-        "audioFormat" : "mp3",
-        "streamURL" : "http:\/\/ice.bassdrive.net:80\/stream",
-        "streamURLios" : "http:\/\/ice.bassdrive.net:80\/stream",
+        "bitrate" : "128", 
+        "status" : 0, 
+        "name" : "ice.bassdrive.net:80\/stream", 
+        "listenerCount" : "0", 
+        "listenerCountPercentage" : 0, 
+        "audioFormat" : "mp3", 
+        "streamURL" : "http:\/\/ice.bassdrive.net:80\/stream", 
+        "streamURLios" : "http:\/\/ice.bassdrive.net:80\/stream", 
         "title" : ""
-     },
+     }, 
      {
-        "bitrate" : "32",
-        "status" : 0,
-        "name" : "ice.bassdrive.net:80\/stream32",
-        "listenerCount" : "0",
-        "listenerCountPercentage" : 0,
-        "audioFormat" : "aac+",
-        "streamURL" : "http:\/\/ice.bassdrive.net:80\/stream32",
-        "streamURLios" : "http:\/\/ice.bassdrive.net:80\/stream32",
+        "bitrate" : "32", 
+        "status" : 0, 
+        "name" : "ice.bassdrive.net:80\/stream32", 
+        "listenerCount" : "0", 
+        "listenerCountPercentage" : 0, 
+        "audioFormat" : "aac+", 
+        "streamURL" : "http:\/\/ice.bassdrive.net:80\/stream32", 
+        "streamURLios" : "http:\/\/ice.bassdrive.net:80\/stream32", 
         "title" : ""
-     },
+     }, 
      {
-        "bitrate" : "56",
-        "status" : 0,
-        "name" : "ice.bassdrive.net:80\/stream56",
-        "listenerCount" : "0",
-        "listenerCountPercentage" : 0,
-        "audioFormat" : "mp3",
-        "streamURL" : "http:\/\/ice.bassdrive.net:80\/stream56",
-        "streamURLios" : "http:\/\/ice.bassdrive.net:80\/stream56",
+        "bitrate" : "56", 
+        "status" : 0, 
+        "name" : "ice.bassdrive.net:80\/stream56", 
+        "listenerCount" : "0", 
+        "listenerCountPercentage" : 0, 
+        "audioFormat" : "mp3", 
+        "streamURL" : "http:\/\/ice.bassdrive.net:80\/stream56", 
+        "streamURLios" : "http:\/\/ice.bassdrive.net:80\/stream56", 
         "title" : ""
-     },
+     }, 
      {
-        "bitrate" : "128",
-        "status" : "1",
-        "name" : "stream.bassdrive.uk:8200",
-        "listenerCount" : "14",
-        "listenerCountPercentage" : "2.73",
-        "audioFormat" : "mp3",
-        "streamURL" : "http:\/\/stream.bassdrive.uk:8200",
-        "streamURLios" : "http:\/\/stream.bassdrive.uk:8200",
+        "bitrate" : "128", 
+        "status" : "1", 
+        "name" : "stream.bassdrive.uk:8200", 
+        "listenerCount" : "14", 
+        "listenerCountPercentage" : "2.73", 
+        "audioFormat" : "mp3", 
+        "streamURL" : "http:\/\/stream.bassdrive.uk:8200", 
+        "streamURLios" : "http:\/\/stream.bassdrive.uk:8200", 
         "title" : "Kos.Mos Music Presents Phuture - hosted by Freestylers"
      }
-    ],
+    ], 
 
   "stats" : [
      {
-        "bandwidth" : 22.13,
-        "connections" : 177,
-        "name" : "Total",
-        "capacity" : 20510,
+        "bandwidth" : 22.13, 
+        "connections" : 177, 
+        "name" : "Total", 
+        "capacity" : 20510, 
         "bandwidthFormat" : "megabit"
-     },
+     }, 
      {
-        "bandwidth" : 15.38,
-        "connections" : 123,
-        "name" : "TotalUnique",
-        "capacity" : 20510,
+        "bandwidth" : 15.38, 
+        "connections" : 123, 
+        "name" : "TotalUnique", 
+        "capacity" : 20510, 
         "bandwidthFormat" : "megabit"
-     },
+     }, 
      {
-        "bandwidth" : 22.13,
-        "bitrateFormat" : "kilobit",
-        "bitrate" : 128,
-        "connections" : 177,
-        "name" : "Premium",
-        "capacity" : 20510,
+        "bandwidth" : 22.13, 
+        "bitrateFormat" : "kilobit", 
+        "bitrate" : 128, 
+        "connections" : 177, 
+        "name" : "Premium", 
+        "capacity" : 20510, 
         "bandwidthFormat" : "megabit"
-    },
+    }, 
     {
-        "bandwidth" : 0,
-        "bitrateFormat" : "kilobit",
-        "bitrate" : 56,
-        "connections" : 0,
-        "name" : "Midgrade",
-        "capacity" : 0,
+        "bandwidth" : 0, 
+        "bitrateFormat" : "kilobit", 
+        "bitrate" : 56, 
+        "connections" : 0, 
+        "name" : "Midgrade", 
+        "capacity" : 0, 
         "bandwidthFormat" : "megabit"
-    },
+    }, 
     {
-        "bandwidth" : 0,
-        "bitrateFormat" : "kilobit",
-        "bitrate" : 32,
-        "connections" : 0,
-        "name" : "AACplus",
-        "capacity" : 0,
+        "bandwidth" : 0, 
+        "bitrateFormat" : "kilobit", 
+        "bitrate" : 32, 
+        "connections" : 0, 
+        "name" : "AACplus", 
+        "capacity" : 0, 
         "bandwidthFormat" : "megabit"
-    },
+    }, 
     {
-        "bandwidth" : 0,
-        "bitrateFormat" : "kilobit",
-        "bitrate" : 128,
-        "connections" : null,
-        "name" : "Random",
-        "capacity" : null,
+        "bandwidth" : 0, 
+        "bitrateFormat" : "kilobit", 
+        "bitrate" : 128, 
+        "connections" : null, 
+        "name" : "Random", 
+        "capacity" : null, 
         "bandwidthFormat" : "megabit"
     }
-    ],
+    ], 
 
   "nowplaying" : [
     {
-        "name" : "Kos.Mos Music Presents Phuture - hosted by Freestylers",
+        "name" : "Kos.Mos Music Presents Phuture - hosted by Freestylers", 
         "label" : "Artist"
-    },
+    }, 
     {
-        "name" : "Kos.Mos Music Presents Phuture - hosted by Freestylers",
+        "name" : "Kos.Mos Music Presents Phuture - hosted by Freestylers", 
         "label" : "Title"
     }
     ]
@@ -27739,133 +28949,133 @@ from 2021:
   {
   &quot;relays&quot; : [
      {
-        &quot;bitrate&quot; : &quot;128&quot;,
-        &quot;status&quot; : &quot;1&quot;,
-        &quot;name&quot; : &quot;bassdrive.radioca.st:8702&quot;,
-        &quot;listenerCount&quot; : &quot;54&quot;,
-        &quot;listenerCountPercentage&quot; : &quot;0.54&quot;,
-        &quot;audioFormat&quot; : &quot;mp3&quot;,
-        &quot;streamURL&quot; : &quot;http:\/\/bassdrive.radioca.st:8702&quot;,
-        &quot;streamURLios&quot; : &quot;http:\/\/bassdrive.radioca.st:8702&quot;,
+        &quot;bitrate&quot; : &quot;128&quot;, 
+        &quot;status&quot; : &quot;1&quot;, 
+        &quot;name&quot; : &quot;bassdrive.radioca.st:8702&quot;, 
+        &quot;listenerCount&quot; : &quot;54&quot;, 
+        &quot;listenerCountPercentage&quot; : &quot;0.54&quot;, 
+        &quot;audioFormat&quot; : &quot;mp3&quot;, 
+        &quot;streamURL&quot; : &quot;http:\/\/bassdrive.radioca.st:8702&quot;, 
+        &quot;streamURLios&quot; : &quot;http:\/\/bassdrive.radioca.st:8702&quot;, 
         &quot;title&quot; : &quot;Kos.Mos Music Presents Phuture - hosted by Freestylers&quot;
-     },
+     }, 
      {
-        &quot;bitrate&quot; : &quot;128&quot;,
-        &quot;status&quot; : &quot;1&quot;,
-        &quot;name&quot; : &quot;chi.bassdrive.co:80&quot;,
-        &quot;listenerCount&quot; : &quot;109&quot;,
-        &quot;listenerCountPercentage&quot; : &quot;1.09&quot;,
-        &quot;audioFormat&quot; : &quot;mp3&quot;,
-        &quot;streamURL&quot; : &quot;http:\/\/chi.bassdrive.co:80&quot;,
-        &quot;streamURLios&quot; : &quot;http:\/\/chi.bassdrive.co:80&quot;,
+        &quot;bitrate&quot; : &quot;128&quot;, 
+        &quot;status&quot; : &quot;1&quot;, 
+        &quot;name&quot; : &quot;chi.bassdrive.co:80&quot;, 
+        &quot;listenerCount&quot; : &quot;109&quot;, 
+        &quot;listenerCountPercentage&quot; : &quot;1.09&quot;, 
+        &quot;audioFormat&quot; : &quot;mp3&quot;, 
+        &quot;streamURL&quot; : &quot;http:\/\/chi.bassdrive.co:80&quot;, 
+        &quot;streamURLios&quot; : &quot;http:\/\/chi.bassdrive.co:80&quot;, 
         &quot;title&quot; : &quot;Kos.Mos Music Presents Phuture - hosted by Freestylers&quot;
-     },
+     }, 
      {
-        &quot;bitrate&quot; : &quot;128&quot;,
-        &quot;status&quot; : 0,
-        &quot;name&quot; : &quot;ice.bassdrive.net:80\/stream&quot;,
-        &quot;listenerCount&quot; : &quot;0&quot;,
-        &quot;listenerCountPercentage&quot; : 0,
-        &quot;audioFormat&quot; : &quot;mp3&quot;,
-        &quot;streamURL&quot; : &quot;http:\/\/ice.bassdrive.net:80\/stream&quot;,
-        &quot;streamURLios&quot; : &quot;http:\/\/ice.bassdrive.net:80\/stream&quot;,
+        &quot;bitrate&quot; : &quot;128&quot;, 
+        &quot;status&quot; : 0, 
+        &quot;name&quot; : &quot;ice.bassdrive.net:80\/stream&quot;, 
+        &quot;listenerCount&quot; : &quot;0&quot;, 
+        &quot;listenerCountPercentage&quot; : 0, 
+        &quot;audioFormat&quot; : &quot;mp3&quot;, 
+        &quot;streamURL&quot; : &quot;http:\/\/ice.bassdrive.net:80\/stream&quot;, 
+        &quot;streamURLios&quot; : &quot;http:\/\/ice.bassdrive.net:80\/stream&quot;, 
         &quot;title&quot; : &quot;&quot;
-     },
+     }, 
      {
-        &quot;bitrate&quot; : &quot;32&quot;,
-        &quot;status&quot; : 0,
-        &quot;name&quot; : &quot;ice.bassdrive.net:80\/stream32&quot;,
-        &quot;listenerCount&quot; : &quot;0&quot;,
-        &quot;listenerCountPercentage&quot; : 0,
-        &quot;audioFormat&quot; : &quot;aac+&quot;,
-        &quot;streamURL&quot; : &quot;http:\/\/ice.bassdrive.net:80\/stream32&quot;,
-        &quot;streamURLios&quot; : &quot;http:\/\/ice.bassdrive.net:80\/stream32&quot;,
+        &quot;bitrate&quot; : &quot;32&quot;, 
+        &quot;status&quot; : 0, 
+        &quot;name&quot; : &quot;ice.bassdrive.net:80\/stream32&quot;, 
+        &quot;listenerCount&quot; : &quot;0&quot;, 
+        &quot;listenerCountPercentage&quot; : 0, 
+        &quot;audioFormat&quot; : &quot;aac+&quot;, 
+        &quot;streamURL&quot; : &quot;http:\/\/ice.bassdrive.net:80\/stream32&quot;, 
+        &quot;streamURLios&quot; : &quot;http:\/\/ice.bassdrive.net:80\/stream32&quot;, 
         &quot;title&quot; : &quot;&quot;
-     },
+     }, 
      {
-        &quot;bitrate&quot; : &quot;56&quot;,
-        &quot;status&quot; : 0,
-        &quot;name&quot; : &quot;ice.bassdrive.net:80\/stream56&quot;,
-        &quot;listenerCount&quot; : &quot;0&quot;,
-        &quot;listenerCountPercentage&quot; : 0,
-        &quot;audioFormat&quot; : &quot;mp3&quot;,
-        &quot;streamURL&quot; : &quot;http:\/\/ice.bassdrive.net:80\/stream56&quot;,
-        &quot;streamURLios&quot; : &quot;http:\/\/ice.bassdrive.net:80\/stream56&quot;,
+        &quot;bitrate&quot; : &quot;56&quot;, 
+        &quot;status&quot; : 0, 
+        &quot;name&quot; : &quot;ice.bassdrive.net:80\/stream56&quot;, 
+        &quot;listenerCount&quot; : &quot;0&quot;, 
+        &quot;listenerCountPercentage&quot; : 0, 
+        &quot;audioFormat&quot; : &quot;mp3&quot;, 
+        &quot;streamURL&quot; : &quot;http:\/\/ice.bassdrive.net:80\/stream56&quot;, 
+        &quot;streamURLios&quot; : &quot;http:\/\/ice.bassdrive.net:80\/stream56&quot;, 
         &quot;title&quot; : &quot;&quot;
-     },
+     }, 
      {
-        &quot;bitrate&quot; : &quot;128&quot;,
-        &quot;status&quot; : &quot;1&quot;,
-        &quot;name&quot; : &quot;stream.bassdrive.uk:8200&quot;,
-        &quot;listenerCount&quot; : &quot;14&quot;,
-        &quot;listenerCountPercentage&quot; : &quot;2.73&quot;,
-        &quot;audioFormat&quot; : &quot;mp3&quot;,
-        &quot;streamURL&quot; : &quot;http:\/\/stream.bassdrive.uk:8200&quot;,
-        &quot;streamURLios&quot; : &quot;http:\/\/stream.bassdrive.uk:8200&quot;,
+        &quot;bitrate&quot; : &quot;128&quot;, 
+        &quot;status&quot; : &quot;1&quot;, 
+        &quot;name&quot; : &quot;stream.bassdrive.uk:8200&quot;, 
+        &quot;listenerCount&quot; : &quot;14&quot;, 
+        &quot;listenerCountPercentage&quot; : &quot;2.73&quot;, 
+        &quot;audioFormat&quot; : &quot;mp3&quot;, 
+        &quot;streamURL&quot; : &quot;http:\/\/stream.bassdrive.uk:8200&quot;, 
+        &quot;streamURLios&quot; : &quot;http:\/\/stream.bassdrive.uk:8200&quot;, 
         &quot;title&quot; : &quot;Kos.Mos Music Presents Phuture - hosted by Freestylers&quot;
      }
-    ],
+    ], 
 
   &quot;stats&quot; : [
      {
-        &quot;bandwidth&quot; : 22.13,
-        &quot;connections&quot; : 177,
-        &quot;name&quot; : &quot;Total&quot;,
-        &quot;capacity&quot; : 20510,
+        &quot;bandwidth&quot; : 22.13, 
+        &quot;connections&quot; : 177, 
+        &quot;name&quot; : &quot;Total&quot;, 
+        &quot;capacity&quot; : 20510, 
         &quot;bandwidthFormat&quot; : &quot;megabit&quot;
-     },
+     }, 
      {
-        &quot;bandwidth&quot; : 15.38,
-        &quot;connections&quot; : 123,
-        &quot;name&quot; : &quot;TotalUnique&quot;,
-        &quot;capacity&quot; : 20510,
+        &quot;bandwidth&quot; : 15.38, 
+        &quot;connections&quot; : 123, 
+        &quot;name&quot; : &quot;TotalUnique&quot;, 
+        &quot;capacity&quot; : 20510, 
         &quot;bandwidthFormat&quot; : &quot;megabit&quot;
-     },
+     }, 
      {
-        &quot;bandwidth&quot; : 22.13,
-        &quot;bitrateFormat&quot; : &quot;kilobit&quot;,
-        &quot;bitrate&quot; : 128,
-        &quot;connections&quot; : 177,
-        &quot;name&quot; : &quot;Premium&quot;,
-        &quot;capacity&quot; : 20510,
+        &quot;bandwidth&quot; : 22.13, 
+        &quot;bitrateFormat&quot; : &quot;kilobit&quot;, 
+        &quot;bitrate&quot; : 128, 
+        &quot;connections&quot; : 177, 
+        &quot;name&quot; : &quot;Premium&quot;, 
+        &quot;capacity&quot; : 20510, 
         &quot;bandwidthFormat&quot; : &quot;megabit&quot;
-    },
+    }, 
     {
-        &quot;bandwidth&quot; : 0,
-        &quot;bitrateFormat&quot; : &quot;kilobit&quot;,
-        &quot;bitrate&quot; : 56,
-        &quot;connections&quot; : 0,
-        &quot;name&quot; : &quot;Midgrade&quot;,
-        &quot;capacity&quot; : 0,
+        &quot;bandwidth&quot; : 0, 
+        &quot;bitrateFormat&quot; : &quot;kilobit&quot;, 
+        &quot;bitrate&quot; : 56, 
+        &quot;connections&quot; : 0, 
+        &quot;name&quot; : &quot;Midgrade&quot;, 
+        &quot;capacity&quot; : 0, 
         &quot;bandwidthFormat&quot; : &quot;megabit&quot;
-    },
+    }, 
     {
-        &quot;bandwidth&quot; : 0,
-        &quot;bitrateFormat&quot; : &quot;kilobit&quot;,
-        &quot;bitrate&quot; : 32,
-        &quot;connections&quot; : 0,
-        &quot;name&quot; : &quot;AACplus&quot;,
-        &quot;capacity&quot; : 0,
+        &quot;bandwidth&quot; : 0, 
+        &quot;bitrateFormat&quot; : &quot;kilobit&quot;, 
+        &quot;bitrate&quot; : 32, 
+        &quot;connections&quot; : 0, 
+        &quot;name&quot; : &quot;AACplus&quot;, 
+        &quot;capacity&quot; : 0, 
         &quot;bandwidthFormat&quot; : &quot;megabit&quot;
-    },
+    }, 
     {
-        &quot;bandwidth&quot; : 0,
-        &quot;bitrateFormat&quot; : &quot;kilobit&quot;,
-        &quot;bitrate&quot; : 128,
-        &quot;connections&quot; : null,
-        &quot;name&quot; : &quot;Random&quot;,
-        &quot;capacity&quot; : null,
+        &quot;bandwidth&quot; : 0, 
+        &quot;bitrateFormat&quot; : &quot;kilobit&quot;, 
+        &quot;bitrate&quot; : 128, 
+        &quot;connections&quot; : null, 
+        &quot;name&quot; : &quot;Random&quot;, 
+        &quot;capacity&quot; : null, 
         &quot;bandwidthFormat&quot; : &quot;megabit&quot;
     }
-    ],
+    ], 
 
   &quot;nowplaying&quot; : [
     {
-        &quot;name&quot; : &quot;Kos.Mos Music Presents Phuture - hosted by Freestylers&quot;,
+        &quot;name&quot; : &quot;Kos.Mos Music Presents Phuture - hosted by Freestylers&quot;, 
         &quot;label&quot; : &quot;Artist&quot;
-    },
+    }, 
     {
-        &quot;name&quot; : &quot;Kos.Mos Music Presents Phuture - hosted by Freestylers&quot;,
+        &quot;name&quot; : &quot;Kos.Mos Music Presents Phuture - hosted by Freestylers&quot;, 
         &quot;label&quot; : &quot;Title&quot;
     }
     ]
@@ -28484,7 +29694,7 @@ channel presentation.
 
 A single string constant will
 convey a single system social
-media image across email, web,
+media image across email, web, 
 and SOAP; the CLR-SSL system 
 assets are outputted through 
 channel specific architectures 
@@ -28517,133 +29727,133 @@ https://lightsaber.crnrstn.jony5.com/_tmp_diagrams/bassdrive_dirty_shit/kos.mos.
   {
   "relays" : [
      {
-        "bitrate" : "128",
-        "status" : "1",
-        "name" : "bassdrive.radioca.st:8702",
-        "listenerCount" : "54",
-        "listenerCountPercentage" : "0.54",
-        "audioFormat" : "mp3",
-        "streamURL" : "http:\/\/bassdrive.radioca.st:8702",
-        "streamURLios" : "http:\/\/bassdrive.radioca.st:8702",
+        "bitrate" : "128", 
+        "status" : "1", 
+        "name" : "bassdrive.radioca.st:8702", 
+        "listenerCount" : "54", 
+        "listenerCountPercentage" : "0.54", 
+        "audioFormat" : "mp3", 
+        "streamURL" : "http:\/\/bassdrive.radioca.st:8702", 
+        "streamURLios" : "http:\/\/bassdrive.radioca.st:8702", 
         "title" : "Kos.Mos Music Presents Phuture - hosted by Freestylers"
-     },
+     }, 
      {
-        "bitrate" : "128",
-        "status" : "1",
-        "name" : "chi.bassdrive.co:80",
-        "listenerCount" : "109",
-        "listenerCountPercentage" : "1.09",
-        "audioFormat" : "mp3",
-        "streamURL" : "http:\/\/chi.bassdrive.co:80",
-        "streamURLios" : "http:\/\/chi.bassdrive.co:80",
+        "bitrate" : "128", 
+        "status" : "1", 
+        "name" : "chi.bassdrive.co:80", 
+        "listenerCount" : "109", 
+        "listenerCountPercentage" : "1.09", 
+        "audioFormat" : "mp3", 
+        "streamURL" : "http:\/\/chi.bassdrive.co:80", 
+        "streamURLios" : "http:\/\/chi.bassdrive.co:80", 
         "title" : "Kos.Mos Music Presents Phuture - hosted by Freestylers"
-     },
+     }, 
      {
-        "bitrate" : "128",
-        "status" : 0,
-        "name" : "ice.bassdrive.net:80\/stream",
-        "listenerCount" : "0",
-        "listenerCountPercentage" : 0,
-        "audioFormat" : "mp3",
-        "streamURL" : "http:\/\/ice.bassdrive.net:80\/stream",
-        "streamURLios" : "http:\/\/ice.bassdrive.net:80\/stream",
+        "bitrate" : "128", 
+        "status" : 0, 
+        "name" : "ice.bassdrive.net:80\/stream", 
+        "listenerCount" : "0", 
+        "listenerCountPercentage" : 0, 
+        "audioFormat" : "mp3", 
+        "streamURL" : "http:\/\/ice.bassdrive.net:80\/stream", 
+        "streamURLios" : "http:\/\/ice.bassdrive.net:80\/stream", 
         "title" : ""
-     },
+     }, 
      {
-        "bitrate" : "32",
-        "status" : 0,
-        "name" : "ice.bassdrive.net:80\/stream32",
-        "listenerCount" : "0",
-        "listenerCountPercentage" : 0,
-        "audioFormat" : "aac+",
-        "streamURL" : "http:\/\/ice.bassdrive.net:80\/stream32",
-        "streamURLios" : "http:\/\/ice.bassdrive.net:80\/stream32",
+        "bitrate" : "32", 
+        "status" : 0, 
+        "name" : "ice.bassdrive.net:80\/stream32", 
+        "listenerCount" : "0", 
+        "listenerCountPercentage" : 0, 
+        "audioFormat" : "aac+", 
+        "streamURL" : "http:\/\/ice.bassdrive.net:80\/stream32", 
+        "streamURLios" : "http:\/\/ice.bassdrive.net:80\/stream32", 
         "title" : ""
-     },
+     }, 
      {
-        "bitrate" : "56",
-        "status" : 0,
-        "name" : "ice.bassdrive.net:80\/stream56",
-        "listenerCount" : "0",
-        "listenerCountPercentage" : 0,
-        "audioFormat" : "mp3",
-        "streamURL" : "http:\/\/ice.bassdrive.net:80\/stream56",
-        "streamURLios" : "http:\/\/ice.bassdrive.net:80\/stream56",
+        "bitrate" : "56", 
+        "status" : 0, 
+        "name" : "ice.bassdrive.net:80\/stream56", 
+        "listenerCount" : "0", 
+        "listenerCountPercentage" : 0, 
+        "audioFormat" : "mp3", 
+        "streamURL" : "http:\/\/ice.bassdrive.net:80\/stream56", 
+        "streamURLios" : "http:\/\/ice.bassdrive.net:80\/stream56", 
         "title" : ""
-     },
+     }, 
      {
-        "bitrate" : "128",
-        "status" : "1",
-        "name" : "stream.bassdrive.uk:8200",
-        "listenerCount" : "14",
-        "listenerCountPercentage" : "2.73",
-        "audioFormat" : "mp3",
-        "streamURL" : "http:\/\/stream.bassdrive.uk:8200",
-        "streamURLios" : "http:\/\/stream.bassdrive.uk:8200",
+        "bitrate" : "128", 
+        "status" : "1", 
+        "name" : "stream.bassdrive.uk:8200", 
+        "listenerCount" : "14", 
+        "listenerCountPercentage" : "2.73", 
+        "audioFormat" : "mp3", 
+        "streamURL" : "http:\/\/stream.bassdrive.uk:8200", 
+        "streamURLios" : "http:\/\/stream.bassdrive.uk:8200", 
         "title" : "Kos.Mos Music Presents Phuture - hosted by Freestylers"
      }
-    ],
+    ], 
 
   "stats" : [
      {
-        "bandwidth" : 22.13,
-        "connections" : 177,
-        "name" : "Total",
-        "capacity" : 20510,
+        "bandwidth" : 22.13, 
+        "connections" : 177, 
+        "name" : "Total", 
+        "capacity" : 20510, 
         "bandwidthFormat" : "megabit"
-     },
+     }, 
      {
-        "bandwidth" : 15.38,
-        "connections" : 123,
-        "name" : "TotalUnique",
-        "capacity" : 20510,
+        "bandwidth" : 15.38, 
+        "connections" : 123, 
+        "name" : "TotalUnique", 
+        "capacity" : 20510, 
         "bandwidthFormat" : "megabit"
-     },
+     }, 
      {
-        "bandwidth" : 22.13,
-        "bitrateFormat" : "kilobit",
-        "bitrate" : 128,
-        "connections" : 177,
-        "name" : "Premium",
-        "capacity" : 20510,
+        "bandwidth" : 22.13, 
+        "bitrateFormat" : "kilobit", 
+        "bitrate" : 128, 
+        "connections" : 177, 
+        "name" : "Premium", 
+        "capacity" : 20510, 
         "bandwidthFormat" : "megabit"
-    },
+    }, 
     {
-        "bandwidth" : 0,
-        "bitrateFormat" : "kilobit",
-        "bitrate" : 56,
-        "connections" : 0,
-        "name" : "Midgrade",
-        "capacity" : 0,
+        "bandwidth" : 0, 
+        "bitrateFormat" : "kilobit", 
+        "bitrate" : 56, 
+        "connections" : 0, 
+        "name" : "Midgrade", 
+        "capacity" : 0, 
         "bandwidthFormat" : "megabit"
-    },
+    }, 
     {
-        "bandwidth" : 0,
-        "bitrateFormat" : "kilobit",
-        "bitrate" : 32,
-        "connections" : 0,
-        "name" : "AACplus",
-        "capacity" : 0,
+        "bandwidth" : 0, 
+        "bitrateFormat" : "kilobit", 
+        "bitrate" : 32, 
+        "connections" : 0, 
+        "name" : "AACplus", 
+        "capacity" : 0, 
         "bandwidthFormat" : "megabit"
-    },
+    }, 
     {
-        "bandwidth" : 0,
-        "bitrateFormat" : "kilobit",
-        "bitrate" : 128,
-        "connections" : null,
-        "name" : "Random",
-        "capacity" : null,
+        "bandwidth" : 0, 
+        "bitrateFormat" : "kilobit", 
+        "bitrate" : 128, 
+        "connections" : null, 
+        "name" : "Random", 
+        "capacity" : null, 
         "bandwidthFormat" : "megabit"
     }
-    ],
+    ], 
 
   "nowplaying" : [
     {
-        "name" : "Kos.Mos Music Presents Phuture - hosted by Freestylers",
+        "name" : "Kos.Mos Music Presents Phuture - hosted by Freestylers", 
         "label" : "Artist"
-    },
+    }, 
     {
-        "name" : "Kos.Mos Music Presents Phuture - hosted by Freestylers",
+        "name" : "Kos.Mos Music Presents Phuture - hosted by Freestylers", 
         "label" : "Title"
     }
     ]
@@ -28759,133 +29969,133 @@ $css_data['crnrstn'] . '>c<span ' . $css_data['crnrstn_R'] .
   {
   &quot;relays&quot; : [
      {
-        &quot;bitrate&quot; : &quot;128&quot;,
-        &quot;status&quot; : &quot;1&quot;,
-        &quot;name&quot; : &quot;bassdrive.radioca.st:8702&quot;,
-        &quot;listenerCount&quot; : &quot;54&quot;,
-        &quot;listenerCountPercentage&quot; : &quot;0.54&quot;,
-        &quot;audioFormat&quot; : &quot;mp3&quot;,
-        &quot;streamURL&quot; : &quot;http:\/\/bassdrive.radioca.st:8702&quot;,
-        &quot;streamURLios&quot; : &quot;http:\/\/bassdrive.radioca.st:8702&quot;,
+        &quot;bitrate&quot; : &quot;128&quot;, 
+        &quot;status&quot; : &quot;1&quot;, 
+        &quot;name&quot; : &quot;bassdrive.radioca.st:8702&quot;, 
+        &quot;listenerCount&quot; : &quot;54&quot;, 
+        &quot;listenerCountPercentage&quot; : &quot;0.54&quot;, 
+        &quot;audioFormat&quot; : &quot;mp3&quot;, 
+        &quot;streamURL&quot; : &quot;http:\/\/bassdrive.radioca.st:8702&quot;, 
+        &quot;streamURLios&quot; : &quot;http:\/\/bassdrive.radioca.st:8702&quot;, 
         &quot;title&quot; : &quot;Kos.Mos Music Presents Phuture - hosted by Freestylers&quot;
-     },
+     }, 
      {
-        &quot;bitrate&quot; : &quot;128&quot;,
-        &quot;status&quot; : &quot;1&quot;,
-        &quot;name&quot; : &quot;chi.bassdrive.co:80&quot;,
-        &quot;listenerCount&quot; : &quot;109&quot;,
-        &quot;listenerCountPercentage&quot; : &quot;1.09&quot;,
-        &quot;audioFormat&quot; : &quot;mp3&quot;,
-        &quot;streamURL&quot; : &quot;http:\/\/chi.bassdrive.co:80&quot;,
-        &quot;streamURLios&quot; : &quot;http:\/\/chi.bassdrive.co:80&quot;,
+        &quot;bitrate&quot; : &quot;128&quot;, 
+        &quot;status&quot; : &quot;1&quot;, 
+        &quot;name&quot; : &quot;chi.bassdrive.co:80&quot;, 
+        &quot;listenerCount&quot; : &quot;109&quot;, 
+        &quot;listenerCountPercentage&quot; : &quot;1.09&quot;, 
+        &quot;audioFormat&quot; : &quot;mp3&quot;, 
+        &quot;streamURL&quot; : &quot;http:\/\/chi.bassdrive.co:80&quot;, 
+        &quot;streamURLios&quot; : &quot;http:\/\/chi.bassdrive.co:80&quot;, 
         &quot;title&quot; : &quot;Kos.Mos Music Presents Phuture - hosted by Freestylers&quot;
-     },
+     }, 
      {
-        &quot;bitrate&quot; : &quot;128&quot;,
-        &quot;status&quot; : 0,
-        &quot;name&quot; : &quot;ice.bassdrive.net:80\/stream&quot;,
-        &quot;listenerCount&quot; : &quot;0&quot;,
-        &quot;listenerCountPercentage&quot; : 0,
-        &quot;audioFormat&quot; : &quot;mp3&quot;,
-        &quot;streamURL&quot; : &quot;http:\/\/ice.bassdrive.net:80\/stream&quot;,
-        &quot;streamURLios&quot; : &quot;http:\/\/ice.bassdrive.net:80\/stream&quot;,
+        &quot;bitrate&quot; : &quot;128&quot;, 
+        &quot;status&quot; : 0, 
+        &quot;name&quot; : &quot;ice.bassdrive.net:80\/stream&quot;, 
+        &quot;listenerCount&quot; : &quot;0&quot;, 
+        &quot;listenerCountPercentage&quot; : 0, 
+        &quot;audioFormat&quot; : &quot;mp3&quot;, 
+        &quot;streamURL&quot; : &quot;http:\/\/ice.bassdrive.net:80\/stream&quot;, 
+        &quot;streamURLios&quot; : &quot;http:\/\/ice.bassdrive.net:80\/stream&quot;, 
         &quot;title&quot; : &quot;&quot;
-     },
+     }, 
      {
-        &quot;bitrate&quot; : &quot;32&quot;,
-        &quot;status&quot; : 0,
-        &quot;name&quot; : &quot;ice.bassdrive.net:80\/stream32&quot;,
-        &quot;listenerCount&quot; : &quot;0&quot;,
-        &quot;listenerCountPercentage&quot; : 0,
-        &quot;audioFormat&quot; : &quot;aac+&quot;,
-        &quot;streamURL&quot; : &quot;http:\/\/ice.bassdrive.net:80\/stream32&quot;,
-        &quot;streamURLios&quot; : &quot;http:\/\/ice.bassdrive.net:80\/stream32&quot;,
+        &quot;bitrate&quot; : &quot;32&quot;, 
+        &quot;status&quot; : 0, 
+        &quot;name&quot; : &quot;ice.bassdrive.net:80\/stream32&quot;, 
+        &quot;listenerCount&quot; : &quot;0&quot;, 
+        &quot;listenerCountPercentage&quot; : 0, 
+        &quot;audioFormat&quot; : &quot;aac+&quot;, 
+        &quot;streamURL&quot; : &quot;http:\/\/ice.bassdrive.net:80\/stream32&quot;, 
+        &quot;streamURLios&quot; : &quot;http:\/\/ice.bassdrive.net:80\/stream32&quot;, 
         &quot;title&quot; : &quot;&quot;
-     },
+     }, 
      {
-        &quot;bitrate&quot; : &quot;56&quot;,
-        &quot;status&quot; : 0,
-        &quot;name&quot; : &quot;ice.bassdrive.net:80\/stream56&quot;,
-        &quot;listenerCount&quot; : &quot;0&quot;,
-        &quot;listenerCountPercentage&quot; : 0,
-        &quot;audioFormat&quot; : &quot;mp3&quot;,
-        &quot;streamURL&quot; : &quot;http:\/\/ice.bassdrive.net:80\/stream56&quot;,
-        &quot;streamURLios&quot; : &quot;http:\/\/ice.bassdrive.net:80\/stream56&quot;,
+        &quot;bitrate&quot; : &quot;56&quot;, 
+        &quot;status&quot; : 0, 
+        &quot;name&quot; : &quot;ice.bassdrive.net:80\/stream56&quot;, 
+        &quot;listenerCount&quot; : &quot;0&quot;, 
+        &quot;listenerCountPercentage&quot; : 0, 
+        &quot;audioFormat&quot; : &quot;mp3&quot;, 
+        &quot;streamURL&quot; : &quot;http:\/\/ice.bassdrive.net:80\/stream56&quot;, 
+        &quot;streamURLios&quot; : &quot;http:\/\/ice.bassdrive.net:80\/stream56&quot;, 
         &quot;title&quot; : &quot;&quot;
-     },
+     }, 
      {
-        &quot;bitrate&quot; : &quot;128&quot;,
-        &quot;status&quot; : &quot;1&quot;,
-        &quot;name&quot; : &quot;stream.bassdrive.uk:8200&quot;,
-        &quot;listenerCount&quot; : &quot;14&quot;,
-        &quot;listenerCountPercentage&quot; : &quot;2.73&quot;,
-        &quot;audioFormat&quot; : &quot;mp3&quot;,
-        &quot;streamURL&quot; : &quot;http:\/\/stream.bassdrive.uk:8200&quot;,
-        &quot;streamURLios&quot; : &quot;http:\/\/stream.bassdrive.uk:8200&quot;,
+        &quot;bitrate&quot; : &quot;128&quot;, 
+        &quot;status&quot; : &quot;1&quot;, 
+        &quot;name&quot; : &quot;stream.bassdrive.uk:8200&quot;, 
+        &quot;listenerCount&quot; : &quot;14&quot;, 
+        &quot;listenerCountPercentage&quot; : &quot;2.73&quot;, 
+        &quot;audioFormat&quot; : &quot;mp3&quot;, 
+        &quot;streamURL&quot; : &quot;http:\/\/stream.bassdrive.uk:8200&quot;, 
+        &quot;streamURLios&quot; : &quot;http:\/\/stream.bassdrive.uk:8200&quot;, 
         &quot;title&quot; : &quot;Kos.Mos Music Presents Phuture - hosted by Freestylers&quot;
      }
-    ],
+    ], 
 
   &quot;stats&quot; : [
      {
-        &quot;bandwidth&quot; : 22.13,
-        &quot;connections&quot; : 177,
-        &quot;name&quot; : &quot;Total&quot;,
-        &quot;capacity&quot; : 20510,
+        &quot;bandwidth&quot; : 22.13, 
+        &quot;connections&quot; : 177, 
+        &quot;name&quot; : &quot;Total&quot;, 
+        &quot;capacity&quot; : 20510, 
         &quot;bandwidthFormat&quot; : &quot;megabit&quot;
-     },
+     }, 
      {
-        &quot;bandwidth&quot; : 15.38,
-        &quot;connections&quot; : 123,
-        &quot;name&quot; : &quot;TotalUnique&quot;,
-        &quot;capacity&quot; : 20510,
+        &quot;bandwidth&quot; : 15.38, 
+        &quot;connections&quot; : 123, 
+        &quot;name&quot; : &quot;TotalUnique&quot;, 
+        &quot;capacity&quot; : 20510, 
         &quot;bandwidthFormat&quot; : &quot;megabit&quot;
-     },
+     }, 
      {
-        &quot;bandwidth&quot; : 22.13,
-        &quot;bitrateFormat&quot; : &quot;kilobit&quot;,
-        &quot;bitrate&quot; : 128,
-        &quot;connections&quot; : 177,
-        &quot;name&quot; : &quot;Premium&quot;,
-        &quot;capacity&quot; : 20510,
+        &quot;bandwidth&quot; : 22.13, 
+        &quot;bitrateFormat&quot; : &quot;kilobit&quot;, 
+        &quot;bitrate&quot; : 128, 
+        &quot;connections&quot; : 177, 
+        &quot;name&quot; : &quot;Premium&quot;, 
+        &quot;capacity&quot; : 20510, 
         &quot;bandwidthFormat&quot; : &quot;megabit&quot;
-    },
+    }, 
     {
-        &quot;bandwidth&quot; : 0,
-        &quot;bitrateFormat&quot; : &quot;kilobit&quot;,
-        &quot;bitrate&quot; : 56,
-        &quot;connections&quot; : 0,
-        &quot;name&quot; : &quot;Midgrade&quot;,
-        &quot;capacity&quot; : 0,
+        &quot;bandwidth&quot; : 0, 
+        &quot;bitrateFormat&quot; : &quot;kilobit&quot;, 
+        &quot;bitrate&quot; : 56, 
+        &quot;connections&quot; : 0, 
+        &quot;name&quot; : &quot;Midgrade&quot;, 
+        &quot;capacity&quot; : 0, 
         &quot;bandwidthFormat&quot; : &quot;megabit&quot;
-    },
+    }, 
     {
-        &quot;bandwidth&quot; : 0,
-        &quot;bitrateFormat&quot; : &quot;kilobit&quot;,
-        &quot;bitrate&quot; : 32,
-        &quot;connections&quot; : 0,
-        &quot;name&quot; : &quot;AACplus&quot;,
-        &quot;capacity&quot; : 0,
+        &quot;bandwidth&quot; : 0, 
+        &quot;bitrateFormat&quot; : &quot;kilobit&quot;, 
+        &quot;bitrate&quot; : 32, 
+        &quot;connections&quot; : 0, 
+        &quot;name&quot; : &quot;AACplus&quot;, 
+        &quot;capacity&quot; : 0, 
         &quot;bandwidthFormat&quot; : &quot;megabit&quot;
-    },
+    }, 
     {
-        &quot;bandwidth&quot; : 0,
-        &quot;bitrateFormat&quot; : &quot;kilobit&quot;,
-        &quot;bitrate&quot; : 128,
-        &quot;connections&quot; : null,
-        &quot;name&quot; : &quot;Random&quot;,
-        &quot;capacity&quot; : null,
+        &quot;bandwidth&quot; : 0, 
+        &quot;bitrateFormat&quot; : &quot;kilobit&quot;, 
+        &quot;bitrate&quot; : 128, 
+        &quot;connections&quot; : null, 
+        &quot;name&quot; : &quot;Random&quot;, 
+        &quot;capacity&quot; : null, 
         &quot;bandwidthFormat&quot; : &quot;megabit&quot;
     }
-    ],
+    ], 
 
   &quot;nowplaying&quot; : [
     {
-        &quot;name&quot; : &quot;Kos.Mos Music Presents Phuture - hosted by Freestylers&quot;,
+        &quot;name&quot; : &quot;Kos.Mos Music Presents Phuture - hosted by Freestylers&quot;, 
         &quot;label&quot; : &quot;Artist&quot;
-    },
+    }, 
     {
-        &quot;name&quot; : &quot;Kos.Mos Music Presents Phuture - hosted by Freestylers&quot;,
+        &quot;name&quot; : &quot;Kos.Mos Music Presents Phuture - hosted by Freestylers&quot;, 
         &quot;label&quot; : &quot;Title&quot;
     }
     ]
@@ -29927,7 +31137,7 @@ Last Modified: Thursday, February 12, 2026 @ 2158 hrs.';
         break;
         case $root . $os_path_dir_separator_char . 
              '_config' . $os_path_dir_separator_char . 
-             'config.system_paths' . $os_path_dir_separator_char . 
+             'system_paths' . $os_path_dir_separator_char . 
              'crnrstn.system_path_initialization.runtime_exe.php':
         case 'crnrstn.system_path_initialization.runtime_exe.php':
         case __NAMESPACE__ . 
@@ -30554,7 +31764,7 @@ Thursday, August 1, 2024 @ 2323 hrs.</div>';
         break;
         case $root . $os_path_dir_separator_char . 
              '_config' . $os_path_dir_separator_char . 
-             'config.system_paths' . $os_path_dir_separator_char . 
+             'system_paths' . $os_path_dir_separator_char . 
              'crnrstn.system_paths.function.php':
         case 'crnrstn.system_paths.function.php':
         case __NAMESPACE__ . 
@@ -31571,9 +32781,9 @@ Thursday, August 29, 2024 @ 0149 hrs.</div>';
                          *
                          */
                         $R_text = '_crnrstn_object_boot_resource_paths_initialization(
-    $application_directory,
-    $framework_directory,
-    $slsh = DIRECTORY_SEPARATOR,
+    $application_directory, 
+    $framework_directory, 
+    $slsh = DIRECTORY_SEPARATOR, 
     $CRNRSTN_ROOT_OFFSET = \'../../../\'
 )';
 
@@ -32223,11 +33433,11 @@ Thursday, August 29, 2024 @ 0406 hrs.</div>';
                          *
                          */
                         $R_text = '_crnrstn_include_file(
-    $file_path,
-    $include_method_name = \'include_once\',
-    $hash_algorithm = NULL,
-    $hash_output_binary = false,
-    $enable_file_validation = true,
+    $file_path, 
+    $include_method_name = \'include_once\', 
+    $hash_algorithm = NULL, 
+    $hash_output_binary = false, 
+    $enable_file_validation = true, 
     $load_control_profile = NULL
 )';
 
@@ -34769,7 +35979,7 @@ Sunday, September 1, 2024 @ 0626 hrs.</div>';
         break;
         case $root . $os_path_dir_separator_char . 
              '_config' . $os_path_dir_separator_char . 
-             'config.php' . $os_path_dir_separator_char . 
+             'php' . $os_path_dir_separator_char . 
              'crnrstn.php_initialization.function.php':
         case 'crnrstn.php_initialization.function.php':
         case __NAMESPACE__ . 
@@ -38684,7 +39894,7 @@ Saturday, September 14, 2024 @ 0249 hrs.</div>';
              *
              * The current WSDL in prodction at:
              * https://alpha.jony5.com/_crnrstn/soa/?wsdl
-             * 
+             *
             <?xml version="1.0" encoding="ISO-8859-1"?>
             <definitions xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" 
             xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
@@ -39815,7 +41025,7 @@ Saturday, September 14, 2024 @ 0249 hrs.</div>';
              * # C # R # N # R # S # T # N # :: # L # I # G # H # T
              * $tmp_output_ARRAY[] = array(
              *     $name         =>      array(
-             *     'MEMORY_POINTER'            => $oCRNRSTN->registered_resource_memory_pointer($name, $tmp_file_path),
+             *     'MEMORY_POINTER'            => $oCRNRSTN->registered_resource_memory_pointer($name, $tmp_file_path), 
              *     'REGISTERED_NAME'           => array($name => 1),               // REGISTERED_NAME should have
              *                                                                     // only classes and global
              *                                                                     // functions that are defined
@@ -39825,43 +41035,43 @@ Saturday, September 14, 2024 @ 0249 hrs.</div>';
              *                                                                     // the file is referenced by its
              *                                                                     // system registered name, the
              *                                                                     // whole file will be loaded.
-             *     'EXTENDS_CLASS'             => array(),
+             *     'EXTENDS_CLASS'             => array(), 
              *     'REQUIRED_RESOURCES'        => array(
              *                                         $name => array(
-             *                                                     'REGISTERED_NAME' => array(),
-             *                                                     'EXTENDS_CLASS' => array(),
-             *                                                     'is_active' => 1,
+             *                                                     'REGISTERED_NAME' => array(), 
+             *                                                     'EXTENDS_CLASS' => array(), 
+             *                                                     'is_active' => 1, 
              *                                                     'RESOURCE_TYPE' => ''
              *                                                     )
-             *                                         ),
+             *                                         ), 
              *     'TITLE_HTML'                => 'C<span ' . $css_data['crnrstn_R'] . '>R</span>NRSTN :: <span ' . $css_data['lightsaber'] . '>Lightsaber</span> <span ' . $css_data['rdma'] . '>RoCEv2</span> SOAP Services ' .
-             *                                    'Layer (CLR-SSL) C<span ' . $css_data['crnrstn_R'] . '>R</span>NRSTN :: v1.0.1 Documentation Administration and Management Web Site Web Services Endpoint (WSDL)',
+             *                                    'Layer (CLR-SSL) C<span ' . $css_data['crnrstn_R'] . '>R</span>NRSTN :: v1.0.1 Documentation Administration and Management Web Site Web Services Endpoint (WSDL)', 
              *     'TITLE_TEXT'                => 'CRNRSTN :: Lightsaber SOAP Services ' .
-             *                                    'Layer CRNRSTN :: v1.0.1 Documentation Administration and Management Web Site Web Services Endpoint (WSDL)',
-             *     'is_active'                 => 1,
+             *                                    'Layer CRNRSTN :: v1.0.1 Documentation Administration and Management Web Site Web Services Endpoint (WSDL)', 
+             *     'is_active'                 => 1, 
              *     'LOAD_CONTROL_PROFILE'      => -1,                  // (int) CRNRSTN_LOAD_1_TO_1_SESSION and (int) CRNRSTN_LOAD_1_TO_1_REQUEST.
-             *     'LOAD_METHOD'               => 'include_once',
+             *     'LOAD_METHOD'               => 'include_once', 
              *     'RESOURCE_TYPE'             => 'SOAP_ENDPOINT',     // 'SOAP_ENDPOINT', 'CLASS_DEFINITION', 'FUNCTION_DEFINITION', 'RUNTIME_EXECUTABLE'
-             *     'SOFTWARE_VERSION'          => '2.00.0001',
-             *     'FILE_PATH'                 => $tmp_file_path,
-             *     'URL'                       => $oCRNRSTN->return_registered_resource_meta($name, 'URL'),
-             *     'CONSTRUCTOR_FUNCTION_HTML' => $oCRNRSTN->return_registered_resource_meta($name, 'CONSTRUCTOR_FUNCTION_HTML'),
-             *     'CONSTRUCTOR_FUNCTION_TEXT' => $oCRNRSTN->return_registered_resource_meta($name, 'CONSTRUCTOR_FUNCTION_TEXT'),
-             *     'DESCRIPTION_HTML'          => $oCRNRSTN->return_registered_resource_meta($name, 'DESCRIPTION_HTML'),
-             *     'DESCRIPTION_TEXT'          => $oCRNRSTN->return_registered_resource_meta($name, 'DESCRIPTION_TEXT'),
-             *     'PREVIEW_RESOURCE_HTML'     => $oCRNRSTN->return_registered_resource_meta($name, 'PREVIEW_RESOURCE_HTML'),
-             *     'PREVIEW_RESOURCE_TEXT'     => $oCRNRSTN->return_registered_resource_meta($name, 'PREVIEW_RESOURCE_TEXT'),
-             *     'AUTHOR_CONTRIBUTORS_HTML'  => $oCRNRSTN->return_registered_resource_meta($name, 'AUTHOR_CONTRIBUTORS_HTML'),
-             *     'AUTHOR_CONTRIBUTORS_TEXT'  => $oCRNRSTN->return_registered_resource_meta($name, 'AUTHOR_CONTRIBUTORS_TEXT'),
-             *     'COMPANY_NAME_HTML'         => $oCRNRSTN->return_registered_resource_meta($name, 'COMPANY_NAME_HTML'),
-             *     'COMPANY_NAME_TEXT'         => $oCRNRSTN->return_registered_resource_meta($name, 'COMPANY_NAME_TEXT'),
-             *     'LICENSE_NAME'              => 'MIT License',
-             *     'LICENSE_URL'               => 'https://crnrstn.jony5.com/licensing/',
-             *     'COPYRIGHT'                 => 'Copyright (c) 2012-2024 :: eVifweb® development :: All Rights Reserved.',
-             *     'REMOVED_PHP_VERSION'       => '',
-             *     'DEPRECATED_PHP_VERSION'    => '',
-             *     'SUPPORTED_PHP_VERSION'     => '',
-             *     'DATEMODIFIED'              => 'Sat Jul 13 07:35:41.659938 2024',
+             *     'SOFTWARE_VERSION'          => '2.00.0001', 
+             *     'FILE_PATH'                 => $tmp_file_path, 
+             *     'URL'                       => $oCRNRSTN->return_registered_resource_meta($name, 'URL'), 
+             *     'CONSTRUCTOR_FUNCTION_HTML' => $oCRNRSTN->return_registered_resource_meta($name, 'CONSTRUCTOR_FUNCTION_HTML'), 
+             *     'CONSTRUCTOR_FUNCTION_TEXT' => $oCRNRSTN->return_registered_resource_meta($name, 'CONSTRUCTOR_FUNCTION_TEXT'), 
+             *     'DESCRIPTION_HTML'          => $oCRNRSTN->return_registered_resource_meta($name, 'DESCRIPTION_HTML'), 
+             *     'DESCRIPTION_TEXT'          => $oCRNRSTN->return_registered_resource_meta($name, 'DESCRIPTION_TEXT'), 
+             *     'PREVIEW_RESOURCE_HTML'     => $oCRNRSTN->return_registered_resource_meta($name, 'PREVIEW_RESOURCE_HTML'), 
+             *     'PREVIEW_RESOURCE_TEXT'     => $oCRNRSTN->return_registered_resource_meta($name, 'PREVIEW_RESOURCE_TEXT'), 
+             *     'AUTHOR_CONTRIBUTORS_HTML'  => $oCRNRSTN->return_registered_resource_meta($name, 'AUTHOR_CONTRIBUTORS_HTML'), 
+             *     'AUTHOR_CONTRIBUTORS_TEXT'  => $oCRNRSTN->return_registered_resource_meta($name, 'AUTHOR_CONTRIBUTORS_TEXT'), 
+             *     'COMPANY_NAME_HTML'         => $oCRNRSTN->return_registered_resource_meta($name, 'COMPANY_NAME_HTML'), 
+             *     'COMPANY_NAME_TEXT'         => $oCRNRSTN->return_registered_resource_meta($name, 'COMPANY_NAME_TEXT'), 
+             *     'LICENSE_NAME'              => 'MIT License', 
+             *     'LICENSE_URL'               => 'https://crnrstn.jony5.com/licensing/', 
+             *     'COPYRIGHT'                 => 'Copyright (c) 2012-2024 :: eVifweb® development :: All Rights Reserved.', 
+             *     'REMOVED_PHP_VERSION'       => '', 
+             *     'DEPRECATED_PHP_VERSION'    => '', 
+             *     'SUPPORTED_PHP_VERSION'     => '', 
+             *     'DATEMODIFIED'              => 'Sat Jul 13 07:35:41.659938 2024', 
              *     'DATECREATED'               => 'Sat Jul 13 07:35:41.659938 2024'
              *     )
              * );
@@ -40464,7 +41674,7 @@ content management.</div>';
              * # C # R # N # R # S # T # N # :: # L # I # G # H # T
              * $tmp_output_ARRAY[] = array(
              *     $name         =>      array(
-             *     'MEMORY_POINTER'            => $oCRNRSTN->registered_resource_memory_pointer($name, $tmp_file_path),
+             *     'MEMORY_POINTER'            => $oCRNRSTN->registered_resource_memory_pointer($name, $tmp_file_path), 
              *     'REGISTERED_NAME'           => array($name => 1),               // REGISTERED_NAME should have
              *                                                                     // only classes and global
              *                                                                     // functions that are defined
@@ -40474,43 +41684,43 @@ content management.</div>';
              *                                                                     // the file is referenced by its
              *                                                                     // system registered name, the
              *                                                                     // whole file will be loaded.
-             *     'EXTENDS_CLASS'             => array(),
+             *     'EXTENDS_CLASS'             => array(), 
              *     'REQUIRED_RESOURCES'        => array(
              *                                         $name => array(
-             *                                                     'REGISTERED_NAME' => array(),
-             *                                                     'EXTENDS_CLASS' => array(),
-             *                                                     'is_active' => 1,
+             *                                                     'REGISTERED_NAME' => array(), 
+             *                                                     'EXTENDS_CLASS' => array(), 
+             *                                                     'is_active' => 1, 
              *                                                     'RESOURCE_TYPE' => ''      // 'SOAP_ENDPOINT', 'CLASS_DEFINITION', 'FUNCTION_DEFINITION', 'RUNTIME_EXECUTABLE'
              *                                                     )
-             *                                         ),
+             *                                         ), 
              *     'TITLE_HTML'                => 'C<span ' . $css_data['crnrstn_R'] . '>R</span>NRSTN :: <span ' . $css_data['lightsaber'] . '>Lightsaber</span> <span ' . $css_data['rdma'] . '>RoCEv2</span> SOAP Services ' .
-             *                                    'Layer (CLR-SSL) C<span ' . $css_data['crnrstn_R'] . '>R</span>NRSTN :: v1.0.1 Documentation Web Site Web Services Endpoint (WSDL)',
+             *                                    'Layer (CLR-SSL) C<span ' . $css_data['crnrstn_R'] . '>R</span>NRSTN :: v1.0.1 Documentation Web Site Web Services Endpoint (WSDL)', 
              *     'TITLE_TEXT'                => 'CRNRSTN :: Lightsaber SOAP Services ' .
-             *                                    'Layer CRNRSTN :: v1.0.1 Documentation Web Site Web Services Endpoint (WSDL)',
-             *     'is_active'                 => 1,
+             *                                    'Layer CRNRSTN :: v1.0.1 Documentation Web Site Web Services Endpoint (WSDL)', 
+             *     'is_active'                 => 1, 
              *     'LOAD_CONTROL_PROFILE'      => -1,                  // (int) CRNRSTN_LOAD_1_TO_1_SESSION and (int) CRNRSTN_LOAD_1_TO_1_REQUEST.
-             *     'LOAD_METHOD'               => 'include_once',
+             *     'LOAD_METHOD'               => 'include_once', 
              *     'RESOURCE_TYPE'             => 'SOAP_ENDPOINT',     // 'SOAP_ENDPOINT', 'CLASS_DEFINITION', 'FUNCTION_DEFINITION', 'RUNTIME_EXECUTABLE'
-             *     'SOFTWARE_VERSION'          => '2.00.0001',
-             *     'FILE_PATH'                 => $tmp_file_path,
-             *     'URL'                       => $oCRNRSTN->return_registered_resource_meta($name, 'URL'),
-             *     'CONSTRUCTOR_FUNCTION_HTML' => $oCRNRSTN->return_registered_resource_meta($name, 'CONSTRUCTOR_FUNCTION_HTML'),
-             *     'CONSTRUCTOR_FUNCTION_TEXT' => $oCRNRSTN->return_registered_resource_meta($name, 'CONSTRUCTOR_FUNCTION_TEXT'),
-             *     'DESCRIPTION_HTML'          => $oCRNRSTN->return_registered_resource_meta($name, 'DESCRIPTION_HTML'),
-             *     'DESCRIPTION_TEXT'          => $oCRNRSTN->return_registered_resource_meta($name, 'DESCRIPTION_TEXT'),
-             *     'PREVIEW_RESOURCE_HTML'     => $oCRNRSTN->return_registered_resource_meta($name, 'PREVIEW_RESOURCE_HTML'),
-             *     'PREVIEW_RESOURCE_TEXT'     => $oCRNRSTN->return_registered_resource_meta($name, 'PREVIEW_RESOURCE_TEXT'),
-             *     'AUTHOR_CONTRIBUTORS_HTML'  => $oCRNRSTN->return_registered_resource_meta($name, 'AUTHOR_CONTRIBUTORS_HTML'),
-             *     'AUTHOR_CONTRIBUTORS_TEXT'  => $oCRNRSTN->return_registered_resource_meta($name, 'AUTHOR_CONTRIBUTORS_TEXT'),
-             *     'COMPANY_NAME_HTML'         => $oCRNRSTN->return_registered_resource_meta($name, 'COMPANY_NAME_HTML'),
-             *     'COMPANY_NAME_TEXT'         => $oCRNRSTN->return_registered_resource_meta($name, 'COMPANY_NAME_TEXT'),
-             *     'LICENSE_NAME'              => 'MIT License',
-             *     'LICENSE_URL'               => 'https://crnrstn.jony5.com/licensing/',
-             *     'COPYRIGHT'                 => 'Copyright (c) 2012-2024 :: eVifweb® development :: All Rights Reserved.',
-             *     'REMOVED_PHP_VERSION'       => '',
-             *     'DEPRECATED_PHP_VERSION'    => '',
-             *     'SUPPORTED_PHP_VERSION'     => '',
-             *     'DATEMODIFIED'              => 'Sat Jul 13 07:35:19.806937 2024',
+             *     'SOFTWARE_VERSION'          => '2.00.0001', 
+             *     'FILE_PATH'                 => $tmp_file_path, 
+             *     'URL'                       => $oCRNRSTN->return_registered_resource_meta($name, 'URL'), 
+             *     'CONSTRUCTOR_FUNCTION_HTML' => $oCRNRSTN->return_registered_resource_meta($name, 'CONSTRUCTOR_FUNCTION_HTML'), 
+             *     'CONSTRUCTOR_FUNCTION_TEXT' => $oCRNRSTN->return_registered_resource_meta($name, 'CONSTRUCTOR_FUNCTION_TEXT'), 
+             *     'DESCRIPTION_HTML'          => $oCRNRSTN->return_registered_resource_meta($name, 'DESCRIPTION_HTML'), 
+             *     'DESCRIPTION_TEXT'          => $oCRNRSTN->return_registered_resource_meta($name, 'DESCRIPTION_TEXT'), 
+             *     'PREVIEW_RESOURCE_HTML'     => $oCRNRSTN->return_registered_resource_meta($name, 'PREVIEW_RESOURCE_HTML'), 
+             *     'PREVIEW_RESOURCE_TEXT'     => $oCRNRSTN->return_registered_resource_meta($name, 'PREVIEW_RESOURCE_TEXT'), 
+             *     'AUTHOR_CONTRIBUTORS_HTML'  => $oCRNRSTN->return_registered_resource_meta($name, 'AUTHOR_CONTRIBUTORS_HTML'), 
+             *     'AUTHOR_CONTRIBUTORS_TEXT'  => $oCRNRSTN->return_registered_resource_meta($name, 'AUTHOR_CONTRIBUTORS_TEXT'), 
+             *     'COMPANY_NAME_HTML'         => $oCRNRSTN->return_registered_resource_meta($name, 'COMPANY_NAME_HTML'), 
+             *     'COMPANY_NAME_TEXT'         => $oCRNRSTN->return_registered_resource_meta($name, 'COMPANY_NAME_TEXT'), 
+             *     'LICENSE_NAME'              => 'MIT License', 
+             *     'LICENSE_URL'               => 'https://crnrstn.jony5.com/licensing/', 
+             *     'COPYRIGHT'                 => 'Copyright (c) 2012-2024 :: eVifweb® development :: All Rights Reserved.', 
+             *     'REMOVED_PHP_VERSION'       => '', 
+             *     'DEPRECATED_PHP_VERSION'    => '', 
+             *     'SUPPORTED_PHP_VERSION'     => '', 
+             *     'DATEMODIFIED'              => 'Sat Jul 13 07:35:19.806937 2024', 
              *     'DATECREATED'               => 'Sat Jul 13 07:35:19.806937 2024'
              *     )
              * );
@@ -41112,7 +42322,7 @@ Endpoint (WSDL).</span>';
         break;
         case $root . $os_path_dir_separator_char . 
              '_config' . $os_path_dir_separator_char . 
-             '_config.defaults' . $os_path_dir_separator_char . 
+             'defaults' . $os_path_dir_separator_char . 
              'crnrstn.settings.function.php':
         case 'crnrstn.settings.function.php':
         case __NAMESPACE__ . 
@@ -44087,22 +45297,22 @@ Monday, July 22, 2024 @ 0838 hrs.</div>';
                         $R_text = ' _crnrstn_native_resource_registry(
     $request_type, 
     $oCRNRSTN = NULL, 
-    $object_version = NULL,
+    $object_version = NULL, 
     $name = NULL, 
     $R_data_000 = NULL, 
-    $R_data_001 = NULL,
+    $R_data_001 = NULL, 
     $R_data_002 = NULL, 
     $R_data_003 = NULL, 
-    $R_data_004 = NULL,
+    $R_data_004 = NULL, 
     $R_data_005 = NULL, 
     $R_data_006 = NULL, 
-    $R_data_007 = NULL,
+    $R_data_007 = NULL, 
     $R_data_008 = NULL, 
     $R_data_009 = NULL, 
-    $R_data_010 = NULL,
+    $R_data_010 = NULL, 
     $R_data_011 = NULL, 
     $R_data_012 = NULL, 
-    $R_data_013 = NULL,
+    $R_data_013 = NULL, 
     $R_data_014 = NULL, 
     $R_data_015 = NULL
 )';
@@ -44803,9 +46013,9 @@ licensing details.</li></ol></div>';
                          *
                          */
                         $R_text = '_crnrstn_native_resource_registry_content_library(
-    $R_resp,
-    $R_meta_key,
-    $R,
+    $R_resp, 
+    $R_meta_key, 
+    $R, 
     $R_debug_mode = 0
 )';
 
@@ -45109,10 +46319,10 @@ licensing details.</li></ol></div>';
              * control parameter to support
              * HTML, Text, and Multi-Part output.
              *
-             * Where,
-             * $output_mode = ['HTML',
-             *                                'TEXT',
-             *                                'MULTI-PART']
+             * Where, 
+             * $output_mode = ['HTML', 
+             *                 'TEXT', 
+             *                 'MULTI-PART']
              *
              *
              * 5 :: Thursday, November 6, 2025 @ 0324 hrs.
@@ -45145,11 +46355,11 @@ licensing details.</li></ol></div>';
                         case 'TITLE_HTML':
 
                             /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
-                             * Where the multi_part_output_mode
+                             * Where the multi_part_output_mode 
                              * values are:
-                             * - 'HTML',
-                             * - 'TEXT', and
-                             * - 'MULTI-PART'.
+                             * - 'HTML', 
+                             * - 'TEXT', and 
+                             * - 'MULTI-PART'. 
                              *
                              */
                             $output_mode = 'HTML';
@@ -45256,11 +46466,11 @@ licensing details.</li></ol></div>';
                         case 'DESCRIPTION_HTML':
 
                             /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
-                             * Where the multi_part_output_mode
+                             * Where the multi_part_output_mode 
                              * values are:
-                             * - 'HTML',
-                             * - 'TEXT', and
-                             * - 'MULTI-PART'.
+                             * - 'HTML', 
+                             * - 'TEXT', and 
+                             * - 'MULTI-PART'. 
                              *
                              */
                             $output_mode = 'HTML';
@@ -45392,11 +46602,11 @@ Thursday, August 27, 2026 @ 2302 hrs.</div>';
                         case 'CONSTRUCTOR_FUNCTION_HTML':
 
                             /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
-                             * Where the multi_part_output_mode
+                             * Where the multi_part_output_mode 
                              * values are:
-                             * - 'HTML',
-                             * - 'TEXT', and
-                             * - 'MULTI-PART'.
+                             * - 'HTML', 
+                             * - 'TEXT', and 
+                             * - 'MULTI-PART'. 
                              *
                              */
                             $output_mode = 'HTML';
@@ -45524,11 +46734,11 @@ Thursday, August 27, 2026 @ 2302 hrs.</div>';
                         case 'PREVIEW_RESOURCE_HTML':
 
                             /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
-                             * Where the multi_part_output_mode
+                             * Where the multi_part_output_mode 
                              * values are:
-                             * - 'HTML',
-                             * - 'TEXT', and
-                             * - 'MULTI-PART'.
+                             * - 'HTML', 
+                             * - 'TEXT', and 
+                             * - 'MULTI-PART'. 
                              *
                              */
                             $output_mode = 'HTML';
@@ -45664,10 +46874,10 @@ Thursday, August 27, 2026 @ 2302 hrs.</div>';
                                    $R_resp[$memory_pointer]['resource_name'] . '.';
 
                     if(!(_crnrstn_native_resource_registry(
-                        __FUNCTION__,
-                        $R,
-                        'registry_access_is_authorized',
-                         NULL,
+                        __FUNCTION__, 
+                        $R, 
+                        'registry_access_is_authorized', 
+                         NULL, 
                          $R_debug_mode) !== false))
                     {
 
@@ -45691,12 +46901,12 @@ Thursday, August 27, 2026 @ 2302 hrs.</div>';
                                                 \substr($timediff, 0, -8) . 
                                                 '] ';
                             \openlog(
-                                $syslog_prefix,
+                                $syslog_prefix, 
                                 \LOG_CONS |
                                 \LOG_NDELAY |
                                 \LOG_NOWAIT |
                                 \LOG_PID |
-                                \LOG_PERROR,
+                                \LOG_PERROR, 
                                 \LOG_SYSLOG);
                             \syslog($syslog_level, $clr_ssl_msg);
                             \closelog();
@@ -45710,18 +46920,18 @@ Thursday, August 27, 2026 @ 2302 hrs.</div>';
                                      'xxxxxxxxxxxxxxxxxxxxxxxxxxx';
                         $token_generation_date = '2026xxxxxxxxxxxxxxxxxxxxxxxxxxx';
                         $token = array(
-                                 'token'                   => $msg_token,
-                                 'token_generation_date'   => $token_generation_date,
-                                 'request_type'            => __FUNCTION__,
-                                 'code'                    => 200,
+                                 'token'                   => $msg_token, 
+                                 'token_generation_date'   => $token_generation_date, 
+                                 'request_type'            => __FUNCTION__, 
+                                 'code'                    => 200, 
                                  'clr_ssl_msg'             => $clr_ssl_msg);
                         $R->error_log(
-                            $clr_ssl_msg,
-                            \LOG_ERR,
-                            \E_ERROR,
-                            __LINE__,
-                            __FUNCTION__,
-                            __FILE__,
+                            $clr_ssl_msg, 
+                            \LOG_ERR, 
+                            \E_ERROR, 
+                            __LINE__, 
+                            __FUNCTION__, 
+                            __FILE__, 
                             $token);
 
                     }
@@ -45759,10 +46969,10 @@ Thursday, August 27, 2026 @ 2302 hrs.</div>';
              * control parameter to support
              * HTML, Text, and Multi-Part output.
              *
-             * Where,
-             * $output_mode = ['HTML',
-             *                                'TEXT',
-             *                                'MULTI-PART']
+             * Where, 
+             * $output_mode = ['HTML', 
+             *                 'TEXT', 
+             *                 'MULTI-PART']
              *
              *
              * 5 :: Thursday, November 6, 2025 @ 0324 hrs.
@@ -45795,11 +47005,11 @@ Thursday, August 27, 2026 @ 2302 hrs.</div>';
                         case 'TITLE_HTML':
 
                             /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
-                             * Where the multi_part_output_mode
+                             * Where the multi_part_output_mode 
                              * values are:
-                             * - 'HTML',
-                             * - 'TEXT', and
-                             * - 'MULTI-PART'.
+                             * - 'HTML', 
+                             * - 'TEXT', and 
+                             * - 'MULTI-PART'. 
                              *
                              */
                             $output_mode = 'HTML';
@@ -45905,11 +47115,11 @@ Thursday, August 27, 2026 @ 2302 hrs.</div>';
                         case 'DESCRIPTION_HTML':
 
                             /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
-                             * Where the multi_part_output_mode
+                             * Where the multi_part_output_mode 
                              * values are:
-                             * - 'HTML',
-                             * - 'TEXT', and
-                             * - 'MULTI-PART'.
+                             * - 'HTML', 
+                             * - 'TEXT', and 
+                             * - 'MULTI-PART'. 
                              *
                              */
                             $output_mode = 'HTML';
@@ -46038,11 +47248,11 @@ Friday, August 28, 2026 @ 0801 hrs.</div>';
                         case 'CONSTRUCTOR_FUNCTION_HTML':
 
                             /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
-                             * Where the multi_part_output_mode
+                             * Where the multi_part_output_mode 
                              * values are:
-                             * - 'HTML',
-                             * - 'TEXT', and
-                             * - 'MULTI-PART'.
+                             * - 'HTML', 
+                             * - 'TEXT', and 
+                             * - 'MULTI-PART'. 
                              *
                              */
                             $output_mode = 'HTML';
@@ -46164,11 +47374,11 @@ Friday, August 28, 2026 @ 0801 hrs.</div>';
                         case 'PREVIEW_RESOURCE_HTML':
 
                             /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
-                             * Where the multi_part_output_mode
+                             * Where the multi_part_output_mode 
                              * values are:
-                             * - 'HTML',
-                             * - 'TEXT', and
-                             * - 'MULTI-PART'.
+                             * - 'HTML', 
+                             * - 'TEXT', and 
+                             * - 'MULTI-PART'. 
                              *
                              */
                             $output_mode = 'HTML';
@@ -46304,10 +47514,10 @@ Friday, August 28, 2026 @ 0801 hrs.</div>';
                                    $R_resp[$memory_pointer]['resource_name'] . '.';
 
                     if(!(_crnrstn_native_resource_registry(
-                        __FUNCTION__,
-                        $R,
-                        'registry_access_is_authorized',
-                         NULL,
+                        __FUNCTION__, 
+                        $R, 
+                        'registry_access_is_authorized', 
+                         NULL, 
                          $R_debug_mode) !== false))
                     {
 
@@ -46331,12 +47541,12 @@ Friday, August 28, 2026 @ 0801 hrs.</div>';
                                                 \substr($timediff, 0, -8) . 
                                                 '] ';
                             \openlog(
-                                $syslog_prefix,
+                                $syslog_prefix, 
                                 \LOG_CONS |
                                 \LOG_NDELAY |
                                 \LOG_NOWAIT |
                                 \LOG_PID |
-                                \LOG_PERROR,
+                                \LOG_PERROR, 
                                 \LOG_SYSLOG);
                             \syslog($syslog_level, $clr_ssl_msg);
                             \closelog();
@@ -46350,18 +47560,18 @@ Friday, August 28, 2026 @ 0801 hrs.</div>';
                                      'xxxxxxxxxxxxxxxxxxxxxxxxxxx';
                         $token_generation_date = '2026xxxxxxxxxxxxxxxxxxxxxxxxxxx';
                         $token = array(
-                                 'token'                   => $msg_token,
-                                 'token_generation_date'   => $token_generation_date,
-                                 'request_type'            => __FUNCTION__,
-                                 'code'                    => 200,
+                                 'token'                   => $msg_token, 
+                                 'token_generation_date'   => $token_generation_date, 
+                                 'request_type'            => __FUNCTION__, 
+                                 'code'                    => 200, 
                                  'clr_ssl_msg'             => $clr_ssl_msg);
                         $R->error_log(
-                            $clr_ssl_msg,
-                            \LOG_ERR,
-                            \E_ERROR,
-                            __LINE__,
-                            __FUNCTION__,
-                            __FILE__,
+                            $clr_ssl_msg, 
+                            \LOG_ERR, 
+                            \E_ERROR, 
+                            __LINE__, 
+                            __FUNCTION__, 
+                            __FILE__, 
                             $token);
 
                     }
@@ -46399,10 +47609,10 @@ Friday, August 28, 2026 @ 0801 hrs.</div>';
              * control parameter to support
              * HTML, Text, and Multi-Part output.
              *
-             * Where,
-             * $output_mode = ['HTML',
-             *                                'TEXT',
-             *                                'MULTI-PART']
+             * Where, 
+             * $output_mode = ['HTML', 
+             *                 'TEXT', 
+             *                 'MULTI-PART']
              *
              *
              * 5 :: Thursday, November 6, 2025 @ 0324 hrs.
@@ -46435,11 +47645,11 @@ Friday, August 28, 2026 @ 0801 hrs.</div>';
                         case 'TITLE_HTML':
 
                             /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
-                             * Where the multi_part_output_mode
+                             * Where the multi_part_output_mode 
                              * values are:
-                             * - 'HTML',
-                             * - 'TEXT', and
-                             * - 'MULTI-PART'.
+                             * - 'HTML', 
+                             * - 'TEXT', and 
+                             * - 'MULTI-PART'. 
                              *
                              */
                             $output_mode = 'HTML';
@@ -46546,11 +47756,11 @@ Friday, August 28, 2026 @ 0801 hrs.</div>';
                         case 'DESCRIPTION_HTML':
 
                             /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
-                             * Where the multi_part_output_mode
+                             * Where the multi_part_output_mode 
                              * values are:
-                             * - 'HTML',
-                             * - 'TEXT', and
-                             * - 'MULTI-PART'.
+                             * - 'HTML', 
+                             * - 'TEXT', and 
+                             * - 'MULTI-PART'. 
                              *
                              */
                             $output_mode = 'HTML';
@@ -46683,11 +47893,11 @@ Friday, August 28, 2026 @ 1010 hrs.</div>';
                         case 'CONSTRUCTOR_FUNCTION_HTML':
 
                             /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
-                             * Where the multi_part_output_mode
+                             * Where the multi_part_output_mode 
                              * values are:
-                             * - 'HTML',
-                             * - 'TEXT', and
-                             * - 'MULTI-PART'.
+                             * - 'HTML', 
+                             * - 'TEXT', and 
+                             * - 'MULTI-PART'. 
                              *
                              */
                             $output_mode = 'HTML';
@@ -46811,11 +48021,11 @@ Friday, August 28, 2026 @ 1010 hrs.</div>';
                         case 'PREVIEW_RESOURCE_HTML':
 
                             /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
-                             * Where the multi_part_output_mode
+                             * Where the multi_part_output_mode 
                              * values are:
-                             * - 'HTML',
-                             * - 'TEXT', and
-                             * - 'MULTI-PART'.
+                             * - 'HTML', 
+                             * - 'TEXT', and 
+                             * - 'MULTI-PART'. 
                              *
                              */
                             $output_mode = 'HTML';
@@ -46951,10 +48161,10 @@ Friday, August 28, 2026 @ 1010 hrs.</div>';
                                    $R_resp[$memory_pointer]['resource_name'] . '.';
 
                     if(!(_crnrstn_native_resource_registry(
-                        __FUNCTION__,
-                        $R,
-                        'registry_access_is_authorized',
-                         NULL,
+                        __FUNCTION__, 
+                        $R, 
+                        'registry_access_is_authorized', 
+                         NULL, 
                          $R_debug_mode) !== false))
                     {
 
@@ -46978,12 +48188,12 @@ Friday, August 28, 2026 @ 1010 hrs.</div>';
                                                 \substr($timediff, 0, -8) . 
                                                 '] ';
                             \openlog(
-                                $syslog_prefix,
+                                $syslog_prefix, 
                                 \LOG_CONS |
                                 \LOG_NDELAY |
                                 \LOG_NOWAIT |
                                 \LOG_PID |
-                                \LOG_PERROR,
+                                \LOG_PERROR, 
                                 \LOG_SYSLOG);
                             \syslog($syslog_level, $clr_ssl_msg);
                             \closelog();
@@ -46997,18 +48207,18 @@ Friday, August 28, 2026 @ 1010 hrs.</div>';
                                      'xxxxxxxxxxxxxxxxxxxxxxxxxxx';
                         $token_generation_date = '2026xxxxxxxxxxxxxxxxxxxxxxxxxxx';
                         $token = array(
-                                 'token'                   => $msg_token,
-                                 'token_generation_date'   => $token_generation_date,
-                                 'request_type'            => __FUNCTION__,
-                                 'code'                    => 200,
+                                 'token'                   => $msg_token, 
+                                 'token_generation_date'   => $token_generation_date, 
+                                 'request_type'            => __FUNCTION__, 
+                                 'code'                    => 200, 
                                  'clr_ssl_msg'             => $clr_ssl_msg);
                         $R->error_log(
-                            $clr_ssl_msg,
-                            \LOG_ERR,
-                            \E_ERROR,
-                            __LINE__,
-                            __FUNCTION__,
-                            __FILE__,
+                            $clr_ssl_msg, 
+                            \LOG_ERR, 
+                            \E_ERROR, 
+                            __LINE__, 
+                            __FUNCTION__, 
+                            __FILE__, 
                             $token);
 
                     }
@@ -47020,7 +48230,7 @@ Friday, August 28, 2026 @ 1010 hrs.</div>';
         break;
         case $root . $os_path_dir_separator_char . 
              '_config' . $os_path_dir_separator_char . 
-             'config.lightbox_helper.original' . $os_path_dir_separator_char . 
+             'lightbox_helper' . $os_path_dir_separator_char . 
              'lightbox_helper.admin.runtime_exe.php':
         case 'lightbox_helper.admin.runtime_exe.php':
         case 'lightbox_helper.admin':
@@ -47648,7 +48858,7 @@ will support at runtime.
         break;
         case $root . $os_path_dir_separator_char . 
              '_config' . $os_path_dir_separator_char . 
-             '_config.defaults' . $os_path_dir_separator_char . 
+             'defaults' . $os_path_dir_separator_char . 
              'crnrstn.overrides.runtime_exe.php':
         case 'crnrstn.overrides.runtime_exe.php':
         case 'crnrstn.overrides':
@@ -48277,7 +49487,7 @@ Monday, July 29, 2024 @ 1527 hrs.</div>';
         break;
         case $root . $os_path_dir_separator_char . 
              '_config' . $os_path_dir_separator_char . 
-             '_config.defaults' . $os_path_dir_separator_char . 
+             'defaults' . $os_path_dir_separator_char . 
              'crnrstn.settings.runtime_exe.php':
         case 'crnrstn.settings.runtime_exe.php':
         case 'crnrstn.settings':
@@ -49529,7 +50739,7 @@ and email.</div>';
         break;
         case $root . $os_path_dir_separator_char . 
              '_config' . $os_path_dir_separator_char . 
-             'config.database.secure' . $os_path_dir_separator_char . 
+             'database.secure' . $os_path_dir_separator_char . 
              'crnrstn.db_config.runtime_exe.php':
         case 'crnrstn.db_config.runtime_exe.php':
         case 'crnrstn.db_config':
@@ -50180,7 +51390,7 @@ Monday, July 22, 2024 @ 0843 hrs.</div>';
         break;
         case $root . $os_path_dir_separator_char . 
              '_config' . $os_path_dir_separator_char . 
-             'config.encryption.secure' . $os_path_dir_separator_char . 
+             'encryption.secure' . $os_path_dir_separator_char . 
              'crnrstn.encryption.runtime_exe.php':
         case 'crnrstn.encryption.runtime_exe.php':
         case 'crnrstn.encryption':
@@ -51145,7 +52355,7 @@ GPHSJCDROMF
         break;
         case $root . $os_path_dir_separator_char . 
              '_config' . $os_path_dir_separator_char . 
-             'config.ip_address_authorization.secure' . $os_path_dir_separator_char . 
+             'ip_address_authorization.secure' . $os_path_dir_separator_char . 
              'crnrstn.deny_ip_address_access.runtime_exe.php':
         case 'crnrstn.deny_ip_address_access.runtime_exe.php':
         case 'crnrstn.deny_ip_address_access':
@@ -51795,7 +53005,7 @@ Monday, July 22, 2024 @ 1005 hrs.';
         break;
         case $root . $os_path_dir_separator_char . 
              '_config' . $os_path_dir_separator_char . 
-             'config.ip_address_authorization.secure' . $os_path_dir_separator_char . 
+             'ip_address_authorization.secure' . $os_path_dir_separator_char . 
              'crnrstn.grant_ip_address_exclusive.runtime_exe.php':
         case 'crnrstn.grant_ip_address_exclusive.runtime_exe.php':
         case 'crnrstn.grant_ip_address_exclusive':
@@ -52450,7 +53660,7 @@ Monday, July 22, 2024 @ 1024 hrs.</div>';
         break;
         case $root . $os_path_dir_separator_char . 
              '_config' . $os_path_dir_separator_char . 
-             'config.resource_wildcards.secure' . $os_path_dir_separator_char . 
+             'resource_wildcards.secure' . $os_path_dir_separator_char . 
              'crnrstn.resource_wildcards.runtime_exe.php':
         case 'crnrstn.resource_wildcards.runtime_exe.php':
         case 'crnrstn.resource_wildcards':
@@ -53465,7 +54675,7 @@ GPHSJCDROMF
         break;
         case $root . $os_path_dir_separator_char . 
              '_config' . $os_path_dir_separator_char . 
-             'config.seo_analytics.secure' . $os_path_dir_separator_char . 
+             'seo_analytics.secure' . $os_path_dir_separator_char . 
              'crnrstn.seo_analytics.runtime_exe.php':
         case 'crnrstn.seo_analytics.runtime_exe.php':
         case 'crnrstn.seo_analytics':
@@ -54120,7 +55330,7 @@ Monday, July 22, 2024 @ 1104 hrs.</div>';
         break;
         case $root . $os_path_dir_separator_char . 
              '_config' . $os_path_dir_separator_char . 
-             'config.seo_engagement.secure' . $os_path_dir_separator_char . 
+             'seo_engagement.secure' . $os_path_dir_separator_char . 
              'crnrstn.seo_engagement.runtime_exe.php':
         case 'crnrstn.seo_engagement.runtime_exe.php':
         case 'crnrstn.seo_engagement':
@@ -54763,7 +55973,7 @@ Monday, July 22, 2024 @ 1111 hrs.</div>';
         break;
         case $root . $os_path_dir_separator_char . 
              '_config' . $os_path_dir_separator_char . 
-             'config.soap.secure' . $os_path_dir_separator_char . 
+             'soap.secure' . $os_path_dir_separator_char . 
              'crnrstn.soap_config.runtime_exe.php':
         case 'crnrstn.soap_config.runtime_exe.php':
         case 'crnrstn.soap_config':
@@ -55415,7 +56625,7 @@ Monday, July 22, 2024 @ 1132 hrs.</div>';
         break;
         case $root . $os_path_dir_separator_char . 
              '_config' . $os_path_dir_separator_char . 
-             'config.social_media_meta.secure' . $os_path_dir_separator_char . 
+             'social_media_meta.secure' . $os_path_dir_separator_char . 
              'crnrstn.social_media_meta.runtime_exe.php':
         case 'crnrstn.social_media_meta.runtime_exe.php':
         case 'crnrstn.social_media_meta':
@@ -56061,7 +57271,7 @@ Monday, July 22, 2024 @ 1142 hrs.</div>';
         break;
         case $root . $os_path_dir_separator_char . 
              '_config' . $os_path_dir_separator_char . 
-             'config.system_resource.secure' . $os_path_dir_separator_char . 
+             'system_resource.secure' . $os_path_dir_separator_char . 
              'crnrstn.system_resource.runtime_exe.php':
         case 'crnrstn.system_resource.runtime_exe.php':
         case 'crnrstn.system_resource':
@@ -57111,7 +58321,7 @@ $css_data['crnrstn_R'] . '>R</span></span>_channel_ALL<br>
         break;
         case $root . $os_path_dir_separator_char . 
              '_config' . $os_path_dir_separator_char . 
-             'config.wordpress.secure' . $os_path_dir_separator_char . 
+             'wordpress.secure' . $os_path_dir_separator_char . 
              'crnrstn.wordpress_config.runtime_exe.php':
         case 'crnrstn.wordpress_config.runtime_exe.php':
         case 'crnrstn.wordpress_config':
@@ -57743,7 +58953,7 @@ Monday, July 22, 2024 @ 1234 hrs.</div>';
         break;
         case $root . $os_path_dir_separator_char . 
              '_config' . $os_path_dir_separator_char . 
-             'config.integer_constants' . $os_path_dir_separator_char . 
+             'integer_constants' . $os_path_dir_separator_char . 
              'crnrstn.int_return.function.php':
         case 'crnrstn.int_return.function.php':
         case __NAMESPACE__ . 
@@ -58379,7 +59589,7 @@ Monday, July 22, 2024 @ 0937 hrs.</div>';
         break;
         case $root . $os_path_dir_separator_char . 
              '_config' . $os_path_dir_separator_char . 
-             'config.integer_constants' . $os_path_dir_separator_char . 
+             'integer_constants' . $os_path_dir_separator_char . 
              'crnrstn.constants_load.runtime_exe.php':
         case 'crnrstn.constants_load.runtime_exe.php':
         case 'crnrstn.constants_load':
@@ -59022,7 +60232,7 @@ Monday, July 22, 2024 @ 0953 hrs.</div>';
         break;
         case $root . $os_path_dir_separator_char . 
              '_config' . $os_path_dir_separator_char . 
-             'config.lightbox_helper.original' . $os_path_dir_separator_char . 
+             'lightbox_helper' . $os_path_dir_separator_char . 
              'lightbox_helper.settings.function.php':
         case 'lightbox_helper.settings.function.php':
         case __NAMESPACE__ . 
@@ -59734,7 +60944,7 @@ $css_data['reg_mark'] . '>&reg;</sup></span>.</span>';
 namespace CRNRSTN;
 
 /**
- * 
+ *
  *
  * GLOBAL FUNCTION
  * RESOURCE DEFINITION :: _lightbox_helper_by_eVifweb_settings
@@ -60229,7 +61439,7 @@ $css_data['lightbox_helper'] . '>oLightbox_Helper</span> = NULL){}</div>';
         break;
         case $root . $os_path_dir_separator_char . 
              '_config' . $os_path_dir_separator_char . 
-             'config.lightbox_helper.original' . $os_path_dir_separator_char . 
+             'lightbox_helper' . $os_path_dir_separator_char . 
              'lightbox_helper.default_page.function.php':
         case 'lightbox_helper.default_page.function.php':
         case __NAMESPACE__ . 
@@ -60872,7 +62082,7 @@ Monday, July 22, 2024 @ 1303 hrs.</div>';
         break;
         case $root . $os_path_dir_separator_char . 
              '_config' . $os_path_dir_separator_char . 
-             'config.lightbox_helper.original' . $os_path_dir_separator_char . 
+             'lightbox_helper' . $os_path_dir_separator_char . 
              'lightbox_helper.default_gallery.function.php':
         case 'lightbox_helper.default_gallery.function.php':
         case __NAMESPACE__ . 
@@ -61517,7 +62727,7 @@ Monday, July 22, 2024 @ 1302 hrs.</div>';
         break;
         case $root . $os_path_dir_separator_char . 
              '_config' . $os_path_dir_separator_char . 
-             'config.lightbox_helper.original' . $os_path_dir_separator_char . 
+             'lightbox_helper' . $os_path_dir_separator_char . 
              'lightbox_helper.default_thumbnail.function.php':
         case 'lightbox_helper.default_thumbnail.function.php':
         case __NAMESPACE__ . 
@@ -62166,7 +63376,7 @@ Monday, July 22, 2024 @ 1304 hrs.</div>';
         break;
         case $root . $os_path_dir_separator_char . 
              '_config' . $os_path_dir_separator_char . 
-             'config.lightbox_helper.original' . $os_path_dir_separator_char . 
+             'lightbox_helper' . $os_path_dir_separator_char . 
              'lightbox_helper.custom_page.function.php':
         case 'lightbox_helper.custom_page.function.php':
         case __NAMESPACE__ . 
@@ -62809,7 +64019,7 @@ Monday, July 22, 2024 @ 1257 hrs.</div>';
         break;
         case $root . $os_path_dir_separator_char . 
              '_config' . $os_path_dir_separator_char . 
-             'config.lightbox_helper.original' . $os_path_dir_separator_char . 
+             'lightbox_helper' . $os_path_dir_separator_char . 
              'lightbox_helper.custom_gallery.function.php':
         case 'lightbox_helper.custom_gallery.function.php':
         case __NAMESPACE__ . 
@@ -63450,7 +64660,7 @@ Monday, July 22, 2024 @ 1252 hrs.</div>';
         break;
         case $root . $os_path_dir_separator_char . 
              '_config' . $os_path_dir_separator_char . 
-             'config.lightbox_helper.original' . $os_path_dir_separator_char . 
+             'lightbox_helper' . $os_path_dir_separator_char . 
              'lightbox_helper.custom_thumbnail.function.php':
         case 'lightbox_helper.custom_thumbnail.function.php':
         case __NAMESPACE__ . 
@@ -67322,7 +68532,7 @@ All Rights Reserved.
                          * 5
                          *
                          */
-                        $R_text = '/** 
+                        $R_text = '/**
 * @package CRNRSTN 
  
 // 5 :: 
@@ -69885,7 +71095,7 @@ Tuesday July 23, 2024 @ 0042 hrs.</div>';
         break;
         case $root . $os_path_dir_separator_char . 
              '_config' . $os_path_dir_separator_char . 
-             'config.system_links' . $os_path_dir_separator_char . 
+             'system_links' . $os_path_dir_separator_char . 
              'crnrstn.system_link_library.function.php':
         case 'crnrstn.system_link_library.function.php':
         case __NAMESPACE__ . 
@@ -70644,13 +71854,13 @@ Monday, August 5, 2024 @ 0352 hrs.</div>';
                          *
                          */
                         $R_text = '_crnrstn_system_link_library(
-    $url,
-    $oCRNRSTN_LINK_MGR,
-    $background_color_hex = \'#FFF\',
-    $iso_lang_code = \'en\',
-    $output_mode = \'MULTI-PART\',
-    $generate_search_algorithm_data = false,
-    $generate_version_synchronization_hash = false,
+    $url, 
+    $oCRNRSTN_LINK_MGR, 
+    $background_color_hex = \'#FFF\', 
+    $iso_lang_code = \'en\', 
+    $output_mode = \'MULTI-PART\', 
+    $generate_search_algorithm_data = false, 
+    $generate_version_synchronization_hash = false, 
     $css_data_ARRAY = NULL
 )';
 
@@ -71146,7 +72356,7 @@ Monday, August 5, 2024 @ 0352 hrs.</div>';
 support the CRNRSTN :: 
 Lightsaber RoCEv2 SOAP Services 
 Layer (CLR-SSL) with a rich and 
-helpful UI/UX experience,
+helpful UI/UX experience, 
 we need a place to put 
 about five (5) literal 
 metric tons of system 
@@ -71805,7 +73015,7 @@ will be sent earlier.
 
 See, max_disk_storage_utilization
 and max_disk_storage_utilization_warning
-in /_lightbox_helper/_config/_config.defaults/crnrstn.settings.runtime_exe.php
+in /_lightbox_helper/_config/defaults/crnrstn.settings.runtime_exe.php
 
 From a high level, all UGC
 configuration input passes
@@ -71897,7 +73107,7 @@ will be sent earlier.
 <div ' . $css_data['line_break'] . '><br><br></div>
 See, max_disk_storage_utilization
 and max_disk_storage_utilization_warning
-in /_lightbox_helper/_config/_config.defaults/<span ' . $css_data['crnrstn'] . 
+in /_lightbox_helper/_config/defaults/<span ' . $css_data['crnrstn'] . 
 '>c<span ' . $css_data['crnrstn_R'] . 
 '>r</span>nrstn</span>.settings.runtime_exe.php
 
@@ -74373,7 +75583,8 @@ Tuesday, July 30, 2024 @ 0705 hrs.
                         '>Lightsaber</span> <span ' . $css_data['rdma'] . 
                         '>RoCEv2</span> ' . 
                         '<span ' . $css_data['soap'] . '>SOAP</span> ' . 
-                        'Services Layer (CLR-SSL) Logging ' . 
+                        'Services Layer (CLR-SSL) Advanced Multi-Channel ' . 
+                        'Logging and Exception Handling Notifications ' . 
                         'Services Layer</span>';
 
                 break;
@@ -74457,7 +75668,8 @@ RoCEv2 SOAP Services Layer
 (CLR-SSL) Advanced Multi-Channel 
 Logging and Exception 
 Handling Notifications 
-Services Layer. 
+Services Layer...where 
+do we start? 
 
 This kit will 
 definitely log things. 
@@ -74534,7 +75746,8 @@ Last Modified: Saturday, March 14, 2026 @ 0311 hrs.';
 Advanced Multi-Channel
 Logging and Exception
 Handling Notifications
-Services Layer. 
+Services Layer...where 
+do we start?
 
 <div ' . $css_data['line_break'] . '><br><br></div>
 This kit will
@@ -85919,9 +87132,9 @@ Tuesday, July 30, 2024 @ 1422 hrs.</div>';
                          *
                          */
                         $R_text = '__construct(
-    $oCRNRSTN,
-    $wsdl_uri,
-    $cache_ttl = NULL,
+    $oCRNRSTN, 
+    $wsdl_uri, 
+    $cache_ttl = NULL, 
     $useCURL = NULL
 )';
 
@@ -87916,7 +89129,7 @@ Tuesday, July 2, 2024 @ 0740 hrs.</div>';
                          * 5
                          *
                          * Sunday, November 9, 2025 @ 0711 hrs.
-                         * 
+                         *
                          */
                         $R_text = '__construct($oCRNRSTN)';
 
@@ -95106,8 +96319,8 @@ page assembly architecture.</span>';
                          *
                          */
                         $R_text = '__construct(
-    $oCRNRSTN,
-    $oCRNRSTN_UI_ASSEMBLER,
+    $oCRNRSTN, 
+    $oCRNRSTN_UI_ASSEMBLER, 
     $module_page_key = NULL
 )';
 
@@ -95378,7 +96591,7 @@ page assembly architecture.</span>';
         break;
         case $root . $os_path_dir_separator_char . 
              '_config' . $os_path_dir_separator_char . 
-             'config.integer_constants' . $os_path_dir_separator_char . 
+             'integer_constants' . $os_path_dir_separator_char . 
              'crnrstn.system_integer_bank.function.php':
         case 'crnrstn.system_integer_bank.function.php':
         case __NAMESPACE__ . 
@@ -95772,9 +96985,9 @@ Thursday August 15, 2024 @ 0129 hrs.</div>';
                          *
                          */
                         $R_text = '_crnrstn_system_integer_bank(
-    $resource_constant,
-    $oCRNRSTN_CONTENT_SOURCE_CONTROLLER,
-    $iso_lang_code = \'en\',
+    $resource_constant, 
+    $oCRNRSTN_CONTENT_SOURCE_CONTROLLER, 
+    $iso_lang_code = \'en\', 
     $background_color_hex = \'#FFF\'
 )';
 
@@ -96046,7 +97259,7 @@ Thursday August 15, 2024 @ 0129 hrs.</div>';
         break;
         case $root . $os_path_dir_separator_char . 
              '_config' . $os_path_dir_separator_char . 
-             'config.system_content' . $os_path_dir_separator_char . 
+             'system_content' . $os_path_dir_separator_char . 
              'crnrstn.documentation_library.function.php':
         case 'crnrstn.documentation_library.function.php':
         case __NAMESPACE__ . 
@@ -100854,10 +102067,10 @@ of OpenSSL HMAC hash algorithm
 encryption and decryption 
 multi-variant compatibility 
 testing against: 
- - different length
-   passwords,
- - different ciphers,
- - different HMAC
+ - different length 
+   passwords, 
+ - different ciphers, 
+ - different HMAC 
    hash algorithm, and 
  - different combinations 
    of all of the above. 
@@ -103244,10 +104457,10 @@ Monday, May 11, 2026 @ 0340 hrs.</div>';
              * control parameter to support
              * HTML, Text, and Multi-Part output.
              *
-             * Where,
-             * $output_mode = ['HTML',
-             *                                'TEXT',
-             *                                'MULTI-PART']
+             * Where, 
+             * $output_mode = ['HTML', 
+             *                 'TEXT', 
+             *                 'MULTI-PART']
              *
              *
              * 5
@@ -103278,11 +104491,11 @@ Monday, May 11, 2026 @ 0340 hrs.</div>';
                         case 'TITLE_HTML':
 
                             /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
-                             * Where the multi_part_output_mode
+                             * Where the multi_part_output_mode 
                              * values are:
-                             * - 'HTML',
-                             * - 'TEXT', and
-                             * - 'MULTI-PART'.
+                             * - 'HTML', 
+                             * - 'TEXT', and 
+                             * - 'MULTI-PART'. 
                              *
                              */
                             $output_mode = 'HTML';
@@ -103393,11 +104606,11 @@ Monday, May 11, 2026 @ 0340 hrs.</div>';
                         case 'DESCRIPTION_HTML':
 
                             /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
-                             * Where the multi_part_output_mode
+                             * Where the multi_part_output_mode 
                              * values are:
-                             * - 'HTML',
-                             * - 'TEXT', and
-                             * - 'MULTI-PART'.
+                             * - 'HTML', 
+                             * - 'TEXT', and 
+                             * - 'MULTI-PART'. 
                              *
                              */
                             $output_mode = 'HTML';
@@ -103537,11 +104750,11 @@ Thursday, July 9, 2026 @ 1409 hrs.</div>';
                         case 'CONSTRUCTOR_FUNCTION_HTML':
 
                             /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
-                             * Where the multi_part_output_mode
+                             * Where the multi_part_output_mode 
                              * values are:
-                             * - 'HTML',
-                             * - 'TEXT', and
-                             * - 'MULTI-PART'.
+                             * - 'HTML', 
+                             * - 'TEXT', and 
+                             * - 'MULTI-PART'. 
                              *
                              */
                             $output_mode = 'HTML';
@@ -103643,11 +104856,11 @@ Thursday, July 9, 2026 @ 1409 hrs.</div>';
                         case 'PREVIEW_RESOURCE_HTML':
 
                             /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
-                             * Where the multi_part_output_mode
+                             * Where the multi_part_output_mode 
                              * values are:
-                             * - 'HTML',
-                             * - 'TEXT', and
-                             * - 'MULTI-PART'.
+                             * - 'HTML', 
+                             * - 'TEXT', and 
+                             * - 'MULTI-PART'. 
                              *
                              */
                             $output_mode = 'HTML';
@@ -103780,10 +104993,10 @@ Thursday, July 9, 2026 @ 1409 hrs.</div>';
                                    $R_resp[$memory_pointer]['resource_name'] . '.';
 
                     if(!(_crnrstn_native_resource_registry(
-                        __FUNCTION__,
-                        $R,
-                        'registry_access_is_authorized',
-                         NULL,
+                        __FUNCTION__, 
+                        $R, 
+                        'registry_access_is_authorized', 
+                         NULL, 
                          $R_debug_mode) !== false))
                     {
 
@@ -103807,12 +105020,12 @@ Thursday, July 9, 2026 @ 1409 hrs.</div>';
                                                 \substr($timediff, 0, -8) . 
                                                 '] ';
                             \openlog(
-                                $syslog_prefix,
+                                $syslog_prefix, 
                                 \LOG_CONS |
                                 \LOG_NDELAY |
                                 \LOG_NOWAIT |
                                 \LOG_PID |
-                                \LOG_PERROR,
+                                \LOG_PERROR, 
                                 \LOG_SYSLOG);
                             \syslog($syslog_level, $clr_ssl_msg);
                             \closelog();
@@ -103826,18 +105039,18 @@ Thursday, July 9, 2026 @ 1409 hrs.</div>';
                                      'xxxxxxxxxxxxxxxxxxxxxxxxxxx';
                         $token_generation_date = '2026xxxxxxxxxxxxxxxxxxxxxxxxxxx';
                         $token = array(
-                                 'token'                   => $msg_token,
-                                 'token_generation_date'   => $token_generation_date,
-                                 'request_type'            => __FUNCTION__,
-                                 'code'                    => 200,
+                                 'token'                   => $msg_token, 
+                                 'token_generation_date'   => $token_generation_date, 
+                                 'request_type'            => __FUNCTION__, 
+                                 'code'                    => 200, 
                                  'clr_ssl_msg'             => $clr_ssl_msg);
                         $R->error_log(
-                            $clr_ssl_msg,
-                            \LOG_ERR,
-                            \E_ERROR,
-                            __LINE__,
-                            __FUNCTION__,
-                            __FILE__,
+                            $clr_ssl_msg, 
+                            \LOG_ERR, 
+                            \E_ERROR, 
+                            __LINE__, 
+                            __FUNCTION__, 
+                            __FILE__, 
                             $token);
 
                     }
@@ -103868,10 +105081,10 @@ Thursday, July 9, 2026 @ 1409 hrs.</div>';
              * control parameter to support
              * HTML, Text, and Multi-Part output.
              *
-             * Where,
-             * $output_mode = ['HTML',
-             *                                'TEXT',
-             *                                'MULTI-PART']
+             * Where, 
+             * $output_mode = ['HTML', 
+             *                 'TEXT', 
+             *                 'MULTI-PART']
              *
              *
              * 5
@@ -103902,11 +105115,11 @@ Thursday, July 9, 2026 @ 1409 hrs.</div>';
                         case 'TITLE_HTML':
 
                             /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
-                             * Where the multi_part_output_mode
+                             * Where the multi_part_output_mode 
                              * values are:
-                             * - 'HTML',
-                             * - 'TEXT', and
-                             * - 'MULTI-PART'.
+                             * - 'HTML', 
+                             * - 'TEXT', and 
+                             * - 'MULTI-PART'. 
                              *
                              */
                             $output_mode = 'HTML';
@@ -104017,11 +105230,11 @@ Thursday, July 9, 2026 @ 1409 hrs.</div>';
                         case 'DESCRIPTION_HTML':
 
                             /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
-                             * Where the multi_part_output_mode
+                             * Where the multi_part_output_mode 
                              * values are:
-                             * - 'HTML',
-                             * - 'TEXT', and
-                             * - 'MULTI-PART'.
+                             * - 'HTML', 
+                             * - 'TEXT', and 
+                             * - 'MULTI-PART'. 
                              *
                              */
                             $output_mode = 'HTML';
@@ -104163,11 +105376,11 @@ Thursday, July 9, 2026 @ 1444 hrs.</div>';
                         case 'CONSTRUCTOR_FUNCTION_HTML':
 
                             /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
-                             * Where the multi_part_output_mode
+                             * Where the multi_part_output_mode 
                              * values are:
-                             * - 'HTML',
-                             * - 'TEXT', and
-                             * - 'MULTI-PART'.
+                             * - 'HTML', 
+                             * - 'TEXT', and 
+                             * - 'MULTI-PART'. 
                              *
                              */
                             $output_mode = 'HTML';
@@ -104269,11 +105482,11 @@ Thursday, July 9, 2026 @ 1444 hrs.</div>';
                         case 'PREVIEW_RESOURCE_HTML':
 
                             /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
-                             * Where the multi_part_output_mode
+                             * Where the multi_part_output_mode 
                              * values are:
-                             * - 'HTML',
-                             * - 'TEXT', and
-                             * - 'MULTI-PART'.
+                             * - 'HTML', 
+                             * - 'TEXT', and 
+                             * - 'MULTI-PART'. 
                              *
                              */
                             $output_mode = 'HTML';
@@ -104406,10 +105619,10 @@ Thursday, July 9, 2026 @ 1444 hrs.</div>';
                                    $R_resp[$memory_pointer]['resource_name'] . '.';
 
                     if(!(_crnrstn_native_resource_registry(
-                        __FUNCTION__,
-                        $R,
-                        'registry_access_is_authorized',
-                         NULL,
+                        __FUNCTION__, 
+                        $R, 
+                        'registry_access_is_authorized', 
+                         NULL, 
                          $R_debug_mode) !== false))
                     {
 
@@ -104433,12 +105646,12 @@ Thursday, July 9, 2026 @ 1444 hrs.</div>';
                                                 \substr($timediff, 0, -8) . 
                                                 '] ';
                             \openlog(
-                                $syslog_prefix,
+                                $syslog_prefix, 
                                 \LOG_CONS |
                                 \LOG_NDELAY |
                                 \LOG_NOWAIT |
                                 \LOG_PID |
-                                \LOG_PERROR,
+                                \LOG_PERROR, 
                                 \LOG_SYSLOG);
                             \syslog($syslog_level, $clr_ssl_msg);
                             \closelog();
@@ -104452,18 +105665,18 @@ Thursday, July 9, 2026 @ 1444 hrs.</div>';
                                      'xxxxxxxxxxxxxxxxxxxxxxxxxxx';
                         $token_generation_date = '2026xxxxxxxxxxxxxxxxxxxxxxxxxxx';
                         $token = array(
-                                 'token'                   => $msg_token,
-                                 'token_generation_date'   => $token_generation_date,
-                                 'request_type'            => __FUNCTION__,
-                                 'code'                    => 200,
+                                 'token'                   => $msg_token, 
+                                 'token_generation_date'   => $token_generation_date, 
+                                 'request_type'            => __FUNCTION__, 
+                                 'code'                    => 200, 
                                  'clr_ssl_msg'             => $clr_ssl_msg);
                         $R->error_log(
-                            $clr_ssl_msg,
-                            \LOG_ERR,
-                            \E_ERROR,
-                            __LINE__,
-                            __FUNCTION__,
-                            __FILE__,
+                            $clr_ssl_msg, 
+                            \LOG_ERR, 
+                            \E_ERROR, 
+                            __LINE__, 
+                            __FUNCTION__, 
+                            __FILE__, 
                             $token);
 
                     }
@@ -104494,10 +105707,10 @@ Thursday, July 9, 2026 @ 1444 hrs.</div>';
              * control parameter to support
              * HTML, Text, and Multi-Part output.
              *
-             * Where,
-             * $output_mode = ['HTML',
-             *                                'TEXT',
-             *                                'MULTI-PART']
+             * Where, 
+             * $output_mode = ['HTML', 
+             *                 'TEXT', 
+             *                 'MULTI-PART']
              *
              *
              * 5
@@ -104528,11 +105741,11 @@ Thursday, July 9, 2026 @ 1444 hrs.</div>';
                         case 'TITLE_HTML':
 
                             /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
-                             * Where the multi_part_output_mode
+                             * Where the multi_part_output_mode 
                              * values are:
-                             * - 'HTML',
-                             * - 'TEXT', and
-                             * - 'MULTI-PART'.
+                             * - 'HTML', 
+                             * - 'TEXT', and 
+                             * - 'MULTI-PART'. 
                              *
                              */
                             $output_mode = 'HTML';
@@ -104643,11 +105856,11 @@ Thursday, July 9, 2026 @ 1444 hrs.</div>';
                         case 'DESCRIPTION_HTML':
 
                             /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
-                             * Where the multi_part_output_mode
+                             * Where the multi_part_output_mode 
                              * values are:
-                             * - 'HTML',
-                             * - 'TEXT', and
-                             * - 'MULTI-PART'.
+                             * - 'HTML', 
+                             * - 'TEXT', and 
+                             * - 'MULTI-PART'. 
                              *
                              */
                             $output_mode = 'HTML';
@@ -104791,11 +106004,11 @@ Thursday, July 9, 2026 @ 1454 hrs.</div>';
                         case 'CONSTRUCTOR_FUNCTION_HTML':
 
                             /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
-                             * Where the multi_part_output_mode
+                             * Where the multi_part_output_mode 
                              * values are:
-                             * - 'HTML',
-                             * - 'TEXT', and
-                             * - 'MULTI-PART'.
+                             * - 'HTML', 
+                             * - 'TEXT', and 
+                             * - 'MULTI-PART'. 
                              *
                              */
                             $output_mode = 'HTML';
@@ -104897,11 +106110,11 @@ Thursday, July 9, 2026 @ 1454 hrs.</div>';
                         case 'PREVIEW_RESOURCE_HTML':
 
                             /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
-                             * Where the multi_part_output_mode
+                             * Where the multi_part_output_mode 
                              * values are:
-                             * - 'HTML',
-                             * - 'TEXT', and
-                             * - 'MULTI-PART'.
+                             * - 'HTML', 
+                             * - 'TEXT', and 
+                             * - 'MULTI-PART'. 
                              *
                              */
                             $output_mode = 'HTML';
@@ -105034,10 +106247,10 @@ Thursday, July 9, 2026 @ 1454 hrs.</div>';
                                    $R_resp[$memory_pointer]['resource_name'] . '.';
 
                     if(!(_crnrstn_native_resource_registry(
-                        __FUNCTION__,
-                        $R,
-                        'registry_access_is_authorized',
-                         NULL,
+                        __FUNCTION__, 
+                        $R, 
+                        'registry_access_is_authorized', 
+                         NULL, 
                          $R_debug_mode) !== false))
                     {
 
@@ -105061,12 +106274,12 @@ Thursday, July 9, 2026 @ 1454 hrs.</div>';
                                                 \substr($timediff, 0, -8) . 
                                                 '] ';
                             \openlog(
-                                $syslog_prefix,
+                                $syslog_prefix, 
                                 \LOG_CONS |
                                 \LOG_NDELAY |
                                 \LOG_NOWAIT |
                                 \LOG_PID |
-                                \LOG_PERROR,
+                                \LOG_PERROR, 
                                 \LOG_SYSLOG);
                             \syslog($syslog_level, $clr_ssl_msg);
                             \closelog();
@@ -105080,18 +106293,18 @@ Thursday, July 9, 2026 @ 1454 hrs.</div>';
                                      'xxxxxxxxxxxxxxxxxxxxxxxxxxx';
                         $token_generation_date = '2026xxxxxxxxxxxxxxxxxxxxxxxxxxx';
                         $token = array(
-                                 'token'                   => $msg_token,
-                                 'token_generation_date'   => $token_generation_date,
-                                 'request_type'            => __FUNCTION__,
-                                 'code'                    => 200,
+                                 'token'                   => $msg_token, 
+                                 'token_generation_date'   => $token_generation_date, 
+                                 'request_type'            => __FUNCTION__, 
+                                 'code'                    => 200, 
                                  'clr_ssl_msg'             => $clr_ssl_msg);
                         $R->error_log(
-                            $clr_ssl_msg,
-                            \LOG_ERR,
-                            \E_ERROR,
-                            __LINE__,
-                            __FUNCTION__,
-                            __FILE__,
+                            $clr_ssl_msg, 
+                            \LOG_ERR, 
+                            \E_ERROR, 
+                            __LINE__, 
+                            __FUNCTION__, 
+                            __FILE__, 
                             $token);
 
                     }
@@ -105863,7 +107076,7 @@ Monday, July 29, 2024 @ 1115 hrs.</div>';
         break;
         case $root . $os_path_dir_separator_char . 
              '_config' . $os_path_dir_separator_char . 
-             'config.database.sql' . $os_path_dir_separator_char . 
+             'database.sql' . $os_path_dir_separator_char . 
              'crnrstn.database_sql_silo.class.php':
         case 'crnrstn.database_sql_silo.class.php':
         case __NAMESPACE__ . 
@@ -110404,12 +111617,12 @@ Friday, July 26, 2024 @ 0538 hrs.</div>';
              *       5 :: Saturday, November 1, 2025 @ 0724 hrs.
              *
              * # C # R # N # R # S # T # N # :: # L # I # G # H # T
-             * Edit: Renamed the class,
-             *       crnrstn_query_field_output_manager to
-             *       crnrstn_sql_field_output_manager as
-             *       we restart CLR-SSL Database Services
-             *       Layer integrations development
-             *       from scratch.
+             * Edit: Renamed the class, 
+             *       crnrstn_query_field_output_manager to 
+             *       crnrstn_sql_field_output_manager as 
+             *       we restart CLR-SSL Database Services 
+             *       Layer integrations development 
+             *       from scratch. 
              *       5 :: Sunday, August 16, 2026 @ 0411 hrs.
              *
              * # C # R # N # R # S # T # N # :: # L # I # G # H # T
@@ -111110,12 +112323,12 @@ Friday, July 26, 2024 @ 1045 hrs.</div>';
              *       5 :: Saturday, November 1, 2025 @ 0745 hrs.
              *
              * # C # R # N # R # S # T # N # :: # L # I # G # H # T
-             * Edit: Renamed the class,
-             *       crnrstn_query_profile_manager to
-             *       crnrstn_sql_profile_manager as
-             *       we restart CLR-SSL Database Services
-             *       Layer integrations development
-             *       from scratch.
+             * Edit: Renamed the class, 
+             *       crnrstn_query_profile_manager to 
+             *       crnrstn_sql_profile_manager as 
+             *       we restart CLR-SSL Database Services 
+             *       Layer integrations development 
+             *       from scratch. 
              *       5 :: Sunday, August 16, 2026 @ 0428 hrs.
              *
              * # C # R # N # R # S # T # N # :: # L # I # G # H # T
@@ -111779,12 +112992,12 @@ Friday, July 26, 2024 @ 0846 hrs.</div>';
              *       5 :: Saturday, November 1, 2025 @ 0755 hrs.
              *
              * # C # R # N # R # S # T # N # :: # L # I # G # H # T
-             * Edit: Renamed the class,
-             *       crnrstn_query_manager to
-             *       crnrstn_sql_manager as
-             *       we restart CLR-SSL Database Services
-             *       Layer integrations development
-             *       from scratch.
+             * Edit: Renamed the class, 
+             *       crnrstn_query_manager to 
+             *       crnrstn_sql_manager as 
+             *       we restart CLR-SSL Database Services 
+             *       Layer integrations development 
+             *       from scratch. 
              *       5 :: Sunday, August 16, 2026 @ 0420 hrs.
              *       Lights joint with fire from
              *       kitchen stove gas range.
@@ -112056,9 +113269,9 @@ $piped_primary_id_fields = \'ACCNT_AREA|OFFICE|EMAIL_DNS|IS_ACTIVE\';
 $piped_lookup_id_data    = \'north|New York|gmail.com|1\';
 
 $result = $R->retrieve_data_by_id(
-                          $result_set_key,
-                          $lookup_fieldname,
-                          $piped_primary_id_fields,
+                          $result_set_key, 
+                          $lookup_fieldname, 
+                          $piped_primary_id_fields, 
                           $piped_lookup_id_data
                           );
 
@@ -112158,9 +113371,9 @@ $piped_lookup_id_data    = \'north|New York|gmail.com|1\';
 $result = <span ' . $css_data['crnrstn'] . 
 '>$<span ' . $css_data['crnrstn_R'] . 
 '>R</span></span>->retrieve_data_by_id(
-                          $result_set_key,
-                          $lookup_fieldname,
-                          $piped_primary_id_fields,
+                          $result_set_key, 
+                          $lookup_fieldname, 
+                          $piped_primary_id_fields, 
                           $piped_lookup_id_data
                           );
 
@@ -117036,8 +118249,8 @@ Monday, July 19, 2024 @ 1448 hrs.</div>';
                          *
                          */
                         $R_text = '__construct(
-    $oCRNRSTN,
-    $raw_html_data = NULL,
+    $oCRNRSTN, 
+    $raw_html_data = NULL, 
     $output_mode = \'HTML_PAGE\'
 )';
 
@@ -124442,133 +125655,133 @@ https://lightsaber.crnrstn.jony5.com/_tmp_diagrams/bassdrive_dirty_shit/kos.mos.
   {
   "relays" : [
      {
-        "bitrate" : "128",
-        "status" : "1",
-        "name" : "bassdrive.radioca.st:8702",
-        "listenerCount" : "54",
-        "listenerCountPercentage" : "0.54",
-        "audioFormat" : "mp3",
-        "streamURL" : "http:\/\/bassdrive.radioca.st:8702",
-        "streamURLios" : "http:\/\/bassdrive.radioca.st:8702",
+        "bitrate" : "128", 
+        "status" : "1", 
+        "name" : "bassdrive.radioca.st:8702", 
+        "listenerCount" : "54", 
+        "listenerCountPercentage" : "0.54", 
+        "audioFormat" : "mp3", 
+        "streamURL" : "http:\/\/bassdrive.radioca.st:8702", 
+        "streamURLios" : "http:\/\/bassdrive.radioca.st:8702", 
         "title" : "Kos.Mos Music Presents Phuture - hosted by Freestylers"
-     },
+     }, 
      {
-        "bitrate" : "128",
-        "status" : "1",
-        "name" : "chi.bassdrive.co:80",
-        "listenerCount" : "109",
-        "listenerCountPercentage" : "1.09",
-        "audioFormat" : "mp3",
-        "streamURL" : "http:\/\/chi.bassdrive.co:80",
-        "streamURLios" : "http:\/\/chi.bassdrive.co:80",
+        "bitrate" : "128", 
+        "status" : "1", 
+        "name" : "chi.bassdrive.co:80", 
+        "listenerCount" : "109", 
+        "listenerCountPercentage" : "1.09", 
+        "audioFormat" : "mp3", 
+        "streamURL" : "http:\/\/chi.bassdrive.co:80", 
+        "streamURLios" : "http:\/\/chi.bassdrive.co:80", 
         "title" : "Kos.Mos Music Presents Phuture - hosted by Freestylers"
-     },
+     }, 
      {
-        "bitrate" : "128",
-        "status" : 0,
-        "name" : "ice.bassdrive.net:80\/stream",
-        "listenerCount" : "0",
-        "listenerCountPercentage" : 0,
-        "audioFormat" : "mp3",
-        "streamURL" : "http:\/\/ice.bassdrive.net:80\/stream",
-        "streamURLios" : "http:\/\/ice.bassdrive.net:80\/stream",
+        "bitrate" : "128", 
+        "status" : 0, 
+        "name" : "ice.bassdrive.net:80\/stream", 
+        "listenerCount" : "0", 
+        "listenerCountPercentage" : 0, 
+        "audioFormat" : "mp3", 
+        "streamURL" : "http:\/\/ice.bassdrive.net:80\/stream", 
+        "streamURLios" : "http:\/\/ice.bassdrive.net:80\/stream", 
         "title" : ""
-     },
+     }, 
      {
-        "bitrate" : "32",
-        "status" : 0,
-        "name" : "ice.bassdrive.net:80\/stream32",
-        "listenerCount" : "0",
-        "listenerCountPercentage" : 0,
-        "audioFormat" : "aac+",
-        "streamURL" : "http:\/\/ice.bassdrive.net:80\/stream32",
-        "streamURLios" : "http:\/\/ice.bassdrive.net:80\/stream32",
+        "bitrate" : "32", 
+        "status" : 0, 
+        "name" : "ice.bassdrive.net:80\/stream32", 
+        "listenerCount" : "0", 
+        "listenerCountPercentage" : 0, 
+        "audioFormat" : "aac+", 
+        "streamURL" : "http:\/\/ice.bassdrive.net:80\/stream32", 
+        "streamURLios" : "http:\/\/ice.bassdrive.net:80\/stream32", 
         "title" : ""
-     },
+     }, 
      {
-        "bitrate" : "56",
-        "status" : 0,
-        "name" : "ice.bassdrive.net:80\/stream56",
-        "listenerCount" : "0",
-        "listenerCountPercentage" : 0,
-        "audioFormat" : "mp3",
-        "streamURL" : "http:\/\/ice.bassdrive.net:80\/stream56",
-        "streamURLios" : "http:\/\/ice.bassdrive.net:80\/stream56",
+        "bitrate" : "56", 
+        "status" : 0, 
+        "name" : "ice.bassdrive.net:80\/stream56", 
+        "listenerCount" : "0", 
+        "listenerCountPercentage" : 0, 
+        "audioFormat" : "mp3", 
+        "streamURL" : "http:\/\/ice.bassdrive.net:80\/stream56", 
+        "streamURLios" : "http:\/\/ice.bassdrive.net:80\/stream56", 
         "title" : ""
-     },
+     }, 
      {
-        "bitrate" : "128",
-        "status" : "1",
-        "name" : "stream.bassdrive.uk:8200",
-        "listenerCount" : "14",
-        "listenerCountPercentage" : "2.73",
-        "audioFormat" : "mp3",
-        "streamURL" : "http:\/\/stream.bassdrive.uk:8200",
-        "streamURLios" : "http:\/\/stream.bassdrive.uk:8200",
+        "bitrate" : "128", 
+        "status" : "1", 
+        "name" : "stream.bassdrive.uk:8200", 
+        "listenerCount" : "14", 
+        "listenerCountPercentage" : "2.73", 
+        "audioFormat" : "mp3", 
+        "streamURL" : "http:\/\/stream.bassdrive.uk:8200", 
+        "streamURLios" : "http:\/\/stream.bassdrive.uk:8200", 
         "title" : "Kos.Mos Music Presents Phuture - hosted by Freestylers"
      }
-    ],
+    ], 
 
   "stats" : [
      {
-        "bandwidth" : 22.13,
-        "connections" : 177,
-        "name" : "Total",
-        "capacity" : 20510,
+        "bandwidth" : 22.13, 
+        "connections" : 177, 
+        "name" : "Total", 
+        "capacity" : 20510, 
         "bandwidthFormat" : "megabit"
-     },
+     }, 
      {
-        "bandwidth" : 15.38,
-        "connections" : 123,
-        "name" : "TotalUnique",
-        "capacity" : 20510,
+        "bandwidth" : 15.38, 
+        "connections" : 123, 
+        "name" : "TotalUnique", 
+        "capacity" : 20510, 
         "bandwidthFormat" : "megabit"
-     },
+     }, 
      {
-        "bandwidth" : 22.13,
-        "bitrateFormat" : "kilobit",
-        "bitrate" : 128,
-        "connections" : 177,
-        "name" : "Premium",
-        "capacity" : 20510,
+        "bandwidth" : 22.13, 
+        "bitrateFormat" : "kilobit", 
+        "bitrate" : 128, 
+        "connections" : 177, 
+        "name" : "Premium", 
+        "capacity" : 20510, 
         "bandwidthFormat" : "megabit"
-    },
+    }, 
     {
-        "bandwidth" : 0,
-        "bitrateFormat" : "kilobit",
-        "bitrate" : 56,
-        "connections" : 0,
-        "name" : "Midgrade",
-        "capacity" : 0,
+        "bandwidth" : 0, 
+        "bitrateFormat" : "kilobit", 
+        "bitrate" : 56, 
+        "connections" : 0, 
+        "name" : "Midgrade", 
+        "capacity" : 0, 
         "bandwidthFormat" : "megabit"
-    },
+    }, 
     {
-        "bandwidth" : 0,
-        "bitrateFormat" : "kilobit",
-        "bitrate" : 32,
-        "connections" : 0,
-        "name" : "AACplus",
-        "capacity" : 0,
+        "bandwidth" : 0, 
+        "bitrateFormat" : "kilobit", 
+        "bitrate" : 32, 
+        "connections" : 0, 
+        "name" : "AACplus", 
+        "capacity" : 0, 
         "bandwidthFormat" : "megabit"
-    },
+    }, 
     {
-        "bandwidth" : 0,
-        "bitrateFormat" : "kilobit",
-        "bitrate" : 128,
-        "connections" : null,
-        "name" : "Random",
-        "capacity" : null,
+        "bandwidth" : 0, 
+        "bitrateFormat" : "kilobit", 
+        "bitrate" : 128, 
+        "connections" : null, 
+        "name" : "Random", 
+        "capacity" : null, 
         "bandwidthFormat" : "megabit"
     }
-    ],
+    ], 
 
   "nowplaying" : [
     {
-        "name" : "Kos.Mos Music Presents Phuture - hosted by Freestylers",
+        "name" : "Kos.Mos Music Presents Phuture - hosted by Freestylers", 
         "label" : "Artist"
-    },
+    }, 
     {
-        "name" : "Kos.Mos Music Presents Phuture - hosted by Freestylers",
+        "name" : "Kos.Mos Music Presents Phuture - hosted by Freestylers", 
         "label" : "Title"
     }
     ]
@@ -124689,133 +125902,133 @@ $css_data['crnrstn'] . '>c<span ' . $css_data['crnrstn_R'] .
   {
   &quot;relays&quot; : [
      {
-        &quot;bitrate&quot; : &quot;128&quot;,
-        &quot;status&quot; : &quot;1&quot;,
-        &quot;name&quot; : &quot;bassdrive.radioca.st:8702&quot;,
-        &quot;listenerCount&quot; : &quot;54&quot;,
-        &quot;listenerCountPercentage&quot; : &quot;0.54&quot;,
-        &quot;audioFormat&quot; : &quot;mp3&quot;,
-        &quot;streamURL&quot; : &quot;http:\/\/bassdrive.radioca.st:8702&quot;,
-        &quot;streamURLios&quot; : &quot;http:\/\/bassdrive.radioca.st:8702&quot;,
+        &quot;bitrate&quot; : &quot;128&quot;, 
+        &quot;status&quot; : &quot;1&quot;, 
+        &quot;name&quot; : &quot;bassdrive.radioca.st:8702&quot;, 
+        &quot;listenerCount&quot; : &quot;54&quot;, 
+        &quot;listenerCountPercentage&quot; : &quot;0.54&quot;, 
+        &quot;audioFormat&quot; : &quot;mp3&quot;, 
+        &quot;streamURL&quot; : &quot;http:\/\/bassdrive.radioca.st:8702&quot;, 
+        &quot;streamURLios&quot; : &quot;http:\/\/bassdrive.radioca.st:8702&quot;, 
         &quot;title&quot; : &quot;Kos.Mos Music Presents Phuture - hosted by Freestylers&quot;
-     },
+     }, 
      {
-        &quot;bitrate&quot; : &quot;128&quot;,
-        &quot;status&quot; : &quot;1&quot;,
-        &quot;name&quot; : &quot;chi.bassdrive.co:80&quot;,
-        &quot;listenerCount&quot; : &quot;109&quot;,
-        &quot;listenerCountPercentage&quot; : &quot;1.09&quot;,
-        &quot;audioFormat&quot; : &quot;mp3&quot;,
-        &quot;streamURL&quot; : &quot;http:\/\/chi.bassdrive.co:80&quot;,
-        &quot;streamURLios&quot; : &quot;http:\/\/chi.bassdrive.co:80&quot;,
+        &quot;bitrate&quot; : &quot;128&quot;, 
+        &quot;status&quot; : &quot;1&quot;, 
+        &quot;name&quot; : &quot;chi.bassdrive.co:80&quot;, 
+        &quot;listenerCount&quot; : &quot;109&quot;, 
+        &quot;listenerCountPercentage&quot; : &quot;1.09&quot;, 
+        &quot;audioFormat&quot; : &quot;mp3&quot;, 
+        &quot;streamURL&quot; : &quot;http:\/\/chi.bassdrive.co:80&quot;, 
+        &quot;streamURLios&quot; : &quot;http:\/\/chi.bassdrive.co:80&quot;, 
         &quot;title&quot; : &quot;Kos.Mos Music Presents Phuture - hosted by Freestylers&quot;
-     },
+     }, 
      {
-        &quot;bitrate&quot; : &quot;128&quot;,
-        &quot;status&quot; : 0,
-        &quot;name&quot; : &quot;ice.bassdrive.net:80\/stream&quot;,
-        &quot;listenerCount&quot; : &quot;0&quot;,
-        &quot;listenerCountPercentage&quot; : 0,
-        &quot;audioFormat&quot; : &quot;mp3&quot;,
-        &quot;streamURL&quot; : &quot;http:\/\/ice.bassdrive.net:80\/stream&quot;,
-        &quot;streamURLios&quot; : &quot;http:\/\/ice.bassdrive.net:80\/stream&quot;,
+        &quot;bitrate&quot; : &quot;128&quot;, 
+        &quot;status&quot; : 0, 
+        &quot;name&quot; : &quot;ice.bassdrive.net:80\/stream&quot;, 
+        &quot;listenerCount&quot; : &quot;0&quot;, 
+        &quot;listenerCountPercentage&quot; : 0, 
+        &quot;audioFormat&quot; : &quot;mp3&quot;, 
+        &quot;streamURL&quot; : &quot;http:\/\/ice.bassdrive.net:80\/stream&quot;, 
+        &quot;streamURLios&quot; : &quot;http:\/\/ice.bassdrive.net:80\/stream&quot;, 
         &quot;title&quot; : &quot;&quot;
-     },
+     }, 
      {
-        &quot;bitrate&quot; : &quot;32&quot;,
-        &quot;status&quot; : 0,
-        &quot;name&quot; : &quot;ice.bassdrive.net:80\/stream32&quot;,
-        &quot;listenerCount&quot; : &quot;0&quot;,
-        &quot;listenerCountPercentage&quot; : 0,
-        &quot;audioFormat&quot; : &quot;aac+&quot;,
-        &quot;streamURL&quot; : &quot;http:\/\/ice.bassdrive.net:80\/stream32&quot;,
-        &quot;streamURLios&quot; : &quot;http:\/\/ice.bassdrive.net:80\/stream32&quot;,
+        &quot;bitrate&quot; : &quot;32&quot;, 
+        &quot;status&quot; : 0, 
+        &quot;name&quot; : &quot;ice.bassdrive.net:80\/stream32&quot;, 
+        &quot;listenerCount&quot; : &quot;0&quot;, 
+        &quot;listenerCountPercentage&quot; : 0, 
+        &quot;audioFormat&quot; : &quot;aac+&quot;, 
+        &quot;streamURL&quot; : &quot;http:\/\/ice.bassdrive.net:80\/stream32&quot;, 
+        &quot;streamURLios&quot; : &quot;http:\/\/ice.bassdrive.net:80\/stream32&quot;, 
         &quot;title&quot; : &quot;&quot;
-     },
+     }, 
      {
-        &quot;bitrate&quot; : &quot;56&quot;,
-        &quot;status&quot; : 0,
-        &quot;name&quot; : &quot;ice.bassdrive.net:80\/stream56&quot;,
-        &quot;listenerCount&quot; : &quot;0&quot;,
-        &quot;listenerCountPercentage&quot; : 0,
-        &quot;audioFormat&quot; : &quot;mp3&quot;,
-        &quot;streamURL&quot; : &quot;http:\/\/ice.bassdrive.net:80\/stream56&quot;,
-        &quot;streamURLios&quot; : &quot;http:\/\/ice.bassdrive.net:80\/stream56&quot;,
+        &quot;bitrate&quot; : &quot;56&quot;, 
+        &quot;status&quot; : 0, 
+        &quot;name&quot; : &quot;ice.bassdrive.net:80\/stream56&quot;, 
+        &quot;listenerCount&quot; : &quot;0&quot;, 
+        &quot;listenerCountPercentage&quot; : 0, 
+        &quot;audioFormat&quot; : &quot;mp3&quot;, 
+        &quot;streamURL&quot; : &quot;http:\/\/ice.bassdrive.net:80\/stream56&quot;, 
+        &quot;streamURLios&quot; : &quot;http:\/\/ice.bassdrive.net:80\/stream56&quot;, 
         &quot;title&quot; : &quot;&quot;
-     },
+     }, 
      {
-        &quot;bitrate&quot; : &quot;128&quot;,
-        &quot;status&quot; : &quot;1&quot;,
-        &quot;name&quot; : &quot;stream.bassdrive.uk:8200&quot;,
-        &quot;listenerCount&quot; : &quot;14&quot;,
-        &quot;listenerCountPercentage&quot; : &quot;2.73&quot;,
-        &quot;audioFormat&quot; : &quot;mp3&quot;,
-        &quot;streamURL&quot; : &quot;http:\/\/stream.bassdrive.uk:8200&quot;,
-        &quot;streamURLios&quot; : &quot;http:\/\/stream.bassdrive.uk:8200&quot;,
+        &quot;bitrate&quot; : &quot;128&quot;, 
+        &quot;status&quot; : &quot;1&quot;, 
+        &quot;name&quot; : &quot;stream.bassdrive.uk:8200&quot;, 
+        &quot;listenerCount&quot; : &quot;14&quot;, 
+        &quot;listenerCountPercentage&quot; : &quot;2.73&quot;, 
+        &quot;audioFormat&quot; : &quot;mp3&quot;, 
+        &quot;streamURL&quot; : &quot;http:\/\/stream.bassdrive.uk:8200&quot;, 
+        &quot;streamURLios&quot; : &quot;http:\/\/stream.bassdrive.uk:8200&quot;, 
         &quot;title&quot; : &quot;Kos.Mos Music Presents Phuture - hosted by Freestylers&quot;
      }
-    ],
+    ], 
 
   &quot;stats&quot; : [
      {
-        &quot;bandwidth&quot; : 22.13,
-        &quot;connections&quot; : 177,
-        &quot;name&quot; : &quot;Total&quot;,
-        &quot;capacity&quot; : 20510,
+        &quot;bandwidth&quot; : 22.13, 
+        &quot;connections&quot; : 177, 
+        &quot;name&quot; : &quot;Total&quot;, 
+        &quot;capacity&quot; : 20510, 
         &quot;bandwidthFormat&quot; : &quot;megabit&quot;
-     },
+     }, 
      {
-        &quot;bandwidth&quot; : 15.38,
-        &quot;connections&quot; : 123,
-        &quot;name&quot; : &quot;TotalUnique&quot;,
-        &quot;capacity&quot; : 20510,
+        &quot;bandwidth&quot; : 15.38, 
+        &quot;connections&quot; : 123, 
+        &quot;name&quot; : &quot;TotalUnique&quot;, 
+        &quot;capacity&quot; : 20510, 
         &quot;bandwidthFormat&quot; : &quot;megabit&quot;
-     },
+     }, 
      {
-        &quot;bandwidth&quot; : 22.13,
-        &quot;bitrateFormat&quot; : &quot;kilobit&quot;,
-        &quot;bitrate&quot; : 128,
-        &quot;connections&quot; : 177,
-        &quot;name&quot; : &quot;Premium&quot;,
-        &quot;capacity&quot; : 20510,
+        &quot;bandwidth&quot; : 22.13, 
+        &quot;bitrateFormat&quot; : &quot;kilobit&quot;, 
+        &quot;bitrate&quot; : 128, 
+        &quot;connections&quot; : 177, 
+        &quot;name&quot; : &quot;Premium&quot;, 
+        &quot;capacity&quot; : 20510, 
         &quot;bandwidthFormat&quot; : &quot;megabit&quot;
-    },
+    }, 
     {
-        &quot;bandwidth&quot; : 0,
-        &quot;bitrateFormat&quot; : &quot;kilobit&quot;,
-        &quot;bitrate&quot; : 56,
-        &quot;connections&quot; : 0,
-        &quot;name&quot; : &quot;Midgrade&quot;,
-        &quot;capacity&quot; : 0,
+        &quot;bandwidth&quot; : 0, 
+        &quot;bitrateFormat&quot; : &quot;kilobit&quot;, 
+        &quot;bitrate&quot; : 56, 
+        &quot;connections&quot; : 0, 
+        &quot;name&quot; : &quot;Midgrade&quot;, 
+        &quot;capacity&quot; : 0, 
         &quot;bandwidthFormat&quot; : &quot;megabit&quot;
-    },
+    }, 
     {
-        &quot;bandwidth&quot; : 0,
-        &quot;bitrateFormat&quot; : &quot;kilobit&quot;,
-        &quot;bitrate&quot; : 32,
-        &quot;connections&quot; : 0,
-        &quot;name&quot; : &quot;AACplus&quot;,
-        &quot;capacity&quot; : 0,
+        &quot;bandwidth&quot; : 0, 
+        &quot;bitrateFormat&quot; : &quot;kilobit&quot;, 
+        &quot;bitrate&quot; : 32, 
+        &quot;connections&quot; : 0, 
+        &quot;name&quot; : &quot;AACplus&quot;, 
+        &quot;capacity&quot; : 0, 
         &quot;bandwidthFormat&quot; : &quot;megabit&quot;
-    },
+    }, 
     {
-        &quot;bandwidth&quot; : 0,
-        &quot;bitrateFormat&quot; : &quot;kilobit&quot;,
-        &quot;bitrate&quot; : 128,
-        &quot;connections&quot; : null,
-        &quot;name&quot; : &quot;Random&quot;,
-        &quot;capacity&quot; : null,
+        &quot;bandwidth&quot; : 0, 
+        &quot;bitrateFormat&quot; : &quot;kilobit&quot;, 
+        &quot;bitrate&quot; : 128, 
+        &quot;connections&quot; : null, 
+        &quot;name&quot; : &quot;Random&quot;, 
+        &quot;capacity&quot; : null, 
         &quot;bandwidthFormat&quot; : &quot;megabit&quot;
     }
-    ],
+    ], 
 
   &quot;nowplaying&quot; : [
     {
-        &quot;name&quot; : &quot;Kos.Mos Music Presents Phuture - hosted by Freestylers&quot;,
+        &quot;name&quot; : &quot;Kos.Mos Music Presents Phuture - hosted by Freestylers&quot;, 
         &quot;label&quot; : &quot;Artist&quot;
-    },
+    }, 
     {
-        &quot;name&quot; : &quot;Kos.Mos Music Presents Phuture - hosted by Freestylers&quot;,
+        &quot;name&quot; : &quot;Kos.Mos Music Presents Phuture - hosted by Freestylers&quot;, 
         &quot;label&quot; : &quot;Title&quot;
     }
     ]
@@ -127687,18 +128900,18 @@ Tuesday, November 11, 2025 @ 0711 hrs.</div>';
                              'xxxxxxxxxxxxxxxxxxxxxxxxxxx';
                 $token_generation_date = '2026xxxxxxxxxxxxxxxxxxxxxxxxxxx';
                 $token = array(
-                         'token'                   => $msg_token,
-                         'token_generation_date'   => $token_generation_date,
-                         'request_type'            => __FUNCTION__,
-                         'code'                    => 200,
+                         'token'                   => $msg_token, 
+                         'token_generation_date'   => $token_generation_date, 
+                         'request_type'            => __FUNCTION__, 
+                         'code'                    => 200, 
                          'clr_ssl_msg'             => $clr_ssl_msg);
                 $R->error_log(
-                    $clr_ssl_msg,
-                    \LOG_ERR,
-                    \E_ERROR,
-                    __LINE__,
-                    __FUNCTION__,
-                    __FILE__,
+                    $clr_ssl_msg, 
+                    \LOG_ERR, 
+                    \E_ERROR, 
+                    __LINE__, 
+                    __FUNCTION__, 
+                    __FILE__, 
                     $token);
 
             }
@@ -127759,7 +128972,7 @@ Tuesday, November 11, 2025 @ 0711 hrs.</div>';
                $R_text, 
                $R_html, 
                $R_resp, 
-               NULL,
+               NULL, 
                $output_mode, 
                $generate_version_sync_hash, 
                $generate_search_algorithm_data, 

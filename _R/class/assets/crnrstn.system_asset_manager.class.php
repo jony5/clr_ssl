@@ -29132,13 +29132,24 @@ self::$image_filesystem_meta_ARRAY[CRNRSTN_BASE64 & CRNRSTN_JPEG][self::$request
         //        CRNRSTN :: SUPPORTED WEBSITE,
         //        ...ALSO CAN INCLUDE LOCALHOST.
 
-        //
-        // INITIALIZE FILE 
-        // SYSTEM MANAGER. 5 :: Tuesday, June 6, 2023 @ 0230 hrs.
-        $oFILE_SYSTEM_MGR = $this->generate_file_system_manager();
+        /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
+         * Initialize the CRNRSTN :: Lightsaber 
+         * RoCEv2 SOAP Services Layer 
+         * (CLR-SSL) File System 
+         * Integrations Manager 
+         * class object. 
+         *
+         *
+         * 5 :: Tuesday, June 6, 2023 @ 0230 hrs.
+         *
+         */
+        $oFILE_SYSTEM_MGR = NULL;
+        // 5 :: Friday, September 25, 2026 @ 0831 hrs.
+        $this->anoint(
+               'crnrstn_file_system_integrations_manager',
+               $oFILE_SYSTEM_MGR);
 
         switch($output_mode){
-
 
         }
 

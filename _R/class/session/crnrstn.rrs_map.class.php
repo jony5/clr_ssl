@@ -3022,7 +3022,7 @@ class crnrstn_rrs_map extends crnrstn
                  * ACCELERATION. BOTH NEED 
                  * TO BE TRUE TO GO 
                  * CRNRSTN :: PLAID. 
-                 * See /_R/_config/_config.defaults
+                 * See /_R/_config/defaults
                  * /_crnrstn.system_settings.inc.php
                  *
                  */
@@ -17400,7 +17400,7 @@ class crnrstn_rrs_map extends crnrstn
                                 //
                                 // CRNRSTN :: CONFIGURATION DATA. 
                                 // See // REDIRECTS AND 404 IMG URLS, 
-                                //     in /_R/_config/_config.defaults
+                                //     in /_R/_config/defaults
                                 //     /_crnrstn.system_settings.inc.php
                                 //
                                 // RETURN DEFAULT 404 

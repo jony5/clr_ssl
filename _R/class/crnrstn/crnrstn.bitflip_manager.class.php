@@ -394,7 +394,7 @@ class crnrstn_bitflip_manager extends crnrstn
     //protected $oCRNRSTN_BITWISE;
 
     //protected $oCRNRSTN_BITS_ARRAY = array();
-    //private static $os_bit_size;
+    private static $os_bit_size;
     private static $lscpu_output;
     private static $uname_output;
     private static $getconf_output;
@@ -438,6 +438,30 @@ class crnrstn_bitflip_manager extends crnrstn
          *                                  'crnrstn_bitmask');
          *
          */
+
+        /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
+         * Initialize OS integer size (bit size) 
+         * using the system provided 
+         * PHP_INT_SIZE global constant. 
+         *
+         *
+         * 5 :: Friday, October 23, 2026 @ 1514 hrs.
+         *
+         */
+        switch(\PHP_INT_SIZE){
+            case 4:
+
+                self::$os_bit_size = (int) 32;
+
+            break;
+            case 8:
+            default:
+
+                self::$os_bit_size = (int) 64;
+
+            break;
+
+        }
 
         $spice_salt_mem_ptr = NULL;
         // 5 :: Saturday, August 22, 2026 @ 0519 hrs.
@@ -827,8 +851,7 @@ class crnrstn_bitflip_manager extends crnrstn
              $constant_value = NULL)
     {
 
-        if(is_int($constant_nom)){
-
+        if(is_int($constant_nom))
             /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
              * Use provided const nom as (int) 
              * value if integer passed in as 
@@ -836,8 +859,6 @@ class crnrstn_bitflip_manager extends crnrstn
              *
              */
             $constant_value = $constant_nom;
-
-        }
 
         /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
          * Use the bitmask object technology 
@@ -962,19 +983,13 @@ class crnrstn_bitflip_manager extends crnrstn
              $return_raw_byte_read = false)
     {
 
-        $tmp_int_read = $oCRNRSTN_BITMASK->read($integer_constant);
+        $tmp_int_read = $this->R['icy_digital_itcc']->read($integer_constant);
 
-        if($return_raw_byte_read !== false){
-
+        if($return_raw_byte_read !== false)
             return $tmp_int_read;
 
-        }
-
-        if($tmp_int_read > 0){
-
+        if($tmp_int_read > 0)
             return true;
-
-        }
 
         //return $this->R['icy_digital_itcc']->read($integer_constant);
         return false;
@@ -1190,35 +1205,45 @@ class crnrstn_bitflip_manager extends crnrstn
             case 'os_bit_size':
                 //$this->os_bit_size = 64;
 
-                return $this->os_bit_size;
+                return self::$os_bit_size;
 
-            break;
             case 'lscpu':
                 //self::$lscpu_output = shell_exec('lscpu');
 
                 return self::$lscpu_output;
 
-            break;
             case 'uname':
                 //self::$uname_output = shell_exec('uname -m');
 
                 return self::$uname_output;
 
-            break;
             case 'getconf':
                 //self::$getconf_output = (int) shell_exec('getconf LONG_BIT');
 
                 return self::$getconf_output;
 
-            break;
             default:
 
-                $this->error_log('Unknown system property requested. ' . 
-                                 $this->data_report($property), 
-                                 __LINE__, 
-                                 __METHOD__, 
-                                 __FILE__, 
-                                 CRNRSTN_SETTINGS_CRNRSTN);
+                $clr_ssl_msg = 'Unknown system property requested. ' . 
+                               $this->data_report($property);
+                // 5 :: Mon May xxxxxxxxxxxxxxxxxxxxxxxxxxx
+                $msg_token = 'd9c5ca131ab8615a1738c340cf44c4ff' . 
+                             'xxxxxxxxxxxxxxxxxxxxxxxxxxx';
+                $token_generation_date = '2026xxxxxxxxxxxxxxxxxxxxxxxxxxx';
+                $token = array(
+                         'token'                   => $msg_token, 
+                         'token_generation_date'   => $token_generation_date, 
+                         'request_type'            => __METHOD__, 
+                         'code'                    => 200, 
+                         'clr_ssl_msg'             => $clr_ssl_msg);
+                $this->error_log(
+                       $clr_ssl_msg, 
+                       \LOG_ERR, 
+                       \E_ERROR, 
+                       __LINE__, 
+                       __METHOD__, 
+                       __FILE__, 
+                       $token);
 
             break;
 

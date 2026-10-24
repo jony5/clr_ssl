@@ -614,7 +614,7 @@ class crnrstn_content_source_controller extends crnrstn
 
         $clr_ssl_msg = 'Initializing ' . __CLASS__ . ' with (' . 
                        \gettype($this->R['ui_assembler']) .
-                       ') ' . get_class($this->R['ui_assembler']) .
+                       ') ' . \get_class($this->R['ui_assembler']) .
                        ' at the endpoint ['. $this->page_path . 
                        '].';
         // 5 :: Mon May xxxxxxxxxxxxxxxxxxxxxxxxxxx
@@ -645,15 +645,9 @@ Removed: Sunday, June 28, 2026 @ 1829 hrs.
                      $meta_params = NULL)
     {
 
-        if(isset($this->content_output_type_ARRAY[$this->module_key])){
-
-            if($this->content_output_type_ARRAY[$this->module_key] == 'sauce'){
-
+        if(isset($this->content_output_type_ARRAY[$this->module_key]))
+            if($this->content_output_type_ARRAY[$this->module_key] == 'sauce')
                 return $url;
-
-            }
-
-        }
 
         return $this->return_sticky_link($url, $meta_params);
 
@@ -675,15 +669,9 @@ Removed: Sunday, June 28, 2026 @ 1829 hrs.
                      $target = '_blank')
     {
 
-        if(isset($this->content_output_type_ARRAY[$this->module_key])){
-
-            if($this->content_output_type_ARRAY[$this->module_key] == 'sauce'){
-
+        if(isset($this->content_output_type_ARRAY[$this->module_key]))
+            if($this->content_output_type_ARRAY[$this->module_key] == 'sauce')
                 return '<a href="' . $url . '">Click here.</a>';
-
-            }
-
-        }
 
         return $this->return_sticky_media_link(
                       $media_element_key, 
@@ -745,12 +733,10 @@ Removed: Sunday, June 28, 2026 @ 1829 hrs.
 
         $tmp_predefined_constants_html .= '<div class="crnrstn_predefined_constant_content">
 ';
-
-        //
+        
         // Basic methods
         $tmp_ARRAY_basic = $this->return_mobile_detect_magic_methods('basic');
 
-        //
         // Custom detection methods
         $tmp_ARRAY_custom = $this->return_mobile_detect_magic_methods('custom');
 
@@ -765,11 +751,7 @@ Removed: Sunday, June 28, 2026 @ 1829 hrs.
         $tmp_predefined_constants_html .= $token . '<div class="crnrstn_predefined_constant_title"><h3>Basic detection methods</h3></div>';
         foreach($tmp_ARRAY_basic as 
             $index => $method_name)
-        {
-
-            $tmp_str .= $method_name . '<br>';
-
-        }
+                $tmp_str .= $method_name . '<br>';
 
         $tmp_str = $this->strrtrim($tmp_str, '<br>');
         $tmp_predefined_constants_html .= '<div class="crnrstn_documentation_dyn_content_description"><p>' . $tmp_str . '</p></div>';
@@ -779,11 +761,7 @@ Removed: Sunday, June 28, 2026 @ 1829 hrs.
         $tmp_predefined_constants_html .= $token . '<div class="crnrstn_predefined_constant_title"><h3>Custom detection methods</h3></div>';
         foreach($tmp_ARRAY_custom as 
             $index => $method_name)
-        {
-
-            $tmp_str .= $method_name . '<br>';
-
-        }
+                $tmp_str .= $method_name . '<br>';
 
         $tmp_str = $this->strrtrim($tmp_str, '<br>');
         $tmp_predefined_constants_html .= '<div class="crnrstn_documentation_dyn_content_description">' . $tmp_str . '</div>';
@@ -793,11 +771,7 @@ Removed: Sunday, June 28, 2026 @ 1829 hrs.
         $tmp_predefined_constants_html .= $token . '<div class="crnrstn_predefined_constant_title"><h3>Experimental version() method</h3></div>';
         foreach($tmp_ARRAY_experiment as 
             $index => $method_name)
-        {
-
-            $tmp_str .= $method_name . '<br>';
-
-        }
+                $tmp_str .= $method_name . '<br>';
 
         $tmp_str = $this->strrtrim($tmp_str, '<br>');
         $tmp_predefined_constants_html .= '<div class="crnrstn_documentation_dyn_content_description">' . $tmp_str . '</div>';
@@ -807,11 +781,7 @@ Removed: Sunday, June 28, 2026 @ 1829 hrs.
         $tmp_predefined_constants_html .= $token . '<div class="crnrstn_predefined_constant_title"><h3>Other tests</h3></div>';
         foreach($tmp_ARRAY_other as 
             $index => $method_name)
-        {
-
-            $tmp_str .= $method_name . '<br>';
-
-        }
+                $tmp_str .= $method_name . '<br>';
 
         $tmp_str = $this->strrtrim($tmp_str, '<br>');
         $tmp_predefined_constants_html .= '<div class="crnrstn_documentation_dyn_content_description">' . $tmp_str . '</div>';
@@ -840,10 +810,10 @@ Removed: Sunday, June 28, 2026 @ 1829 hrs.
 
                 $tmp_str_out = $this->return_mobile_detect_magic_method_html();
 
-                break;
+            break;
             default:
 
-                break;
+            break;
 
         }
 
@@ -1073,15 +1043,8 @@ Removed: Sunday, June 28, 2026 @ 1829 hrs.
         $tmp_str = '';
         foreach($tmp_ARRAY as 
             $index => $method)
-        {
-
-            if($method !== $method_name){
-
-                $tmp_str .= $method;
-
-            }
-
-        }
+                if($method !== $method_name)
+                    $tmp_str .= $method;
 
         /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
          * Include these related 
@@ -1091,23 +1054,13 @@ Removed: Sunday, June 28, 2026 @ 1829 hrs.
          */
         $this->clr_ssl_ccs_sauce($tmp_str);
 
-        if($this->content_output_type_ARRAY[$this->module_key] == 'sauce'){
-
+        if($this->content_output_type_ARRAY[$this->module_key] == 'sauce')
             return $tmp_str;
-
-        }
 
         foreach($tmp_ARRAY as 
             $index => $method)
-        {
-
-            if($method !== $method_name){
-
-                $tmp_output_ARRAY[] = $method;
-
-            }
-
-        }
+                if($method !== $method_name)
+                    $tmp_output_ARRAY[] = $method;
 
         return $tmp_output_ARRAY;
 
@@ -1142,7 +1095,6 @@ Removed: Sunday, June 28, 2026 @ 1829 hrs.
 
                                 <div class="crnrstn_documentation_caution_copy_wrap">
                                     <div class="crnrstn_documentation_caution_copy">' . $caution_note . '</div>
-
                                 </div>
 
                                 <div class="crnrstn_documentation_bg_caution_icon_wrapper_rel">
@@ -1192,11 +1144,8 @@ Removed: Sunday, June 28, 2026 @ 1829 hrs.
         switch($resource_constant){
             case $this->R_data['int_flag']['CRNRSTN_RESOURCE_THIRDPARTY']:
 
-                if($this->content_output_type_ARRAY[$this->module_key] == 'sauce'){
-
+                if($this->content_output_type_ARRAY[$this->module_key] == 'sauce')
                     return '<a href="' . $url . '">' . $link_copy . '</a>';
-
-                }
 
                 $tmp_img = $this->return_system_image(
                                   $system_asset_constant, 
@@ -1213,15 +1162,10 @@ Removed: Sunday, June 28, 2026 @ 1829 hrs.
                     default:
 
                         $tmp_link_id = '';
-                        if(!isset($this->link_build_track_ARRAY[$system_asset_constant])){
-
+                        if(!isset($this->link_build_track_ARRAY[$system_asset_constant]))
                             $this->link_build_track_ARRAY[$system_asset_constant][] = 1;
-
-                        }else{
-
+                        else
                             $tmp_link_id = count($this->link_build_track_ARRAY[$system_asset_constant]);
-
-                        }
 
                         $url = $this->return_sticky_link(
                                       $url, 
@@ -1229,6 +1173,7 @@ Removed: Sunday, June 28, 2026 @ 1829 hrs.
                                       $this->module_key . '_' . 
                                       strtolower($system_asset_constant) . '_' . 
                                       $tmp_link_id);
+
                         return '<a href="' . 
                                $url . '" target="_blank">' . 
                                $link_copy . '</a><sup class="crnrstn_the_r_text_link_sup">' . 
@@ -1322,11 +1267,8 @@ Removed: Sunday, June 28, 2026 @ 1829 hrs.
         switch($resource_constant){
             case $this->R_data['int_flag']['CRNRSTN_RESOURCE_DOCUMENTATION']:
 
-                if($this->content_output_type_ARRAY[$this->module_key] == 'sauce'){
-
+                if($this->content_output_type_ARRAY[$this->module_key] == 'sauce')
                     return $module_key;
-
-                }
 
                 $tmp_img = $this->return_system_image(
                                   $system_asset_constant, 
@@ -1338,8 +1280,7 @@ Removed: Sunday, June 28, 2026 @ 1829 hrs.
                                   NULL, 
                                   $this->R_data['int_flag']['CRNRSTN_HTML']);
 
-                if(isset($url_override)){
-
+                if(isset($url_override))
                     return '<a href="' . 
                            $url_override . 
                            '" target="_blank">' . 
@@ -1347,8 +1288,6 @@ Removed: Sunday, June 28, 2026 @ 1829 hrs.
                            '</a><sup class="crnrstn_the_r_text_link_sup">' . 
                            $tmp_img . 
                            '</sup>';
-
-                }
 
                 return '<a href="#" onclick="oCRNRSTN_JS.related_link_text_click(\'' . 
                        $module_key . '\');">' . 
@@ -1364,11 +1303,8 @@ Removed: Sunday, June 28, 2026 @ 1829 hrs.
 
                     if($this->content_output_type_ARRAY[$this->module_key] == 'sauce'){
 
-                        if(isset($url_override)){
-
+                        if(isset($url_override))
                             return '<a href="' . $url_override . '">' . $module_key . '</a>';
-
-                        }
 
                         return '<a href="https://php.net/manual-lookup.php?pattern=' . 
                                $module_key . '">' . 
@@ -3472,7 +3408,7 @@ Last Modified: Saturday, July 18, 2026 @ 0815 hrs.
 
 A CHECKLIST.
 TODO :: DELETE LISTED ITEMS WHEN DOM UNIT TEST FILE RESOURCE PATH IS ESTABLISHED.
-SEE, /_R/_config/config.mime_types       // 185+ mime-types. 260+ FILE EXTENSIONS. 336.1 MB.
+SEE, /_R/_config/mime_types       // 185+ mime-types. 260+ FILE EXTENSIONS. 336.1 MB.
 -----
 case 'CRNRSTN_ICO':
 case 'CRNRSTN_CSS':

@@ -1089,7 +1089,7 @@ SOAP Resource: (' .
              *                                    self::$oCRNRSTN_ENV);
              *
              */
-
+            $SOAP_oAuth         =
             $spice_salt_mem_ptr = NULL;
             // 5 :: Saturday, August 22, 2026 @ 0701 hrs.
             $this->compound_ointment(
@@ -1100,7 +1100,7 @@ SOAP Resource: (' .
                    self::$oCRNRSTN_ENV);
             $this->anoint(
                    'crnrstn_soap_authorization_manager',
-                   $R_bitmask);
+                   $SOAP_oAuth);
 
             $this->SOAP_oAuth_ARRAY[$SOAP_oAuth->serial] = $SOAP_oAuth;
 
@@ -1110,19 +1110,42 @@ SOAP Resource: (' .
 
         }else{
 
-            //
-            // # C # R # N # R # S # T # N # :: # L # I # G # H # T
-            // Return an instantiation of
-            // the CRNRSTN :: Lightsaber
-            // SOAP Services Layer
-            // Authorization Manager
-            // class object.
-            //
-            //
-            // 5 :: Monday, July 15, 2024 @ 2229 hrs.
-            //
-            // $SOAP_oAuth_NULL = new crnrstn_soap_authorization_manager('AUTH::NULL', $SOAP_AuthKey, self::$oCRNRSTN_ENV);
-            $SOAP_oAuth_NULL = self::$oCRNRSTN_ENV->return_registered_resource('new', 'crnrstn_soap_authorization_manager', 'AUTH::NULL', $SOAP_AuthKey, self::$oCRNRSTN_ENV);
+            /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
+             * Return an instantiation of
+             * the CRNRSTN :: Lightsaber
+             * SOAP Services Layer
+             * Authorization Manager
+             * class object.
+             *
+             *
+             * 5 :: Monday, July 15, 2024 @ 2229 hrs.
+             *
+             * $SOAP_oAuth_NULL = new crnrstn_soap_authorization_manager(
+             *                        'AUTH::NULL', 
+             *                        $SOAP_AuthKey, 
+             *                        self::$oCRNRSTN_ENV);
+             *
+             * $SOAP_oAuth_NULL = self::$oCRNRSTN_ENV->return_registered_resource(
+             *                                         'new', 
+             *                                         'crnrstn_soap_authorization_manager', 
+             *                                         'AUTH::NULL', 
+             *                                         $SOAP_AuthKey, 
+             *                                         self::$oCRNRSTN_ENV);
+             *
+             */
+
+            $SOAP_oAuth_NULL    =
+            $spice_salt_mem_ptr = NULL;
+            // 5 :: Saturday, August 22, 2026 @ 0701 hrs.
+            $this->compound_ointment(
+                   $spice_salt_mem_ptr, 
+                   'crnrstn_soap_authorization_manager', 
+                   'AUTH::NULL', 
+                   $SOAP_AuthKey, 
+                   self::$oCRNRSTN_ENV);
+            $this->anoint(
+                   'crnrstn_soap_authorization_manager', 
+                   $SOAP_oAuth_NULL);
 
             return $SOAP_oAuth_NULL;
 

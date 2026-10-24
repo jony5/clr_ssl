@@ -1393,10 +1393,10 @@ class lightbox_helper_by_eVifweb extends crnrstn
          * output from:
          *  - /_lightbox_helper/_config/resource_registry/crnrstn.native_resource_registry.function.php
          *  - /_lightbox_helper/_config/resource_registry/crnrstn.native_registered_resource_content_library.function.php
-         *  - /_lightbox_helper/_config/config.integer_constants/crnrstn.system_integer_bank.function.php
-         *  - /_lightbox_helper/_config/config.lightbox_helper.original/
-         *  - /_lightbox_helper/_config/config.system_content/crnrstn.documentation_library.function.php
-         *  - /_lightbox_helper/_config/config.system_links/crnrstn.system_link_library.function.php
+         *  - /_lightbox_helper/_config/integer_constants/crnrstn.system_integer_bank.function.php
+         *  - /_lightbox_helper/_config/lightbox_helper/
+         *  - /_lightbox_helper/_config/system_content/crnrstn.documentation_library.function.php
+         *  - /_lightbox_helper/_config/system_links/crnrstn.system_link_library.function.php
          *
          *
          * 5
@@ -2066,7 +2066,7 @@ class lightbox_helper_by_eVifweb extends crnrstn
             // runtime currently.
             //
             // Please see,
-            // /lightbox_helper/_config/_config.defaults/crnrstn.settings.function.php
+            // /lightbox_helper/_config/defaults/crnrstn.settings.function.php
             $tmp_preferred_hash_ARRAY = array('sha256' => 'sha256', 'sha224' => 'sha224',
             'sha384' => 'sha384', 'sha512' => 'sha512', 'sha512-224' => 'sha512-224', 'sha512-256' => 'sha512-256',
             'rsa-sha224' => 'rsa-sha224', 'rsa-sha256' => 'rsa-sha256', 'rsa-sha384' => 'rsa-sha384',
@@ -4444,7 +4444,7 @@ class lightbox_helper_by_eVifweb extends crnrstn
                     [Array\n(\n)\n].
                         $registry_name[
                             _crnrstn_int_return
-                            |/var/www/html/lightbox_helper/_lightbox_helper/_config/config.integer_constants/crnrstn.constants_load.runtime_exe.php
+                            |/var/www/html/lightbox_helper/_lightbox_helper/_config/integer_constants/crnrstn.constants_load.runtime_exe.php
                             |_crnrstn_native_resource_registry_content_library
                             |_crnrstn_settings
                             |_lightbox_helper_by_eVifweb_settings
@@ -6052,7 +6052,7 @@ class lightbox_helper_by_eVifweb extends crnrstn
         // defined yet.
         //
         // Please see,
-        // /_lightbox_helper/_config/config.integer_constants/crnrstn.integer_return.function.php
+        // /_lightbox_helper/_config/integer_constants/crnrstn.integer_return.function.php
         //
         // [Begin LOCALHOST_CHAD_MACBOOKPRO ERROR log output]
         //   [Sat Jul 13 01:20:44.777684 2024]

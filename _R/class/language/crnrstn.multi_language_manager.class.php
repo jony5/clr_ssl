@@ -330,6 +330,8 @@ class crnrstn_multi_language_manager extends crnrstn
         $this->system_language_is_active_ARRAY = array('en');
         $this->load_language_preference('en');
 
+        $this->iso_language_html_default = $this->get_crnrstn('iso_lang_code');
+
 	}
 
 	public function return_lang_pref_data(
@@ -3324,11 +3326,8 @@ class crnrstn_multi_language_manager extends crnrstn
     public function iso_language_html()
     {
 
-        if(isset($this->iso_language_html_current)){
-
+        if(isset($this->iso_language_html_current))
             return $this->iso_language_html_current;
-
-        }
 
         if(!$this->isset_iso_language_profile()){
 
@@ -3338,11 +3337,8 @@ class crnrstn_multi_language_manager extends crnrstn
 
             //
             // JUST RETURN SYSTEM DEFAULT FOR ANY PRE-INITIALIZATION CONFIGURATION DRIVERS.
-            if(!isset($header_accept_language)){
-
+            if(!isset($header_accept_language))
                 return $this->iso_language_html_default;
-
-            }
 
             $this->consume_accept_language_data($header_accept_language);
 
@@ -3465,8 +3461,6 @@ class crnrstn_multi_language_manager extends crnrstn
                         //case 'en':
                         return 'CRNRSTN :: Lightsaber.';
 
-                    break;
-
                 }
 
             break;
@@ -3479,9 +3473,10 @@ class crnrstn_multi_language_manager extends crnrstn
                     default:
 
                         //case 'en':
-                        return 'CRNRSTN :: is an MIT licensed PHP web services layer that properly joins a LAMP application to multiple hosting environments.';
-
-                    break;
+                        return 'CRNRSTN :: is an MIT licensed PHP ' . 
+                               'web services layer that properly joins ' . 
+                               'a LAMP application to multiple ' . 
+                               'hosting environments.';
 
                 }
 
@@ -3497,8 +3492,6 @@ class crnrstn_multi_language_manager extends crnrstn
                         //case 'en':
                         return 'Redirecting to';
 
-                    break;
-
                 }
 
             break;
@@ -3511,9 +3504,7 @@ class crnrstn_multi_language_manager extends crnrstn
                     default:
 
                         //case 'en':
-                        return 'Welcome to C<span class="the_R">R</span>NRSTN ::';
-
-                    break;
+                        return 'Welcome to ' . $this->get_crnrstn('CLR_SSL_long_HTML') . '.';
 
                 }
 
@@ -3527,9 +3518,10 @@ class crnrstn_multi_language_manager extends crnrstn
                     default:
 
                         //case 'en':
-                        return 'This is the intro demo page for a vanilla implementation.';
-
-                    break;
+                        return 'This is the intro demo page ' . 
+                               'for a vanilla implementation of ' . 
+                               $this->get_crnrstn('CLR_SSL_short_HTML') . 
+                               '.';
 
                 }
 
@@ -3545,8 +3537,6 @@ class crnrstn_multi_language_manager extends crnrstn
                         //case 'en':
                         return 'Demonstration ::';
 
-                    break;
-
                 }
 
             break;
@@ -3559,9 +3549,8 @@ class crnrstn_multi_language_manager extends crnrstn
                     default:
 
                         //case 'en':
-                        return 'Pulling custom data out of the system resource configuration';
-
-                    break;
+                        return 'Pulling custom data out of ' . 
+                               'the system resource configuration';
 
                 }
 
@@ -3577,8 +3566,6 @@ class crnrstn_multi_language_manager extends crnrstn
                         //case 'en':
                         return 'file';
 
-                    break;
-
                 }
 
             break;
@@ -3592,8 +3579,6 @@ class crnrstn_multi_language_manager extends crnrstn
 
                         //case 'en':
                         return 'See';
-
-                    break;
 
                 }
 
@@ -3609,8 +3594,6 @@ class crnrstn_multi_language_manager extends crnrstn
                         //case 'en':
                         return 'Recent Activity ::';
 
-                    break;
-
                 }
 
             break;
@@ -3623,9 +3606,10 @@ class crnrstn_multi_language_manager extends crnrstn
                     default:
 
                         //case 'en':
-                        return 'For now, current activity related to the direction of the project will be posted here:';
+                        return 'For now, current activity related ' . 
+                               'to the direction of the project ' . 
+                               'will be posted here:';
 
-                    break;
 
                 }
 
@@ -3641,8 +3625,6 @@ class crnrstn_multi_language_manager extends crnrstn
                         //case 'en':
                         return 'There are currently no posts to display.';
 
-                    break;
-
                 }
 
             break;
@@ -3651,21 +3633,19 @@ class crnrstn_multi_language_manager extends crnrstn
                 switch($this->iso_language_html_current){
                     case 'es':
 
-                        break;
+                    break;
                     default:
 
                         //case 'en':
                         return 'There are currently no posts to display.';
 
-                        break;
 
                 }
 
                 break;
                 /*
-
                 Check out the CRNRSTN :: v1.0.0 Facebook photo album!
-photo album
+                photo album
 
                  */
 
@@ -3681,8 +3661,6 @@ photo album
                         //case 'en':
                         return 'Check out the C<span class="the_R">R</span>NRSTN :: v1.0.0';
 
-                    break;
-
                 }
 
             break;
@@ -3697,8 +3675,6 @@ photo album
                         //case 'en':
                         return 'photo album';
 
-                    break;
-
                 }
 
             break;
@@ -3711,9 +3687,8 @@ photo album
                     default:
 
                         //case 'en':
-                        return 'Jonathan \'5\' Harris :: All Rights Reserved in accordance with<br>the latest version of the';
-
-                    break;
+                        return 'Jonathan \'5\' Harris :: All Rights Reserved ' . 
+                               'in accordance with<br>the latest version of the';
 
                 }
 
@@ -3729,8 +3704,6 @@ photo album
                         //case 'en':
                         return 'Share';
 
-                    break;
-
                 }
 
             break;
@@ -3744,8 +3717,6 @@ photo album
 
                         //case 'en':
                         return 'Top';
-
-                    break;
 
                 }
 
@@ -3761,8 +3732,6 @@ photo album
                         //case 'en':
                         return 'Related Methods';
 
-                    break;
-
                 }
 
             break;
@@ -3776,8 +3745,6 @@ photo album
 
                         //case 'en':
                         return 'Return Value';
-
-                    break;
 
                 }
 
@@ -3793,8 +3760,6 @@ photo album
                         //case 'en':
                         return 'Method Parameter Definitions';
 
-                    break;
-
                 }
 
             break;
@@ -3808,8 +3773,6 @@ photo album
 
                         //case 'en':
                         return 'Method Definition';
-
-                    break;
 
                 }
 
@@ -3825,8 +3788,6 @@ photo album
                         //case 'en':
                         return 'A TASTY CRNRSTN :: SNIPPET.';
 
-                    break;
-
                 }
 
             break;
@@ -3840,19 +3801,15 @@ photo album
 
                         return 'Tekniske spesifikasjoner';
 
-                    break;
                     //case 'en':
                     case 'el':
 
                         return 'Τεχνικές προδιαγραφές';
 
-                    break;
                     default:
 
                         //case 'en':
                         return 'Technical specifications';
-
-                    break;
 
                 }
 
@@ -3873,8 +3830,6 @@ photo album
                         //case 'en':
                         return 'Example';
 
-                    break;
-
                 }
 
             break;
@@ -3894,8 +3849,6 @@ photo album
                         //case 'en':
                         return 'Note';
 
-                    break;
-
                 }
 
             break;
@@ -3910,8 +3863,6 @@ photo album
                         //case 'en':
                         return 'download';
 
-                    break;
-
                 }
 
             break;
@@ -3924,9 +3875,9 @@ photo album
                     default:
 
                         //case 'en':
-                        return 'For a quick reference on environmental configuration and detection, please see the demonstration below.';
-
-                    break;
+                        return 'For a quick reference on environmental ' . 
+                               'configuration and detection, please see ' . 
+                               'the demonstration below.';
 
                 }
 
@@ -3940,9 +3891,8 @@ photo album
                     default:
 
                         //case 'en':
-                        return 'For a quick reference, please see the demonstration below.';
-
-                    break;
+                        return 'For a quick reference, please ' . 
+                               'see the demonstration below.';
 
                 }
 
@@ -3958,8 +3908,6 @@ photo album
                         //case 'en':
                         return 'char string to clipboard';
 
-                    break;
-
                 }
 
             break;
@@ -3973,8 +3921,6 @@ photo album
                         //case 'en':
 
                         return 'Click here';
-
-                    break;
 
                 }
 
@@ -3990,8 +3936,6 @@ photo album
 
                         return ' to copy the lines above to clipboard';
 
-                    break;
-
                 }
 
             break;
@@ -4004,9 +3948,10 @@ photo album
                     default:
                         //case 'en':
 
-                        return 'To enable server detection, please configure C<span style="color:#F90000;">R</span>NRSTN :: for this environment within the configuration file.';
-
-                    break;
+                        return 'To enable server detection, please ' . 
+                               'configure C<span style="color:#F90000;">' . 
+                               'R</span>NRSTN :: for this environment ' . 
+                               'within the configuration file.';
 
                 }
 
@@ -4020,9 +3965,9 @@ photo album
                     default:
                         //case 'en':
 
-                        return 'Please specify a configuration serial in the C<span style="color:#F90000;">R</span>NRSTN :: config file.';
-
-                    break;
+                        return 'Please specify a configuration ' . 
+                               'serial in the C<span style="color:#F90000;">' . 
+                               'R</span>NRSTN :: config file.';
 
                 }
 
@@ -4038,8 +3983,6 @@ photo album
 
                         return 'Enter filename for PNG, JPG or base64';
 
-                    break;
-
                 }
 
             break;
@@ -4053,8 +3996,6 @@ photo album
                         //case 'en':
 
                         return 'Menu';
-
-                    break;
 
                 }
 
@@ -4070,8 +4011,6 @@ photo album
 
                         return 'Navigation to Menu';
 
-                    break;
-
                 }
 
             break;
@@ -4085,8 +4024,6 @@ photo album
                         //case 'en':
 
                         return 'Close';
-
-                    break;
 
                 }
 
@@ -4102,8 +4039,6 @@ photo album
 
                         return 'Navigation to Close';
 
-                    break;
-
                 }
 
             break;
@@ -4117,8 +4052,6 @@ photo album
                         //case 'en':
 
                         return 'Full Screen';
-
-                    break;
 
                 }
 
@@ -4134,8 +4067,6 @@ photo album
 
                         return 'Navigation to Full Screen';
 
-                    break;
-
                 }
 
             break;
@@ -4149,8 +4080,6 @@ photo album
                         //case 'en':
 
                         return 'Minimize';
-
-                    break;
 
                 }
 
@@ -4166,8 +4095,6 @@ photo album
 
                         return 'Navigation to Minimize';
 
-                    break;
-
                 }
 
             break;
@@ -4176,13 +4103,11 @@ photo album
                 switch($this->iso_language_html_current){
                     case 'es':
 
-                        break;
+                    break;
                     default:
                         //case 'en':
 
                         return '5';
-
-                        break;
 
                 }
 
@@ -4198,8 +4123,6 @@ photo album
 
                         return 'eVifweb development';
 
-                    break;
-
                 }
 
             break;
@@ -4213,8 +4136,6 @@ photo album
                         //case 'en':
 
                         return 'EULA';
-
-                    break;
 
                 }
 
@@ -4230,8 +4151,6 @@ photo album
 
                         return 'Process to batch';
 
-                    break;
-
                 }
 
             break;
@@ -4245,8 +4164,6 @@ photo album
                         //case 'en':
 
                         return 'connect';
-
-                    break;
 
                 }
 
@@ -4262,8 +4179,6 @@ photo album
 
                         return 'password (optional)';
 
-                    break;
-
                 }
 
             break;
@@ -4277,8 +4192,6 @@ photo album
                         //case 'en':
 
                         return 'username';
-
-                    break;
 
                 }
 
@@ -4294,8 +4207,6 @@ photo album
 
                         return 'Enter char count';
 
-                    break;
-
                 }
             break;
             case 'BUTTON_TEXT_SUBMIT':
@@ -4308,8 +4219,6 @@ photo album
                         //case 'en':
 
                         return 'Submit';
-
-                    break;
 
                 }
 
@@ -4325,8 +4234,6 @@ photo album
 
                         return 'Add';
 
-                    break;
-
                 }
 
             break;
@@ -4339,9 +4246,8 @@ photo album
                     default:
                         //case 'en':
 
-                        return 'The session has expired due to inactivity exceeding x seconds.';
-
-                    break;
+                        return 'The session has expired due ' . 
+                               'to inactivity exceeding x seconds.';
 
                 }
 
@@ -4357,8 +4263,6 @@ photo album
 
                         return 'Email is required.';
 
-                    break;
-
                 }
 
             break;
@@ -4373,8 +4277,6 @@ photo album
 
                         return 'Password is required.';
 
-                    break;
-
                 }
 
             break;
@@ -4382,13 +4284,11 @@ photo album
                 switch($this->iso_language_html_current){
                     case 'es':
 
-                        break;
+                    break;
                     default:
                         //case 'en':
 
                         return 'password';
-
-                        break;
 
                 }
 
@@ -4403,8 +4303,6 @@ photo album
 
                         return 'email';
 
-                    break;
-
                 }
 
             break;
@@ -4412,13 +4310,11 @@ photo album
                 switch($this->iso_language_html_current){
                     case 'es':
 
-                        break;
+                    break;
                     default:
                         //case 'en':
 
                         return 'SIGN IN';
-
-                        break;
 
                 }
 
@@ -4427,13 +4323,11 @@ photo album
                 switch($this->iso_language_html_current){
                     case 'es':
 
-                        break;
+                    break;
                     default:
                         //case 'en':
 
                         return 'Need to';
-
-                        break;
 
                 }
 
@@ -4448,8 +4342,6 @@ photo album
 
                         return 'create an account';
 
-                    break;
-
                 }
 
             break;
@@ -4462,8 +4354,6 @@ photo album
                         //case 'en':
 
                         return 'or';
-
-                    break;
 
                 }
 
@@ -4478,8 +4368,6 @@ photo album
 
                         return 'forget your password';
 
-                break;
-
                 }
 
             break;
@@ -4492,8 +4380,6 @@ photo album
                         //case 'en':
 
                         return 'Your IP';
-
-                    break;
 
                 }
 
@@ -4508,8 +4394,6 @@ photo album
 
                         return 'Login attempts';
 
-                    break;
-
                 }
 
             break;
@@ -4522,8 +4406,6 @@ photo album
                         //case 'en':
 
                         return 'Attempts remaining';
-
-                    break;
 
                 }
 
@@ -4538,8 +4420,6 @@ photo album
 
                         return 'All Rights Reserved in accordance with';
 
-                    break;
-
                 }
 
             break;
@@ -4553,8 +4433,6 @@ photo album
 
                         return 'the latest version of the';
 
-                    break;
-
                 }
 
             break;
@@ -4567,8 +4445,6 @@ photo album
                         //case 'en':
 
                         return 'MIT License';
-
-                    break;
 
                 }
 

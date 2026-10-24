@@ -459,7 +459,8 @@ class crnrstn_registry_user
              $R_node_id_override = NULL, 
              $R_client_id_override = NULL, 
              $R_request_id_override = NULL, 
-             $R_request_serial_override = NULL)
+             $R_request_serial_override = NULL, 
+             $R = NULL)
     {
         /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
          * Where $object_boot_resources is a
@@ -552,6 +553,11 @@ class crnrstn_registry_user
          *       5 :: Saturday, June 20, 2026 @ 0235 hrs.
          *       Sips coffee. 
          *
+         * # C # R # N # R # S # T # N # :: # L # I # G # H # T
+         * Edit: Added the $R input parameter to the 
+         *       crnrstn_registry_user _construct().
+         *       5 :: Thursday, October 1, 2026 @ 0737 hrs.
+         *
          */
 
         // 5 :: Saturday, June 20, 2026 @ 0250 hrs.
@@ -574,38 +580,43 @@ class crnrstn_registry_user
         if(isset($request_serial_override))
             self::$R_data['R_request_serial'] = $R_request_serial_override;
 
-        /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
-         * Initialize start time and 
-         * a few performance reporting 
-         * integer constants. 
-         *
-         * Also, define the CLR-SSL 
-         * Resource Registry, and fire 
-         * up any supporting low-level 
-         * dependencies. 
-         *
-         *
-         * 5 :: Tuesday, May 26, 2026 @ 1526 hrs.
-         *
-         */
-        $this->clr_ssl_initialize(
-               $application_directory, 
-               $R_framework_directory, 
-               $R_hmac_algorithm_override, 
-               $R_debug_mode_override, 
-               $PHPMailer_debug_mode_override, 
-               $WordPress_debug_mode_override);
+        if(isset($R))
+            // 5 :: Thursday, October 1, 2026 @ 0826 hrs.
+            $this->clr_ssl_initialize_by_pass($R);
+        else 
+            /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
+             * Initialize start time and 
+             * a few performance reporting 
+             * integer constants. 
+             *
+             * Also, define the CLR-SSL 
+             * Resource Registry, and fire 
+             * up any supporting low-level 
+             * dependencies. 
+             *
+             *
+             * 5 :: Tuesday, May 26, 2026 @ 1526 hrs.
+             *
+             */
+            $this->clr_ssl_initialize(
+                   $application_directory, 
+                   $R_framework_directory, 
+                   $R_hmac_algorithm_override, 
+                   $R_debug_mode_override, 
+                   $PHPMailer_debug_mode_override, 
+                   $WordPress_debug_mode_override);
 
         /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
-         * Create a monitoring and
-         * reporting touch point to
-         * support the management
-         * of server memory
-         * consumption and CPU
+         * Create a monitoring and 
+         * reporting touch point to 
+         * support the management 
+         * of server memory 
+         * consumption and CPU 
          * processor load for...
          *
-         * The CRNRSTN :: Lightsaber
-         * SOAP Services Layer.
+         * The CRNRSTN :: Lightsaber 
+         * RoCEv2 SOAP Services 
+         * Layer (CLR-SSL). 
          *
          *
          * 5
@@ -615,17 +626,20 @@ class crnrstn_registry_user
          */
         $this->memory_performance('CLR_SSL_REGISTRY_USER_CONSTRUCTOR');
 
-        /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
-         * Object boot. 
-         *
-         *
-         * 5
-         *
-         * Sunday, September 1, 2024 @ 0248 hrs.
-         * Last Modified: Tuesday, May 26, 2026 @ 2121 hrs.
-         *
-         */
-        $this->object_boot(__METHOD__);
+        if(isset($R))
+            $this->object_boot_bypass($R);
+        else
+            /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
+             * Object boot. 
+             *
+             *
+             * 5
+             *
+             * Sunday, September 1, 2024 @ 0248 hrs.
+             * Last Modified: Tuesday, May 26, 2026 @ 2121 hrs.
+             *
+             */
+            $this->object_boot(__METHOD__, $R);
 
         /*
         [Sat Jun 13 02:57:39.839475 2026] [:error] [pid 1713] 
@@ -721,15 +735,16 @@ class crnrstn_registry_user
          *       5 :: Tuesday, June 16, 2026 @ 1957 hrs.
          *
          * # C # R # N # R # S # T # N # :: # L # I # G # H # T
-         * Edit: Remved the $R_odata input
-         *       parameter from the clr_ssl_initialize()
-         *       method of the crnrstn_registry_user
-         *       class object.
+         * Edit: Removed the $R_odata input 
+         *       parameter from the clr_ssl_initialize() 
+         *       method of the crnrstn_registry_user 
+         *       class object. 
          *       5 :: Sunday, August 23, 2026 @ 0306 hrs.
          *
          */
-        self::$R_data['starttime']     = $_SERVER['REQUEST_TIME_FLOAT'];
-        self::$R_data['starttime_dst'] = \gettimeofday();
+
+        self::$R_data['starttime']          = $_SERVER['REQUEST_TIME_FLOAT'];
+        self::$R_data['starttime_dst']      = \gettimeofday();
         self::$R_data['eVifweb_long_HTML']  = 'e<span class="the_V">V</span>ifweb development';
         self::$R_data['eVifweb_long_TEXT']  = 'eVifweb development';
         self::$R_data['eVifweb_short_HTML'] = 'e<span class="the_V">V</span>ifweb';
@@ -917,8 +932,8 @@ class crnrstn_registry_user
          * The default timezone is 
          * initialized here:
          *
-         * /_R/_config/_config.defaults
-         * /load_static_cache/R_timezone_default
+         * /_R/_config/defaults
+         * /R_timezone_default
          * /crnrstn.R_timezone_default.runtime_exe.php
          *
          * The return data is a timezone identifier, 
@@ -1545,6 +1560,29 @@ class crnrstn_registry_user
 
         return NULL;
 
+    }
+
+    /**
+     * R :: Content pending.
+     *
+     * @param
+     * @param
+     * @param
+     * @param
+     * @param
+     * @param
+     * @param
+     * @return
+     * @access private
+     *
+     */
+    private function clr_ssl_initialize_by_pass($R)
+    {
+        // 5 :: Thursday, October 1, 2026 @ 0829 hrs.
+
+        // Data Cache Initialization.
+        self::$R_data = $R->R_data_write(__METHOD__, 'R_data');
+        
     }
 
     /**
@@ -5205,7 +5243,7 @@ class crnrstn_registry_user
         <meta name="description" lang="en" content="A CLR-SSL Resource Registry Data ' .
         'Output Report for ' . $R_resp[$mem_ptr]['title']['TEXT'] .'">
         <link rel="shortcut icon" type="image/x-icon" href="' .
-            self::$R_data['directory_shift'] . '/' .
+            self::$R_data['R_directory_shift'] . '/' .
             self::$R_data['R_framework_directory'] .
             '/ui/imgs/favicon/system/crnrstn' .
             '/favicon.ico?' .
@@ -5213,7 +5251,7 @@ class crnrstn_registry_user
             $this->file_url_cache_id(self::$R_data['R_framework_path'] .
                    '/ui/imgs/favicon/system/crnrstn/favicon.ico') . '"/>
         <link type="text/css" rel="stylesheet" href="' .
-            self::$R_data['directory_shift'] . '/' .
+            self::$R_data['R_directory_shift'] . '/' .
             self::$R_data['R_framework_directory'] .
             '/ui/css/crnrstn.main_desktop.css?' .
             $session_salt . '=crnrstn.main_desktop.css' .
@@ -5221,7 +5259,7 @@ class crnrstn_registry_user
             $this->file_url_cache_id(self::$R_data['R_framework_path'] .
                    '/ui/css/crnrstn.main_desktop.css') . '">
         <script type="application/json" src="' .
-            self::$R_data['directory_shift'] . '/' .
+            self::$R_data['R_directory_shift'] . '/' .
             self::$R_data['R_framework_directory'] .
             '/ui/js/_lib/jquery/4.0.0/' .
             'jquery-4.0.0.min.map?' .
@@ -5231,7 +5269,7 @@ class crnrstn_registry_user
                    '/ui/js/_lib/jquery/4.0.0/' .
                    'jquery-4.0.0.min.map') . '"></script>
         <script type="text/javascript" src="' .
-            self::$R_data['directory_shift'] . '/' .
+            self::$R_data['R_directory_shift'] . '/' .
             self::$R_data['R_framework_directory'] .
             '/ui/js/_lib/jquery/4.0.0/' .
             'jquery-4.0.0.min.js?' .
@@ -5241,7 +5279,7 @@ class crnrstn_registry_user
                    '/ui/js/_lib/jquery/4.0.0/' .
                    'jquery-4.0.0.min.js') . '"></script>
         <link type="text/css" rel="stylesheet" href="' .
-            self::$R_data['directory_shift'] . '/' .
+            self::$R_data['R_directory_shift'] . '/' .
             self::$R_data['R_framework_directory'] .
             '/ui/js/_lib/lightbox.js' .
             '/2.12.0/dist/css/lightbox.min.css?' .
@@ -5251,7 +5289,7 @@ class crnrstn_registry_user
                    '/ui/js/_lib/lightbox.js' .
                    '/2.12.0/dist/css/lightbox.min.css') . '">
         <link type="text/css" rel="stylesheet" href="' .
-            self::$R_data['directory_shift'] . '/' .
+            self::$R_data['R_directory_shift'] . '/' .
             self::$R_data['R_framework_directory'] .
             '/ui/js/_lib/jquery_ui/1.14.2/' .
             'jquery-ui.theme.min.css?' .
@@ -5261,7 +5299,7 @@ class crnrstn_registry_user
                    '/ui/js/_lib/jquery_ui/1.14.2/' .
                    'jquery-ui.theme.min.css') . '">
         <link type="text/css" rel="stylesheet" href="' .
-            self::$R_data['directory_shift'] . '/' .
+            self::$R_data['R_directory_shift'] . '/' .
             self::$R_data['R_framework_directory'] .
             '/ui/js/_lib/jquery_ui/1.14.2' .
             '/jquery-ui.structure.min.css?' .
@@ -5271,7 +5309,7 @@ class crnrstn_registry_user
                    '/ui/js/_lib/jquery_ui/1.14.2' .
                    '/jquery-ui.structure.min.css') . '">
         <link type="text/css" rel="stylesheet" href="' .
-            self::$R_data['directory_shift'] . '/' .
+            self::$R_data['R_directory_shift'] . '/' .
             self::$R_data['R_framework_directory'] .
             '/ui/js/_lib/jquery_ui/1.14.2/' .
             'jquery-ui.min.css?' .
@@ -5281,7 +5319,7 @@ class crnrstn_registry_user
                    '/ui/js/_lib/jquery_ui/1.14.2/' .
                    'jquery-ui.min.css') . '">
         <script type="text/javascript" src="' .
-            self::$R_data['directory_shift'] . '/' .
+            self::$R_data['R_directory_shift'] . '/' .
             self::$R_data['R_framework_directory'] .
             '/ui/js/_lib/jquery_ui/1.14.2/' .
             'jquery-ui.min.js?' .
@@ -5291,7 +5329,7 @@ class crnrstn_registry_user
                    '/ui/js/_lib/jquery_ui/1.14.2/' .
                    'jquery-ui.min.js') . '"></script>
         <script type="text/javascript" src="' .
-            self::$R_data['directory_shift'] . '/' .
+            self::$R_data['R_directory_shift'] . '/' .
             self::$R_data['R_framework_directory'] .
             '/ui/js/crnrstn.main.js?' .
             $session_salt . '=crnrstn.main.js' .
@@ -5302,7 +5340,7 @@ class crnrstn_registry_user
     <body>
         <div class="R_report_message_container">
             <a href="http://evifweb.jony5.com" target="_blank"><img src="' .
-                self::$R_data['directory_shift'] . '/' .
+                self::$R_data['R_directory_shift'] . '/' .
                 self::$R_data['R_framework_directory'] .
                 '/ui/imgs/png/system/crnrstn_R_lg.png?' .
                 $session_salt . '=crnrstn_R_lg&R_cache=' .
@@ -5319,7 +5357,7 @@ class crnrstn_registry_user
         </div>
         <div class="R_report_stone_pillar">
             <img src="' .
-                self::$R_data['directory_shift'] . '/' .
+                self::$R_data['R_directory_shift'] . '/' .
                 self::$R_data['R_framework_directory'] .
                 '/ui/imgs/png/system/r_stone_giant_pillar.png?' .
                 $session_salt . '=r_stone_giant_pillar&R_cache=' .
@@ -5606,7 +5644,7 @@ class crnrstn_registry_user
         <div class="R_report_logos_shell">
             <a href="http://evifweb.jony5.com" target="_blank">
                 <img src="' .
-                self::$R_data['directory_shift'] . '/' .
+                self::$R_data['R_directory_shift'] . '/' .
                 self::$R_data['R_framework_directory'] .
                 '/ui/imgs/png/system/5.png?' .
                 $session_salt . '=5&R_cache=' .
@@ -5617,7 +5655,7 @@ class crnrstn_registry_user
             <a href="https://github.com/jony5/CRNRSTN-Lightsaber-RoCEv2-SOAP-Services-Layer/" ' .
             'target="_blank">
                 <img src="' .
-                self::$R_data['directory_shift'] . '/' .
+                self::$R_data['R_directory_shift'] . '/' .
                 self::$R_data['R_framework_directory'] .
                 '/ui/imgs/png/system' .
                 '/crnrstn_logo_lg.png?' .
@@ -5634,7 +5672,7 @@ class crnrstn_registry_user
             <a href="https://jony5.com" ' .
             'target="_blank">
                 <img src="' .
-                self::$R_data['directory_shift'] . '/' .
+                self::$R_data['R_directory_shift'] . '/' .
                 self::$R_data['R_framework_directory'] .
                 '/ui/imgs/png/system' .
                 '/stache.png?' .
@@ -6070,7 +6108,7 @@ class crnrstn_registry_user
                                 session_id_start <=> a runtime executable|crnrstn.constants_load.runtime_exe.php <=> a runtime executable|
                                 _crnrstn_native_resource_registry_content_library <=> a function definition|
                                 crnrstn_ascii_art <=> a class definition|
-                                crnrstn_file_system_integrations_manager <=> a class definition|
+                                crnrstn_file_sys_mgr <=> a class definition|
                                 crnrstn_logging <=> a class definition|crnrstn_session_manager <=> a class definition|
                                 crnrstn_registry_user <=> a class definition|
                                 crnrstn_bitflip_manager <=> a class definition|
@@ -6785,7 +6823,7 @@ die();</code></pre>';
         /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
          * Quick check for 
          * crnrstn_ascii_art and 
-         * crnrstn_file_system_integrations_manager 
+         * crnrstn_file_sys_mgr 
          * class objects. 
          *
          *
@@ -7117,15 +7155,15 @@ die();</code></pre>';
          *    resource_registry/
          *    crnrstn.native_registered_resource_content_library.function.php
          *  - /_R/_config/
-         *    config.integer_constants/
+         *    integer_constants/
          *    crnrstn.system_integer_bank.function.php
          *  - /_R/_config/
-         *    config.lightbox_helper.original/
+         *    lightbox_helper/
          *  - /_R/_config/
-         *    config.system_content/
+         *    system_content/
          *    crnrstn.documentation_library.function.php
          *  - /_R/_config/
-         *    config.system_links/
+         *    system_links/
          *    crnrstn.system_link_library.function.php
          *
          *
@@ -7247,10 +7285,10 @@ die();</code></pre>';
              *
              */
             $tmp_data                        = \array_pop($directory_shift);
-            self::$R_data['directory_shift'] = \implode('', $directory_shift);
+            self::$R_data['R_directory_shift'] = \implode('', $directory_shift);
 
             if(\strlen($path_chunk[0]) > 0)
-                self::$R_data['directory_shift'] .= $path_chunk[0];
+                self::$R_data['R_directory_shift'] .= $path_chunk[0];
 
             /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
              * Standardize the use of HTTP
@@ -7261,7 +7299,7 @@ die();</code></pre>';
              * 5
              *
              */
-            self::$R_data['directory_shift'] = \rtrim(self::$R_data['directory_shift'], '/');
+            self::$R_data['R_directory_shift'] = \rtrim(self::$R_data['R_directory_shift'], '/');
 
             if(\strlen($path_chunk[0]) > 0)
                 $root = \implode(self::$R_data['operating_system']['os_path_dir_separator_char'], $script_filepath_ARRAY) .
@@ -7405,8 +7443,8 @@ die();</code></pre>';
                  * the system file to receive
                  * and return $R_data. 
                  *
-                 * /_R/_config/_config.defaults
-                 * /load_static_cache/R_timezone_default
+                 * /_R/_config/defaults
+                 * /R_timezone_default
                  * /crnrstn.R_timezone_default.runtime_exe.php
                  *
                  *
@@ -7431,8 +7469,8 @@ die();</code></pre>';
                                      '.runtime_exe.php';
                 $resource_filepath = self::$R_data['R_framework_path'] . self::$R_data['operating_system']['os_path_dir_separator_char'] .
                                      '_config' . self::$R_data['operating_system']['os_path_dir_separator_char'] . 
-                                     '_config.defaults' . self::$R_data['operating_system']['os_path_dir_separator_char'] . 
-                                     'load_static_cache' . self::$R_data['operating_system']['os_path_dir_separator_char'] . 
+                                     'defaults' . self::$R_data['operating_system']['os_path_dir_separator_char'] . 
+                                     self::$R_data['operating_system']['os_path_dir_separator_char'] . 
                                      $resource . self::$R_data['operating_system']['os_path_dir_separator_char'] . 
                                      $resource_filename;
 
@@ -7475,8 +7513,8 @@ die();</code></pre>';
                      * We try to set the timezone 
                      * here, first.
                      * -----
-                     * /_R/_config/_config.defaults
-                     * /load_static_cache/R_timezone_default
+                     * /_R/_config/defaults
+                     * /R_timezone_default
                      * /crnrstn.R_timezone_default.runtime_exe.php
                      *
                      * # C # R # N # R # S # T # N # :: # L # I # G # H # T
@@ -7506,8 +7544,8 @@ die();</code></pre>';
                  * the system file to receive
                  * and return $R_data.
                  *
-                 * /_R/_config/_config.defaults
-                 * /load_static_cache/R_seo_analytics
+                 * /_R/_config/defaults
+                 * /R_seo_analytics
                  * /crnrstn.R_seo_analytics.runtime_exe.php
                  *
                  *
@@ -7531,8 +7569,8 @@ die();</code></pre>';
                                      '.runtime_exe.php';
                 $resource_filepath = self::$R_data['R_framework_path'] . self::$R_data['operating_system']['os_path_dir_separator_char'] .
                                      '_config' . self::$R_data['operating_system']['os_path_dir_separator_char'] .
-                                     '_config.defaults' . self::$R_data['operating_system']['os_path_dir_separator_char'] .
-                                     'load_static_cache' . self::$R_data['operating_system']['os_path_dir_separator_char'] .
+                                     'defaults' . self::$R_data['operating_system']['os_path_dir_separator_char'] .
+                                     self::$R_data['operating_system']['os_path_dir_separator_char'] .
                                      $resource . self::$R_data['operating_system']['os_path_dir_separator_char'] .
                                      $resource_filename;
 
@@ -7578,8 +7616,8 @@ die();</code></pre>';
                  * the system file to receive
                  * and return $R_data.
                  *
-                 * /_R/_config/_config.defaults
-                 * /load_static_cache/networking
+                 * /_R/_config/defaults
+                 * /networking
                  * /crnrstn.networking.runtime_exe.php
                  *
                  *
@@ -7603,8 +7641,8 @@ die();</code></pre>';
                                      '.runtime_exe.php';
                 $resource_filepath = self::$R_data['R_framework_path'] . self::$R_data['operating_system']['os_path_dir_separator_char'] .
                                      '_config' . self::$R_data['operating_system']['os_path_dir_separator_char'] .
-                                     '_config.defaults' . self::$R_data['operating_system']['os_path_dir_separator_char'] .
-                                     'load_static_cache' . self::$R_data['operating_system']['os_path_dir_separator_char'] .
+                                     'defaults' . self::$R_data['operating_system']['os_path_dir_separator_char'] .
+                                     self::$R_data['operating_system']['os_path_dir_separator_char'] .
                                      $resource . self::$R_data['operating_system']['os_path_dir_separator_char'] .
                                      $resource_filename;
 
@@ -7659,8 +7697,8 @@ die();</code></pre>';
                  * the system file to receive
                  * and return $R_data.
                  *
-                 * /_R/_config/_config.defaults
-                 * /load_static_cache/R_seo_analytics
+                 * /_R/_config/defaults
+                 * /R_seo_analytics
                  * /crnrstn.R_seo_analytics.runtime_exe.php
                  *
                  *
@@ -7684,7 +7722,7 @@ die();</code></pre>';
                 $resource_filename = 'crnrstn.db_config.runtime_exe.php';
                 $resource_filepath = self::$R_data['R_framework_path'] . self::$R_data['operating_system']['os_path_dir_separator_char'] .
                                      '_config' . self::$R_data['operating_system']['os_path_dir_separator_char'] .
-                                     'config.database.secure' . self::$R_data['operating_system']['os_path_dir_separator_char'] .
+                                     'database.secure' . self::$R_data['operating_system']['os_path_dir_separator_char'] .
                                      $resource_filename;
 
                 if($this->is_file($resource_filepath, $resource_filename)){
@@ -7738,8 +7776,8 @@ die();</code></pre>';
                  * the system file to receive
                  * and return $R_data. 
                  *
-                 * /_R/_config/_config.defaults
-                 * /load_static_cache/R_framework_directory
+                 * /_R/_config/defaults
+                 * /R_framework_directory
                  * /crnrstn.R_framework_directory.runtime_exe.php
                  *
                  * Previously initialized via: 
@@ -7767,8 +7805,8 @@ die();</code></pre>';
                                      '.runtime_exe.php';
                 $resource_filepath = self::$R_data['R_framework_path'] . self::$R_data['operating_system']['os_path_dir_separator_char'] .
                                      '_config' . self::$R_data['operating_system']['os_path_dir_separator_char'] . 
-                                     '_config.defaults' . self::$R_data['operating_system']['os_path_dir_separator_char'] . 
-                                     'load_static_cache' . self::$R_data['operating_system']['os_path_dir_separator_char'] . 
+                                     'defaults' . self::$R_data['operating_system']['os_path_dir_separator_char'] . 
+                                     self::$R_data['operating_system']['os_path_dir_separator_char'] . 
                                      $resource . self::$R_data['operating_system']['os_path_dir_separator_char'] . 
                                      $resource_filename;
 
@@ -7825,8 +7863,8 @@ die();</code></pre>';
                  * the system file to receive
                  * and return $R_data. 
                  *
-                 * /_R/_config/_config.defaults
-                 * /load_static_cache/string_concat_delimiter_char
+                 * /_R/_config/defaults
+                 * /string_concat_delimiter_char
                  * /crnrstn.string_concat_delimiter_char.runtime_exe.php
                  *
                  * Previously initialized via: 
@@ -7859,8 +7897,8 @@ die();</code></pre>';
                  * [lnum 3764] 
                  * [mthd CRNRSTN\\crnrstn::R_load_static] 
                  * include_once $resource_filepath 
-                 * [/var/www/html/sysops/_crnrstn/_config/_config.defaults
-                 * /load_static_cache/string_concat_delimiter_char/index.php]
+                 * [/var/www/html/sysops/_crnrstn/_config/defaults
+                 * /string_concat_delimiter_char/index.php]
                  *
                  *
                  * 5 :: Tuesday, March 31, 2026 @ 2335 hrs.
@@ -7882,8 +7920,8 @@ die();</code></pre>';
                                      '.runtime_exe.php';
                 $resource_filepath = self::$R_data['R_framework_path'] . self::$R_data['operating_system']['os_path_dir_separator_char'] .
                                      '_config' . self::$R_data['operating_system']['os_path_dir_separator_char'] . 
-                                     '_config.defaults' . self::$R_data['operating_system']['os_path_dir_separator_char'] . 
-                                     'load_static_cache' . self::$R_data['operating_system']['os_path_dir_separator_char'] . 
+                                     'defaults' . self::$R_data['operating_system']['os_path_dir_separator_char'] . 
+                                     self::$R_data['operating_system']['os_path_dir_separator_char'] . 
                                      $resource . self::$R_data['operating_system']['os_path_dir_separator_char'] . 
                                      $resource_filename;
 
@@ -7940,8 +7978,8 @@ die();</code></pre>';
                  * the system file to receive
                  * and return $R_data. 
                  *
-                 * /_R/_config/_config.defaults
-                 * /load_static_cache/background_color_hex
+                 * /_R/_config/defaults
+                 * /background_color_hex
                  * /crnrstn.background_color_hex.runtime_exe.php
                  *
                  * Previously initialized via: 
@@ -7969,8 +8007,8 @@ die();</code></pre>';
                                      '.runtime_exe.php';
                 $resource_filepath = self::$R_data['R_framework_path'] . self::$R_data['operating_system']['os_path_dir_separator_char'] .
                                      '_config' . self::$R_data['operating_system']['os_path_dir_separator_char'] . 
-                                     '_config.defaults' . self::$R_data['operating_system']['os_path_dir_separator_char'] . 
-                                     'load_static_cache' . self::$R_data['operating_system']['os_path_dir_separator_char'] . 
+                                     'defaults' . self::$R_data['operating_system']['os_path_dir_separator_char'] . 
+                                     self::$R_data['operating_system']['os_path_dir_separator_char'] . 
                                      $resource . self::$R_data['operating_system']['os_path_dir_separator_char'] . 
                                      $resource_filename;
 
@@ -8027,8 +8065,8 @@ die();</code></pre>';
                  * the system file to receive
                  * and return $R_data. 
                  *
-                 * /_R/_config/_config.defaults
-                 * /load_static_cache/R_debug_mode
+                 * /_R/_config/defaults
+                 * /R_debug_mode
                  * /crnrstn.R_debug_mode.runtime_exe.php
                  *
                  * Previously initialized via: 
@@ -8056,8 +8094,8 @@ die();</code></pre>';
                                      '.runtime_exe.php';
                 $resource_filepath = self::$R_data['R_framework_path'] . self::$R_data['operating_system']['os_path_dir_separator_char'] .
                                      '_config' . self::$R_data['operating_system']['os_path_dir_separator_char'] . 
-                                     '_config.defaults' . self::$R_data['operating_system']['os_path_dir_separator_char'] . 
-                                     'load_static_cache' . self::$R_data['operating_system']['os_path_dir_separator_char'] . 
+                                     'defaults' . self::$R_data['operating_system']['os_path_dir_separator_char'] . 
+                                     self::$R_data['operating_system']['os_path_dir_separator_char'] . 
                                      $resource . self::$R_data['operating_system']['os_path_dir_separator_char'] . 
                                      $resource_filename;
 
@@ -8114,8 +8152,8 @@ die();</code></pre>';
                  * the system file to receive
                  * and return $R_data. 
                  *
-                 * /_R/_config/_config.defaults
-                 * /load_static_cache/phpmailer_debug_mode
+                 * /_R/_config/defaults
+                 * /phpmailer_debug_mode
                  * /crnrstn.phpmailer_debug_mode.runtime_exe.php
                  *
                  * Previously initialized via: 
@@ -8143,8 +8181,8 @@ die();</code></pre>';
                                      '.runtime_exe.php';
                 $resource_filepath = self::$R_data['R_framework_path'] . self::$R_data['operating_system']['os_path_dir_separator_char'] .
                                      '_config' . self::$R_data['operating_system']['os_path_dir_separator_char'] . 
-                                     '_config.defaults' . self::$R_data['operating_system']['os_path_dir_separator_char'] . 
-                                     'load_static_cache' . self::$R_data['operating_system']['os_path_dir_separator_char'] . 
+                                     'defaults' . self::$R_data['operating_system']['os_path_dir_separator_char'] . 
+                                     self::$R_data['operating_system']['os_path_dir_separator_char'] . 
                                      $resource . self::$R_data['operating_system']['os_path_dir_separator_char'] . 
                                      $resource_filename;
 
@@ -8201,8 +8239,8 @@ die();</code></pre>';
                  * the system file to receive
                  * and return $R_data. 
                  *
-                 * /_R/_config/_config.defaults
-                 * /load_static_cache/wordpress_debug_mode
+                 * /_R/_config/defaults
+                 * /wordpress_debug_mode
                  * /crnrstn.wordpress_debug_mode.runtime_exe.php
                  *
                  *
@@ -8225,8 +8263,8 @@ die();</code></pre>';
                                      '.runtime_exe.php';
                 $resource_filepath = self::$R_data['R_framework_path'] . self::$R_data['operating_system']['os_path_dir_separator_char'] .
                                      '_config' . self::$R_data['operating_system']['os_path_dir_separator_char'] . 
-                                     '_config.defaults' . self::$R_data['operating_system']['os_path_dir_separator_char'] . 
-                                     'load_static_cache' . self::$R_data['operating_system']['os_path_dir_separator_char'] . 
+                                     'defaults' . self::$R_data['operating_system']['os_path_dir_separator_char'] . 
+                                     self::$R_data['operating_system']['os_path_dir_separator_char'] . 
                                      $resource . self::$R_data['operating_system']['os_path_dir_separator_char'] . 
                                      $resource_filename;
 
@@ -8283,8 +8321,8 @@ die();</code></pre>';
                  * the system file to receive
                  * and return $R_data. 
                  *
-                 * /_R/_config/_config.defaults
-                 * /load_static_cache/iso_lang_code
+                 * /_R/_config/defaults
+                 * /iso_lang_code
                  * /crnrstn.iso_lang_code.runtime_exe.php
                  *
                  * self::$R_data['iso_lang_code']
@@ -8309,8 +8347,8 @@ die();</code></pre>';
                                      '.runtime_exe.php';
                 $resource_filepath = self::$R_data['R_framework_path'] . self::$R_data['operating_system']['os_path_dir_separator_char'] .
                                      '_config' . self::$R_data['operating_system']['os_path_dir_separator_char'] . 
-                                     '_config.defaults' . self::$R_data['operating_system']['os_path_dir_separator_char'] . 
-                                     'load_static_cache' . self::$R_data['operating_system']['os_path_dir_separator_char'] . 
+                                     'defaults' . self::$R_data['operating_system']['os_path_dir_separator_char'] . 
+                                     self::$R_data['operating_system']['os_path_dir_separator_char'] . 
                                      $resource . self::$R_data['operating_system']['os_path_dir_separator_char'] . 
                                      $resource_filename;
 
@@ -8367,8 +8405,8 @@ die();</code></pre>';
                  * the system file to receive
                  * and return $R_data. 
                  *
-                 * /_R/_config/_config.defaults
-                 * /load_static_cache/R_datatype_master
+                 * /_R/_config/defaults
+                 * /R_datatype_master
                  * /crnrstn.R_datatype_master.runtime_exe.php
                  *
                  * Previously initialized via: 
@@ -8402,8 +8440,8 @@ die();</code></pre>';
                                      '.runtime_exe.php';
                 $resource_filepath = self::$R_data['R_framework_path'] . self::$R_data['operating_system']['os_path_dir_separator_char'] .
                                      '_config' . self::$R_data['operating_system']['os_path_dir_separator_char'] . 
-                                     '_config.defaults' . self::$R_data['operating_system']['os_path_dir_separator_char'] . 
-                                     'load_static_cache' . self::$R_data['operating_system']['os_path_dir_separator_char'] . 
+                                     'defaults' . self::$R_data['operating_system']['os_path_dir_separator_char'] . 
+                                     self::$R_data['operating_system']['os_path_dir_separator_char'] . 
                                      $resource . self::$R_data['operating_system']['os_path_dir_separator_char'] . 
                                      $resource_filename;
 
@@ -8499,8 +8537,8 @@ die();</code></pre>';
                  * the system file to receive
                  * and return $R_data. 
                  *
-                 * /_R/_config/_config.defaults
-                 * /load_static_cache/system_output_profile_constant
+                 * /_R/_config/defaults
+                 * /system_output_profile_constant
                  * /crnrstn.system_output_profile_constant.runtime_exe.php
                  *
                  * Previously initialized via: 
@@ -8528,8 +8566,7 @@ die();</code></pre>';
                                      '.runtime_exe.php';
                 $resource_filepath = self::$R_data['R_framework_path'] . self::$R_data['operating_system']['os_path_dir_separator_char'] .
                                      '_config' . self::$R_data['operating_system']['os_path_dir_separator_char'] . 
-                                     '_config.defaults' . self::$R_data['operating_system']['os_path_dir_separator_char'] . 
-                                     'load_static_cache' . self::$R_data['operating_system']['os_path_dir_separator_char'] . 
+                                     'defaults' . self::$R_data['operating_system']['os_path_dir_separator_char'] . 
                                      $resource . self::$R_data['operating_system']['os_path_dir_separator_char'] . 
                                      $resource_filename;
 
@@ -8587,8 +8624,8 @@ die();</code></pre>';
                  * the system file to receive
                  * and return $R_data. 
                  *
-                 * /_R/_config/_config.defaults
-                 * /load_static_cache/version_crnrstn
+                 * /_R/_config/defaults
+                 * /version_crnrstn
                  * /crnrstn.version_crnrstn.runtime_exe.php
                  *
                  * Previously initialized via: 
@@ -8616,8 +8653,7 @@ die();</code></pre>';
                                      '.runtime_exe.php';
                 $resource_filepath = self::$R_data['R_framework_path'] . self::$R_data['operating_system']['os_path_dir_separator_char'] .
                                      '_config' . self::$R_data['operating_system']['os_path_dir_separator_char'] . 
-                                     '_config.defaults' . self::$R_data['operating_system']['os_path_dir_separator_char'] . 
-                                     'load_static_cache' . self::$R_data['operating_system']['os_path_dir_separator_char'] . 
+                                     'defaults' . self::$R_data['operating_system']['os_path_dir_separator_char'] . 
                                      $resource . self::$R_data['operating_system']['os_path_dir_separator_char'] . 
                                      $resource_filename;
 
@@ -8680,8 +8716,8 @@ die();</code></pre>';
                  * the system file to receive
                  * and return $R_data. 
                  *
-                 * /_R/_config/_config.defaults
-                 * /load_static_cache/interact_ui_theme
+                 * /_R/_config/defaults
+                 * /interact_ui_theme
                  * /crnrstn.interact_ui_theme.runtime_exe.php
                  *
                  * Previously initialized via: 
@@ -8709,8 +8745,7 @@ die();</code></pre>';
                                      '.runtime_exe.php';
                 $resource_filepath = self::$R_data['R_framework_path'] . self::$R_data['operating_system']['os_path_dir_separator_char'] .
                                      '_config' . self::$R_data['operating_system']['os_path_dir_separator_char'] . 
-                                     '_config.defaults' . self::$R_data['operating_system']['os_path_dir_separator_char'] . 
-                                     'load_static_cache' . self::$R_data['operating_system']['os_path_dir_separator_char'] . 
+                                     'defaults' . self::$R_data['operating_system']['os_path_dir_separator_char'] . 
                                      $resource . self::$R_data['operating_system']['os_path_dir_separator_char'] . 
                                      $resource_filename;
 
@@ -8833,8 +8868,8 @@ die();</code></pre>';
                  * the system file to receive
                  * and return $R_data. 
                  *
-                 * /_R/_config/_config.defaults
-                 * /load_static_cache/interact_ui_theme_options
+                 * /_R/_config/defaults
+                 * /interact_ui_theme_options
                  * /crnrstn.interact_ui_theme_options.runtime_exe.php
                  *
                  * Previously initialized via: 
@@ -8862,8 +8897,7 @@ die();</code></pre>';
                                      '.runtime_exe.php';
                 $resource_filepath = self::$R_data['R_framework_path'] . self::$R_data['operating_system']['os_path_dir_separator_char'] .
                                      '_config' . self::$R_data['operating_system']['os_path_dir_separator_char'] . 
-                                     '_config.defaults' . self::$R_data['operating_system']['os_path_dir_separator_char'] . 
-                                     'load_static_cache' . self::$R_data['operating_system']['os_path_dir_separator_char'] . 
+                                     'defaults' . self::$R_data['operating_system']['os_path_dir_separator_char'] .  
                                      $resource . self::$R_data['operating_system']['os_path_dir_separator_char'] . 
                                      $resource_filename;
 
@@ -8952,13 +8986,13 @@ die();</code></pre>';
                  * the system file to receive
                  * and return $R_data. 
                  *
-                 * /_R/_config/_config.defaults
-                 * /load_static_cache/interact_ui_theme_init
+                 * /_R/_config/defaults
+                 * /interact_ui_theme_init
                  * /crnrstn.interact_ui_theme_init.runtime_exe.php
                  *
                  * Previously initialized via: 
                  * /_crnrstn/_config
-                 * /_config.defaults
+                 * /defaults
                  * /_crnrstn.themes.inc.php
                  *
                  *
@@ -8981,8 +9015,7 @@ die();</code></pre>';
                                      '.runtime_exe.php';
                 $resource_filepath = self::$R_data['R_framework_path'] . self::$R_data['operating_system']['os_path_dir_separator_char'] .
                                      '_config' . self::$R_data['operating_system']['os_path_dir_separator_char'] . 
-                                     '_config.defaults' . self::$R_data['operating_system']['os_path_dir_separator_char'] . 
-                                     'load_static_cache' . self::$R_data['operating_system']['os_path_dir_separator_char'] . 
+                                     'defaults' . self::$R_data['operating_system']['os_path_dir_separator_char'] . 
                                      $resource . self::$R_data['operating_system']['os_path_dir_separator_char'] . 
                                      $resource_filename;
 
@@ -9044,8 +9077,8 @@ die();</code></pre>';
                  * the system file to receive
                  * and return $R_data. 
                  *
-                 * /_R/_config/_config.defaults
-                 * /load_static_cache/salt_string_length
+                 * /_R/_config/defaults
+                 * /salt_string_length
                  * /crnrstn.salt_string_length.runtime_exe.php
                  *
                  * Previously initialized via: 
@@ -9076,8 +9109,7 @@ die();</code></pre>';
                                      '.runtime_exe.php';
                 $resource_filepath = self::$R_data['R_framework_path'] . self::$R_data['operating_system']['os_path_dir_separator_char'] .
                                      '_config' . self::$R_data['operating_system']['os_path_dir_separator_char'] . 
-                                     '_config.defaults' . self::$R_data['operating_system']['os_path_dir_separator_char'] . 
-                                     'load_static_cache' . self::$R_data['operating_system']['os_path_dir_separator_char'] . 
+                                     'defaults' . self::$R_data['operating_system']['os_path_dir_separator_char'] .  
                                      $resource . self::$R_data['operating_system']['os_path_dir_separator_char'] . 
                                      $resource_filename;
 
@@ -9138,8 +9170,8 @@ die();</code></pre>';
                  * the system file to receive
                  * and return $R_data. 
                  *
-                 * /_R/_config/_config.defaults
-                 * /load_static_cache/hmac_algorithm
+                 * /_R/_config/defaults
+                 * /hmac_algorithm
                  * /crnrstn.hmac_algorithm.runtime_exe.php
                  *
                  * Previously initialized via: 
@@ -9167,8 +9199,7 @@ die();</code></pre>';
                                      '.runtime_exe.php';
                 $resource_filepath = self::$R_data['R_framework_path'] . self::$R_data['operating_system']['os_path_dir_separator_char'] .
                                      '_config' . self::$R_data['operating_system']['os_path_dir_separator_char'] . 
-                                     '_config.defaults' . self::$R_data['operating_system']['os_path_dir_separator_char'] . 
-                                     'load_static_cache' . self::$R_data['operating_system']['os_path_dir_separator_char'] . 
+                                     'defaults' . self::$R_data['operating_system']['os_path_dir_separator_char'] .  
                                      $resource . self::$R_data['operating_system']['os_path_dir_separator_char'] . 
                                      $resource_filename;
 
@@ -9225,8 +9256,8 @@ die();</code></pre>';
                  * the system file to receive
                  * and return $R_data. 
                  *
-                 * /_R/_config/_config.defaults
-                 * /load_static_cache/R_hmac_hash_algorithm
+                 * /_R/_config/defaults
+                 * /R_hmac_hash_algorithm
                  * /crnrstn.R_hmac_hash_algorithm.runtime_exe.php
                  *
                  * Previously initialized via: 
@@ -9264,8 +9295,7 @@ die();</code></pre>';
                                      '.runtime_exe.php';
                 $resource_filepath = self::$R_data['R_framework_path'] . self::$R_data['operating_system']['os_path_dir_separator_char'] .
                                      '_config' . self::$R_data['operating_system']['os_path_dir_separator_char'] . 
-                                     '_config.defaults' . self::$R_data['operating_system']['os_path_dir_separator_char'] . 
-                                     'load_static_cache' . self::$R_data['operating_system']['os_path_dir_separator_char'] . 
+                                     'defaults' . self::$R_data['operating_system']['os_path_dir_separator_char'] . 
                                      $resource . self::$R_data['operating_system']['os_path_dir_separator_char'] . 
                                      $resource_filename;
 
@@ -9322,8 +9352,8 @@ die();</code></pre>';
                  * the system file to receive
                  * and return $R_data. 
                  *
-                 * /_R/_config/_config.defaults
-                 * /load_static_cache/R_hmac_hash_algorithm_int
+                 * /_R/_config/defaults
+                 * /R_hmac_hash_algorithm_int
                  * /crnrstn.R_hmac_hash_algorithm_int.runtime_exe.php
                  *
                  * Previously initialized via: 
@@ -9357,8 +9387,7 @@ die();</code></pre>';
                                      '.runtime_exe.php';
                 $resource_filepath = self::$R_data['R_framework_path'] . self::$R_data['operating_system']['os_path_dir_separator_char'] .
                                      '_config' . self::$R_data['operating_system']['os_path_dir_separator_char'] . 
-                                     '_config.defaults' . self::$R_data['operating_system']['os_path_dir_separator_char'] . 
-                                     'load_static_cache' . self::$R_data['operating_system']['os_path_dir_separator_char'] . 
+                                     'defaults' . self::$R_data['operating_system']['os_path_dir_separator_char'] . 
                                      $resource . self::$R_data['operating_system']['os_path_dir_separator_char'] . 
                                      $resource_filename;
 
@@ -9414,8 +9443,8 @@ die();</code></pre>';
                  * the system file to receive
                  * and return $R_data. 
                  *
-                 * /_R/_config/_config.defaults
-                 * /load_static_cache/R_OpenSSL_config
+                 * /_R/_config/defaults
+                 * /R_OpenSSL_config
                  * /crnrstn.R_OpenSSL_config.runtime_exe.php
                  *
                  * Previously initialized via: 
@@ -9451,8 +9480,7 @@ die();</code></pre>';
                                      '.runtime_exe.php';
                 $resource_filepath = self::$R_data['R_framework_path'] . self::$R_data['operating_system']['os_path_dir_separator_char'] .
                                      '_config' . self::$R_data['operating_system']['os_path_dir_separator_char'] . 
-                                     '_config.defaults' . self::$R_data['operating_system']['os_path_dir_separator_char'] . 
-                                     'load_static_cache' . self::$R_data['operating_system']['os_path_dir_separator_char'] . 
+                                     'defaults' . self::$R_data['operating_system']['os_path_dir_separator_char'] . 
                                      $resource . self::$R_data['operating_system']['os_path_dir_separator_char'] . 
                                      $resource_filename;
 
@@ -9540,8 +9568,8 @@ die();</code></pre>';
                  * the system file to initialize 
                  * file system management settings.
                  *
-                 * /_R/_config/_config.defaults
-                 * /load_static_cache/file_system_management_settings
+                 * /_R/_config/defaults
+                 * /file_system_management_settings
                  * /crnrstn.file_system_management_settings.runtime_exe.php
                  *
                  *
@@ -9564,8 +9592,7 @@ die();</code></pre>';
                                      '.runtime_exe.php';
                 $resource_filepath = self::$R_data['R_framework_path'] . self::$R_data['operating_system']['os_path_dir_separator_char'] .
                                      '_config' . self::$R_data['operating_system']['os_path_dir_separator_char'] . 
-                                     '_config.defaults' . self::$R_data['operating_system']['os_path_dir_separator_char'] . 
-                                     'load_static_cache' . self::$R_data['operating_system']['os_path_dir_separator_char'] . 
+                                     'defaults' . self::$R_data['operating_system']['os_path_dir_separator_char'] . 
                                      $resource . self::$R_data['operating_system']['os_path_dir_separator_char'] . 
                                      $resource_filename;
 
@@ -9665,8 +9692,8 @@ die();</code></pre>';
                  * the system file to receive
                  * and return $R_data. 
                  *
-                 * /_R/_config/_config.defaults
-                 * /load_static_cache/timezone_syntax
+                 * /_R/_config/defaults
+                 * /timezone_syntax
                  * /crnrstn.timezone_syntax.runtime_exe.php
                  *
                  *
@@ -9689,8 +9716,7 @@ die();</code></pre>';
                                      '.runtime_exe.php';
                 $resource_filepath = self::$R_data['R_framework_path'] . self::$R_data['operating_system']['os_path_dir_separator_char'] .
                                      '_config' . self::$R_data['operating_system']['os_path_dir_separator_char'] . 
-                                     '_config.defaults' . self::$R_data['operating_system']['os_path_dir_separator_char'] . 
-                                     'load_static_cache' . self::$R_data['operating_system']['os_path_dir_separator_char'] . 
+                                     'defaults' . self::$R_data['operating_system']['os_path_dir_separator_char'] .  
                                      $resource . self::$R_data['operating_system']['os_path_dir_separator_char'] . 
                                      $resource_filename;
 
@@ -10174,8 +10200,8 @@ die();</code></pre>';
                  * the system file to receive 
                  * and return $R_data. 
                  *
-                 * /_R/_config/_config.defaults
-                 * /load_static_cache/R_byte_units
+                 * /_R/_config/defaults
+                 * /R_byte_units
                  * /crnrstn.R_byte_units.runtime_exe.php
                  *
                  * Previously initialized (2024-2025) via: 
@@ -10201,8 +10227,7 @@ die();</code></pre>';
                                      '.runtime_exe.php';
                 $resource_filepath = self::$R_data['R_framework_path'] . self::$R_data['operating_system']['os_path_dir_separator_char'] .
                                      '_config' . self::$R_data['operating_system']['os_path_dir_separator_char'] . 
-                                     '_config.defaults' . self::$R_data['operating_system']['os_path_dir_separator_char'] . 
-                                     'load_static_cache' . self::$R_data['operating_system']['os_path_dir_separator_char'] . 
+                                     'defaults' . self::$R_data['operating_system']['os_path_dir_separator_char'] .  
                                      $resource . self::$R_data['operating_system']['os_path_dir_separator_char'] . 
                                      $resource_filename;
 
@@ -10356,8 +10381,8 @@ die();</code></pre>';
                  * the system file to receive 
                  * and return $R_data. 
                  *
-                 * /_R/_config/_config.defaults
-                 * /load_static_cache/R_http_header_fields
+                 * /_R/_config/defaults
+                 * /R_http_header_fields
                  * /crnrstn.R_http_header_fields.runtime_exe.php
                  *
                  * Previously initialized (2024-2025) via: 
@@ -10385,8 +10410,7 @@ die();</code></pre>';
                                      '.runtime_exe.php';
                 $resource_filepath = self::$R_data['R_framework_path'] . self::$R_data['operating_system']['os_path_dir_separator_char'] .
                                      '_config' . self::$R_data['operating_system']['os_path_dir_separator_char'] . 
-                                     '_config.defaults' . self::$R_data['operating_system']['os_path_dir_separator_char'] . 
-                                     'load_static_cache' . self::$R_data['operating_system']['os_path_dir_separator_char'] . 
+                                     'defaults' . self::$R_data['operating_system']['os_path_dir_separator_char'] . 
                                      $resource . self::$R_data['operating_system']['os_path_dir_separator_char'] . 
                                      $resource_filename;
 
@@ -10480,8 +10504,8 @@ die();</code></pre>';
                  * the system file to receive 
                  * and return $R_data. 
                  *
-                 * /_R/_config/_config.defaults
-                 * /load_static_cache/R_sql_time_intervals
+                 * /_R/_config/defaults
+                 * /R_sql_time_intervals
                  * /crnrstn.R_sql_time_intervals.runtime_exe.php
                  *
                  * Previously initialized (2024-2025) via: 
@@ -10509,8 +10533,7 @@ die();</code></pre>';
                                      '.runtime_exe.php';
                 $resource_filepath = self::$R_data['R_framework_path'] . self::$R_data['operating_system']['os_path_dir_separator_char'] .
                                      '_config' . self::$R_data['operating_system']['os_path_dir_separator_char'] . 
-                                     '_config.defaults' . self::$R_data['operating_system']['os_path_dir_separator_char'] . 
-                                     'load_static_cache' . self::$R_data['operating_system']['os_path_dir_separator_char'] . 
+                                     'defaults' . self::$R_data['operating_system']['os_path_dir_separator_char'] . 
                                      $resource . self::$R_data['operating_system']['os_path_dir_separator_char'] . 
                                      $resource_filename;
 
@@ -10669,8 +10692,8 @@ die();</code></pre>';
                  * the system file to receive 
                  * and return $R_data. 
                  *
-                 * /_R/_config/_config.defaults
-                 * /load_static_cache/R_server_operations
+                 * /_R/_config/defaults
+                 * /R_server_operations
                  * /crnrstn.R_server_operations.runtime_exe.php
                  *
                  * Previously initialized (2024-2025) via: 
@@ -10696,8 +10719,7 @@ die();</code></pre>';
                                      '.runtime_exe.php';
                 $resource_filepath = self::$R_data['R_framework_path'] . self::$R_data['operating_system']['os_path_dir_separator_char'] .
                                      '_config' . self::$R_data['operating_system']['os_path_dir_separator_char'] . 
-                                     '_config.defaults' . self::$R_data['operating_system']['os_path_dir_separator_char'] . 
-                                     'load_static_cache' . self::$R_data['operating_system']['os_path_dir_separator_char'] . 
+                                     'defaults' . self::$R_data['operating_system']['os_path_dir_separator_char'] . 
                                      $resource . self::$R_data['operating_system']['os_path_dir_separator_char'] . 
                                      $resource_filename;
 
@@ -11164,8 +11186,8 @@ die();</code></pre>';
                  * and will be returned in $R_data 
                  * if present in $_GET[]. 
                  *
-                 * /_R/_config/_config.defaults
-                 * /load_static_cache/GET_tunnel_vars
+                 * /_R/_config/defaults
+                 * /GET_tunnel_vars
                  * /crnrstn.GET_tunnel_vars.runtime_exe.php
                  *
                  * Previously initialized via: 
@@ -11194,8 +11216,7 @@ die();</code></pre>';
                                      '.runtime_exe.php';
                 $resource_filepath = self::$R_data['R_framework_path'] . self::$R_data['operating_system']['os_path_dir_separator_char'] .
                                      '_config' . self::$R_data['operating_system']['os_path_dir_separator_char'] . 
-                                     '_config.defaults' . self::$R_data['operating_system']['os_path_dir_separator_char'] . 
-                                     'load_static_cache' . self::$R_data['operating_system']['os_path_dir_separator_char'] . 
+                                     'defaults' . self::$R_data['operating_system']['os_path_dir_separator_char'] . 
                                      $resource . self::$R_data['operating_system']['os_path_dir_separator_char'] . 
                                      $resource_filename;
 
@@ -12910,8 +12931,7 @@ Read access to ' . $resource . ' denied to caller: ' . $caller . '</code></pre>'
                  *       Architecture
                  *       -----
                  *       /_R/_config
-                 *       /_config.defaults
-                 *       /load_static_cache
+                 *       /defaults
                  *       /interact_ui_theme_init
                  *       /crnrstn.interact_ui_theme_init.runtime_exe.php
                  *
@@ -13188,7 +13208,7 @@ Read access to ' . $resource . ' denied to caller: ' . $caller . '</code></pre>'
                                                 '\crnrstn_registry_user::config_load_static_application_data' => 1,
                                                 self::$R_data['R_framework_path'] . self::$R_data['operating_system']['os_path_dir_separator_char'] .
                                                 '_config' . self::$R_data['operating_system']['os_path_dir_separator_char'] . 
-                                                'config.integer_constants' . self::$R_data['operating_system']['os_path_dir_separator_char'] . 
+                                                'integer_constants' . self::$R_data['operating_system']['os_path_dir_separator_char'] . 
                                                 'crnrstn.constants_load.runtime_exe.php'                      => 1);
 
                 if(!isset($write_authorized_callers[$caller])){
@@ -13216,7 +13236,7 @@ Read access to ' . $resource . ' denied to caller: ' . $caller . '</code></pre>'
                                                 '\crnrstn_registry_user::config_load_static_application_data' => 1, 
                                                 self::$R_data['R_framework_path'] . self::$R_data['operating_system']['os_path_dir_separator_char'] .
                                                 '_config' . self::$R_data['operating_system']['os_path_dir_separator_char'] . 
-                                                'config.integer_constants' . self::$R_data['operating_system']['os_path_dir_separator_char'] . 
+                                                'integer_constants' . self::$R_data['operating_system']['os_path_dir_separator_char'] . 
                                                 'crnrstn.constants_load.runtime_exe.php'                      => 1);
 
                 if(!isset($write_authorized_callers[$caller])){
@@ -13686,7 +13706,7 @@ Read access to ' . $resource . ' denied to caller: ' . $caller . '</code></pre>'
 
             return true;
 
-        }// End of filter. 
+        }// End of deprecated logs filter. 
 
         /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
          * Edit: Moved crnrstn->error_log 
@@ -14564,7 +14584,9 @@ Read access to ' . $resource . ' denied to caller: ' . $caller . '</code></pre>'
          *       object_boot method.
          *       5 :: Tuesday, May 26, 2026 @ 2123 hrs.
          *
-         * # C # R # N # R # S # T # N # :: # L # I # G # H # T
+         */
+
+        /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
          * Load the CLR-SSL 
          * Resource Registry 
          * Function Definition, 
@@ -14986,6 +15008,35 @@ Read access to ' . $resource . ' denied to caller: ' . $caller . '</code></pre>'
                    $token);
 
         }
+
+    }
+
+    /**
+     * R :: Content pending.
+     *
+     * @param
+     * @return NULL
+     * @access private
+     *
+     */
+    private function object_boot_bypass($R)
+    {
+        // 5 :: Thursday, October 1, 2026 @ 0753 hrs.
+
+        // Object Storage Initialization
+        self::$_R['kivotos'] = $R->R_data_write(__METHOD__, 'R_kivotos');
+
+        // Object Boot
+        _crnrstn_native_resource_registry(
+            'object_boot',
+            $this,
+            NULL,
+            NULL,
+            self::$R_data['R_debug_mode']);
+
+        $this->R_data_write(__METHOD__, 'R_image_output_mode');
+
+        return NULL;
 
     }
 
@@ -15936,7 +15987,7 @@ Read access to ' . $resource . ' denied to caller: ' . $caller . '</code></pre>'
              &$R_data_010 = NULL, &$R_data_011 = NULL, 
              &$R_data_012 = NULL, &$R_data_013 = NULL, 
              &$R_data_014 = NULL, &$R_data_015 = NULL)
-     {
+    {
 
         /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
          * Copied the method, anoint, from 
@@ -15962,18 +16013,47 @@ Read access to ' . $resource . ' denied to caller: ' . $caller . '</code></pre>'
          *
          */
 
-         return self::$_R['registry_assistant']->anoint(
-                                                 $resource_name, 
-                                                 $R_data_000, $R_data_001, 
-                                                 $R_data_002, $R_data_003, 
-                                                 $R_data_004, $R_data_005, 
-                                                 $R_data_006, $R_data_007, 
-                                                 $R_data_008, $R_data_009, 
-                                                 $R_data_010, $R_data_011, 
-                                                 $R_data_012, $R_data_013, 
-                                                 $R_data_014, $R_data_015);
+        return self::$_R['registry_assistant']->anoint(
+                                                $resource_name, 
+                                                $R_data_000, $R_data_001, 
+                                                $R_data_002, $R_data_003, 
+                                                $R_data_004, $R_data_005, 
+                                                $R_data_006, $R_data_007, 
+                                                $R_data_008, $R_data_009, 
+                                                $R_data_010, $R_data_011, 
+                                                $R_data_012, $R_data_013, 
+                                                $R_data_014, $R_data_015);
 
-     }
+    }
+
+    /**
+     * R :: Content pending.
+     *
+     * @param
+     * @param
+     * @param
+     * @return
+     * @access public
+     *
+     */
+    function compound_ointment_extract(
+                     $resource_name, 
+                     $input_position = 0, 
+                     $input_default = NULL)
+    {
+        /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
+         * Copied the method compound_ointment_extract 
+         * from crnrstn to the crnrstn_registry_user. 
+         * 5 :: Thursday, October 1, 2026 @ 0636 hrs.
+         *
+         */
+        //if(isset(self::$_R['kivotos']->R['registry_assistant']))
+            return self::$_R['kivotos']->R['registry_assistant']->compound_ointment_extract(
+                                                                  $resource_name, 
+                                                                  $input_position, 
+                                                                  $input_default);
+
+    }
 
     /**
      * R :: Content pending. 
@@ -17861,7 +17941,7 @@ $R_resp    = ' . \print_r($R_resp, true) . '</code></pre>';
              * runtime currently.
              *
              * Please see,
-             * /lightbox_helper/_config/_config.defaults/crnrstn.settings.function.php
+             * /lightbox_helper/_config/defaults/crnrstn.settings.function.php
              *
              */
             $tmp_preferred_hash_ARRAY = array('sha256' => 'sha256', 'sha224' => 'sha224',
@@ -19838,9 +19918,17 @@ $R_resp    = ' . \print_r($R_resp, true) . '</code></pre>';
             case 'CLR_SSL_long_TEXT':
             case 'CLR_SSL_short_HTML':
             case 'CLR_SSL_short_TEXT':
-                // 5 :: Tuesday, August 25, 2026 @ 0218 hrs.
+                // 5 :: Tuesday, August 25, 2026 @ 0217 hrs.
 
                 return self::$R_data[$name];
+
+            case 'CRNRSTN_config_salt':
+
+                return self::$CRNRSTN_config_salt;
+
+            case 'config_resource_meta_ARRAY':
+
+                return self::$config_resource_meta_ARRAY;
 
             case 'R_cluster_id':
 
@@ -19858,15 +19946,15 @@ $R_resp    = ' . \print_r($R_resp, true) . '</code></pre>';
 
             case 'R_request_id':
                 /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
-                 * Edit: Renamed request_id and
-                 *       request_id_override to
-                 *       R_request_id and
-                 *       R_request_id_override
-                 *       respectively to align
-                 *       to the crnrstn_registry_user
-                 *       __construct() input
-                 *       overhaul pivoting around
-                 *       config_serial_override.
+                 * Edit: Renamed request_id and 
+                 *       request_id_override to 
+                 *       R_request_id and 
+                 *       R_request_id_override 
+                 *       respectively to align 
+                 *       to the crnrstn_registry_user 
+                 *       __construct() input 
+                 *       overhaul pivoting around 
+                 *       config_serial_override. 
                  *       5 :: Saturday, June 20, 2026 @ 0243 hrs.
                  *
                  */
@@ -19875,15 +19963,15 @@ $R_resp    = ' . \print_r($R_resp, true) . '</code></pre>';
 
             case 'R_request_serial':
                 /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
-                 * Edit: Renamed request_serial and
-                 *       request_serial_override to
-                 *       R_request_serial and
-                 *       R_request_serial_override
-                 *       respectively to align to
-                 *       the crnrstn_registry_user
-                 *       __construct() input
-                 *       overhaul pivoting around
-                 *       config_serial_override.
+                 * Edit: Renamed request_serial and 
+                 *       request_serial_override to 
+                 *       R_request_serial and 
+                 *       R_request_serial_override 
+                 *       respectively to align to 
+                 *       the crnrstn_registry_user 
+                 *       __construct() input 
+                 *       overhaul pivoting around 
+                 *       config_serial_override. 
                  *       5 :: Saturday, June 20, 2026 @ 0306 hrs.
                  *
                  */
@@ -19892,15 +19980,15 @@ $R_resp    = ' . \print_r($R_resp, true) . '</code></pre>';
 
             case 'R_debug_mode':
                 /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
-                 * Set after validation.
+                 * Set after validation. 
                  *
                  * # C # R # N # R # S # T # N # :: # L # I # G # H # T
-                 * Edit: Update get_crnrstn to
+                 * Edit: Update get_crnrstn to 
                  *       access debug mode data
-                 *       from the CLR-SSL
-                 *       R_data rails. Changed
+                 *       from the CLR-SSL 
+                 *       R_data rails. Changed 
                  *       self::$CRNRSTN_debug_mode
-                 *       to
+                 *       to 
                  *       self::$R_data['crnrstn_debug_mode'];
                  *       after some sweet, sweet bong rips.
                  *       * lights joint *
@@ -19909,17 +19997,18 @@ $R_resp    = ' . \print_r($R_resp, true) . '</code></pre>';
                  *       Last Modified: Monday, April 27, 2026 @ 0457 hrs.
                  *
                  * # C # R # N # R # S # T # N # :: # L # I # G # H # T
-                 * Edit: Renamed crnrstn_debug_mode
-                 *       and CRNRSTN_debug_mode to
-                 *       simply, R_debug_mode,
-                 *       in order to align to
-                 *       the crnrstn_registry_user
-                 *       __construct() input
-                 *       overhaul pivoting around
-                 *       config_serial_override.
+                 * Edit: Renamed crnrstn_debug_mode 
+                 *       and CRNRSTN_debug_mode to 
+                 *       simply, R_debug_mode, 
+                 *       in order to align to 
+                 *       the crnrstn_registry_user 
+                 *       __construct() input 
+                 *       overhaul pivoting around 
+                 *       config_serial_override. 
                  *       5 :: Saturday, June 20, 2026 @ 0306 hrs.
                  *
                  */
+
                 return self::$R_data['R_debug_mode'];
 
             case 'phpmailer_debug_mode':
@@ -19938,8 +20027,30 @@ $R_resp    = ' . \print_r($R_resp, true) . '</code></pre>';
             case 'module_key':
                 // 5 :: Thursday, July 9, 2026 @ 0458 hrs.
 
-                // return self::$_R['kivotos']->R['content_src_ctrlr']->return_page_serial();
                 return self::$_R['kivotos']->R['content_src_ctrlr']->module_key;
+
+            /*
+            case 'module_key':
+                // 5 :: Thursday, July 9, 2026 @ 0501 hrs.
+
+                return self::$_R['kivotos']->R['content_src_ctrlr']->return_page_serial();
+            */
+            case 'public_key':
+                // 5 :: Tuesday, September 1, 2026 @ 0037 hrs.
+
+                return self::$_R['kivotos']->get_kivotos(
+                                             $name, 
+                                             $R_index_000);
+
+            case 'generate_version_sync_hash':
+                // 5 :: Tuesday, September 1, 2026 @ 0428 hrs.
+
+                return false;
+
+            case 'generate_search_algorithm_data':
+                // 5 :: Tuesday, September 1, 2026 @ 0428 hrs.
+
+                return false;
 
             case 'R_kivotos_index':
 
@@ -19953,10 +20064,10 @@ $R_resp    = ' . \print_r($R_resp, true) . '</code></pre>';
 
                 return self::$_R['kivotos']->R['dtsm']->return_received_data('crnrstn_interact_ui_link_text_click');
 
-            case 'directory_shift':
+            case 'R_directory_shift':
                 // 5 :: Case of the Monday's, August 3, 2026 @ 0610 hrs.
 
-                return self::$R_data['directory_shift'];
+                return self::$R_data['R_directory_shift'];
 
             case 'R_framework_path':
                 // 5 :: Friday, April 3, 2026 @ 2351 hrs.
@@ -19966,11 +20077,11 @@ $R_resp    = ' . \print_r($R_resp, true) . '</code></pre>';
             case 'operating_system':
                 // 5 :: Wednesday, May 20, 2026 @ 2355 hrs.
 
-                if(isset($R_index_001))
+                if(isset($R_index_001)) 
                     // 5 :: Monday, August 10, 2026 @ 2359 hrs.
                     return self::$R_data['operating_system'][$R_index_000][$R_index_001];
 
-                if(isset($R_index_000))
+                if(isset($R_index_000)) 
                     // 5 :: Monday, August 10, 2026 @ 2353 hrs.
                     return self::$R_data['operating_system'][$R_index_000];
 
@@ -19987,60 +20098,60 @@ $R_resp    = ' . \print_r($R_resp, true) . '</code></pre>';
 
                 return self::$R_data[$name];
 
-            case 'http':
+            case 'http': 
                 // 5 :: Wednesday, August 7, 2024 @ 0530 hrs.
 
                 return self::$R_data['R_paths']['HTTP']['uri'];
 
-            case 'https':
+            case 'https': 
                 // 5 :: Wednesday, August 7, 2024 @ 0530 hrs.
 
                 return self::$R_data['R_paths']['HTTPS']['uri'];
 
-            case 'directory':
+            case 'directory': 
                 // 5 :: Wednesday, August 7, 2024 @ 0530 hrs.
 
                 //self::$R_data['R_paths']['HTTP']['path'];
                 return self::$R_data['R_paths']['HTTPS']['path'];
 
-            case 'application_http':
+            case 'application_http': 
                 // 5 :: Wednesday, August 7, 2024 @ 0530 hrs.
 
                 return self::$R_data['R_paths']['HTTP']['APPLICATION']['uri'];
 
-            case 'application_https':
+            case 'application_https': 
                 // 5 :: Wednesday, August 7, 2024 @ 0530 hrs.
 
                 return self::$R_data['R_paths']['HTTPS']['APPLICATION']['uri'];
 
-            case 'application_path':
+            case 'application_path': 
                 // 5 :: Wednesday, May 20, 2026 @ 0045 hrs.
 
                 //self::$R_data['R_paths']['HTTP']['APPLICATION']['path'];
                 return self::$R_data['R_paths']['HTTPS']['APPLICATION']['path'];
 
-            case 'framework_http':
+            case 'framework_http': 
                 // 5 :: Wednesday, August 7, 2024 @ 0530 hrs.
 
                 return self::$R_data['R_paths']['HTTP']['FRAMEWORK']['uri'];
 
-            case 'framework_https':
+            case 'framework_https': 
                 // 5 :: Wednesday, August 7, 2024 @ 0530 hrs.
 
                 return self::$R_data['R_paths']['HTTPS']['FRAMEWORK']['uri'];
 
-            case 'framework_path':
+            case 'framework_path': 
                 // 5 :: Wednesday, May 20, 2026 @ 0051 hrs.
 
                 //self::$R_data['R_paths']['HTTP']['FRAMEWORK']['path'];
                 return self::$R_data['R_paths']['HTTPS']['FRAMEWORK']['path'];
 
-            case 'running_http':
+            case 'running_http': 
                 // 5 :: Wednesday, August 7, 2024 @ 0530 hrs.
 
                 return self::$R_data['R_paths']['HTTP']['RUNNING']['uri'];
 
-            case 'running_https':
+            case 'running_https': 
                 // 5 :: Wednesday, August 7, 2024 @ 0530 hrs.
 
                 return self::$R_data['R_paths']['HTTPS']['RUNNING']['uri'];
@@ -20051,40 +20162,37 @@ $R_resp    = ' . \print_r($R_resp, true) . '</code></pre>';
                 //self::$R_data['R_paths']['HTTP']['RUNNING']['path'];
                 return self::$R_data['R_paths']['HTTPS']['RUNNING']['path'];
 
-            case 'clr_ssl_rasl_http':
+            case 'clr_ssl_rasl_http': 
                 // 5 :: Wednesday, August 7, 2024 @ 0530 hrs.
 
                 return self::$R_data['R_paths']['HTTP']['CSS-RASL']['uri'];
 
-            case 'clr_ssl_rasl_https':
+            case 'clr_ssl_rasl_https': 
                 // 5 :: Wednesday, August 7, 2024 @ 0530 hrs.
 
                 return self::$R_data['R_paths']['HTTPS']['CSS-RASL']['uri'];
 
-            case 'clr_ssl_rasl_directory':
+            case 'clr_ssl_rasl_directory': 
                 // 5 :: Wednesday, August 7, 2024 @ 0530 hrs.
 
                 //self::$R_data['R_paths']['HTTP']['CSS-RASL']['path'];
                 return self::$R_data['R_paths']['HTTPS']['CSS-RASL']['path'];
 
-            case 'crnrstn_soap_http':
+            case 'crnrstn_soap_http': 
                 // 5 :: Wednesday, August 7, 2024 @ 0530 hrs.
 
                 return self::$R_data['R_paths']['HTTP']['CRNRSTN_SOAP']['uri'];
 
-            case 'crnrstn_soap_https':
+            case 'crnrstn_soap_https': 
                 // 5 :: Wednesday, August 7, 2024 @ 0530 hrs.
 
-                if(isset(self::$R_data['R_cluster_id'])){
-
+                if(isset(self::$R_data['R_cluster_id']))
                     return self::$R_data['R_paths']['HTTPS']['CRNRSTN_SOAP']['uri'];
-
-                }
 
                 // 5 :: Tuesday, June 2, 2026 @ 0708 hrs.
                 return self::$R_data[$name];
 
-            case 'crnrstn_soap_directory':
+            case 'crnrstn_soap_directory': 
                 // 5 :: Wednesday, August 7, 2024 @ 0530 hrs.
 
                 //self::$R_data['R_paths']['HTTP']['CRNRSTN_SOAP']['path'];
@@ -20093,19 +20201,15 @@ $R_resp    = ' . \print_r($R_resp, true) . '</code></pre>';
             case 'iso8601_to_timestamp[date_string]':
                 // 5 :: Tuesday, June 2, 2026 @ 1129 hrs.
 
-                if(!isset(self::$R_data[$name])){
-
+                if(!isset(self::$R_data[$name]))
                     return $this->return_query_date_time_stamp();
-
-                }
 
                 return self::$R_data[$name];
 
-            break;
-            case 'nusoap_fault[faultcode]':
-            case 'nusoap_fault[faultactor]':
-            case 'nusoap_fault[faultstring]':
-            case 'nusoap_fault[faultdetail]':
+            case 'nusoap_fault[faultcode]': 
+            case 'nusoap_fault[faultactor]': 
+            case 'nusoap_fault[faultstring]': 
+            case 'nusoap_fault[faultdetail]': 
                 // 5 :: Tuesday, June 2, 2026 @ 0727 hrs.
 
                 return self::$R_data[$name];
@@ -20152,7 +20256,6 @@ $R_resp    = ' . \print_r($R_resp, true) . '</code></pre>';
 
                 return self::$R_data[$name];
 
-            break;
             case 'nusoap_wsdlcache[cache_lifetime]':
                 // 5 :: Tuesday, June 2, 2026 @ 0944 hrs.
 
@@ -20202,6 +20305,7 @@ $R_resp    = ' . \print_r($R_resp, true) . '</code></pre>';
                 // 5 :: Tuesday, June 2, 2026 @ 1006 hrs.
 
                 return self::$R_data[$name];
+
             case 'wsdl[wsdl]':
                 // 5 :: Tuesday, August 18, 2026 @ 1259 hrs.
 
@@ -20339,21 +20443,25 @@ $R_resp    = ' . \print_r($R_resp, true) . '</code></pre>';
 
             case 'env_err_reporting_profile_ARRAY':
 
-                return $this->env_err_reporting_profile_ARRAY[self::$R_data['R_cluster_id']][self::$env_key_hash_config_ARRAY[self::$R_data['R_cluster_id']]];
+                return $this->env_err_reporting_profile_ARRAY[self::$R_data['R_cluster_id']][self::$R_data['env'][self::$R_data['R_node_id']]['hash']];
 
-            case 'env_html_comments_mode_ARRAY':
-                /* E.g.:
-                 * - CRNRSTN_HTML_COMMENTS_FULL,
-                 * - CRNRSTN_HTML_COMMENTS_NONE, and
-                 * - CRNRSTN_HTML_COMMENTS_CDN_STABILITY_CONTROL_ENABLED <-- *
-                 *   * Timestamps are omitted
-                 *     from HTML comments.
+            case 'R_html_comments_mode':
+
+                /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
+                 * CLR-SSL HTML Code
+                 * Comments On/Off Options:
+                 *
+                 * TLDR;
+                 * OFF = CRNRSTN_HTML_COMMENTS_NONE
+                 * OFF = CRNRSTN_HTML_COMMENTS_SILENT_GOLD (Alias for CRNRSTN_HTML_COMMENTS_NONE)
+                 * ON  = CRNRSTN_HTML_COMMENTS_FULL
+                 * ON  = CRNRSTN_HTML_COMMENTS_ENLARGED_PHYLACTERIES (Alias for CRNRSTN_HTML_COMMENTS_FULL)
+                 * ON  = CRNRSTN_HTML_COMMENTS_CDN_STABILITY_CONTROL_ENABLED**
+                 *       ** No page generation timestamps in HTML comments.
                  *
                  */
+                return self::$R_data[self::$R_data['env'][self::$R_data['R_node_id']]['hash']]['R_html_comments_mode'];
 
-                return $this->env_html_comments_mode_ARRAY[self::$R_data['R_cluster_id']][self::$env_key_hash_config_ARRAY[self::$R_data['R_cluster_id']]];
-
-            //case 'channel_integer_syntax_ARRAY':
             case 'channels':
 
                 return self::$R_data[$name];
@@ -20388,15 +20496,15 @@ $R_resp    = ' . \print_r($R_resp, true) . '</code></pre>';
             case 'object_serializable_channels_ARRAY':
 
                 /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
-                 * The CRNRSTN :: Lightsaber
-                 * RoCEv2 SOAP Services Layer
-                 * (CLR-SSL) Multi-Channel
-                 * Decoupled Data Object
-                 * (MC-DDO) Data Storage
-                 * Services Layer.
+                 * The CRNRSTN :: Lightsaber 
+                 * RoCEv2 SOAP Services Layer 
+                 * (CLR-SSL) Multi-Channel 
+                 * Decoupled Data Object 
+                 * (MC-DDO) Data Storage 
+                 * Services Layer. 
                  *
-                 * DDO settings and
-                 * configuration override.
+                 * DDO settings and 
+                 * configuration override. 
                  *
                  *
                  * 5
@@ -20407,15 +20515,15 @@ $R_resp    = ' . \print_r($R_resp, true) . '</code></pre>';
             case 'ddo_serializable_data_types_ARRAY':
 
                 /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
-                 * The CRNRSTN :: Lightsaber
-                 * RoCEv2 SOAP Services Layer
-                 * (CLR-SSL) Multi-Channel
-                 * Decoupled Data Object
-                 * (MC-DDO) Data Storage
-                 * Services Layer.
+                 * The CRNRSTN :: Lightsaber 
+                 * RoCEv2 SOAP Services Layer 
+                 * (CLR-SSL) Multi-Channel 
+                 * Decoupled Data Object 
+                 * (MC-DDO) Data Storage 
+                 * Services Layer. 
                  *
-                 * DDO settings and
-                 * configuration override.
+                 * DDO settings and 
+                 * configuration override. 
                  *
                  *
                  * 5
@@ -20425,8 +20533,8 @@ $R_resp    = ' . \print_r($R_resp, true) . '</code></pre>';
 
             case 'string_concat_delimiter_char':
                 /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
-                 * Edit: Added string_concat_delimiter_char
-                 *       as get_crnrstn() method data output.
+                 * Edit: Added string_concat_delimiter_char 
+                 *       as get_crnrstn() method data output. 
                  *       5 :: Wednesday November 12, 2025 @ 0050 hrs.
                  *
                  * Return the settings value.
@@ -20436,9 +20544,9 @@ $R_resp    = ' . \print_r($R_resp, true) . '</code></pre>';
                  *
                  *
                  * 5 :: Wednesday November 12, 2025 @ 0050 hrs.
-                 *
+                 * 
                  * # C # R # N # R # S # T # N # :: # L # I # G # H # T
-                 * Edit: Refactored self::$string_concat_delimiter_char
+                 * Edit: Refactored self::$string_concat_delimiter_char 
                  *       to $this->R_data['string_concat_delimiter_char'].
                  *       5 :: Tuesday, March 31, 2026 @ 1505 hrs.
                  *
@@ -20455,8 +20563,8 @@ $R_resp    = ' . \print_r($R_resp, true) . '</code></pre>';
                  * 5 :: Saturday, August 24, 2024 @ 0912 hrs.
                  *
                  * # C # R # N # R # S # T # N # :: # L # I # G # H # T
-                 * Edit: Added background_color_hex
-                 *       as get_crnrstn() method data output.
+                 * Edit: Added background_color_hex 
+                 *       as get_crnrstn() method data output. 
                  *       5 :: Wednesday November 12, 2025 @ 0045 hrs.
                  *
                  *
@@ -20468,7 +20576,7 @@ $R_resp    = ' . \print_r($R_resp, true) . '</code></pre>';
                  * 5 :: Wednesday November 12, 2025 @ 0045 hrs.
                  *
                  * # C # R # N # R # S # T # N # :: # L # I # G # H # T
-                 * Edit: Refactored self::$background_color_hex
+                 * Edit: Refactored self::$background_color_hex 
                  *       to $this->R_data['background_color_hex'].
                  *       5 :: Tuesday, March 31, 2026 @ 1508 hrs.
                  *
@@ -20480,34 +20588,34 @@ $R_resp    = ' . \print_r($R_resp, true) . '</code></pre>';
                  * 5 :: Thursday, August 22, 2024 @ 0132 hrs.
                  *
                  * # C # R # N # R # S # T # N # :: # L # I # G # H # T
-                 * Note: Consider designing a PHPMailer
-                 *       lang file path ($lang_path) hook
-                 *       to support over 50 language packs
-                 *       if the CLR-SSL deviates from
-                 *       ISO 639-1 when we start driving
-                 *       iso_lang_code dynamically.
+                 * Note: Consider designing a PHPMailer 
+                 *       lang file path ($lang_path) hook 
+                 *       to support over 50 language packs 
+                 *       if the CLR-SSL deviates from 
+                 *       ISO 639-1 when we start driving 
+                 *       iso_lang_code dynamically. 
                  *
-                 *       PHPMailer's extension
-                 *       of crnrstn to use iso_lang_code
-                 *       in its public function
-                 *       setLanguage($langcode = 'en',
+                 *       PHPMailer's extension 
+                 *       of crnrstn to use iso_lang_code 
+                 *       in its public function 
+                 *       setLanguage($langcode = 'en', 
                  *       $lang_path = '') states that:
                  *
-                 * [setLanguage]
-                 * Set the language for error messages.
-                 * Returns false if it cannot load the language file.
-                 * The default language is English.
+                 * [setLanguage] 
+                 * Set the language for error messages. 
+                 * Returns false if it cannot load the language file. 
+                 * The default language is English. 
                  *
-                 * @param string $langcode ISO 639-1
-                 *               2-character language code
+                 * @param string $langcode ISO 639-1 
+                 *               2-character language code 
                  *               (e.g. French is "fr")
-                 * @param string $lang_path Path to the
-                 *               language file directory,
-                 *               with trailing
+                 * @param string $lang_path Path to the 
+                 *               language file directory, 
+                 *               with trailing 
                  *               separator (slash)
                  *
                  * function setLanguage(
-                 *          $langcode = 'en',
+                 *          $langcode = 'en', 
                  *          $lang_path = '')
                  * {}
                  *
@@ -20516,15 +20624,15 @@ $R_resp    = ' . \print_r($R_resp, true) . '</code></pre>';
                  */
 
                 /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
-                 * One vote from PHPMailer is for
+                 * One vote from PHPMailer is for 
                  * the two (2) char ISO 639-1.
                  *
-                 * My vote is to be able to
-                 * do stuff like en-US;
-                 * I'm happy to build the
-                 * required file path directive
-                 * for the PHPMailer application
-                 * language file system.
+                 * My vote is to be able to 
+                 * do stuff like en-US; 
+                 * I'm happy to build the 
+                 * required file path directive 
+                 * for the PHPMailer application 
+                 * language file system. 
                  *
                  *
                  * Last Modified: Wednesday, June 17, 2026 @ 0833 hrs.
@@ -20537,11 +20645,11 @@ $R_resp    = ' . \print_r($R_resp, true) . '</code></pre>';
                  * 5 :: Monday, August 19, 2024 @ 0740 hrs.
                  *
                  * # C # R # N # R # S # T # N # :: # L # I # G # H # T
-                 * Edit: Copied case logic attributes:
-                 *       - css_styles,
-                 *       - iso_lang_code, and
-                 *       - background_color_hex from
-                 *       the crnrstn_registry_user->get_data()
+                 * Edit: Copied case logic attributes: 
+                 *       - css_styles, 
+                 *       - iso_lang_code, and 
+                 *       - background_color_hex from 
+                 *       the crnrstn_registry_user->get_data() 
                  *       method.
                  *       5 :: Friday, April 3, 20226 @ 1232 hrs.
                  *
@@ -20554,11 +20662,11 @@ $R_resp    = ' . \print_r($R_resp, true) . '</code></pre>';
                  */
 
                 /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
-                 * Check the application
-                 * acceleration memory
-                 * cache layer for
-                 * immediate style
-                 * data return.
+                 * Check the application 
+                 * acceleration memory 
+                 * cache layer for 
+                 * immediate style 
+                 * data return. 
                  *
                  *
                  * 5
@@ -20613,8 +20721,8 @@ $R_resp    = ' . \print_r($R_resp, true) . '</code></pre>';
 
             case 'application_directory':
                 /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
-                 * Edit: Added application_directory
-                 *       as get_crnrstn() method data output.
+                 * Edit: Added application_directory 
+                 *       as get_crnrstn() method data output. 
                  *       5 :: Monday, March 9, 2026 @ 0655 hrs.
                  *
                  */
@@ -20624,8 +20732,8 @@ $R_resp    = ' . \print_r($R_resp, true) . '</code></pre>';
             case 'R_framework_directory':
             //case 'framework_directory':
                 /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
-                 * Edit: Added framework_directory
-                 *       as get_crnrstn() method data output.
+                 * Edit: Added framework_directory 
+                 *       as get_crnrstn() method data output. 
                  *       5 :: Wednesday, October 29, 2025 @ 0613 hrs.
                  *
                  */
@@ -20636,62 +20744,36 @@ $R_resp    = ' . \print_r($R_resp, true) . '</code></pre>';
 
                 return self::$R_data['max_disk'];
 
-
-            case 'max_disk':
-
-                return self::$R_data['max_disk'];
-
-
             case 'permissions_chmod':
 
                 return self::$permissions_chmod;
 
             case 'openssl_ARRAY':
 
-                if(isset($R_index_000) &&
-                    isset($R_index_001) &&
-                    isset($R_index_002) &&
+                if(isset($R_index_000) && 
+                    isset($R_index_001) && 
+                    isset($R_index_002) && 
                     isset($R_index_003))
-                {
-
-                    if(isset(self::$R_data[self::$R_data['R_cluster_id']][self::$R_data['R_node_id']]['R_OpenSSL_config'][$R_index_000][$R_index_001][$R_index_002][$R_index_003])){
-
-                        return self::$R_data[self::$R_data['R_cluster_id']][self::$R_data['R_node_id']]['R_OpenSSL_config'][$R_index_000][$R_index_001][$R_index_002][$R_index_003];
-
-                    }else{
-
-                        return NULL;
-
-                    }
-
-                }else{
-
-                    if(isset($R_index_000) &&
-                        isset($R_index_001) &&
-                        isset($R_index_002))
-                    {
-
-                        if(isset(self::$R_data[self::$R_data['R_cluster_id']][self::$R_data['R_node_id']]['R_OpenSSL_config'][$R_index_000][$R_index_001][$R_index_002])){
-
-                            return self::$R_data[self::$R_data['R_cluster_id']][self::$R_data['R_node_id']]['R_OpenSSL_config'][$R_index_000][$R_index_001][$R_index_002];
-
-                        }else{
-
+                        if(isset(self::$R_data[self::$R_data['R_cluster_id']][self::$R_data['R_node_id']]['R_OpenSSL_config'][$R_index_000][$R_index_001][$R_index_002][$R_index_003]))
+                            return self::$R_data[self::$R_data['R_cluster_id']][self::$R_data['R_node_id']]['R_OpenSSL_config'][$R_index_000][$R_index_001][$R_index_002][$R_index_003];
+                        else
                             return NULL;
-
-                        }
-
-                    }
-
-                }
+                else
+                    if(isset($R_index_000) && 
+                        isset($R_index_001) && 
+                        isset($R_index_002))
+                            if(isset(self::$R_data[self::$R_data['R_cluster_id']][self::$R_data['R_node_id']]['R_OpenSSL_config'][$R_index_000][$R_index_001][$R_index_002]))
+                                return self::$R_data[self::$R_data['R_cluster_id']][self::$R_data['R_node_id']]['R_OpenSSL_config'][$R_index_000][$R_index_001][$R_index_002];
+                            else
+                                return NULL;
 
                 return NULL;
 
             break;
             case 'log_silo_profile':
 
-                /* Get CRNRSTN :: Log
-                 * Silo profile.
+                /* Get CRNRSTN :: Log 
+                 * Silo profile. 
                  *
                  */
                 return self::$log_silo_profile_ARRAY;
@@ -20707,17 +20789,17 @@ $R_resp    = ' . \print_r($R_resp, true) . '</code></pre>';
 
             case 'hmac_algorithm':
                 /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
-                 * Edit: Added hmac_algorithm private
-                 *       static output to get_crnrstn(),
-                 *       and we will set this to be used as a
-                 *       default if hashing algorithm is
-                 *       required during initialization. It is.
+                 * Edit: Added hmac_algorithm private 
+                 *       static output to get_crnrstn(), 
+                 *       and we will set this to be used as a 
+                 *       default if hashing algorithm is 
+                 *       required during initialization. It is. 
                  *       5 :: Wednesday, October 29, 2025 @ 0648 hrs.
-                 *
+                 * 
                  * # C # R # N # R # S # T # N # :: # L # I # G # H # T
-                 * Edit: Refactored $hmac_algorithm private
-                 *       static crnrstn class attribute
-                 *       to $this->R_data['hmac_algorithm'].
+                 * Edit: Refactored $hmac_algorithm private 
+                 *       static crnrstn class attribute 
+                 *       to $this->R_data['hmac_algorithm']. 
                  *       5 :: Tuesday, March 31, 2026 @ 1443 hrs.
                  *
                  */
@@ -20744,6 +20826,10 @@ $R_resp    = ' . \print_r($R_resp, true) . '</code></pre>';
 
                 return self::$data_channel_init_sequence;
 
+            case 'R_sql_time_intervals':
+
+                return self::$R_data[$name];
+
             case 'static_css_length_unit':
 
                 return self::$static_css_length_unit;
@@ -20758,40 +20844,31 @@ $R_resp    = ' . \print_r($R_resp, true) . '</code></pre>';
 
             case 'server_files_version_hash_ARRAY':
 
-                if(isset($R_index_000)){
-
+                if(isset($R_index_000))
                     return self::$server_files_version_hash_ARRAY[$R_index_000];
-
-                }
 
                 return self::$server_files_version_hash_ARRAY;
 
             case 'R_interact_ui_theme_options':
                 /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
                  * Edit: Replaced use of Icy Digital ITCC
-                 *       Bitwise Svc Layer supported
+                 *       Bitwise Svc Layer supported 
                  *       architecture behind
-                 *       'system_theme_style_constants_ARRAY'
-                 *       with
+                 *       'system_theme_style_constants_ARRAY' 
+                 *       with 
                  *       self::$R_data['interact_ui_theme_options'].
                  *       5 :: Thursday, May 28, 2026 @ 0724 hrs.
                  *
                  * # C # R # N # R # S # T # N # :: # L # I # G # H # T
-                 * Edit: Renamed the index,
-                 *       'interact_ui_theme_options', to
-                 *       'R_interact_ui_theme_options'.
+                 * Edit: Renamed the index, 
+                 *       'interact_ui_theme_options', to 
+                 *       'R_interact_ui_theme_options'. 
                  *       5 :: Saturday, June 27, 2026 @ 0208 hrs.
                  *
                  */
-                if(isset($R_index_000)){
-
-                    if(isset(self::$R_data['R_interact_ui_theme_options']['isset_options'][$R_index_000])){
-
+                if(isset($R_index_000))
+                    if(isset(self::$R_data['R_interact_ui_theme_options']['isset_options'][$R_index_000]))
                         return self::$R_data['R_interact_ui_theme_options']['isset_options'][$R_index_000];
-
-                    }
-
-                }
 
                 return NULL;
 
@@ -20834,28 +20911,36 @@ $R_resp    = ' . \print_r($R_resp, true) . '</code></pre>';
 
                 return NULL;
 
+            case 'R_seo_analytics':
+                // 5 :: Friday, October 23, 2026 @ 1402 hrs.
+
+                if(isset(self::$R_data['R_seo_analytics']))
+                    return self::$R_data['R_seo_analytics'];
+
+                return '';
+
             default:
 
-                $clr_ssl_msg = 'Unknown switch case received [' .
-                               \strval($name) .
+                $clr_ssl_msg = 'Unknown switch case received [' . 
+                               \strval($name) . 
                                '].';
                 // 5 :: Mon May xxxxxxxxxxxxxxxxxxxxxxxxxxx
-                $msg_token = 'd9c5ca131ab8615a1738c340cf44c4ff' .
+                $msg_token = 'd9c5ca131ab8615a1738c340cf44c4ff' . 
                              'xxxxxxxxxxxxxxxxxxxxxxxxxxx';
                 $token_generation_date = '2026xxxxxxxxxxxxxxxxxxxxxxxxxxx';
                 $token = array(
-                         'token'                   => $msg_token,
-                         'token_generation_date'   => $token_generation_date,
-                         'request_type'            => __METHOD__,
-                         'code'                    => 200,
+                         'token'                   => $msg_token, 
+                         'token_generation_date'   => $token_generation_date, 
+                         'request_type'            => __METHOD__, 
+                         'code'                    => 200, 
                          'clr_ssl_msg'             => $clr_ssl_msg);
                 $this->error_log(
-                       $clr_ssl_msg,
-                       \LOG_WARNING,
-                       \E_WARNING,
-                       __LINE__,
-                       __METHOD__,
-                       __FILE__,
+                       $clr_ssl_msg, 
+                       \LOG_WARNING, 
+                       \E_WARNING, 
+                       __LINE__, 
+                       __METHOD__, 
+                       __FILE__, 
                        $token);
 
             break;
@@ -22740,7 +22825,7 @@ $R_resp    = ' . \print_r($R_resp, true) . '</code></pre>';
         // defined yet.
         //
         // Please see,
-        // /_lightbox_helper/_config/config.integer_constants/crnrstn.integer_return.function.php
+        // /_lightbox_helper/_config/integer_constants/crnrstn.integer_return.function.php
         //
         // [Begin LOCALHOST_CHAD_MACBOOKPRO ERROR log output]
         //   [Sat Jul 13 01:20:44.777684 2024]
@@ -23075,7 +23160,7 @@ $R_resp    = ' . \print_r($R_resp, true) . '</code></pre>';
             // defined yet.
             //
             // Please see,
-            // /_lightbox_helper/_config/config.integer_constants/crnrstn.integer_return.function.php
+            // /_lightbox_helper/_config/integer_constants/crnrstn.integer_return.function.php
             //
             //
             // 5 :: Saturday, July 13, 2024 @ 0236 hrs.
@@ -24596,16 +24681,47 @@ $R_resp    = ' . \print_r($R_resp, true) . '</code></pre>';
      */
     function data_report(
              $data, 
-             $title = 'The CRNRSTN :: Lightsaber ' . 
-                      'System Registry :: UGC ' . 
-                      'Input Data Report')
+             $title = NULL)
     {
-        // 5 :: Wednesday, July 31, 2024 @ 0845 hrs.
+        /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
+         * 5 :: Wednesday, July 31, 2024 @ 0845 hrs.
+         *
+         * # C # R # N # R # S # T # N # :: # L # I # G # H # T
+         * Edit: Modified the default of the data_report 
+         *       $title input parameter from string 
+         *       to $title = NULL in order to address 
+         *       interoperability issues with 
+         *       PHP v5.4.31 parsing:
+         *
+         *       Parse error: syntax error, unexpected '.', 
+         *       expecting ')' in C:\xampp\htdocs\_R\class\
+         *       registry\crnrstn.registry_user.class.php 
+         *       on line 24679.
+         *
+         *       Also, we changed the default for 
+         *       $title from: 
+         *
+         *       The CRNRSTN :: Lightsaber 
+         *       System Registry :: UGC 
+         *       Input Data Report 
+         *
+         *       to
+         *
+         *       CLR-SSL Input 
+         *       Data Report 
+         *
+         *       5 :: Thuraday, October 1, 2026 @ 2354 hrs.
+         *
+         */
 
-        return $title .
-        ' | Type=[' .
-        strtoupper(gettype($data)) .
-        ']. Len=[' . strlen(strval($data)) .
+        if(!isset($title)) 
+            $title = 'CLR-SSL Input ' . 
+                     'Data Report';
+
+        return $title . 
+        ' | Type=[' . 
+        \strtoupper(\gettype($data)) . 
+        ']. Len=[' . \strlen(\strval($data)) . 
         '].';
 
     }
@@ -28173,10 +28289,10 @@ $R_resp    = ' . \print_r($R_resp, true) . '</code></pre>';
                 // output from:
                 //  - /_lightbox_helper/_config/resource_registry/crnrstn.native_resource_registry.function.php
                 //  - /_lightbox_helper/_config/resource_registry/crnrstn.native_registered_resource_content_library.function.php
-                //  - /_lightbox_helper/_config/config.integer_constants/crnrstn.system_integer_bank.function.php
-                //  - /_lightbox_helper/_config/config.lightbox_helper.original/
-                //  - /_lightbox_helper/_config/config.system_content/crnrstn.documentation_library.function.php
-                //  - /_lightbox_helper/_config/config.system_links/crnrstn.system_link_library.function.php
+                //  - /_lightbox_helper/_config/integer_constants/crnrstn.system_integer_bank.function.php
+                //  - /_lightbox_helper/_config/lightbox_helper/
+                //  - /_lightbox_helper/_config/system_content/crnrstn.documentation_library.function.php
+                //  - /_lightbox_helper/_config/system_links/crnrstn.system_link_library.function.php
                 //
                 //
                 // 5
@@ -33788,7 +33904,7 @@ $R_resp    = ' . \print_r($R_resp, true) . '</code></pre>';
          *
          * File:
          * _R/_config
-         * /_config.defaults
+         * /defaults
          * /_crnrstn.system_settings.inc.php
          *
          * Please see: byte_reporting_precision
@@ -33803,7 +33919,7 @@ $R_resp    = ' . \print_r($R_resp, true) . '</code></pre>';
          *
          * File:
          * _R/_config
-         * /_config.defaults
+         * /defaults
          * /_crnrstn.system_settings.inc.php
          *
          * Please see: byte_reporting_units
@@ -37131,8 +37247,8 @@ output   * start              N/Y    N/N     ---       ---        ---          -
                     */
 
                     $script_filename            = \str_replace(
-                                                  self::$R_data['operating_system']['R_path_patterns'][0],
-                                                  self::$R_data['operating_system']['R_path_replacements'][0],
+                                                  self::$R_data['operating_system']['R_path_patterns'][0], 
+                                                  self::$R_data['operating_system']['R_path_replacements'][0], 
                                                   $_SERVER['SCRIPT_FILENAME']);
                     $tmp_script_filepath_ARRAY  = \explode(self::$R_data['operating_system']['os_path_dir_separator_char'], $script_filename);
                     $tmp_app_directory          = \explode('../', self::$R_data['application_directory']);
@@ -37151,12 +37267,18 @@ output   * start              N/Y    N/N     ---       ---        ---          -
                     if(\strlen($path_chunk[0]) > 0)
                         $root = \implode(self::$R_data['operating_system']['os_path_dir_separator_char'], $tmp_script_filepath_ARRAY) .
                                 self::$R_data['operating_system']['os_path_dir_separator_char'] .
-                                $path_chunk[0] .
-                                self::$R_data['R_framework_directory'];
+                                $path_chunk[0] . 
+                                self::$R_data['R_framework_directory'] . 
+                                '/';
                     else
+                        /*
                         $root = \implode(self::$R_data['operating_system']['os_path_dir_separator_char'], $tmp_script_filepath_ARRAY) .
                                 self::$R_data['operating_system']['os_path_dir_separator_char'] .
                                 self::$R_data['R_framework_directory'];
+                         */
+                        $root = $tmp_str_uri . 
+                                self::$R_data['R_framework_directory'] . 
+                                '/';
 
                     /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
                      * Standardize the use of
@@ -37170,8 +37292,8 @@ output   * start              N/Y    N/N     ---       ---        ---          -
                      *
                      */
                     $clean_uri = \str_replace(
-                                self::$R_data['operating_system']['R_path_patterns'][0],
-                                self::$R_data['operating_system']['R_path_replacements'][0],
+                                '\\', 
+                                '/', 
                                 $root);
 
                 }
@@ -37192,10 +37314,12 @@ output   * start              N/Y    N/N     ---       ---        ---          -
                     */
                     $tmp_str_uri .= self::$R_data['application_directory'] . '/' .
                                     self::$R_data['R_framework_directory'] . '/';
+                    
+                    $clean_uri = $tmp_str_uri;
 
                 }
 
-                $clean_uri = $this->str_sanitize($tmp_str_uri, 'url_forward_slashes');
+                $clean_uri = $this->str_sanitize($clean_uri, 'url_forward_slashes');
 
                 $clr_ssl_msg = 'Generating the [' .
                                $path_type .
@@ -37209,18 +37333,18 @@ output   * start              N/Y    N/N     ---       ---        ---          -
                              'xxxxxxxxxxxxxxxxxxxxxxxxxxx';
                 $token_generation_date = '2026xxxxxxxxxxxxxxxxxxxxxxxxxxx';
                 $token = array(
-                         'token'                   => $msg_token,
-                         'token_generation_date'   => $token_generation_date,
-                         'request_type'            => __METHOD__,
-                         'code'                    => 200,
+                         'token'                   => $msg_token, 
+                         'token_generation_date'   => $token_generation_date, 
+                         'request_type'            => __METHOD__, 
+                         'code'                    => 200, 
                          'clr_ssl_msg'             => $clr_ssl_msg);
                 $this->error_log(
-                       $clr_ssl_msg,
-                       \LOG_DEBUG,
-                       \E_NOTICE,
-                       __LINE__,
-                       __METHOD__,
-                       __FILE__,
+                       $clr_ssl_msg, 
+                       \LOG_DEBUG, 
+                       \E_NOTICE, 
+                       __LINE__, 
+                       __METHOD__, 
+                       __FILE__, 
                        $token);
 
                 self::$R_data['R_paths']['HTTP']['FRAMEWORK']['uri']  = $clean_uri;
@@ -40024,611 +40148,487 @@ output   * start              N/Y    N/N     ---       ---        ---          -
          *
          */
 
-        if(isset(self::$R['registry_assistant'])){
-
-            return self::$R['registry_assistant']->str_sanitize($str, $type);
-
-        }else{
-
-            $patterns = array();
-            $replacements = array();
-
-            $type = strtolower($type);
-
-            try{
-
-                switch($type){
-                    case 'data_key_extract':
-
-                        $tmp_ARRAY = explode('::', $str);
-
-                        return $tmp_ARRAY[count($tmp_ARRAY) -1];
-
-                    break;
-                    case 'string_to_bytes':
-                        /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
-                         * Supports taking 
-                         * '42 GiB' to (int) 123233...
-                         *
-                         */
-
-                        $str = strtolower(trim($str));
-                        $patterns[0] = ' ';
-                        $replacements[0] = '';
-
-                    break;
-                    case 'file_mime_type_to_directory':
-
-                        /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
-                         * Mime-Type conversion to 
-                         * lowercase folder name. 
-                         *
-                         */
-                        $str = strtolower($str);
-                        $patterns[0] = ' ';
-                        $patterns[1] = '-';
-                        $patterns[2] = '/';
-                        $patterns[3] = '.';
-                        $patterns[4] = '+';
-
-                        $replacements = $this->build_replacements_array(sizeof($patterns), '_');
-                        /* $replacements[0] = '_';
-                         * $replacements[1] = '_';
-                         * $replacements[2] = '_';
-                         * $replacements[3] = '_';
-                         * $replacements[4] = '_';
-                         *
-                         */
-
-                    break;
-                    case 'css_length_to_clean_int':
-
-                        /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
-                         * Lowercase for 'px'
-                         *
-                         */
-                        $str = strtolower($str);
-
-                        /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
-                         * SOURCE :: https://www.w3schools.com/cssref/css_units.php
-                         * DATE :: Thursday, June 22, 2023 @ 0555 hrs.
-                         *
-                         */
-                        $patterns[0] = ' ';
-                        $patterns[1] = ';';
-                        $patterns[2] = 'cm';
-                        $patterns[3] = 'mm';
-                        $patterns[4] = 'in';
-                        $patterns[5] = 'px';
-                        $patterns[6] = 'pt';
-                        $patterns[7] = 'pc';
-                        $patterns[8] = 'em';
-                        $patterns[9] = 'ex';
-                        $patterns[10] = 'ch';
-                        $patterns[11] = 'rem';
-                        $patterns[12] = 'vw';
-                        $patterns[13] = 'vh';
-                        $patterns[14] = 'vmin';
-                        $patterns[15] = 'vmax';
-                        $patterns[16] = '%';
-
-                        $replacements = $this->build_replacements_array(sizeof($patterns));
-                        /* $replacements[0] = '';
-                         * $replacements[1] = '';
-                         * $replacements[2] = '';
-                         * $replacements[3] = '';
-                         * $replacements[4] = '';
-                         * $replacements[5] = '';
-                         * $replacements[6] = '';
-                         * $replacements[7] = '';
-                         * $replacements[8] = '';
-                         * $replacements[9] = '';
-                         * $replacements[10] = '';
-                         * $replacements[11] = '';
-                         * $replacements[12] = '';
-                         * $replacements[13] = '';
-                         * $replacements[14] = '';
-                         * $replacements[15] = '';
-                         * $replacements[16] = '';
-                         *
-                         */
-
-                    break;
-                    case 'remove_all_spaces':
-
-                        $patterns[0] = ' ';
-                        $replacements[0] = '';
-
-                    break;
-                    case 'url_forward_slashes':
-                        /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
-                         * Added in support of 
-                         * Adobe® Flash® <param> 
-                         * data passthrough to swf 
-                         * for URL formatting: 
-                         * System.security.allowDomain();
-                         *
-                         * See, /_R/ui/js/_lib/google_ajaxslt/0.4/demo/eVifweb_2026/
-                         *
-                         *
-                         * 5 :: Wednesday, May 20, 2026 @ 0330 hrs.
-                         */
-
-                        $patterns[0] = '/';
-                        $patterns[1] = '\\';
-
-                        $replacements = $this->build_replacements_array(sizeof($patterns), '/');
-
-                    break;
-                    case DIRECTORY_SEPARATOR:
-
-                        /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
-                         * Purpose: This is for the file path 
-                         *          sanitization of directory 
-                         *          slashes, and until it can 
-                         *          be tested in Windows, it is 
-                         *          kind of only experimental. 
-                         *
-                         *
-                         * 5 ::
-                         *
-                         * Wednesday, July 3, 2024 @ 0243 hrs.
-                         *
-                         */
-                        $patterns[0] = '/';
-                        $patterns[1] = '\\';
-
-                        $replacements = $this->build_replacements_array(sizeof($patterns), DIRECTORY_SEPARATOR);
-                        /* $replacements[0] = DIRECTORY_SEPARATOR;
-                         * $replacements[1] = DIRECTORY_SEPARATOR;
-                         *
-                         */
-
-                    break;
-                    case 'leading_slash':
-
-                        $str = ltrim($str, '/');
-                        $str = ltrim($str, '\\');
-
-                        return $str;
-
-                    break;
-                    case 'integrations_http_path':
-
-                        /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
-                         * Rtrim all 
-                         * HTTP separator(s). 
-                         *
-                         */
-                        $tmp_str = $this->strrtrim($str, '/');
-
-                        /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
-                         * Append a HTTP 
-                         * forward slash. 
-                         *
-                         */
-                        $tmp_str .= '/';
-
-                        return $tmp_str;
-
-                    break;
-                    case 'integrations_dir_path':
-
-                        /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
-                         * Rtrim all 
-                         * DIRECTORY_SEPARATOR(s). 
-                         *
-                         */
-                        $tmp_str = $this->strrtrim($str, DIRECTORY_SEPARATOR);
-
-                        return $tmp_str;
-
-                    break;
-                    case 'integrations_file_path_append':
-
-                        $tmp_ARRAY = array();
-                        $tmp_ARRAY['slash_segment_cnt'] = 0;
-                        $tmp_slash = DIRECTORY_SEPARATOR;
-                        $tmp_dot = '.';
-                        $tmp_no_segment_zero_dot = false;
-
-                        $tmp_pos_slash = strpos($str, $tmp_slash);
-                        if($tmp_pos_slash !== false){
-
-                            /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
-                             * Does Windows go for '//'? 
-                             *
-                             * We may need to update this 
-                             * later once we can test 
-                             * in Windows. 
-                             *
-                             */
-                            $tmp_slash_ARRAY = explode($tmp_slash, $str);
-
-                            /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
-                             * Is there a dot in the 
-                             * first segment? 
-                             *
-                             */
-                            $tmp_pos_dot = strpos($tmp_slash_ARRAY[0], $tmp_dot);
-                            if(!($tmp_pos_dot !== false)){
-
-                                /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
-                                 * I have no directory 
-                                 * to delete. Do not 
-                                 * remove a directory. 
-                                 *
-                                 */
-                                $tmp_no_segment_zero_dot = true;
-
-                            }
-
-                            $tmp_segment_cnt = count($tmp_slash_ARRAY);
-
-                            foreach($tmp_slash_ARRAY as 
-                                $sl_index => $sl_content)
-                            {
-
-                                $tmp_sl_content_str_len = \strlen($sl_content);
-                                $tmp_clean_str = $this->strrtrim($sl_content, '.');
-
-                                if(\strlen($tmp_clean_str) < 1 || 
-                                    (($sl_index == 0) && ($tmp_segment_cnt > 1) && 
-                                        ($tmp_no_segment_zero_dot == true)))
-                                {
-
-                                    /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
-                                     * We have a removable 
-                                     * string segment. 
-                                     *
-                                     * Count it. 
-                                     *
-                                     */
-                                    $tmp_ARRAY['slash_segment_cnt']++;
-                                    $tmp_ARRAY['dir_nom_segment_str_len'][] = $tmp_sl_content_str_len;
-
-                                }else{
-
-                                    /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
-                                     * STORE THE CONTENT 
-                                     * FROM BETWEEN THE 
-                                     * SLASHES.
-                                     *
-                                     */
-                                    $tmp_ARRAY['segment_str'][] = $sl_content;
-
-                                }
-
-                            }
-
-                        }
-
-                        $tmp_ARRAY['no_segment_zero_dot'] = 0;
-                        if($tmp_no_segment_zero_dot == true){
-
-                            $tmp_ARRAY['no_segment_zero_dot'] = 1;
-
-                        }
-
-                        return $tmp_ARRAY;
-
-                    break;
-                    case 'index':
-
-                        $patterns[0] = '&nbsp;';
-                        $patterns[1] = ')';
-                        $replacements[0] = ' ';
-                        $replacements[1] = ') ';
-
-                    break;
-                    case 'search':
-
-                        $patterns[0] = "
-    ";
-                        $patterns[1] = '"';
-                        $patterns[2] = '=';
-                        $patterns[3] = '{';
-                        $patterns[4] = '}';
-                        $patterns[5] = '(';
-                        $patterns[6] = ')';
-                        $patterns[7] = ' ';
-                        $patterns[8] = '    ';
-                        $patterns[9] = ',';
-                        $patterns[10] = '\n';
-                        $patterns[11] = '\r';
-                        $patterns[12] = '\'';
-                        $patterns[13] = '/';
-                        $patterns[14] = '#';
-                        $patterns[15] = ';';
-                        $patterns[16] = ':';
-                        //$patterns[17] = '>';
-
-                        $replacements = $this->build_replacements_array(sizeof($patterns));
-                        /* $replacements[0] = '';
-                         * $replacements[1] = '';
-                         * $replacements[2] = '';
-                         * $replacements[3] = '';
-                         * $replacements[4] = '';
-                         * $replacements[5] = '';
-                         * $replacements[6] = '';
-                         * $replacements[7] = '';
-                         * $replacements[8] = '';
-                         * $replacements[9] = '';
-                         * $replacements[10] = '';
-                         * $replacements[11] = '';
-                         * $replacements[12] = '';
-                         * $replacements[13] = '';
-                         * $replacements[14] = '';
-                         * $replacements[15] = '';
-                         * $replacements[16] = '';
-                         * $replacements[17] = '';
-                         *
-                         */
-
-                    break;
-                    case 'email_private':
-
-                        $tmp_new_post_at_ARRAY = array();
-                        $clean_str = '';
-                        $last_dot_flag = false;
-                        $tmp_at_split_ARRAY = explode('@', $str);
-                        $tmp_post_at_len = \strlen($tmp_at_split_ARRAY[1]);
-                        $tmp_str_ARRAY = $this->str_split_unicode($str);
-                        $tmp_post_at_str_ARRAY = $this->str_split_unicode($tmp_at_split_ARRAY[1]);
-                        $tmp_post_at_str_rev_ARRAY = array_reverse($tmp_post_at_str_ARRAY);
-
-                        /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
-                         * Prepare post @ 
-                         * situation. 
-                         *
-                         */
-                        for($i = 0; $i < $tmp_post_at_len; $i++){
-
-                            if(!($last_dot_flag === true)){
-
-                                if($tmp_post_at_str_rev_ARRAY[$i] == '.'){
-
-                                    $last_dot_flag = true;
-
-                                }
-
-                                $tmp_new_post_at_ARRAY[] = $tmp_post_at_str_rev_ARRAY[$i];
-
-                                if($last_dot_flag === true){
-
-                                    $i = $tmp_post_at_len + 420;
-                                    $tmp_new_post_at_ARRAY = array_reverse($tmp_new_post_at_ARRAY);
-
-                                }
-
-                            }
-
-                        }
-
-                        $tmp_str_len = sizeof($tmp_str_ARRAY);
-                        for($i = 0; $i < $tmp_str_len; $i++){
-
-                            if($i == 0){
-
-                                $clean_str .= $tmp_str_ARRAY[$i] . '*****';
-
-                            }else{
-
-                                if($tmp_str_ARRAY[$i] == '@'){
-
-                                    $at_flag = true;
-                                    $tmp_plus_one = $i + 1;
-                                    $clean_str .= $tmp_str_ARRAY[$i] . $tmp_str_ARRAY[$tmp_plus_one] . '*****';
-                                    $clean_str .= implode($tmp_new_post_at_ARRAY);
-                                    $i = $tmp_str_len + 420;
-
-                                }
-                            }
-                        }
-
-                        return $clean_str;
-
-                    break;
-                    case 'http_protocol_simple':
-
-                        $patterns[0] = '_';
-                        $patterns[1] = '$';
-                        $patterns[2] = ' ';
-
-                        $replacements = $this->build_replacements_array(sizeof($patterns));
-                        /* $replacements[0] = '';
-                         * $replacements[1] = '';
-                         * $replacements[2] = '';
-                         *
-                         */
-
-                    break;
-                    case 'clean_percentage_numbers':
-
-                        $patterns[0] = '%';
-                        $patterns[1] = 'percent';
-                        $patterns[2] = ' ';
-                        $patterns[3] = '!';
-
-                        $replacements = $this->build_replacements_array(sizeof($patterns));
-                        /* $replacements[0] = '';
-                         * $replacements[1] = '';
-                         * $replacements[2] = '';
-                         * $replacements[3] = '';
-                         *
-                         */
-
-                    break;
-                    case 'custom_mobi_detect_alg':
-
-                        $patterns[0] = '(';
-                        $patterns[1] = ')';
-                        $replacements[0] = '';
-                        $replacements[1] = '';
-
-                    break;
-                    case 'select_statement':
-
-                        $patterns[0] = "`";
-                        $replacements[0] = '';
-
-                    break;
-                    case 'select_field_name':
-
-                        $patterns[0] = "
-";
-                        $patterns[1] = '"';
-                        $patterns[2] = '=';
-                        $patterns[3] = '{';
-                        $patterns[4] = '}';
-                        $patterns[5] = '(';
-                        $patterns[6] = ')';
-                        $patterns[7] = ' ';
-                        $patterns[8] = '    ';
-                        $patterns[9] = ',';
-                        $patterns[10] = '\n';
-                        $patterns[11] = '\r';
-                        $patterns[12] = '\'';
-                        $patterns[13] = '/';
-                        $patterns[14] = '#';
-                        $patterns[15] = ';';
-                        $patterns[16] = ':';
-                        $patterns[17] = '>';
-
-                        $replacements = $this->build_replacements_array(sizeof($patterns));
-                        /* $replacements = array();
-                         * $replacements[0] = '';
-                         * $replacements[1] = '';
-                         * $replacements[2] = '';
-                         * $replacements[3] = '';
-                         * $replacements[4] = '';
-                         * $replacements[5] = '';
-                         * $replacements[6] = '';
-                         * $replacements[7] = '';
-                         * $replacements[8] = '';
-                         * $replacements[9] = '';
-                         * $replacements[10] = '';
-                         * $replacements[11] = '';
-                         * $replacements[12] = '';
-                         * $replacements[13] = '';
-                         * $replacements[14] = '';
-                         * $replacements[15] = '';
-                         * $replacements[16] = '';
-                         * $replacements[17] = '';
-                         *
-                         */
-
-                    break;
-                    case 'sql_interval':
-
-                        /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
-                         * Uppercase for 
-                         * SQL query interval. 
-                         *
-                         */
-                        $str = strtoupper($str);
-
-                        $patterns[0] = ' ';
-                        $replacements[0] = '';
-
-                    break;
-                    case 'max_disk_storage_utilization':
-
-                        $patterns[0] = '%';
-                        $patterns[1] = 'percent';
-                        $patterns[2] = ' ';
-                        $patterns[3] = '!';
-
-                        $replacements = $this->build_replacements_array(sizeof($patterns));
-                        /* $replacements = array();
-                         * $replacements[0] = '';
-                         * $replacements[1] = '';
-                         * $replacements[2] = '';
-                         * $replacements[3] = '';
-                         *
-                         */
-
-                    break;
-                    default:
-
-                        /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
-                         * HOOOSTON, VE HAFF PROBLEM!
-                         * https://www.wired.com/2011/04/alt-text-spacecraft/
-                         *
-                         */
-                        throw new \Exception('Unable to determine ' . 
-                            'string sanitization algorithm [' . 
-                            $type . 
-                            '] for the content[' . 
-                            $str . '].');
-
-                    break;
-
-                }
-
-                $str = str_replace(
-                           $patterns, 
-                           $replacements, 
-                           $str);
-
-                return $str; 
-
-
-            }catch(\Exception $e){
-
-                if(isset(self::$R['registry_assistant'])){
+        $patterns     =
+        $replacements = array();
+        $type         = \strtolower($type);
+
+        switch($type){
+            case 'data_key_extract':
+
+                $tmp_ARRAY = explode('::', $str);
+
+                return $tmp_ARRAY[count($tmp_ARRAY) -1];
+
+            break;
+            case 'string_to_bytes':
+                /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
+                 * Supports taking 
+                 * '42 GiB' to (int) 123233...
+                 *
+                 */
+
+                $str             = \strtolower(trim($str));
+                $patterns[0]     = ' ';
+                $replacements[0] = '';
+
+            break;
+            case 'file_mime_type_to_directory':
+
+                /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
+                 * Mime-Type conversion to 
+                 * lowercase folder name. 
+                 *
+                 */
+                $str         = \strtolower($str);
+                $patterns[0] = ' ';
+                $patterns[1] = '-';
+                $patterns[2] = '/';
+                $patterns[3] = '.';
+                $patterns[4] = '+';
+
+                $replacements = $this->build_replacements_array(sizeof($patterns), '_');
+
+            break;
+            case 'css_length_to_clean_int':
+
+                /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
+                 * Lowercase for 'px'
+                 *
+                 */
+                $str = \strtolower($str);
+
+                /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
+                 * SOURCE :: https://www.w3schools.com/cssref/css_units.php
+                 * DATE :: Thursday, June 22, 2023 @ 0555 hrs.
+                 *
+                 */
+                $patterns[0]  = ' ';
+                $patterns[1]  = ';';
+                $patterns[2]  = 'cm';
+                $patterns[3]  = 'mm';
+                $patterns[4]  = 'in';
+                $patterns[5]  = 'px';
+                $patterns[6]  = 'pt';
+                $patterns[7]  = 'pc';
+                $patterns[8]  = 'em';
+                $patterns[9]  = 'ex';
+                $patterns[10] = 'ch';
+                $patterns[11] = 'rem';
+                $patterns[12] = 'vw';
+                $patterns[13] = 'vh';
+                $patterns[14] = 'vmin';
+                $patterns[15] = 'vmax';
+                $patterns[16] = '%';
+
+                $replacements = $this->build_replacements_array(\sizeof($patterns));
+
+            break;
+            case 'remove_all_spaces':
+
+                $patterns[0]     = ' ';
+                $replacements[0] = '';
+
+            break;
+            case 'url_forward_slashes':
+                /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
+                 * Added in support of 
+                 * Adobe® Flash® <param> 
+                 * data passthrough to swf 
+                 * for URL formatting: 
+                 * System.security.allowDomain();
+                 *
+                 * See, /_R/ui/js/_lib/google_ajaxslt/0.4/demo/eVifweb_2026/
+                 *
+                 *
+                 * 5 :: Wednesday, May 20, 2026 @ 0330 hrs.
+                 */
+
+                $patterns[0] = '/';
+                $patterns[1] = '\\';
+
+                $replacements = $this->build_replacements_array(\sizeof($patterns), '/');
+
+            break;
+            case '/':
+            case '\\':
+
+                /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
+                 * Purpose: This is for the file path 
+                 *          sanitization of directory 
+                 *          slashes, and until it can 
+                 *          be tested in Windows, it is 
+                 *          kind of only experimental. 
+                 *
+                 *
+                 * 5 ::
+                 *
+                 * Wednesday, July 3, 2024 @ 0243 hrs.
+                 *
+                 */
+                $patterns[0] = '/';
+                $patterns[1] = '\\';
+
+                $replacements = $this->build_replacements_array(\sizeof($patterns), self::$R_data['operating_system']['os_path_dir_separator_char']);
+
+            break;
+            case 'leading_slash':
+
+                $str = ltrim($str, '/');
+                $str = ltrim($str, '\\');
+
+                return $str;
+
+            break;
+            case 'integrations_http_path':
+
+                /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
+                 * Rtrim all 
+                 * HTTP separator(s). 
+                 *
+                 */
+                $str = $this->strrtrim($str, '/');
+
+                /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
+                 * Append a HTTP 
+                 * forward slash. 
+                 *
+                 */
+                $str .= '/';
+
+                return $str;
+
+            break;
+            case 'integrations_dir_path':
+
+                /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
+                 * Rtrim all 
+                 * DIRECTORY_SEPARATOR(s). 
+                 *
+                 */
+                $str = $this->strrtrim($str, '/');
+                $str = $this->strrtrim($str, '\\');
+
+                return $str;
+
+            break;
+            case 'integrations_file_path_append':
+
+                $tmp_ARRAY                      = array();
+                $tmp_ARRAY['slash_segment_cnt'] = 0;
+                $tmp_dot                        = '.';
+                $tmp_no_segment_zero_dot        = false;
+                $tmp_pos_slash                  = \strpos($str, self::$R_data['operating_system']['os_path_dir_separator_char']);
+
+                if($tmp_pos_slash !== false){
 
                     /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
-                     * Exception handling performed 
-                     * by the Logging Services Layer 
-                     * of the CRNRSTN :: Lightsaber 
-                     * RoCEv2 SOAP Services 
-                     * Layer (CLR-SSL). 
+                     * Does Windows go for '//'? 
                      *
-                     * Allow the CLR-SSL to handle 
-                     * this exception per the 
-                     * configured logging profile of 
-                     * the running application on 
-                     * this server. 
-                     *
-                     *
-                     * 5
-                     *
-                     * Sunday, June 30, 2024 @ 1547 hrs.
-                     * Last Modified: Friday, February 27, 2026 @ 0233 hrs.
+                     * We may need to update this 
+                     * later once we can test 
+                     * in Windows. 
                      *
                      */
-                    self::$R['registry_assistant']->catch_exception(
-                                     $e, 
-                                     LOG_ERR, 
-                                     __METHOD__, 
-                                     __NAMESPACE__);
+                    $tmp_slash_ARRAY = \explode(self::$R_data['operating_system']['os_path_dir_separator_char'], $str);
 
-                }else{
+                    /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
+                     * Is there a dot in the 
+                     * first segment? 
+                     *
+                     */
+                    $tmp_pos_dot = \strpos($tmp_slash_ARRAY[0], $tmp_dot);
+                    if(!($tmp_pos_dot !== false))
+                        /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
+                         * I have no directory 
+                         * to delete. Do not 
+                         * remove a directory. 
+                         *
+                         */
+                        $tmp_no_segment_zero_dot = true;
 
-                    //
-                    // ...no CRNRSTN :: eh?
-                    // You silly...
-                    //
-                    // Still gonna send it!
-                    //
-                    //
-                    // 5
-                    //
-                    // Wednesday, June 12, 2024 @ 0152 hrs.
-                    $this->catch_exception(
-                           $e, 
-                           LOG_ERR, 
-                           __METHOD__, 
-                           __NAMESPACE__);
+                    $tmp_segment_cnt = \count($tmp_slash_ARRAY);
+
+                    foreach($tmp_slash_ARRAY as 
+                        $sl_index => $sl_content)
+                    {
+
+                        $tmp_sl_content_str_len = \strlen($sl_content);
+                        $tmp_clean_str          = $this->strrtrim($sl_content, '.');
+
+                        if(\strlen($tmp_clean_str) < 1 || 
+                            (($sl_index == 0) && ($tmp_segment_cnt > 1) && 
+                                ($tmp_no_segment_zero_dot == true)))
+                        {
+
+                            /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
+                             * We have a removable 
+                             * string segment. 
+                             *
+                             * Count it. 
+                             *
+                             */
+                            $tmp_ARRAY['slash_segment_cnt']++;
+                            $tmp_ARRAY['dir_nom_segment_str_len'][] = $tmp_sl_content_str_len;
+
+                        }else{
+
+                            /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
+                             * STORE THE CONTENT 
+                             * FROM BETWEEN THE 
+                             * SLASHES.
+                             *
+                             */
+                            $tmp_ARRAY['segment_str'][] = $sl_content;
+
+                        }
+
+                    }
 
                 }
 
-                return '';
+                $tmp_ARRAY['no_segment_zero_dot'] = 0;
+                if($tmp_no_segment_zero_dot == true)
+                    $tmp_ARRAY['no_segment_zero_dot'] = 1;
 
-            }
+                return $tmp_ARRAY;
+
+            break;
+            case 'application_directory_reduction':
+                /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
+                 * We just want the application 
+                 * folder name without any ../'s.
+                 *
+                 * E.g: 
+                 * "../../../folder" becomes "folder"
+                 *
+                 *
+                 * 5 :: Saturday, October 3, 2026 @ 0427 hrs.
+                 *
+                 */
+
+                $patterns[0]     = '../';
+                $patterns[1]     = '..\\';
+                $patterns[2]     = './';
+                $patterns[3]     = '.\\';
+
+                $replacements = $this->build_replacements_array(\sizeof($patterns));
+
+            break;
+            case 'index':
+
+                $patterns[0]     = '&nbsp;';
+                $patterns[1]     = ')';
+                $replacements[0] = ' ';
+                $replacements[1] = ') ';
+
+            break;
+            case 'search':
+
+                $patterns[0]  = '
+';
+                $patterns[1]  = '"';
+                $patterns[2]  = '=';
+                $patterns[3]  = '{';
+                $patterns[4]  = '}';
+                $patterns[5]  = '(';
+                $patterns[6]  = ')';
+                $patterns[7]  = ' ';
+                $patterns[8]  = '    ';
+                $patterns[9]  = ',';
+                $patterns[10] = '\n';
+                $patterns[11] = '\r';
+                $patterns[12] = '\'';
+                $patterns[13] = '/';
+                $patterns[14] = '#';
+                $patterns[15] = ';';
+                $patterns[16] = ':';
+                //$patterns[17] = '>';
+
+                $replacements = $this->build_replacements_array(\sizeof($patterns));
+
+            break;
+            case 'email_private':
+
+                $tmp_new_post_at_ARRAY     = array();
+                $clean_str                 = '';
+                $last_dot_flag             = false;
+                $tmp_at_split_ARRAY        = \explode('@', $str);
+                $tmp_post_at_len           = \strlen($tmp_at_split_ARRAY[1]);
+                $tmp_str_ARRAY             = $this->str_split_unicode($str);
+                $tmp_post_at_str_ARRAY     = $this->str_split_unicode($tmp_at_split_ARRAY[1]);
+                $tmp_post_at_str_rev_ARRAY = \array_reverse($tmp_post_at_str_ARRAY);
+
+                /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
+                 * Prepare post @ 
+                 * situation. 
+                 *
+                 */
+                for($i = 0; $i < $tmp_post_at_len; $i++){
+
+                    if(!($last_dot_flag === true)){
+
+                        if($tmp_post_at_str_rev_ARRAY[$i] == '.')
+                            $last_dot_flag = true;
+
+                        $tmp_new_post_at_ARRAY[] = $tmp_post_at_str_rev_ARRAY[$i];
+
+                        if($last_dot_flag === true){
+
+                            $i = $tmp_post_at_len + 420;
+                            $tmp_new_post_at_ARRAY = \array_reverse($tmp_new_post_at_ARRAY);
+
+                        }
+
+                    }
+
+                }
+
+                $tmp_str_len = \sizeof($tmp_str_ARRAY);
+                for($i = 0; $i < $tmp_str_len; $i++){
+
+                    if($i == 0){
+
+                        $clean_str .= $tmp_str_ARRAY[$i] . '*****';
+
+                    }else{
+
+                        if($tmp_str_ARRAY[$i] == '@'){
+
+                            $at_flag      = true;
+                            $tmp_plus_one = $i + 1;
+                            $clean_str    .= $tmp_str_ARRAY[$i] . $tmp_str_ARRAY[$tmp_plus_one] . '*****';
+                            $clean_str    .= \implode($tmp_new_post_at_ARRAY);
+                            $i            = $tmp_str_len + 420;
+
+                        }
+
+                    }
+
+                }
+
+                return $clean_str;
+
+            break;
+            case 'http_protocol_simple':
+
+                $patterns[0] = '_';
+                $patterns[1] = '$';
+                $patterns[2] = ' ';
+
+                $replacements = $this->build_replacements_array(\sizeof($patterns));
+
+            break;
+            case 'clean_percentage_numbers':
+
+                $patterns[0] = '%';
+                $patterns[1] = 'percent';
+                $patterns[2] = ' ';
+                $patterns[3] = '!';
+
+                $replacements = $this->build_replacements_array(\sizeof($patterns));
+
+            break;
+            case 'custom_mobi_detect_alg':
+
+                $patterns[0]     = '(';
+                $patterns[1]     = ')';
+                $replacements[0] = '';
+                $replacements[1] = '';
+
+            break;
+            case 'select_statement':
+
+                $patterns[0]     = "`";
+                $replacements[0] = '';
+
+            break;
+            case 'select_field_name':
+
+                $patterns[0]  = '
+';
+                $patterns[1]  = '"';
+                $patterns[2]  = '=';
+                $patterns[3]  = '{';
+                $patterns[4]  = '}';
+                $patterns[5]  = '(';
+                $patterns[6]  = ')';
+                $patterns[7]  = ' ';
+                $patterns[8]  = '    ';
+                $patterns[9]  = ',';
+                $patterns[10] = '\n';
+                $patterns[11] = '\r';
+                $patterns[12] = '\'';
+                $patterns[13] = '/';
+                $patterns[14] = '#';
+                $patterns[15] = ';';
+                $patterns[16] = ':';
+                $patterns[17] = '>';
+
+                $replacements = $this->build_replacements_array(\sizeof($patterns));
+
+            break;
+            case 'sql_interval':
+
+                /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
+                 * Uppercase for 
+                 * SQL query interval. 
+                 *
+                 */
+                $str             = \strtoupper($str);
+                $patterns[0]     = ' ';
+                $replacements[0] = '';
+
+            break;
+            case 'max_disk_storage_utilization':
+
+                $patterns[0] = '%';
+                $patterns[1] = 'percent';
+                $patterns[2] = ' ';
+                $patterns[3] = '!';
+
+                $replacements = $this->build_replacements_array(\sizeof($patterns));
+
+            break;
+            default:
+
+                /* # C # R # N # R # S # T # N # :: # L # I # G # H # T
+                 * HOOOSTON, VE HAFF PROBLEM!
+                 * https://www.wired.com/2011/04/alt-text-spacecraft/
+                 *
+                 */
+                $clr_ssl_msg = 'Unable to determine ' . 
+                               'string sanitization algorithm [' . 
+                               $type . 
+                               '] for the content[' . 
+                               $str . '].';
+                // 5 :: Mon May xxxxxxxxxxxxxxxxxxxxxxxxxxx
+                $msg_token = 'd9c5ca131ab8615a1738c340cf44c4ff' . 
+                             'xxxxxxxxxxxxxxxxxxxxxxxxxxx';
+                $token_generation_date = '2026xxxxxxxxxxxxxxxxxxxxxxxxxxx';
+                $token = array(
+                         'token'                   => $msg_token, 
+                         'token_generation_date'   => $token_generation_date, 
+                         'request_type'            => __METHOD__, 
+                         'code'                    => 200, 
+                         'clr_ssl_msg'             => $clr_ssl_msg);
+                $this->error_log(
+                       $clr_ssl_msg, 
+                       \LOG_ERR, 
+                       \E_ERROR, 
+                       __LINE__, 
+                       __METHOD__, 
+                       __FILE__, 
+                       $token);
+            break;
 
         }
+
+        $str = \str_replace(
+               $patterns, 
+               $replacements, 
+               $str);
+
+        return $str;
 
     }
 
@@ -41322,20 +41322,20 @@ output   * start              N/Y    N/N     ---       ---        ---          -
 
         $this->asset_routing_data_key_lookup_ARRAY['mime_type'] = $tmp_ARRAY;
 
-        $tmp_ARRAY = array('/_config/config.mime_types/text_html/CRNRSTN_HTM/Jonathans_source',
-            '/_config/config.mime_types/text_html/CRNRSTN_HTM/Computer Information Systems MSDNAA_cd5_files',
-            '/_config/config.mime_types/text_html/CRNRSTN_HTM/Computer Information Systems MSDNAA_SQL_files',
-            '/_config/config.mime_types/text_html/CRNRSTN_HTM/Fall Books_files',
-            '/_config/config.mime_types/text_html/CRNRSTN_HTM/late fee_files',
-            '/_config/config.mime_types/text_html/CRNRSTN_HTM/Populating & Retrieving Data in a listbox_files',
-            '/_config/config.mime_types/text_html/CRNRSTN_HTM/UML 2 Component Diagram_files',
-            '/_config/config.mime_types/text_html/CRNRSTN_HTM/useCaseDiagram_files',
-            '/_config/config.mime_types/text_html/CRNRSTN_HTM/c++boost.gif',
-            '/_config/config.mime_types/text_html/CRNRSTN_HTM/google_logo_40wht.gif',
-            '/_config/config.mime_types/text_html/CRNRSTN_HTML/(ebook - pdf) - OREILLY - HTML the definite guide.pdf',
-            '/_config/config.mime_types/text_html/CRNRSTN_SHTML/management_files',
-            '/_config/config.mime_types/application_pdf/CRNRSTN_PDF/last_page.txt',
-            '/_config/config.mime_types/application_pdf/CRNRSTN_PDF/cis_assign1_CIS3260_GSU_2002.doc');
+        $tmp_ARRAY = array('/_config/mime_types/text_html/CRNRSTN_HTM/Jonathans_source',
+            '/_config/mime_types/text_html/CRNRSTN_HTM/Computer Information Systems MSDNAA_cd5_files',
+            '/_config/mime_types/text_html/CRNRSTN_HTM/Computer Information Systems MSDNAA_SQL_files',
+            '/_config/mime_types/text_html/CRNRSTN_HTM/Fall Books_files',
+            '/_config/mime_types/text_html/CRNRSTN_HTM/late fee_files',
+            '/_config/mime_types/text_html/CRNRSTN_HTM/Populating & Retrieving Data in a listbox_files',
+            '/_config/mime_types/text_html/CRNRSTN_HTM/UML 2 Component Diagram_files',
+            '/_config/mime_types/text_html/CRNRSTN_HTM/useCaseDiagram_files',
+            '/_config/mime_types/text_html/CRNRSTN_HTM/c++boost.gif',
+            '/_config/mime_types/text_html/CRNRSTN_HTM/google_logo_40wht.gif',
+            '/_config/mime_types/text_html/CRNRSTN_HTML/(ebook - pdf) - OREILLY - HTML the definite guide.pdf',
+            '/_config/mime_types/text_html/CRNRSTN_SHTML/management_files',
+            '/_config/mime_types/application_pdf/CRNRSTN_PDF/last_page.txt',
+            '/_config/mime_types/application_pdf/CRNRSTN_PDF/cis_assign1_CIS3260_GSU_2002.doc');
 
         $this->asset_routing_data_key_lookup_ARRAY['mime_type_exclusions'] = $tmp_ARRAY;
 
