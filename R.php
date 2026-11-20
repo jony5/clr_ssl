@@ -795,7 +795,7 @@ else
         echo $R->file_url_cache_id($R->get_crnrstn('R_framework_path') .
                  '/ui/imgs/png/system/crnrstn_logo_lg.png');
         ?>"
-        width="" height="70" alt="<?php
+        width="117" height="70" alt="<?php
         echo $R->get_crnrstn('CLR_SSL_long_TEXT'); ?> v<?php
         echo $R->version_crnrstn();
         ?>. The CLR-SSL." title="<?php
